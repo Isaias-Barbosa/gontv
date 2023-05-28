@@ -19,7 +19,7 @@ function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/animes" element={<Animes />} />
         <Route path="/animes/:id/*" element={<SingleAnimePage />} />
-        <Route exact path="/play/:id" component={<SinglePlayPage />} />
+        <Route path="/singleplay/:animeId/:episodeId/*" element={<SinglePlayPage />} />
       </Routes>
     <Rodape />
   </BrowserRouter>
