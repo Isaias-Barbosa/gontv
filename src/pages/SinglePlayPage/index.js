@@ -3,6 +3,7 @@ import animeData from 'json/animes.json';
 import { useParams } from 'react-router-dom';
 
 
+
 export default function SinglePlayPage() {
 
     const { animeId, episodeId } = useParams();
