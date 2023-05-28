@@ -1,0 +1,52 @@
+[
+    {
+      "id": 1,
+      "title": "Oshi No Ko",
+      "subtitle": "[Oshi No Ko]",
+      "coverImage": "https://cdn.myanimelist.net/images/anime/1987/135628l.jpg",
+      "studio": "Doga Kobo",
+      "director": "Diretor do Anime",
+      "year": 2023,
+      "episodeDuration": "30 minutos",
+      "genres": ["Ação", "Drama", "Supernatural"],
+      "synopsis": "Ai Hoshino, de dezesseis anos, é uma idol talentosa e bonita que é adorada por seus fãs. Ela é a personificação de uma jovem donzela pura. Mas nem tudo que reluz é ouro. \n\n Gorou Amemiya é um ginecologista do interior e um grande fã de Ai. Então, quando o ídolo grávido aparece em seu hospital, ele fica perplexo. Gorou promete a ela um parto seguro. Mal sabe ele, um encontro com uma figura misteriosa resultaria em sua morte prematura - ou assim ele pensava. \n\n Abrindo os olhos no colo de seu amado ídolo, Gorou descobre que renasceu como Aquamarine Hoshino - o filho recém-nascido de Ai! Com seu mundo virado de cabeça para baixo, Gorou logo descobre que o mundo do showbiz é cheio de espinhos, onde o talento nem sempre gera sucesso. Será que ele conseguirá proteger o sorriso de Ai, que ele tanto ama, com a ajuda de um aliado excêntrico e inesperado?",
+      "episodes": [
+        {
+          "id": 1,
+          "title": "Episódio 1",
+          "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+          "duration": "24 minutos"
+        },
+        {
+          "id": 2,
+          "title": "Episódio 2",
+          "duration": "24 minutos"
+        }
+      ]
+    },
+    {
+        "id": 2,
+        "title": "Steins;Gate",
+        "subtitle": "Steins;Gate",
+        "coverImage": "https://cdn.myanimelist.net/images/anime/1935/127974l.jpg",
+        "studio": "White Fox",
+        "director": "Diretor do Anime",
+        "year": 2011,
+        "episodeDuration": "24 minutos",
+        "genres": ["Drama", "Sci-Fi", "Suspense"],
+        "synopsis": "O excêntrico cientista Rintarou Okabe tem uma sede infindável de exploração científica. Juntamente com seu amigo estúpido, mas bem-intencionado, Mayuri Shiina e seu colega de quarto Itaru Hashida, Rintarou funda o Future Gadget Laboratory na esperança de criar inovações tecnológicas que confundem a psique humana. Apesar das alegações de grandeza, o único 'gadget' notável que o trio criou é um micro-ondas que tem o poder misterioso de transformar bananas em gosma verde. \n\n No entanto, quando Rintarou decide participar da conferência do neurocientista Kurisu Makise sobre viagens no tempo, ele experimenta uma série de eventos estranhos que o levam a acreditar que há mais no gadget 'Phone Microwave'do que aparenta. Aparentemente capaz de enviar mensagens de texto para o passado usando o micro-ondas, Rintarou se envolve ainda mais com a 'máquina do tempo', atraindo a ira e a atenção da misteriosa organização SERN. \n\n Devido à nova descoberta, Rintarou e seus amigos se encontram em um perigo sempre presente. Enquanto trabalha para mitigar os danos que sua invenção causou à linha do tempo, ele não está apenas travando uma batalha para salvar seus entes queridos, mas também contra sua sanidade degradante.        ",
+        "episodes": [
+          {
+            "id": 1,
+            "title": "Episódio 1",
+            "duration": "24 minutos"
+          },
+          {
+            "id": 2,
+            "title": "Episódio 2",
+            "duration": "24 minutos"
+          }
+        ]
+      }
+
+  ]

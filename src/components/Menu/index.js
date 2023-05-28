@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { BsDiscord, BsAndroid2 } from 'react-icons/bs';
 import { IoIosNotifications } from 'react-icons/io';
+import { Link } from 'react-router-dom';
+
 
 
 export default function Menu() {
@@ -39,6 +41,7 @@ export default function Menu() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
 
 
   const siteTitle = 'Gon.TV'
@@ -85,8 +88,8 @@ export default function Menu() {
 
 
         {isOpen && (
-          <div className="fixed top-0 left-0 bg-gray-900 w-64 h-full z-50">
-            <nav className="flex flex-col justify-between items-center bg-gray-900 p-9">
+          <div className="fixed top-0 left-0 bg-gray-900 w-60 h-full z-50">
+            <nav className="flex flex-col justify-between items-center bg-gray-900 p-10">
               <div className="flex justify-between w-full">
                 <div className="text-white font-bold text-xl mb-8">{siteTitle}</div>
                 <button
@@ -98,18 +101,18 @@ export default function Menu() {
               </div>
               <ul className="space-y-4">
                 <li>
-                  <a href="#" className="text-white hover:text-emerald-500 border-b-2 border-b-emerald-500">
+                <Link to="/" className="text-white hover:text-emerald-500 border-b-2 border-b-emerald-500">
                     Home
-                  </a>
+                </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-white hover:text-emerald-500">
+                  <Link to="/animes" className="text-white hover:text-emerald-500">
                     Animes
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="text-white hover:text-emerald-500">
-                    Animes Legendados
+                    Animes Dublados
                   </a>
                 </li>
                 <li>

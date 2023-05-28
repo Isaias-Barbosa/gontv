@@ -1,7 +1,9 @@
+import Banner from "components/Banner";
 import LastAddedAnimes from "components/LastAddedAnimes";
 import PopularAnime from "components/PopularAnime";
 import React, { useState } from 'react';
 import { MdPlayCircleFilled } from 'react-icons/md';
+import animes from 'json/lista.json';
 
 export default function Home() {
 
@@ -30,6 +32,7 @@ export default function Home() {
   return (
 
     <>
+      <Banner />
       <div className="bg-gray-900">
         <PopularAnime />
 
@@ -63,9 +66,10 @@ export default function Home() {
               ))}
             </div>
           </section>
+          <section>
+            <LastAddedAnimes animes={animes} />
+          </section>
         </main>
-
-        <LastAddedAnimes />
       </div>
     </>
 
