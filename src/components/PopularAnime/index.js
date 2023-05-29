@@ -1,5 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function PopularAnime() {
 
@@ -29,30 +32,77 @@ export default function PopularAnime() {
             title: 'Hunter x Hunter (2011)',
             image: 'https://cdn.myanimelist.net/images/anime/1735/117788l.jpg',
         },
+        {
+            id: 6,
+            title: 'Hunter x Hunter (2011)',
+            image: 'https://cdn.myanimelist.net/images/anime/1735/117788l.jpg',
+        },
+        {
+            id: 7,
+            title: 'Hunter x Hunter (2011)',
+            image: 'https://cdn.myanimelist.net/images/anime/1735/117788l.jpg',
+        },
+        {
+            id: 8,
+            title: 'Hunter x Hunter (2011)',
+            image: 'https://cdn.myanimelist.net/images/anime/1735/117788l.jpg',
+        },
     ];
+
+    popularAnimeList.sort((a, b) => a.id - b.id);
+
+    const settings = {
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        centerMode: false,
+        centerPadding: '60px',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+        
+    };
 
     return (
         <section>
             <h2 className="text-2xl text-center text-white font-bold mb-1 p-6">
                 <span className="border-b-4 border-emerald-600 pb-1">Animes Populares</span>
             </h2>
-            <div className="flex justify-center">
-                <a href=''><div className="flex flex-wrap justify-center max-w-full lg:max-w-none">
-                    {popularAnimeList.map((anime, index) => (
-                        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 rounded-lg p-3" key={index}>
-                            <Link to={`/animes/${anime.id}`}>
-                                <img
-                                    src={anime.image}
-                                    alt={anime.title}
-                                    className="w-full h-auto mb-4 mx-auto"
-                                    style={{ width: "270px" }} />
-                                <h3 className="text-xl text-center text-white font-bold">{anime.title}</h3>
-                                <p className="text-xl text-gray-500 text-center font-bold">{anime.episode}</p>
-                            </Link>
-                        </div>
-
+            <div className="mx-auto max-w-7xl">
+                <Slider {...settings}>
+                    {popularAnimeList.map((anime) => (
+                        <Link to={`/animes/${anime.id}`} key={anime.id}>
+                            <div className="flex flex-col items-center mx-2">
+                            <div className="mb-4">
+                                    <img src={anime.image} alt={anime.title} className="w-220 h-auto rounded-lg" />
+                                </div>
+                                <h3 className="text-lg text-white font-semibold">{anime.title}</h3>
+                            </div>
+                        </Link>
                     ))}
-                </div></a>
+                </Slider>
             </div>
         </section>
     )

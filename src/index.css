@@ -16,3 +16,19 @@ code {
     monospace;
 }
 
+/* slick-buttons.css */
+.slick-prev,
+.slick-next {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: blue;
+}

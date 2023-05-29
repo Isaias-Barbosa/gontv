@@ -34,9 +34,11 @@ export default function Home() {
     <>
       <Banner />
       <div className="bg-gray-900">
+      <main className="container mx-auto py-8">
+      <section className="mb-5 flex justify-center">
         <PopularAnime />
+      </section>
 
-        <main className="container mx-auto py-8">
           <section>
             <h2 className="text-2xl text-center text-white font-bold mb-5">
               <span className="border-b-4 border-emerald-600 pb-1"> Animes em Lançamento</span>
