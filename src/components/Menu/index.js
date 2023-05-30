@@ -111,9 +111,9 @@ export default function Menu() {
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-white hover:text-emerald-500">
+                  <Link to="/animesDublados" className="text-white hover:text-emerald-500">
                     Animes Dublados
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="text-white hover:text-emerald-500">

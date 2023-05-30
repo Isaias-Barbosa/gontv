@@ -1,6 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function SingleAnime({ anime }) {
+
+  const location = useLocation();
+  const query = new URLSearchParams(location.search);
+  const language = query.get('language');
+
 
   return (
     <div className="bg-gray-900">
@@ -13,6 +18,9 @@ export default function SingleAnime({ anime }) {
             <h1 className="text-3xl text-white font-bold mb-5">{anime.title}</h1>
             <h2 className="text-xl text-white mb-4">{anime.subtitle}</h2>
             <p className="text-white ">
+              <strong>Tipo: </strong> {anime.Type}
+            </p>
+            <p className="text-white ">
               <strong>Estúdio:</strong> {anime.studio}
             </p>
             <p className="text-white">
@@ -23,6 +31,9 @@ export default function SingleAnime({ anime }) {
             </p>
             <p className="text-white">
               <strong>Duração por Episódio:</strong> {anime.episodeDuration}
+            </p>
+            <p className="text-white">
+              <strong>Linguagem:</strong> {anime.Linguagem}
             </p>
             <p className="text-white">
               <strong>Gêneros:</strong> {anime.genres.join(', ')}
@@ -38,7 +49,10 @@ export default function SingleAnime({ anime }) {
           <ul>
             {anime.episodes.map((episode) => (
               <li key={episode.id}>
-                  <Link to={`/singleplay/${anime.id}/${episode.id}`} className="font-bold text-white">
+                  <Link 
+                  to={`/singleplay/${anime.id}/${episode.id}?language=${language}`}
+                  className="font-bold text-white"
+                  >
                   {episode.title}
                 </Link>
                 - <span className="text-white">Duração: {episode.duration}</span>

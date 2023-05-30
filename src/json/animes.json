@@ -1,55 +1,675 @@
 [
-    {
-      "id": 1,
-      "title": "Oshi No Ko",
-      "subtitle": "[Oshi No Ko]",
-      "coverImage": "https://cdn.myanimelist.net/images/anime/1987/135628l.jpg",
-      "studio": "Doga Kobo",
-      "director": "Diretor do Anime",
-      "year": 2023,
-      "episodeDuration": "30 minutos",
-      "genres": ["Ação", "Drama", "Supernatural"],
-      "synopsis": "Ai Hoshino, de dezesseis anos, é uma idol talentosa e bonita que é adorada por seus fãs. Ela é a personificação de uma jovem donzela pura. Mas nem tudo que reluz é ouro. \n\n Gorou Amemiya é um ginecologista do interior e um grande fã de Ai. Então, quando o ídolo grávido aparece em seu hospital, ele fica perplexo. Gorou promete a ela um parto seguro. Mal sabe ele, um encontro com uma figura misteriosa resultaria em sua morte prematura - ou assim ele pensava. \n\n Abrindo os olhos no colo de seu amado ídolo, Gorou descobre que renasceu como Aquamarine Hoshino - o filho recém-nascido de Ai! Com seu mundo virado de cabeça para baixo, Gorou logo descobre que o mundo do showbiz é cheio de espinhos, onde o talento nem sempre gera sucesso. Será que ele conseguirá proteger o sorriso de Ai, que ele tanto ama, com a ajuda de um aliado excêntrico e inesperado?",
-      "episodes": [
-        {
-          "id": 1,
-          "title": "Episódio 1",
-          "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
-          "duration": "24 minutos"
-        },
-        {
-          "id": 2,
-          "title": "Episódio 2",
-          "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
-          "duration": "24 minutos"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "title": "Steins;Gate",
-      "subtitle": "Steins;Gate",
-      "coverImage": "https://cdn.myanimelist.net/images/anime/1935/127974l.jpg",
-      "studio": "White Fox",
-      "director": "Diretor do Anime",
-      "year": 2011,
-      "episodeDuration": "24 minutos",
-      "genres": ["Drama", "Sci-Fi", "Suspense"],
-      "synopsis": "O excêntrico cientista Rintarou Okabe tem uma sede infindável de exploração científica...",
-      "episodes": [
-        {
-          "id": 1,
-          "title": "Episódio 1",
-          "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
-          "duration": "24 minutos"
-        },
-        {
-          "id": 2,
-          "title": "Episódio 2",
-          "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
-          "duration": "24 minutos"
-        }
-      ]
-    }
-    
-  ]
+  {
+    "id": "",
+    "Type": "TV",
+    "title": "Oshi No Ko",
+    "subtitle": "[Oshi No Ko]",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1987/135628l.jpg",
+    "studio": "Doga Kobo",
+    "director": "Diretor do Anime",
+    "year": 2023,
+    "episodeDuration": "30 minutos",
+    "genres": ["Ação", "Drama", "Supernatural"],
+    "Premiered": "Fall 2021",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Ai Hoshino, de dezesseis anos, é uma idol talentosa e bonita que é adorada por seus fãs. Ela é a personificação de uma jovem donzela pura. Mas nem tudo que reluz é ouro. \n\n Gorou Amemiya é um ginecologista do interior e um grande fã de Ai. Então, quando o ídolo grávido aparece em seu hospital, ele fica perplexo. Gorou promete a ela um parto seguro. Mal sabe ele, um encontro com uma figura misteriosa resultaria em sua morte prematura - ou assim ele pensava. \n\n Abrindo os olhos no colo de seu amado ídolo, Gorou descobre que renasceu como Aquamarine Hoshino - o filho recém-nascido de Ai! Com seu mundo virado de cabeça para baixo, Gorou logo descobre que o mundo do showbiz é cheio de espinhos, onde o talento nem sempre gera sucesso. Será que ele conseguirá proteger o sorriso de Ai, que ele tanto ama, com a ajuda de um aliado excêntrico e inesperado?",
+    "episodes": [
+      {
+        "id": "",
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": "",
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": "",
+    "Type": "TV",
+    "title": "Steins;Gate",
+    "subtitle": "Steins;Gate",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1935/127974l.jpg",
+    "studio": "White Fox",
+    "director": "Diretor do Anime",
+    "year": 2011,
+    "episodeDuration": "24 minutos",
+    "genres": ["Drama", "Sci-Fi", "Suspense"],
+    "Premiered": "Fall 2021",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "O excêntrico cientista Rintarou Okabe tem uma sede infindável de exploração científica...",
+    "episodes": [
+      {
+        "id": "",
+        "title": "Episódio 1",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      },
+      {
+        "id":"",
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": "",
+    "Type": "TV",
+    "title": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
+    "subtitule": "Demon Slayer: Kimetsu no Yaiba - Entertainment District Arc",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1780/135985l.jpg",
+    "studio": "ufotable",
+    "director": "Sotozaki Haruo",
+    "year": "2021",
+    "episodeDuration": "24 min. per episode",
+    "genres": ["Action", "Demons", "Historical", "Shounen", "Supernatural"],
+    "Premiered": "Fall 2021",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Tanjiro Kamado, junto com Inosuke Hashibira, um garoto criado por javalis que usa uma cabeça de javali, e Zenitsu Agatsuma, um garoto assustado que revela seu verdadeiro poder quando dorme, embarcam no Trem Infinito em uma nova missão com o Pilar de Chamas, Kyojuro Rengoku, para derrotar um demônio que tem atormentado o povo e matado caçadores de demônios que se opõem a ele!",
+    "episodes": [
+      {
+        "id": 1,
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": 2,
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "Type": "TV",
+    "title": "Jigokuraku",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1075/131925l.jpg",
+    "studio": "Liden Films",
+    "director": "Chikara Sakurai",
+    "year": "2020",
+    "episodeDuration": "23 min. por episódio",
+    "genres": ["Ação", "Aventura", "Demônios", "Histórico", "Sobrenatural"],
+    "Premiered": "Spring 2023",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Gabimaru, um ninja condenado à morte, recebe uma segunda chance em troca de participar de uma missão perigosa para encontrar o elixir da imortalidade em uma ilha remota habitada por criaturas mortais.",
+    "episodes": [
+      {
+        "id": 1,
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": 2,
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "Type": "TV",
+    "title": "Shingeki no Kyojin: The Final Season",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1142/110532l.jpg",
+    "studio": "MAPPA",
+    "director": "Yasuko Kobayashi",
+    "year": "2020-2021",
+    "episodeDuration": "23 min. por episódio",
+    "genres": [
+      "Ação",
+      "Drama",
+      "Fantasia",
+      "Militar",
+      "Mistério",
+      "Shounen",
+      "Super Poder"
+    ],
+    "Premiered": "Fall 2020",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Eren Yeager e seus aliados continuam sua luta contra os Titãs enquanto revelam os segredos do mundo e lutam pela liberdade da humanidade.",
+    "episodes": [
+      {
+        "id": 1,
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": 2,
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "Type": "TV",
+    "title": "Nanatsu no Taizai: Funnu no Shinpan",
+    "subtitule": "The Seven Deadly Sins: Dragon's Judgement",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1011/111551l.jpg",
+    "studio": "Studio Deen",
+    "director": "Susumu Nishizawa",
+    "year": "2021",
+    "episodeDuration": "24 min. por episódio",
+    "genres": [
+      "Ação",
+      "Aventura",
+      "Demônios",
+      "Fantasia",
+      "Magia",
+      "Shounen",
+      "Sobrenatural"
+    ],
+    "Premiered": "Winter 2021",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Os Sete Pecados Capitais enfrentam novos inimigos enquanto a verdade sobre a maldição dos demônios é revelada e o destino do mundo está em jogo.",
+    "episodes": [
+      {
+        "id": 1,
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": 2,
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "Type": "TV",
+    "title": "One Piece",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/6/73245l.jpg",
+    "studio": "Toei Animation",
+    "director": "Kounosuke Uda, Munehisa Sakai, Hiroaki Miyamoto",
+    "year": "1999-",
+    "episodeDuration": "24 min. por episódio",
+    "genres": [
+      "Ação",
+      "Aventura",
+      "Comédia",
+      "Drama",
+      "Fantasia",
+      "Shounen",
+      "Super Poder"
+    ],
+    "Premiered": "Fall 1999",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Monkey D. Luffy e sua tripulação de piratas buscam o tesouro supremo, o One Piece, e enfrentam desafios perigosos ao longo do caminho em um mundo cheio de piratas, marinheiros e poderes misteriosos.",
+    "episodes": [
+      {
+        "id": 1,
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": 2,
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "Type": "TV",
+    "title": "Haikyuu!!",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/7/76014l.jpg",
+    "studio": "Production I.G",
+    "director": "Susumu Mitsunaka",
+    "year": "2014-2020",
+    "episodeDuration": "24 min. por episódio",
+    "genres": ["Comédia", "Drama", "Escolar", "Esportes", "Shounen"],
+    "Premiered": "Spring 2014",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Shouyou Hinata, inspirado por um jogador de vôlei lendário apelidado de 'Pequeno Gigante', se junta a um clube de vôlei e luta para se tornar um jogador excepcional e levar sua equipe ao campeonato nacional.",
+    "episodes": [
+      {
+        "id": 1,
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": 2,
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "Type": "TV",
+    "title": "Black Clover",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1659/118984l.jpg",
+    "studio": "Studio Pierrot",
+    "director": "Tatsuya Yoshihara",
+    "year": "2017-2021",
+    "episodeDuration": "23 min. por episódio",
+    "genres": ["Ação", "Comédia", "Fantasia", "Magia", "Shounen"],
+    "Premiered": "Fall 2017",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Asta e Yuno são órfãos que cresceram juntos em um mundo onde magia é tudo. Asta, que não tem magia, busca se tornar o Rei Mago e proteger o reino dos perigos que ameaçam a humanidade.",
+    "episodes": [
+      {
+        "id": 1,
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": 2,
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "Type": "TV",
+    "title": "Jujutsu Kaisen",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1171/109222l.jpg",
+    "studio": "MAPPA",
+    "director": "Sunghoo Park",
+    "year": "2020-2021",
+    "episodeDuration": "23 min. por episódio",
+    "genres": ["Ação", "Demônios", "Escolar", "Sobrenatural"],
+    "Premiered": "Fall 2020",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Yuji Itadori, um estudante colegial com habilidades físicas excepcionais, se envolve em uma guerra entre feiticeiros e criaturas amaldiçoadas, enquanto ele se torna o hospedeiro de um poderoso demônio.",
+    "episodes": [
+      {
+        "id": 1,
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": 2,
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "Type": "TV",
+    "title": "Naruto",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/13/17405l.jpg",
+    "studio": "Studio Pierrot",
+    "director": "Hayato Date",
+    "year": "2002-2007",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "episodeDuration": "23 min. por episódio",
+    "genres": [
+      "Ação",
+      "Aventura",
+      "Comédia",
+      "Super Poder",
+      "Artes Marciais",
+      "Shounen"
+    ],
+    "Premiered": "Fall 2002",
+    "synopsis": "Naruto Uzumaki, um jovem ninja hiperativo, busca se tornar o Hokage, o líder de sua vila, enquanto enfrenta desafios perigosos e faz amizades ao longo do caminho.",
+    "episodes": [
+      {
+        "id": 1,
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": 2,
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "Type": "TV",
+    "title": "Dragon Ball Z",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1868/121646l.jpg",
+    "studio": "Toei Animation",
+    "director": "Daisuke Nishio",
+    "year": "1989-1996",
+    "episodeDuration": "24 min. por episódio",
+    "genres": ["Ação", "Aventura", "Comédia", "Fantasia", "Super Poder"],
+    "Premiered": "Spring 1989",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Goku e seus amigos protegem a Terra de ameaças poderosas, enfrentando guerreiros extraterrestres, androides e seres místicos enquanto desbloqueiam seu verdadeiro poder.",
+    "episodes": [
+      {
+        "id": 1,
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": 2,
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "Type": "TV",
+    "title": "Boku no Hero Academia",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/10/78745l.jpg",
+    "studio": "Bones",
+    "director": "Kenji Nagasaki",
+    "year": "2016-",
+    "episodeDuration": "24 min. por episódio",
+    "genres": ["Ação", "Comédia", "Escolar", "Shounen", "Super Poder"],
+    "Premiered": "Spring 2016",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Izuku Midoriya sonha em se tornar um herói, mas nasce sem qualquer poder. Após receber o poder do maior herói do mundo, ele frequenta uma escola para heróis em treinamento e enfrenta vilões poderosos.",
+    "episodes": [
+      {
+        "id": 1,
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": 2,
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "Type": "TV",
+    "title": "Tokyo Revengers",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1839/122012l.jpg",
+    "studio": "LidENFILMS",
+    "director": "Koichi Hatsumi",
+    "year": "2021",
+    "episodeDuration": "24 min. por episódio",
+    "genres": ["Ação", "Drama", "Escolar", "Shounen", "Viagem no Tempo"],
+    "Premiered": "Spring 2021",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Takemichi Hanagaki, um homem desempregado de 26 anos, descobre que a garota por quem ele costumava se apaixonar foi assassinada. Ao ser empurrado para os trilhos do trem, ele viaja no tempo para quando estava no ensino médio e jura mudar seu destino e salvar a garota.",
+    "episodes": [
+      {
+        "id": 1,
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": 2,
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "Type": "TV",
+    "title": "Bleach",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/3/40451l.jpg",
+    "studio": "Studio Pierrot",
+    "director": "Noriyuki Abe",
+    "year": "2004-2012",
+    "episodeDuration": "24 min. por episódio",
+    "genres": ["Ação", "Aventura", "Comédia", "Shounen", "Sobrenatural"],
+    "Premiered": "Fall 2004",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Ichigo Kurosaki, um estudante com a habilidade de ver espíritos, se torna um Shinigami (Ceifador de Almas) e protege a humanidade dos espíritos malignos enquanto enfrenta poderosas ameaças.",
+    "episodes": [
+      {
+        "id": 1,
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": 2,
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "Type": "TV",
+    "title": "Fairy Tail",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1843/96722l.jpg",
+    "studio": "A-1 Pictures, Satelight, Bridge",
+    "director": "Shinji Ishihira",
+    "year": "2009-2019",
+    "episodeDuration": "24 min. por episódio",
+    "genres": ["Ação", "Aventura", "Comédia", "Fantasia", "Magia", "Shounen"],
+    "Premiered": "Fall 2009",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Lucy Heartfilia, uma jovem maga, se junta à Guilda Fairy Tail, onde ela forma uma equipe com Natsu Dragneel, um Dragon Slayer do Fogo, e embarca em missões emocionantes e perigosas.",
+    "episodes": [
+      {
+        "id": 1,
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": 2,
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "Type": "TV",
+    "title": "Hunter x Hunter (2011)",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/11/33657l.jpg",
+    "studio": "Madhouse",
+    "director": "Hiroshi Koujina",
+    "year": "2011-2014",
+    "episodeDuration": "23 min. por episódio",
+    "genres": ["Ação", "Aventura", "Fantasia", "Shounen", "Super Poder"],
+    "Premiered": "Fall 2011",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Gon Freecss descobre que seu pai, que ele acreditava estar morto, é um Hunter - um membro de elite da sociedade com habilidades incríveis. Gon embarca em uma jornada para se tornar um Hunter e encontrar seu pai.",
+    "episodes": [
+      {
+        "id": 1,
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": 2,
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "Type": "TV",
+    "title": "Fullmetal Alchemist: Brotherhood",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1629/108486l.jpg",
+    "studio": "Bones",
+    "director": "Yasuhiro Irie",
+    "year": "2009-2010",
+    "episodeDuration": "24 min. por episódio",
+    "genres": [
+      "Ação",
+      "Aventura",
+      "Comédia",
+      "Drama",
+      "Fantasia",
+      "Magia",
+      "Shounen"
+    ],
+    "Premiered": "Spring 2009",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Os irmãos Edward e Alphonse Elric usam a alquimia em uma tentativa desesperada de ressuscitar sua mãe, mas acabam pagando um preço terrível. Eles embarcam em uma jornada para encontrar a Pedra Filosofal e restaurar seus corpos.",
+    "episodes": [
+      {
+        "id": "",
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": "",
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": "",
+    "Type": "TV",
+    "title": "Code Geass: Hangyaku no Lelouch",
+    "subtitule": "Code Geass: Lelouch da Rebelião",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/5/50331l.jpg",
+    "studio": "Sunrise",
+    "director": "Goro Taniguchi",
+    "year": "2006-2007",
+    "episodeDuration": "24 min. por episódio",
+    "genres": [
+      "Ação",
+      "Mistério",
+      "Drama",
+      "Escolar",
+      "Ficção Científica",
+      "Superpoder",
+      "Militar"
+    ],
+    "Premiered": "Outono 2006",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Numa realidade alternativa, Lelouch Lamperouge, um jovem príncipe, obtém o poder do Geass e se torna o vigilante mascarado conhecido como Zero, liderando uma rebelião contra o opressivo Império Britânico.",
+    "episodes": [
+      {
+        "id": "",
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": "",
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  },
+  {
+    "id": "",
+    "Type": "TV",
+    "title": "Death Note",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/9/9453l.jpg",
+    "studio": "Madhouse",
+    "director": "Tetsurō Araki",
+    "year": "2006-2007",
+    "episodeDuration": "23 min. por episódio",
+    "genres": [
+      "Mistério",
+      "Policial",
+      "Psicológico",
+      "Sobrenatural",
+      "Suspense"
+    ],
+    "Premiered": "Outono 2006",
+    "Fansub": "Oficial",
+    "Linguagem": "Legendado",
+    "Resolução": "FHD",
+    "synopsis": "Light Yagami, um estudante do ensino médio, descobre um misterioso caderno chamado Death Note. Com o poder de matar qualquer pessoa cujo nome seja escrito nele, Light decide usar esse poder para livrar o mundo do mal e criar uma utopia onde ele é o deus do novo mundo.",
+    "episodes": [
+      {
+        "id": "",
+        "title": "Episódio 1",
+        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "duration": "24 minutos"
+      },
+      {
+        "id": "",
+        "title": "Episódio 2",
+        "videoUrl": "https://drive.google.com/file/d/15AlBEYGKjuHq2Y1Wv5Oe9OQ8zhV0uL6W/view?usp=sharing",
+        "duration": "24 minutos"
+      }
+    ]
+  }
+]

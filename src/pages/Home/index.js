@@ -35,7 +35,7 @@ export default function Home() {
       <Banner />
       <div className="bg-gray-900">
       <main className="container mx-auto py-8">
-      <section className="mb-5 flex justify-center">
+      <section>
         <PopularAnime />
       </section>
 
@@ -43,7 +43,7 @@ export default function Home() {
             <h2 className="text-2xl text-center text-white font-bold mb-5">
               <span className="border-b-4 border-emerald-600 pb-1"> Animes em Lançamento</span>
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {animeList.map((anime, index) => (
                 <a href=""><div
                   className="rounded-lg p-3"
