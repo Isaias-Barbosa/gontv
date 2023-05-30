@@ -4,6 +4,7 @@ import PopularAnime from "components/PopularAnime";
 import React, { useState } from 'react';
 import { MdPlayCircleFilled } from 'react-icons/md';
 import animes from 'json/lista.json';
+import LastAddedAnimesDublado from "components/LastAddedAnimesDublado";
 
 export default function Home() {
 
@@ -70,6 +71,9 @@ export default function Home() {
           </section>
           <section>
             <LastAddedAnimes animes={animes} />
+          </section>
+          <section>
+            <LastAddedAnimesDublado animes={animes} />
           </section>
         </main>
       </div>

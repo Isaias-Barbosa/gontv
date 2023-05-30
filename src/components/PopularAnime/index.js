@@ -1,55 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import animeDetails from 'json/animes.json';
 
 export default function PopularAnime() {
 
-    const popularAnimeList = [
-        {
-            id: 1,
-            title: 'Oshi no Ko',
-            image: 'https://myanimelist.net/images/anime/1812/134736l.jpg',
-        },
-        {
-            id: 2,
-            title: 'Steins;Gate',
-            image: 'https://myanimelist.net/images/anime/1935/127974l.jpg',
-        },
-        {
-            id: 3,
-            title: 'Shingeki no Kyojin',
-            image: 'https://cdn.myanimelist.net/images/anime/1517/100633l.jpg',
-        },
-        {
-            id: 4,
-            title: 'Angel Beats',
-            image: 'https://myanimelist.net/images/anime/1244/111115l.jpg',
-        },
-        {
-            id: 5,
-            title: 'Hunter x Hunter (2011)',
-            image: 'https://cdn.myanimelist.net/images/anime/1735/117788l.jpg',
-        },
-        {
-            id: 6,
-            title: 'Hunter x Hunter (2011)',
-            image: 'https://cdn.myanimelist.net/images/anime/1735/117788l.jpg',
-        },
-        {
-            id: 7,
-            title: 'Hunter x Hunter (2011)',
-            image: 'https://cdn.myanimelist.net/images/anime/1735/117788l.jpg',
-        },
-        {
-            id: 8,
-            title: 'Hunter x Hunter (2011)',
-            image: 'https://cdn.myanimelist.net/images/anime/1735/117788l.jpg',
-        },
-    ];
+    const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
 
-    popularAnimeList.sort((a, b) => a.id - b.id);
+    const truncateTitle = (title) => {
+      if (title.length > MAX_TITLE_LENGTH) {
+        return title.substring(0, MAX_TITLE_LENGTH) + '...';
+      }
+      return title;
+    };
+    
+    const [popularAnimeList, setPopularAnimeList] = useState([]);
+
+  useEffect(() => {
+    // Randomizar a lista de animes populares apenas uma vez ao montar o componente
+    const randomizedList = animeDetails.sort(() => Math.random() - 0.5).slice(0, 10);
+    setPopularAnimeList(randomizedList);
+  }, []);
+
 
     const settings = {
         dots: true,
@@ -102,15 +76,15 @@ export default function PopularAnime() {
             <h2 className="text-2xl text-center text-white font-bold mb-1 p-6">
                 <span className="border-b-4 border-emerald-600 pb-1">Animes Populares</span>
             </h2>
-            <div className="mx-8 sm:mx-auto md:mx-8 lg:mx-8 xl:mx-8 2xl:mx-0 max-w-8xl mb-6">
+            <div className="mx-8 sm:mx-auto md:mx-8 lg:mx-8 xl:mx-8 3xl:mx-auto max-w-8xl mb-6">
                 <Slider {...settings}>
                     {popularAnimeList.map((anime) => (
                         <Link to={`/animes/${anime.id}`} key={anime.id}>
                             <div className="flex flex-col items-center mx-2">
                             <div className="mb-4">
-                                    <img src={anime.image} alt={anime.title} className="w-full h-auto rounded-lg" />
+                                    <img src={anime.coverImage} alt={anime.title} className="h-80 mb-3 rounded-lg" />
                                 </div>
-                                <h3 className="text-lg text-white font-semibold">{anime.title}</h3>
+                                <h3 className="text-lg text-center text-white font-semibold">{truncateTitle(anime.title)}</h3>
                             </div>
                         </Link>
                     ))}
@@ -119,3 +93,4 @@ export default function PopularAnime() {
         </section>
     )
 }
+

@@ -4,7 +4,7 @@ export default function SingleAnime({ anime }) {
 
   const location = useLocation();
   const query = new URLSearchParams(location.search);
-  const language = query.get('language');
+  const language = query.get('Linguagem');
 
 
   return (
@@ -36,22 +36,28 @@ export default function SingleAnime({ anime }) {
               <strong>Linguagem:</strong> {anime.Linguagem}
             </p>
             <p className="text-white">
+              <strong>Temporada: </strong> {anime.Premiered}
+            </p>
+            <p className="text-white">
+              <strong>Fansub: </strong> {anime.Fansub}
+            </p>
+            <p className="text-white">
               <strong>Gêneros:</strong> {anime.genres.join(', ')}
             </p>
           </div>
         </div>
-        <div className="my-8">
+        <div className="my-5">
           <h3 className="text-2xl text-white font-bold mb-4 text-center">Sinopse</h3>
-          <p className="text-white text-justify">{anime.synopsis}</p>
+          <p className="text-white text-1xl flex ms-4 text-justify">{anime.synopsis}</p>
         </div>
         <div>
-          <h3 className="text-2xl text-white font-bold mb-4">Episódios</h3>
+          <h3 className="text-2xl ms-4 text-white font-bold mb-4">Episódios</h3>
           <ul>
             {anime.episodes.map((episode) => (
               <li key={episode.id}>
                   <Link 
-                  to={`/singleplay/${anime.id}/${episode.id}?language=${language}`}
-                  className="font-bold text-white"
+                  to={`/singleplay/${anime.id}/${episode.id}`}
+                  className="font-bold ms-4 text-white"
                   >
                   {episode.title}
                 </Link>

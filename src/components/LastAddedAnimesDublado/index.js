@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
-import lastAddedAnimeData from 'json/animes.json'
+import lastAddedAnimeData from 'json/animesDub.json'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-export default function LastAddedAnimes() {
+export default function LastAddedAnimesDublado() {
 
-  const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
+    const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
 
     const truncateTitle = (title) => {
       if (title.length > MAX_TITLE_LENGTH) {
@@ -14,7 +14,7 @@ export default function LastAddedAnimes() {
       }
       return title;
     };
-  
+
   const limitedAnimes = lastAddedAnimeData.slice(0, 10);
 
   const settings = {
@@ -58,13 +58,13 @@ export default function LastAddedAnimes() {
   <>
     <div className='py-8'>
     <h2 className="text-2xl text-white text-center font-bold mb-10">
-    <span className="border-b-4 border-emerald-600 pb-1"> Novos Animes Legendados</span>
+    <span className="border-b-4 border-emerald-600 pb-1"> Novos Animes Dublados</span>
       </h2>
       <div className="mx-8 sm:mx-auto md:mx-8 lg:mx-8 xl:mx-8 3xl:mx-auto max-w-8xl">
     <Slider {...settings}>
     {limitedAnimes && limitedAnimes.length > 0 ? (
               limitedAnimes.map((anime) => (
-        <Link to={`/animes/${anime.id}`}>
+        <Link to={`/animesDublados/${anime.id}`}>
           <div key={anime.id} className="flex flex-col items-center">
           <img src={anime.coverImage} alt={anime.title} className="h-80 mb-3 rounded-lg" />
           <h3 className="text-lg text-white text-center font-semibold">{truncateTitle(anime.title)}</h3>
