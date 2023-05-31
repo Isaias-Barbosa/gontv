@@ -1,21 +1,21 @@
-import SinglePlay from 'components/SinglePlay';
+import Episodio from 'components/Episodio';
 import animeData from 'json/animes.json';
-import animeDataDubs from 'json/animesDub.json';
 import { useParams } from 'react-router-dom';
 
 
 
 export default function SinglePlayPage() {
 
-    const { animeId, episodeId } = useParams();
-    const animeIdInt = parseInt(animeId);
-    const episodeIdInt = parseInt(episodeId);
+  const { slug } = useParams();
+  const anime = animeData.find((anime) => anime.slug === slug);
 
-    // Combina os dois conjuntos de dados em uma única matriz
-    const allAnimeDetails = [...animeData, ...animeDataDubs];
-    
-    const anime = allAnimeDetails.find(anime => anime.id === animeIdInt);
-    const selectedEpisode = anime?.episodes.find(episode => episode.id === episodeIdInt);
+  if (!anime || !anime.episodes || anime.episodes.length === 0) {
+    return <div>Anime não encontrado ou sem episódios</div>;
+  }
+
+  const primeiroEpisodio = anime.episodes[0];
   
-    return selectedEpisode ? <SinglePlay episode={selectedEpisode} /> : <div>Episódio não encontrado</div>;
+  
+
+  return <Episodio anime={anime} episodio={primeiroEpisodio} />;
   }

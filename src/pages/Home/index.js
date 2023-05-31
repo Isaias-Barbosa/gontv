@@ -1,14 +1,17 @@
 import Banner from "components/Banner";
-import LastAddedAnimes from "components/LastAddedAnimes";
 import PopularAnime from "components/PopularAnime";
 import React, { useState } from 'react';
 import { MdPlayCircleFilled } from 'react-icons/md';
-import animes from 'json/lista.json';
-import LastAddedAnimesDublado from "components/LastAddedAnimesDublado";
+import animesG from 'json/lista.json';
+import LastAddedAnimes from "components/LastAddedAnimes";
+import LastAddedAnimesDublado from 'components/LastAddedAnimesDublado';
+import animes from 'json/animes.json';
 
 export default function Home() {
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const legendadoAnimes = animesG.filter((animeG) => animeG.language === 'Legendado' );
 
   const animeList = [
     { title: 'Boku no Hero', episode: 'Episódio 10', resolution: 'FHD', image: 'https://i0.wp.com/img1.ak.crunchyroll.com/i/spire3-tmb/33c2d010cf4238ce66cc01f9335055cd1499180836_full.jpg' },
@@ -44,7 +47,7 @@ export default function Home() {
             <h2 className="text-2xl text-center text-white font-bold mb-5">
               <span className="border-b-4 border-emerald-600 pb-1"> Animes em Lançamento</span>
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
               {animeList.map((anime, index) => (
                 <a href=""><div
                   className="rounded-lg p-3"
@@ -70,7 +73,7 @@ export default function Home() {
             </div>
           </section>
           <section>
-            <LastAddedAnimes animes={animes} />
+            <LastAddedAnimes animes={legendadoAnimes} />
           </section>
           <section>
             <LastAddedAnimesDublado animes={animes} />

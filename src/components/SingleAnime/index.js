@@ -1,11 +1,6 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function SingleAnime({ anime }) {
-
-  const location = useLocation();
-  const query = new URLSearchParams(location.search);
-  const language = query.get('Linguagem');
-
 
   return (
     <div className="bg-gray-900">
@@ -33,7 +28,7 @@ export default function SingleAnime({ anime }) {
               <strong>Duração por Episódio:</strong> {anime.episodeDuration}
             </p>
             <p className="text-white">
-              <strong>Linguagem:</strong> {anime.Linguagem}
+              <strong>Linguagem:</strong> {anime.language}
             </p>
             <p className="text-white">
               <strong>Temporada: </strong> {anime.Premiered}
@@ -56,10 +51,11 @@ export default function SingleAnime({ anime }) {
             {anime.episodes.map((episode) => (
               <li key={episode.id}>
                   <Link 
-                  to={`/singleplay/${anime.id}/${episode.id}`}
+                  to={`/episodio/${anime.slug}/${episode.titleSlug}/${episode.languageEpisode}`}
                   className="font-bold ms-4 text-white"
+                  
                   >
-                  {episode.title}
+                  {episode.titleEpisodio}
                 </Link>
                 - <span className="text-white">Duração: {episode.duration}</span>
               </li>

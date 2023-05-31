@@ -7,7 +7,7 @@ import animeDetails from 'json/animes.json';
 
 export default function PopularAnime() {
 
-    const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
+    const MAX_TITLE_LENGTH = 25; // Define o número máximo de caracteres do título
 
     const truncateTitle = (title) => {
       if (title.length > MAX_TITLE_LENGTH) {
@@ -18,16 +18,16 @@ export default function PopularAnime() {
     
     const [popularAnimeList, setPopularAnimeList] = useState([]);
 
-  useEffect(() => {
-    // Randomizar a lista de animes populares apenas uma vez ao montar o componente
-    const randomizedList = animeDetails.sort(() => Math.random() - 0.5).slice(0, 10);
-    setPopularAnimeList(randomizedList);
-  }, []);
+    useEffect(() => {
+        // Filtrar a lista de animes populares com a propriedade "top" igual a true
+        const filteredList = animeDetails.filter((anime) => anime.top === true).slice(0, 10);
+        setPopularAnimeList(filteredList);
+      }, []);
 
 
     const settings = {
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 6,
         slidesToScroll: 6,
@@ -71,9 +71,11 @@ export default function PopularAnime() {
         
     };
 
+
+
     return (
         <section>
-            <h2 className="text-2xl text-center text-white font-bold mb-1 p-6">
+            <h2 className="text-2xl text-center text-white font-bold mb-4 p-6">
                 <span className="border-b-4 border-emerald-600 pb-1">Animes Populares</span>
             </h2>
             <div className="mx-8 sm:mx-auto md:mx-8 lg:mx-8 xl:mx-8 3xl:mx-auto max-w-8xl mb-6">
@@ -81,8 +83,13 @@ export default function PopularAnime() {
                     {popularAnimeList.map((anime) => (
                         <Link to={`/animes/${anime.id}`} key={anime.id}>
                             <div className="flex flex-col items-center mx-2">
-                            <div className="mb-4">
-                                    <img src={anime.coverImage} alt={anime.title} className="h-80 mb-3 rounded-lg" />
+                            <div className="aspect-ratio-box">
+                                    <img 
+                                    src={anime.coverImage} 
+                                    alt={anime.title} 
+                                    className="w-full h-full object-cover mb-4"
+                                    
+                                    />
                                 </div>
                                 <h3 className="text-lg text-center text-white font-semibold">{truncateTitle(anime.title)}</h3>
                             </div>

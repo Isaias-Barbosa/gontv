@@ -1,18 +1,15 @@
 import {useParams } from 'react-router-dom'
 import SingleAnime from 'components/SingleAnime';
-import animeDetails from 'json/animes.json';
-import animeDetailsDub from 'json/animesDub.json';
+import animes from 'json/animes.json';
+
 
 
 
 export default function SingleAnimePage() {
 
-  const { id } = useParams();
-
-  // Combina os dois conjuntos de dados em uma única matriz
-  const allAnimeDetails = [...animeDetails, ...animeDetailsDub];
-
-  const anime = allAnimeDetails.find((anime) => anime.id === parseInt(id));
+  const { slug } = useParams();
+  
+  const anime = animes.find((anime) => anime.slug === slug);
   
 
   if (!anime) {

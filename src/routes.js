@@ -17,12 +17,11 @@ function AppRoutes() {
     <ScrollToTop />
     <Menu />
     <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/animes" element={<Animes />} />
+    <Route path="/" element={<Home />} />
+        <Route path="/animes/" element={<Animes />} />
         <Route path="/animesDublados" element={<AnimesDub />} />
-        <Route path="/animesDublados/:id*" element={<SingleAnimePage />} />
-        <Route path="/animes/:id*" element={<SingleAnimePage />} />
-        <Route path="/singleplay/:animeId/:episodeId/*" element={<SinglePlayPage />} />
+        <Route path="/animes/:slug/*" element={<SingleAnimePage />} />
+        <Route path="/episodio/:slug/:titleSlug/:languageEpisode/*" element={<SinglePlayPage />} />
       </Routes>
     <Rodape />
   </BrowserRouter>

@@ -60,14 +60,16 @@ export default function LastAddedAnimes() {
     <h2 className="text-2xl text-white text-center font-bold mb-10">
     <span className="border-b-4 border-emerald-600 pb-1"> Novos Animes Legendados</span>
       </h2>
-      <div className="mx-8 sm:mx-auto md:mx-8 lg:mx-8 xl:mx-8 3xl:mx-auto max-w-8xl">
+      <div className="mx-7 sm:mx-auto md:mx-7 lg:mx-7 xl:mx-auto 3xl:mx-auto max-w-8xl">
     <Slider {...settings}>
-    {limitedAnimes && limitedAnimes.length > 0 ? (
+            {limitedAnimes && limitedAnimes.length > 0 ? (
               limitedAnimes.map((anime) => (
-        <Link to={`/animes/${anime.id}`}>
-          <div key={anime.id} className="flex flex-col items-center">
-          <img src={anime.coverImage} alt={anime.title} className="h-80 mb-3 rounded-lg" />
+                <Link to={`/animes/${anime.slug}`}>
+          <div key={anime.id} className="flex flex-col items-center object-cover mx-2">
+          <div className="aspect-ratio-box">
+          <img src={anime.coverImage} alt={anime.title} className="w-full h-full object-cover mb-4" />
           <h3 className="text-lg text-white text-center font-semibold">{truncateTitle(anime.title)}</h3>
+        </div>
         </div>
         </Link>
       ))
