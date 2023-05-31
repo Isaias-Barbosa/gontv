@@ -81,7 +81,7 @@ export default function PopularAnime() {
             <div className="mx-8 sm:mx-auto md:mx-8 lg:mx-8 xl:mx-8 3xl:mx-auto max-w-8xl mb-6">
                 <Slider {...settings}>
                     {popularAnimeList.map((anime) => (
-                        <Link to={`/animes/${anime.id}`} key={anime.id}>
+                        <Link to={`/animes/${anime.slug}`} key={anime.id}>
                             <div className="flex flex-col items-center mx-2">
                             <div className="aspect-ratio-box">
                                     <img 

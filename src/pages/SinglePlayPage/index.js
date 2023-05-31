@@ -6,16 +6,23 @@ import { useParams } from 'react-router-dom';
 
 export default function SinglePlayPage() {
 
-  const { slug } = useParams();
+  const { slug, titleSlug, languageEpisode } = useParams();
   const anime = animeData.find((anime) => anime.slug === slug);
 
   if (!anime || !anime.episodes || anime.episodes.length === 0) {
     return <div>Anime não encontrado ou sem episódios</div>;
   }
 
-  const primeiroEpisodio = anime.episodes[0];
-  
-  
+  const episode = anime.episodes.find(
+    (episode) => episode.titleSlug === titleSlug && episode.languageEpisode === languageEpisode
+  );
 
-  return <Episodio anime={anime} episodio={primeiroEpisodio} />;
+   console.log(anime)
+  if (!episode) {
+    return <div>Episódio não encontrado</div>;
   }
+
+  return <Episodio anime={anime} episodio={episode} />;
+  }
+  
+  

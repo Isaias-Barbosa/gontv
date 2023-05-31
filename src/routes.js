@@ -21,10 +21,11 @@ function AppRoutes() {
         <Route path="/animes/" element={<Animes />} />
         <Route path="/animesDublados" element={<AnimesDub />} />
         <Route path="/animes/:slug/*" element={<SingleAnimePage />} />
-        <Route path="/episodio/:slug/:titleSlug/:languageEpisode/*" element={<SinglePlayPage />} />
+        <Route path="/animes/:slug/:titleSlug/:languageEpisode/*" element={<SinglePlayPage />} />
       </Routes>
     <Rodape />
   </BrowserRouter>
+  
 
   )
 }

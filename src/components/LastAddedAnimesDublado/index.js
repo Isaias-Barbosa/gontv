@@ -58,11 +58,17 @@ export default function LastAddedAnimesDublado({ animes }) {
 
   return (
     <>
-      <div className='py-8'>
-        <h2 className="text-2xl text-white text-center font-bold mb-10">
-          <span className="border-b-4 border-emerald-600 pb-1"> Novos Animes Dublados</span>
+      <div className="py-8">
+      <div className="flex justify-center items-center mb-6">
+        <h2 className="text-2xl text-white font-bold">
+          <span className="border-b-4 border-emerald-600 pb-1">Novos Animes Dublados</span>
         </h2>
-        <div className="mx-8 sm:mx-auto md:mx-7 lg:mx-7 xl:mx-8 3xl:mx-auto max-w-8xl">
+      </div>
+      <div className='flex justify-end py-3 mx-2'>
+      <Link to="/animesDublados" className="text-white  text-md">
+        <span className='border-b-2 border-emerald-600 pb-1'>Ver todos</span></Link>
+      </div>
+        <div className="mx-7 sm:mx-auto md:mx-7 lg:mx-7 xl:mx-8 3xl:mx-auto max-w-8xl">
           <Slider {...settings}>
             {limitedAnimes && limitedAnimes.length > 0 ? (
               limitedAnimes.map((anime) => (

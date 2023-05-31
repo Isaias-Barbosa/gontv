@@ -51,7 +51,7 @@ export default function SingleAnime({ anime }) {
             {anime.episodes.map((episode) => (
               <li key={episode.id}>
                   <Link 
-                  to={`/episodio/${anime.slug}/${episode.titleSlug}/${episode.languageEpisode}`}
+                  to={`/animes/${anime.slug}/${episode.titleSlug}/${episode.languageEpisode}`}
                   className="font-bold ms-4 text-white"
                   
                   >
