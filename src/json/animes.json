@@ -25,15 +25,15 @@
         "titleSlug": "episodio-1",
         "videoUrl": [
           {
-            "resolucao": "FHD",
+            "resolution": "FHD",
             "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
-            "resolucao": "HD",
+            "resolution": "HD",
             "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
-            "resolucao": "SD",
+            "resolution": "SD",
             "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
@@ -47,15 +47,15 @@
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
-            "resolucao": "FHD",
+            "resolution": "FHD",
             "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
-            "resolucao": "HD",
+            "resolution": "HD",
             "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
-            "resolucao": "SD",
+            "resolution": "SD",
             "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
@@ -69,15 +69,15 @@
         "titleSlug": "episodio-3",
         "videoUrl": [
           {
-            "resolucao": "FHD",
+            "resolution": "FHD",
             "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
-            "resolucao": "HD",
+            "resolution": "HD",
             "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
-            "resolucao": "SD",
+            "resolution": "SD",
             "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
@@ -91,15 +91,15 @@
         "titleSlug": "episodio-4",
         "videoUrl": [
           {
-            "resolucao": "FHD",
+            "resolution": "FHD",
             "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
-            "resolucao": "HD",
+            "resolution": "HD",
             "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
-            "resolucao": "SD",
+            "resolution": "SD",
             "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
@@ -113,15 +113,15 @@
         "titleSlug": "episodio-5",
         "videoUrl": [
           {
-            "resolucao": "FHD",
+            "resolution": "FHD",
             "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
-            "resolucao": "HD",
+            "resolution": "HD",
             "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
-            "resolucao": "SD",
+            "resolution": "SD",
             "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
@@ -135,15 +135,15 @@
         "titleSlug": "episodio-6",
         "videoUrl": [
           {
-            "resolucao": "FHD",
+            "resolution": "FHD",
             "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
-            "resolucao": "HD",
+            "resolution": "HD",
             "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
-            "resolucao": "SD",
+            "resolution": "SD",
             "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
@@ -157,15 +157,15 @@
         "titleSlug": "episodio-7",
         "videoUrl": [
           {
-            "resolucao": "FHD",
+            "resolution": "FHD",
             "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
-            "resolucao": "HD",
+            "resolution": "HD",
             "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
-            "resolucao": "SD",
+            "resolution": "SD",
             "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],

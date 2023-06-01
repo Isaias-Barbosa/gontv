@@ -60,7 +60,7 @@ export default function Menu() {
           <FiMenu size={34} />
         </button>
 
-        <div className="flex items-center  bg-gray-900 p-4">
+        <div className="flex items-center bg-gray-900 p-4">
           <div className="flex justify-center flex-grow">
             <div className="flex items-center ms-7 bg-gray-800 rounded-lg justify-center ">
               <input
