@@ -62,7 +62,7 @@ export default function LastAddedAnimes() {
           <span className="border-b-4 border-emerald-600 pb-1">Novos Animes Legendados</span>
         </h2>
       </div>
-      <div className="container mx-auto px-7 max-w-8xl mb-6 xl:px-1 2xl:px-1">
+      <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
         <Slider {...settings}>
           {limitedAnimes && limitedAnimes.length > 0 ? (
             limitedAnimes.map((anime) => (

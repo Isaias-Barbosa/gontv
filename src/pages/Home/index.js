@@ -47,14 +47,16 @@ export default function Home() {
             <h2 className="text-2xl text-center text-white font-bold mb-5">
               <span className="border-b-4 border-emerald-600 pb-1"> Animes em Lançamento</span>
             </h2>
+            <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
               {animeList.map((anime, index) => (
-                <a href=""><div
-                  className="rounded-lg p-3"
-                  key={index}
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                >
+               <a href="" key={index}>
+               <div
+                 className="p-3"
+                 style={{ maxWidth: '320px', height: '100%' }}
+                 onMouseEnter={() => setHoveredIndex(index)}
+                 onMouseLeave={() => setHoveredIndex(null)}
+               >
                   <div className="relative">
                     {hoveredIndex === index && (
                       <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
@@ -70,6 +72,7 @@ export default function Home() {
                   <p className="text-base text-gray-500 text-center font-bold">{anime.episode}</p>
                 </div></a>
               ))}
+            </div>
             </div>
           </section>
           <section>

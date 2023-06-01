@@ -81,7 +81,7 @@ export default function PopularAnime() {
             <h2 className="text-2xl text-center text-white font-bold mb-4 p-6">
                 <span className="border-b-4 border-emerald-600 pb-1">Animes Populares</span>
             </h2>
-            <div className="container mx-auto px-7 max-w-8xl mb-6 xl:px-1 2xl:px-1">
+            <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
                 <Slider {...settings}>
                     {popularAnimeList.map((anime) => (
                         <div key={anime.id} className="aspect-ratio-box">
