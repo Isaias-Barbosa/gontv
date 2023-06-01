@@ -63,6 +63,17 @@ code {
   opacity: 1;
 }
 
+.gradient-overlay {
+  opacity: 0.9; /* Ajuste a opacidade do gradiente conforme necessário */
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .gradient-overlay {
+    background-color: rgba(0, 0, 0, 0.9); /* Ajuste a cor e a opacidade do gradiente conforme necessário */
+    backdrop-filter: blur(30px); /* Ajuste o desfoque do gradiente conforme necessário */
+  }
+}
+
 .custom-height {
   height: 30vh;
 }
