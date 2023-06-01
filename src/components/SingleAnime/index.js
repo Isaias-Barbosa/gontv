@@ -7,10 +7,10 @@ export default function SingleAnime({ anime }) {
       <main className="container mx-auto py-7 relative" style={{ position: "relative", overflow: "hidden" }}>
         <div className="background-container relative">
           <div
-            className="w-full h-auto bg-cover bg-center"
+            className="w-full h-auto bg-cover bg-center rounded-lg"
             style={{
               backgroundImage: `url(${anime.background})`,
-              filter: "brightness(0.9) contrast(1.1) opacity(0.2)",
+              filter: "brightness(0.8) contrast(1.1) opacity(0.2)",
               boxShadow: "0 0 10px rgba(0, 0, 0, 0.8)",
               position: "absolute",
               top: 0,
@@ -19,14 +19,14 @@ export default function SingleAnime({ anime }) {
               bottom: 0,
             }}
           />
-          <div className="content-container flex flex-col items-start">
-            <div className="flex md:flex-row sm:flex-col items-start relative">
+          <div className="content-container flex flex-col items-start ">
+            <div className="flex flex-col xl:flex-row lg:flex-row 2xl:flex-row md:flex-row  items-start relative">
               <div className="flex flex-col p-4 md:p-8 md:w-1/2 md:h-auto md:items-start md:justify-center md:flex-row md:flex-wrap md">
-                <div className="w-full h-auto mx-auto md:ml-0" style={{ position: "relative", boxShadow: "0 0 60px rgba(0, 0, 0, 0.9)", opacity: 0.9 }}>
-                  <img src={anime.coverImage} alt={anime.title} className="w-full h-full" style={{ position: "relative" }} />
+                <div className="w-full h-auto mx-auto md:ml-0 " style={{ position: "relative", boxShadow: "0 0 60px rgba(0, 0, 0, 0.9)", opacity: 0.9 }}>
+                  <img src={anime.coverImage} alt={anime.title} className="w-full h-full rounded-lg " style={{ position: "relative" }} />
                 </div>
               </div>
-              <div className="flex flex-col md:col-span-3e py-1 p-3 mt-5 ml-auto">
+              <div className="flex flex-col md:col-span-3e py-1 p-3 mt-5 md:mt-0 md:ml-5">
                 <h1 className="text-3xl text-white font-bold mb-2">
                   {anime.title}
                 </h1>
