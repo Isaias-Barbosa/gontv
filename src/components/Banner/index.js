@@ -45,8 +45,7 @@ export default function Banner() {
           {carouselImages.map((capa, index) => (
             <div key={index} className="relative">
               <div
-            className="bg-cover bg-center w-full h-96"
-            style={{ backgroundImage: `url(${capa.image})` }}
+            className="bg-cover bg-center w-full" style={{ backgroundImage: `url(${capa.image})`, height: '600px' }}
           >
         <div className="absolute inset-0 bg-black opacity-60"></div>
           <div className="absolute inset-0 flex flex-col justify-center items-center text-white">

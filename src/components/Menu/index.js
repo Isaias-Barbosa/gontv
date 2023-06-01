@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { BsDiscord, BsAndroid2 } from 'react-icons/bs';
 import { IoIosNotifications } from 'react-icons/io';
+import { IoLogInOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
 
@@ -52,11 +53,13 @@ export default function Menu() {
     <>
       <div className="relative">
         {isOpen && (
-          <div className="fixed inset-0 bg-gray-900 opacity-80 z-50"></div>
+          <div className="fixed inset-0 bg-black-light  opacity-80 z-50"></div>
         )}
 
+   
+
         <button
-          className="fixed top-3 left-1  text-white p-1 z-50 md:fixed md:top-3 md:left-8 md:bg-transparent md:text-white md:p-0 md:w-12 md:h-12 md:flex md:justify-center md:items-center"
+          className="fixed top-1 left-4 text-white p-1 z-50  md:fixed md:top-1 md:left-8 md:bg-transparent md:text-white md:p-0 md:w-12 md:h-12 md:flex md:justify-center md:items-center"
           onClick={toggleMenu}
         >
           <FiMenu size={34} />
@@ -68,9 +71,10 @@ export default function Menu() {
               <input
                 type="search"
                 placeholder="Pesquisar"
-                className={`bg-transparent text-white px-1 py-1 rounded-lg focus:outline-none w-${searchSize}`}
+                className={`bg-transparent items-center text-white px-1 py-1 rounded-lg focus:outline-none w-${searchSize} sm:w-32 md:w-48 lg:w-56 xl:w-80 2xl:w-96`}
                 onChange={handleSearchChange}
-              /><a className='text-white border bg-gray-900 rounded-md w-12 text-center mx-3' href='#'>Filtro</a>
+              />
+              <a className='text-white border bg-gray-900 rounded-md w-12 text-center mx-3' href='#'>Filtro</a>
             </div>
             {!isMobile && (
               <div className="flex items-center ml-3 ">
@@ -80,19 +84,17 @@ export default function Menu() {
             )}
           </div>
           {!isMobile && (
-            <IoIosNotifications className='text-white bg-gray-900 border rounded-full' size={34} />
-          )}
-          {!isMobile && (
-            <button className="bg-emerald-700 hover:bg-emerald-500 text-white px-6 py-2 ml-2 rounded-lg">
-              Login
-            </button>
+            <button className="bg-emerald-700 hover:bg-emerald-500 text-white px-4 py-2 mx-2 rounded-lg flex items-center">
+            <IoLogInOutline className="mr-2" size={20} />
+            <span className='text-center'>Login</span>
+          </button>
           )}
         </div>
 
 
         {isOpen && (
-          <div className="fixed top-0 left-0 bg-gray-900 w-60 h-full z-50">
-            <nav className="flex flex-col justify-between items-center bg-gray-900 p-10">
+          <div className="fixed top-0 left-0 bg-black-light w-55 h-full z-50">
+            <nav className="flex flex-col justify-between items-center bg-black-light  p-10">
               <div className="flex justify-between w-full">
                 <div className="text-white font-bold text-xl mb-8">{siteTitle}</div>
                 <button
