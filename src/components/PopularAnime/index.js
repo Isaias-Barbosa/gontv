@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { MdPlayCircleFilled } from 'react-icons/md';
 
 import animeDetails from 'json/animes.json';
 
@@ -10,7 +11,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 export default function PopularAnime() {
 
-    const MAX_TITLE_LENGTH = 25; // Define o número máximo de caracteres do título
+    const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
 
     const truncateTitle = (title) => {
         if (title.length > MAX_TITLE_LENGTH) {
@@ -78,25 +79,30 @@ export default function PopularAnime() {
 
     return (
         <section>
-            <h2 className="text-2xl text-center text-white font-bold mb-4 p-6">
+            <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
+            <h2 className="text-2xl text-start text-white font-bold mb-4 p-1">
                 <span className="border-b-4 border-emerald-600 pb-1">Animes Populares</span>
             </h2>
-            <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
                 <Slider {...settings}>
                     {popularAnimeList.map((anime) => (
-                        <div key={anime.id} className="aspect-ratio-box">
-                        <Link to={`/animes/${anime.slug}`}>
-                        <div className="anime-cover">
-                        <img
-                            src={anime.coverImage}
-                            alt={anime.title}
-                            className="w-full h-full px-1 object-cover mb-3"
-                            style={{ maxWidth: '260px', maxHeight: '325px', minHeight: '200px'}}
-                        />
+                        <div className="aspect-ratio-box" >
+                            <div key={anime.id} className="relative">
+                                <Link to={`/animes/${anime.slug}`}>
+                                    <div className="anime-cover">
+                                        <img
+                                            src={anime.coverImage}
+                                            alt={anime.title}
+                                            className="w-full h-auto px-1 object-cover custom-height mb-1"
+                                        />
+                                        <div className="overlay"></div>
+                                        <button className="play-button">
+                                            <MdPlayCircleFilled className="text-white text-5xl" />
+                                        </button>
+                                    </div>
+                                </Link>
+                                <h3 className="text-lg text-center text-white font-semibold">{truncateTitle(anime.title)}</h3>
+                            </div>
                         </div>
-                        </Link>
-                        <h3 className="text-lg text-center text-white font-semibold">{truncateTitle(anime.title)}</h3>
-                    </div>
                     ))}
                 </Slider>
             </div>

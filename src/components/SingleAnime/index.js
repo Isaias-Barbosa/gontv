@@ -69,7 +69,8 @@ export default function SingleAnime({ anime }) {
         </div>
         <div>
           <h3 className="text-2xl text-center text-white font-bold mb-4">Episódios</h3>
-          <div className="grid grid-cols-3 md:grid-cols-4 gap-4">
+          <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
             {anime.episodes.map((episode) => (
               <div key={episode.id} className="flex flex-col items-center">
                 <Link to={`/animes/${anime.slug}/${episode.titleSlug}/${episode.languageEpisode}`}>
@@ -81,6 +82,7 @@ export default function SingleAnime({ anime }) {
                 <p className="text-white text-sm text-start ms-3">{episode.titleEpisodio}</p>
               </div>
             ))}
+          </div>
           </div>
         </div>
       </main >

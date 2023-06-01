@@ -9,9 +9,18 @@ import animes from 'json/animes.json';
 
 export default function Home() {
 
+  const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
+
+    const truncateTitle = (title) => {
+        if (title.length > MAX_TITLE_LENGTH) {
+            return title.substring(0, MAX_TITLE_LENGTH) + '...';
+        }
+        return title;
+    };
+
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const legendadoAnimes = animesG.filter((animeG) => animeG.language === 'Legendado' );
+  const legendadoAnimes = animesG.filter((animeG) => animeG.language === 'Legendado');
 
   const animeList = [
     { title: 'Boku no Hero', episode: 'Episódio 10', resolution: 'FHD', image: 'https://i0.wp.com/img1.ak.crunchyroll.com/i/spire3-tmb/33c2d010cf4238ce66cc01f9335055cd1499180836_full.jpg' },
@@ -38,49 +47,50 @@ export default function Home() {
     <>
       <Banner />
       <div className="bg-gray-900">
-      <main className="container mx-auto py-8">
-      <section>
-        <PopularAnime />
-      </section>
+        <main className="container mx-auto py-8">
+          <div className="section">
+            <PopularAnime />
+          </div>
 
-          <section>
-            <h2 className="text-2xl text-center text-white font-bold mb-5">
-              <span className="border-b-4 border-emerald-600 pb-1"> Animes em Lançamento</span>
-            </h2>
+          <div className="section">
+
             <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
-              {animeList.map((anime, index) => (
-               <a href="" key={index}>
-               <div
-                 className="p-3"
-                 style={{ maxWidth: '320px', height: '100%' }}
-                 onMouseEnter={() => setHoveredIndex(index)}
-                 onMouseLeave={() => setHoveredIndex(null)}
-               >
-                  <div className="relative">
-                    {hoveredIndex === index && (
-                      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                        <MdPlayCircleFilled className="text-white text-5xl" />
+            <h2 className="text-2xl text-start text-white font-bold mb-5 p-1 ">
+              <span className="border-b-4 border-emerald-600 pb-1"> Lançamentos</span>
+            </h2>
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
+                {animeList.map((anime, index) => (
+                  <a href="" key={index}>
+                    <div
+                      className="p-1"
+                      style={{ maxWidth: '320px', height: '100%' }}
+                      onMouseEnter={() => setHoveredIndex(index)}
+                      onMouseLeave={() => setHoveredIndex(null)}
+                    >
+                      <div className="relative">
+                        {hoveredIndex === index && (
+                          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                            <MdPlayCircleFilled className="text-white text-5xl" />
+                          </div>
+                        )}
+                        <div className="absolute bg-emerald-700 rounded-none m-2 p-1">
+                          <p className="text-white text-xs font-bold">{anime.resolution}</p>
+                        </div>
+                        <img src={anime.image} alt={anime.title} className="w-full h-full object-cover" />
                       </div>
-                    )}
-                    <div className="absolute bg-emerald-700 rounded-none m-2 p-1">
-                      <p className="text-white text-xs font-bold">{anime.resolution}</p>
-                    </div>
-                    <img src={anime.image} alt={anime.title} className="w-full h-full object-cover mb-4" />
-                  </div>
-                  <h3 className="text-lg text-center text-white font-bold">{anime.title}</h3>
-                  <p className="text-base text-gray-500 text-center font-bold">{anime.episode}</p>
-                </div></a>
-              ))}
+                      <h3 className="text-center text-white font-bold text-base sm:text-lg md:text-xl xl:text-lg 2xl:text-lg">{truncateTitle(anime.title)}</h3>
+                      <p className="text-base text-gray-500 text-center font-bold sm:text-sm md:text-base xl:text-sm 2xl:text-md">{anime.episode}</p>
+                    </div></a>
+                ))}
+              </div>
             </div>
-            </div>
-          </section>
-          <section>
+          </div>
+          <div className="section">
             <LastAddedAnimes animes={legendadoAnimes} />
-          </section>
-          <section>
+          </div>
+          <div className="section">
             <LastAddedAnimesDublado animes={animes} />
-          </section>
+          </div>
         </main>
       </div>
     </>

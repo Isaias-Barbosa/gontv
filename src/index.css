@@ -34,3 +34,124 @@ code {
 .anime-cover:hover::before {
   background-color: rgba(0, 0, 0, 0.3); /* Altere a cor aqui para a cor desejada */
 }
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.aspect-ratio-box:hover .play-button {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.aspect-ratio-box:hover .overlay {
+  opacity: 1;
+}
+
+.custom-height {
+  height: 30vh;
+}
+
+/* TELA DE ADICIONADOS */
+
+@media (max-width: 640px) {
+  .custom-height-last {
+    height: 28vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-height-last {
+    height: 40vh;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .custom-height-last {
+    height: 27vh;
+  }
+}
+
+@media (min-width: 1366px) {
+  .custom-height-last {
+    height: 45vh;
+  }
+}
+
+@media (min-width: 1440px) {
+  .custom-height-last {
+    height: 34vh;
+    
+  }
+}
+
+@media (min-width: 1560px) {
+  .custom-height-last {
+    height: 31vh;
+    
+  }
+}
+
+@media (min-width: 2560px) {
+  .custom-height-last {
+    height: 23vh;
+  }
+}
+
+
+
+/* TELAS DE POPULARES*/
+
+@media (max-width: 640px) {
+  .custom-height {
+    height: 26vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-height {
+    height: 40vh;
+  }
+}
+
+@media (min-width: 1366px) {
+  .custom-height {
+    height: 45vh;
+  }
+}
+
+@media (min-width: 1440px) {
+  .custom-height {
+    height: 34vh;
+    
+  }
+}
+
+@media (min-width: 1560px) {
+  .custom-height {
+    height: 31vh;
+    
+  }
+}
+
+@media (min-width: 2560px) {
+  .custom-height {
+    height: 23vh;
+  }
+}
