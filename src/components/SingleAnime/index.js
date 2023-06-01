@@ -4,18 +4,19 @@ export default function SingleAnime({ anime }) {
 
   return (
     <div className="bg-gray-900">
-      <main className="container mx-auto py-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-1">
-          <div className="flex justify-start">
-            <img src={anime.coverImage} alt={anime.title} className="w-80 h-auto mx-auto" />
-          </div>
-          <div className="flex flex-col justify-normal">
-            <h1 className="text-3xl text-white font-bold mb-5">{anime.title}</h1>
+      <main className="container mx-auto py-9">
+      <div className="relative">
+      <div className="flex md:flex-row sm:flex-col items-start relative">
+         <div className="md:mr-4 mb-4 relative w-80">
+        <img src={anime.coverImage} alt={anime.title} className="w-full h-auto mx-auto md:ml-0" />
+      </div>
+          <div className="flex flex-col md:col-span-3e py-1 p-3">  
+            <h1 className="text-3xl text-white font-bold mb-2">{anime.title}</h1>
             <h2 className="text-xl text-white mb-4">{anime.subtitle}</h2>
-            <p className="text-white ">
+            <p className="text-white">
               <strong>Tipo: </strong> {anime.Type}
             </p>
-            <p className="text-white ">
+            <p className="text-white">
               <strong>Estúdio:</strong> {anime.studio}
             </p>
             <p className="text-white">
@@ -41,26 +42,25 @@ export default function SingleAnime({ anime }) {
             </p>
           </div>
         </div>
+        </div>
         <div className="my-5">
           <h3 className="text-2xl text-white font-bold mb-4 text-center">Sinopse</h3>
-          <p className="text-white text-1xl flex ms-4 text-justify">{anime.synopsis}</p>
+          <div className="border border-white rounded-none p-4">
+            <p className="text-white text-1xl text-justify">{anime.synopsis}</p>
+          </div>
         </div>
         <div>
-          <h3 className="text-2xl ms-4 text-white font-bold mb-4">Episódios</h3>
-          <ul>
+          <h3 className="text-2xl text-center text-white font-bold mb-4">Episódios</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {anime.episodes.map((episode) => (
-              <li key={episode.id}>
-                  <Link 
-                  to={`/animes/${anime.slug}/${episode.titleSlug}/${episode.languageEpisode}`}
-                  className="font-bold ms-4 text-white"
-                  
-                  >
-                  {episode.titleEpisodio}
+              <div key={episode.id}>
+                <Link to={`/animes/${anime.slug}/${episode.titleSlug}/${episode.languageEpisode}`}>
+                  <img src={episode.thumbnail} alt={episode.titleEpisodio} className="w-80 h-auto px-2" />
                 </Link>
-                - <span className="text-white">Duração: {episode.duration}</span>
-              </li>
+                <p className="text-white text-sm text-start ms-3">{episode.titleEpisodio}</p>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </main>
     </div>

@@ -54,7 +54,7 @@ export default function Menu() {
         )}
 
         <button
-          className="fixed top-3 left-1 bg-gray-900 text-white p-1 rounded-full z-50 md:fixed md:top-3 md:left-8 md:bg-transparent md:text-white md:p-0 md:w-12 md:h-12 md:flex md:justify-center md:items-center"
+          className="fixed top-3 left-1  text-white p-1 z-50 md:fixed md:top-3 md:left-8 md:bg-transparent md:text-white md:p-0 md:w-12 md:h-12 md:flex md:justify-center md:items-center"
           onClick={toggleMenu}
         >
           <FiMenu size={34} />

@@ -15,6 +15,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "Resolução": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/2sjBP5dC2cNOX4HfYQTkCmWEsYA.jpg",
     "top": false,
     "synopsis": "Ai Hoshino, de dezesseis anos, é uma idol talentosa e bonita que é adorada por seus fãs. Ela é a personificação de uma jovem donzela pura. Mas nem tudo que reluz é ouro. \n\n Gorou Amemiya é um ginecologista do interior e um grande fã de Ai. Então, quando o ídolo grávido aparece em seu hospital, ele fica perplexo. Gorou promete a ela um parto seguro. Mal sabe ele, um encontro com uma figura misteriosa resultaria em sua morte prematura - ou assim ele pensava. \n\n Abrindo os olhos no colo de seu amado ídolo, Gorou descobre que renasceu como Aquamarine Hoshino - o filho recém-nascido de Ai! Com seu mundo virado de cabeça para baixo, Gorou logo descobre que o mundo do showbiz é cheio de espinhos, onde o talento nem sempre gera sucesso. Será que ele conseguirá proteger o sorriso de Ai, que ele tanto ama, com a ajuda de um aliado excêntrico e inesperado?",
     "episodes": [
@@ -22,7 +23,21 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolucao": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolucao": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolucao": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/rvy4W28wYkct3IFxU0RGF2uHppG.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -30,7 +45,131 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolucao": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolucao": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolucao": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/klFBxM7QHRtYvuqBcHGSoJaY5ES.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 3,
+        "titleEpisodio": "Episodio 03",
+        "titleSlug": "episodio-3",
+        "videoUrl": [
+          {
+            "resolucao": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolucao": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolucao": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/47JdOZPYzuypScNqDFMaBUuOWrx.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 4,
+        "titleEpisodio": "Episodio 04",
+        "titleSlug": "episodio-4",
+        "videoUrl": [
+          {
+            "resolucao": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolucao": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolucao": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/h44DwOqXqq44KzNHOzkNpcTRVRR.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 5,
+        "titleEpisodio": "Episodio 05",
+        "titleSlug": "episodio-5",
+        "videoUrl": [
+          {
+            "resolucao": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolucao": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolucao": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/bmIyVqU5c5iw1g1S8ENY5bKpf4P.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 6,
+        "titleEpisodio": "Episodio 06",
+        "titleSlug": "episodio-6",
+        "videoUrl": [
+          {
+            "resolucao": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolucao": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolucao": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/dTnNfowpkkjSG8fxDprhHxJD465.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 7,
+        "titleEpisodio": "Episodio 07",
+        "titleSlug": "episodio-7",
+        "videoUrl": [
+          {
+            "resolucao": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolucao": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolucao": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/culBlCRSAeAbCmOqw6QnCo0z7td.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }

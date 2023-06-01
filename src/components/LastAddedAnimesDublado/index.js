@@ -58,23 +58,20 @@ export default function LastAddedAnimesDublado({ animes }) {
 
   return (
     <>
-      <div className="py-8">
-      <div className="flex justify-center items-center mb-6">
+      <div className="flex justify-center items-center mb-8">
         <h2 className="text-2xl text-white font-bold">
           <span className="border-b-4 border-emerald-600 pb-1">Novos Animes Dublados</span>
         </h2>
       </div>
-      <div className='flex justify-end py-3 mx-2'>
-      <Link to="/animesDublados" className="text-white  text-md">
-        <span className='border-b-2 border-emerald-600 pb-1'>Ver todos</span></Link>
-      </div>
-        <div className="mx-7 sm:mx-auto md:mx-7 lg:mx-7 xl:mx-8 3xl:mx-auto max-w-8xl">
+        <div className="container mx-auto px-7 max-w-8xl mb-6 xl:px-1 2xl:px-1">
           <Slider {...settings}>
             {limitedAnimes && limitedAnimes.length > 0 ? (
               limitedAnimes.map((anime) => (
                 <Link to={`/animes/${anime.slug}`}>
                   <div key={anime.id} className="flex flex-col items-center object-cover mx-2">
+                  <div className="anime-cover">
                     <img src={anime.coverImage} alt={anime.title} className="w-full h-full object-cover" />
+                    </div>
                     <h3 className="text-lg text-white text-center font-semibold">{truncateTitle(anime.title)}</h3>
                   </div>
                 </Link>
@@ -84,7 +81,6 @@ export default function LastAddedAnimesDublado({ animes }) {
             )}
           </Slider>
         </div>
-      </div>
 
     </>
   )
