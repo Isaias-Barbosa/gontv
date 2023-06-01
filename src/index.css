@@ -155,3 +155,44 @@ code {
     height: 23vh;
   }
 }
+
+
+/* TELAS DA PAGINA DE ANIMES*/
+
+@media (max-width: 640px) {
+  .custom-height-animes {
+    height: 26vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-height-animes {
+    height: 40vh;
+  }
+}
+
+@media (min-width: 1366px) {
+  .custom-height-animes {
+    height: 55vh;
+  }
+}
+
+@media (min-width: 1440px) {
+  .custom-height-animes {
+    height: 43vh;
+    
+  }
+}
+
+@media (min-width: 1560px) {
+  .custom-height-animes {
+    height: 31vh;
+    
+  }
+}
+
+@media (min-width: 2560px) {
+  .custom-height-animes {
+    height: 23vh;
+  }
+}

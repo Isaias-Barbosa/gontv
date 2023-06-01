@@ -1,9 +1,10 @@
 import animes from 'json/animes.json'
 import { Link } from 'react-router-dom'
+import { MdPlayCircleFilled } from 'react-icons/md';
 
 export default function Animes() {
 
-    const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
+    const MAX_TITLE_LENGTH = 15; // Define o número máximo de caracteres do título
 
     const truncateTitle = (title) => {
         if (title.length > MAX_TITLE_LENGTH) {
@@ -16,25 +17,35 @@ export default function Animes() {
     const legendadoAnimes = animes.filter((anime) => anime.language === 'Legendado');
 
     return (
-        <div className="bg-gray-900">
-            <h2 className="text-2xl text-white text-center font-bold mb-4 py-7">
-                <span className="border-b-4 border-emerald-600 pb-1"> Animes Legendados</span>
-            </h2>
-            <div class="container mx-auto">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-1" style={{ gridGap: '1rem' }}>
-                    {legendadoAnimes.map((anime) => (
-                        <Link to={`/animes/${anime.slug}`} key={anime.id}>
-                            <div className="flex flex-col items-center">
-                                <img
-                                    src={anime.coverImage}
-                                    alt={anime.title}
-                                    className="h-80 mb-3 rounded-lg object-cover"
+        <div className="bg-gray-900 py-8">
+            <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
+                <h2 className="text-2xl text-white text-start font-bold mb-8 p-1">
+                    <span className="border-b-4 border-emerald-600 pb-1"> Animes Legendados</span>
+                </h2>
+                <div class="container mx-auto">
+                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
+                        {legendadoAnimes.map((anime) => (
+                            <div className="aspect-ratio-box" >
+                                <div className="relative">
+                                    <Link to={`/animes/${anime.slug}`} key={anime.id}>
+                                        <div className="anime-cover">
+                                            <img
+                                                src={anime.coverImage}
+                                                alt={anime.title}
+                                                className="h-auto w-full custom-height-animes rounded-none object-cover"
 
-                                />
-                                <h3 className="text-lg text-white mb-3 font-semibold">{truncateTitle(anime.title)}</h3>
+                                            />
+                                            <div className="overlay"></div>
+                                            <button className="play-button">
+                                                <MdPlayCircleFilled className="text-white text-5xl" />
+                                            </button>
+                                        </div>
+                                    </Link>
+                                    <h3 className="text-lg text-white text-center mb-3 px-2 font-semibold">{truncateTitle(anime.title)}</h3>
+                                </div>
                             </div>
-                        </Link>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
