@@ -17,7 +17,7 @@ export default function Animes() {
     const legendadoAnimes = animes.filter((anime) => anime.language === 'Legendado');
 
     return (
-        <div className="bg-gray-900 py-8">
+        <div className="bg-black-light py-8">
             <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
                 <h2 className="text-2xl text-white text-start font-bold mb-8 p-1">
                     <span className="border-b-4 border-emerald-600 pb-1"> Animes Legendados</span>

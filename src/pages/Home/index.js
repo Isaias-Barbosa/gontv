@@ -46,7 +46,7 @@ export default function Home() {
 
     <>
       <Banner />
-      <div className="bg-gray-900">
+      <div className="bg-black-light">
         <main className="container mx-auto py-8">
           <div className="section">
             <PopularAnime />

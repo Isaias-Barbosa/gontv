@@ -17,7 +17,7 @@ export default function AnimesDub() {
   const dubladoAnimes = animes.filter((anime) => anime.language === 'Dublado');
 
   return (
-    <div className="bg-gray-900 py-8">
+    <div className="bg-black-light py-8">
       <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
         <h2 className="text-2xl text-white text-start font-bold mb-4 pb-1 py-7">
           <span className="border-b-4 border-emerald-600 pb-1"> Animes Dublados</span>

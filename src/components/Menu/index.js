@@ -10,7 +10,7 @@ export default function Menu() {
 
   const [isMobile, setIsMobile] = useState(false);
   const [islogin, setIsLogin] = useState(false)
-  const [searchSize, setSearchSize] = useState(64);
+  const [searchSize, setSearchSize] = useState('64');
 
   useEffect(() => {
     const handleResize = () => {
@@ -42,7 +42,9 @@ export default function Menu() {
     setIsOpen(!isOpen);
   };
 
-
+  const handleSearchChange = (event) => {
+    setSearchSize(event.target.value.length > 0 ? 'full' : '64');
+  };
 
   const siteTitle = 'Gon.TV'
 
@@ -60,13 +62,14 @@ export default function Menu() {
           <FiMenu size={34} />
         </button>
 
-        <div className="flex items-center bg-gray-900 p-4">
+        <div className="flex items-center bg-black-light p-2">
           <div className="flex justify-center flex-grow">
-            <div className="flex items-center ms-7 bg-gray-800 rounded-lg justify-center ">
+            <div className="flex items-center ms-7 border-b-2 bg-black-light rounded-lg justify-center ">
               <input
                 type="search"
                 placeholder="Pesquisar"
                 className={`bg-transparent text-white px-1 py-1 rounded-lg focus:outline-none w-${searchSize}`}
+                onChange={handleSearchChange}
               /><a className='text-white border bg-gray-900 rounded-md w-12 text-center mx-3' href='#'>Filtro</a>
             </div>
             {!isMobile && (

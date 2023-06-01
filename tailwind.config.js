@@ -9,6 +9,11 @@ export const theme = {
     fontFamily: {
       sans: ['Inter var', ...defaultTheme.fontFamily.sans],
     },
+      colors: {
+        'black': '#000000',             // Preto absoluto
+        'black-light': '#111111',     // Preto claro
+        'black-dark': '#050505',     
+      },  
   },
   screens: {
     'sm': {'min': '640px', 'max': '767px'},
