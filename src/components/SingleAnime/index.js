@@ -67,7 +67,7 @@ export default function SingleAnime({ anime }) {
             <h3 className="text-2xl text-white font-bold mb-4 text-center">
               Sinopse
             </h3>
-            <div className="border border-white rounded-none p-2">
+            <div className="border border-white rounded-none p-3">
               <p className="text-white text-1xl text-justify">{anime.synopsis}</p>
             </div>
           </div>

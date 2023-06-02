@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { BsDiscord, BsAndroid2 } from 'react-icons/bs';
-import { IoIosNotifications } from 'react-icons/io';
 import { IoLogInOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
@@ -55,8 +54,6 @@ export default function Menu() {
         {isOpen && (
           <div className="fixed inset-0 bg-black-light  opacity-80 z-50"></div>
         )}
-
-   
 
         <button
           className="fixed top-1 left-4 text-white p-1 z-50  md:fixed md:top-1 md:left-8 md:bg-transparent md:text-white md:p-0 md:w-12 md:h-12 md:flex md:justify-center md:items-center"
