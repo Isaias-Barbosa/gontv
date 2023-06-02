@@ -5,7 +5,7 @@ export default function Banner() {
     const carouselImages = [
       {
         id: 1,
-        title: 'Boku no Hero',
+        title: 'One Piece',
         genero: 'Ação',
         genero2: 'Super Poder',
         text: 'Era uma vez um grande pirata, conhecido como o maior pirata de todos os tempos, Gol D. Roger. Ele conseguiu fama, poder, dinheiro. Só que um dia ele foi capturado pelas forças da Marinha. ',
@@ -45,7 +45,7 @@ export default function Banner() {
           {carouselImages.map((capa, index) => (
             <div key={index} className="relative">
               <div
-            className="bg-cover bg-center w-full" style={{ backgroundImage: `url(${capa.image})`, height: '600px' }}
+            className="bg-cover bg-center w-full" style={{ backgroundImage: `url(${capa.image})`, height: '500px' }}
           >
         <div className="absolute inset-0 bg-black opacity-60"></div>
           <div className="absolute inset-0 flex flex-col justify-center items-center text-white">

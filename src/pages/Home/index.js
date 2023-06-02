@@ -2,7 +2,6 @@ import Banner from "components/Banner";
 import PopularAnime from "components/PopularAnime";
 import React, { useState } from 'react';
 import { MdPlayCircleFilled } from 'react-icons/md';
-import animesG from 'json/lista.json';
 import LastAddedAnimes from "components/LastAddedAnimes";
 import LastAddedAnimesDublado from 'components/LastAddedAnimesDublado';
 import animes from 'json/animes.json';
@@ -20,7 +19,7 @@ export default function Home() {
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const legendadoAnimes = animesG.filter((animeG) => animeG.language === 'Legendado');
+
 
   const animeList = [
     { title: 'Boku no Hero', episode: 'Episódio 10', resolution: 'FHD', image: 'https://i0.wp.com/img1.ak.crunchyroll.com/i/spire3-tmb/33c2d010cf4238ce66cc01f9335055cd1499180836_full.jpg' },
@@ -59,7 +58,7 @@ export default function Home() {
               <span className="border-b-4 border-emerald-600 pb-1"> Lançamentos</span>
             </h2>
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
-                {animeList.map((anime, index) => (
+                {animes.map((anime, index) => (
                   <a href="" key={index}>
                     <div
                       className="p-1"
@@ -74,19 +73,19 @@ export default function Home() {
                           </div>
                         )}
                         <div className="absolute bg-emerald-700 rounded-none m-2 p-1">
-                          <p className="text-white text-xs font-bold">{anime.resolution}</p>
+                          <p className="text-white text-xs font-bold">{anime.episodes[0].resolution}</p>
                         </div>
-                        <img src={anime.image} alt={anime.title} className="w-full h-full object-cover" />
+                        <img src={anime.episodes[0].thumbnail} alt={anime.title} className="w-full h-full object-cover" />
                       </div>
                       <h3 className="text-center text-white font-bold text-base sm:text-lg md:text-xl xl:text-lg 2xl:text-lg">{truncateTitle(anime.title)}</h3>
-                      <p className="text-base text-gray-500 text-center font-bold sm:text-sm md:text-base xl:text-sm 2xl:text-md">{anime.episode}</p>
+                      <p className="text-base text-gray-500 text-center font-bold sm:text-sm md:text-base xl:text-sm 2xl:text-md">{anime.episodes[0].titleEpisodio}</p>
                     </div></a>
                 ))}
               </div>
             </div>
           </div>
           <div className="section">
-            <LastAddedAnimes animes={legendadoAnimes} />
+            <LastAddedAnimes animes={animes} />
           </div>
           <div className="section">
             <LastAddedAnimesDublado animes={animes} />
