@@ -20,7 +20,7 @@ export default function Home() {
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-
+  const lancamentos = animes.slice(0, 20);
 
   const animeList = [
     { title: 'Boku no Hero', episode: 'Episódio 10', resolution: 'FHD', image: 'https://i0.wp.com/img1.ak.crunchyroll.com/i/spire3-tmb/33c2d010cf4238ce66cc01f9335055cd1499180836_full.jpg' },
@@ -55,9 +55,14 @@ export default function Home() {
           <div className="section">
 
             <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
-            <h2 className="text-2xl text-start text-white font-bold mb-5 p-1 ">
+            <h2 className="text-2xl text-start text-white font-bold mb-1 p-1 ">
               <span className="border-b-4 border-emerald-600 pb-1"> Lançamentos</span>
             </h2>
+            <div className="text-end ">
+            <Link to="/AnimesLancamentos" className="text-emerald-600 hover:text-emerald-500 text-end font-bold">
+              Ver Todos
+            </Link>
+            </div>
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
                 {animes.slice(0,20).map((anime, index) => (
                   <Link to={`/animes/${anime.slug}/${anime.episodes[0].titleSlug}/${anime.episodes[0].languageEpisode}`} key={index}>
@@ -81,9 +86,10 @@ export default function Home() {
                       <h3 className="text-center text-white font-bold text-base sm:text-lg md:text-xl xl:text-lg 2xl:text-lg">{truncateTitle(anime.title)}</h3>
                       <p className="text-base text-gray-500 text-center font-bold sm:text-sm md:text-base xl:text-sm 2xl:text-md">{anime.episodes[0].titleEpisodio}</p>
                     </div>
-                    </Link>
+                </Link>
                 ))}
               </div>
+
             </div>
           </div>
           <div className="section">
