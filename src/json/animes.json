@@ -433,22 +433,205 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/b9PEZeiSu1Ux2oweuoaeHmpaFIC.jpg",
     "top": true,
-    "synopsis": "Tanjiro Kamado, junto com Inosuke Hashibira, um garoto criado por javalis que usa uma cabeça de javali, e Zenitsu Agatsuma, um garoto assustado que revela seu verdadeiro poder quando dorme, embarcam no Trem Infinito em uma nova missão com o Pilar de Chamas, Kyojuro Rengoku, para derrotar um demônio que tem atormentado o povo e matado caçadores de demônios que se opõem a ele!",
+    "synopsis": "Tanjiro após a batalha no Distrito do Entretenimento danifica sua espada, então ele parte para a Vila dos Ferreiros com o intuito de falar com o Hotaru Haganezuka para reparar sua espada, enquanto isso, Muzan se reuni com as Luas Superiores.",
     "episodes": [
       {
-        "id": 1,
+        "id": 1310,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/cqDCLZ050JmmumJyTA9FbuQe6a3.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 1311,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/uvT1yTTx3rfAIP8AtqxtSM0ZxRB.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 1311,
+        "titleEpisodio": "Episodio 03",
+        "titleSlug": "episodio-3",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/6DnrHG7XHYwULDnyyv8UrM68yRT.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 1311,
+        "titleEpisodio": "Episodio 04",
+        "titleSlug": "episodio-4",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/7CJiq7TcX6V6OcY9SnhMQMs0exV.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 1311,
+        "titleEpisodio": "Episodio 05",
+        "titleSlug": "episodio-5",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/7DvvdeA0bY3VIhicNYRuD19W28N.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 1311,
+        "titleEpisodio": "Episodio 06",
+        "titleSlug": "episodio-6",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/79Tm5PlbrWkMCVIgX4Gb9PTqb7Z.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 1311,
+        "titleEpisodio": "Episodio 07",
+        "titleSlug": "episodio-7",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/lhbtnegSVHc5VpnCzBBfxrzU8a5.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 1311,
+        "titleEpisodio": "Episodio 08",
+        "titleSlug": "episodio-8",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/twKgIalhN0PeahBx8mwk8UaMhvh.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 1311,
+        "titleEpisodio": "Episodio 09",
+        "titleSlug": "episodio-9",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/6EgVImJC0fn0jshgw12NHRf5Rzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -470,6 +653,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/cTvQ1cIqFvytOGlD65WV56jB4fQ.jpg",
     "top": false,
     "synopsis": "Gabimaru, um ninja condenado à morte, recebe uma segunda chance em troca de participar de uma missão perigosa para encontrar o elixir da imortalidade em uma ilha remota habitada por criaturas mortais.",
     "episodes": [
@@ -477,7 +661,21 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/wZc16WQeTitqtocNNp6g1c2Zho7.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -485,7 +683,21 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/7Ok1gElid8AfPplK4JRyluFpCVh.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -515,6 +727,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/wYisyC5IeuAN5WB5X81eMDcUdwu.jpg",
     "top": true,
     "synopsis": "Eren Yeager e seus aliados continuam sua luta contra os Titãs enquanto revelam os segredos do mundo e lutam pela liberdade da humanidade.",
     "episodes": [
@@ -522,7 +735,21 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/eqRF1ZQSzx31iLkyeJa95hMnWSr.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -530,7 +757,21 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/aV2M59hZVguSbVTj7WkVx1icFxl.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -560,6 +801,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/cmziOVMQrqvVfrjjQdadMdi2bGL.jpg",
     "top": false,
     "synopsis": "Os Sete Pecados Capitais enfrentam novos inimigos enquanto a verdade sobre a maldição dos demônios é revelada e o destino do mundo está em jogo.",
     "episodes": [
@@ -567,7 +809,21 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/tXVgH9qTbxErdPeaPymZFJLAmOT.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -575,7 +831,21 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/88gwF5YNgQwqS6HmT7hQhgO0gW5.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -605,6 +875,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/1u0iRO0kFHlgol3FjUpntxT8Ebs.jpg",
     "top": true,
     "synopsis": "Monkey D. Luffy e sua tripulação de piratas buscam o tesouro supremo, o One Piece, e enfrentam desafios perigosos ao longo do caminho em um mundo cheio de piratas, marinheiros e poderes misteriosos.",
     "episodes": [
@@ -612,7 +883,21 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/jQFsHzYKQDxvIpX42PqszYUmpn5.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -620,7 +905,21 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/him2IAMOhTToCMGwCzBxHCD9cPf.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -642,6 +941,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/12mYMPE7Jy7rhDv0rn95GEtF94V.jpg",
     "top": false,
     "synopsis": "Shouyou Hinata, inspirado por um jogador de vôlei lendário apelidado de 'Pequeno Gigante', se junta a um clube de vôlei e luta para se tornar um jogador excepcional e levar sua equipe ao campeonato nacional.",
     "episodes": [
@@ -649,7 +949,21 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/csL84eGtjaJ0vJdNncNj0ItaTFj.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -657,7 +971,21 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/13veoxgCDkHWZ7udNunYUoYYmyx.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -679,6 +1007,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/7bGvtyA2m16jcCTCdhoiiFF7ibe.jpg",
     "top": true,
     "synopsis": "Asta e Yuno são órfãos que cresceram juntos em um mundo onde magia é tudo. Asta, que não tem magia, busca se tornar o Rei Mago e proteger o reino dos perigos que ameaçam a humanidade.",
     "episodes": [
@@ -686,7 +1015,21 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/6BBR8YE8SPkBiL4urWhVXgS2jKe.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -694,7 +1037,21 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/mgjnfc5WNJHqc1fcjs142i4FQoV.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -716,6 +1073,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/nIHp6fz2MX33blJKYa9BSbhct7W.jpg",
     "top": true,
     "synopsis": "Yuji Itadori, um estudante colegial com habilidades físicas excepcionais, se envolve em uma guerra entre feiticeiros e criaturas amaldiçoadas, enquanto ele se torna o hospedeiro de um poderoso demônio.",
     "episodes": [
@@ -723,7 +1081,21 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/iKKQpS7Utuxupv7mOqd1YlAfNWw.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -731,7 +1103,21 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/7IBoZgraHqJHqEW5een8lEeq0CU.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -750,6 +1136,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/vFMXmS8uS83bINXJp2ct3F2iRZM.jpg",
     "top": true,
     "episodeDuration": "23 min. por episódio",
     "genres": [
@@ -767,7 +1154,21 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/gM9LTtEg3G831yQkiwt30krYLxP.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -775,7 +1176,21 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/An7cmBwndUCkLrtDEFUb9AH1IM1.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -797,6 +1212,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/96fP2e5cuIZnB6wskpNfZrLkrm4.jpg",
     "top": false,
     "synopsis": "Goku e seus amigos protegem a Terra de ameaças poderosas, enfrentando guerreiros extraterrestres, androides e seres místicos enquanto desbloqueiam seu verdadeiro poder.",
     "episodes": [
@@ -804,7 +1220,21 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/vsI19Gvmbym9URI36Yjiiq6o8r0.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -812,7 +1242,21 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/oT9fI9LELlQXkhG7CgNDx5ZCjir.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -834,6 +1278,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/3ILMlmC30QUnYkY3XEBOyJ82Dqu.jpg",
     "top": true,
     "synopsis": "Izuku Midoriya sonha em se tornar um herói, mas nasce sem qualquer poder. Após receber o poder do maior herói do mundo, ele frequenta uma escola para heróis em treinamento e enfrenta vilões poderosos.",
     "episodes": [
@@ -841,7 +1286,21 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/5S4t7vjGUahG8ieEUTDNPi1DPBh.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -849,7 +1308,21 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/m9qwJgfm1eVo70CsRDc2MDFiUcM.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -871,6 +1344,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/zYIFOocMfsKAEysBjhZ8akfXFdB.jpg",
     "top": false,
     "synopsis": "Takemichi Hanagaki, um homem desempregado de 26 anos, descobre que a garota por quem ele costumava se apaixonar foi assassinada. Ao ser empurrado para os trilhos do trem, ele viaja no tempo para quando estava no ensino médio e jura mudar seu destino e salvar a garota.",
     "episodes": [
@@ -878,7 +1352,21 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/6FcmZTXklg6ONMC11H0sqiMBpZ7.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -886,7 +1374,21 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/sRDPlgmp6pr12GpvRMKGzjiIgqJ.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -908,6 +1410,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/qtfMr08KQsWXnCHY0a96N8NpQ2l.jpg",
     "top": true,
     "synopsis": "Ichigo Kurosaki, um estudante com a habilidade de ver espíritos, se torna um Shinigami (Ceifador de Almas) e protege a humanidade dos espíritos malignos enquanto enfrenta poderosas ameaças.",
     "episodes": [
@@ -915,7 +1418,21 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/6FX8jzbR42V9RjFD1W9PygvnJkX.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -923,7 +1440,21 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/zJ9OYjNIRFlXjAXiT4iRvPLV5MH.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -945,6 +1476,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/fANxNeH9JCXPrzNEfriGu1Y95dF.jpg",
     "top": false,
     "synopsis": "Lucy Heartfilia, uma jovem maga, se junta à Guilda Fairy Tail, onde ela forma uma equipe com Natsu Dragneel, um Dragon Slayer do Fogo, e embarca em missões emocionantes e perigosas.",
     "episodes": [
@@ -952,7 +1484,21 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/jDHOICuTalFR1pJHbUI3TsG9qMZ.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -960,7 +1506,21 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/yre6WWqcIzRctIcmbZxC0NoGCTR.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -982,6 +1542,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/sjyobk8kdUzNlkejRhv68tNRJeB.jpg",
     "top": true,
     "synopsis": "Gon Freecss descobre que seu pai, que ele acreditava estar morto, é um Hunter - um membro de elite da sociedade com habilidades incríveis. Gon embarca em uma jornada para se tornar um Hunter e encontrar seu pai.",
     "episodes": [
@@ -989,7 +1550,21 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/7ppEotl1YMs1adTscDdMoLhQaQ3.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -997,7 +1572,21 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/qEX0cNZhtRdvXkqalV3cg1yiJhB.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -1027,6 +1616,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/lY12qhlsm9JJ3I2PyAZNkpU9a5h.jpg",
     "top": true,
     "synopsis": "Os irmãos Edward e Alphonse Elric usam a alquimia em uma tentativa desesperada de ressuscitar sua mãe, mas acabam pagando um preço terrível. Eles embarcam em uma jornada para encontrar a Pedra Filosofal e restaurar seus corpos.",
     "episodes": [
@@ -1034,7 +1624,21 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/9OQdBV5ca27OhfoCWKjJT4Pq0AB.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -1042,7 +1646,21 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/7nj2xLJvjNecLnftoCSmC8QTk6t.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -1072,6 +1690,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/5hS2OIuZSKGkR8R5l3bY5zh04Ce.jpg",
     "top": false,
     "synopsis": "Numa realidade alternativa, Lelouch Lamperouge, um jovem príncipe, obtém o poder do Geass e se torna o vigilante mascarado conhecido como Zero, liderando uma rebelião contra o opressivo Império Britânico.",
     "episodes": [
@@ -1079,7 +1698,21 @@
         "id": 19,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/uXgJMmux25CrTLOQ4PObkD2uszM.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -1087,7 +1720,21 @@
         "id": 19,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/wuAngVVMPf1lEj54NmlWJxydbuD.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -1115,6 +1762,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
+    "background":"https://www.themoviedb.org/t/p/original/ouWGzM6ISz0DlcRG81bvUP6tvhY.jpg",
     "top": false,
     "synopsis": "Light Yagami, um estudante do ensino médio, descobre um misterioso caderno chamado Death Note. Com o poder de matar qualquer pessoa cujo nome seja escrito nele, Light decide usar esse poder para livrar o mundo do mal e criar uma utopia onde ele é o deus do novo mundo.",
     "episodes": [
@@ -1122,7 +1770,21 @@
         "id": 20,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -1130,7 +1792,21 @@
         "id": 20,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail":"https://www.themoviedb.org/t/p/original/b0BSIfkkoYbf4KKTJlY0XOoQxY1.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }

@@ -8,6 +8,7 @@ import SingleAnimePage from "pages/SingleAnimePage";
 import Animes from "pages/Animes";
 import SinglePlayPage from "pages/SinglePlayPage";
 import AnimesDub from "pages/AnimesDub";
+import SearchAnime from "pages/SearchAnime";
 
 
 
@@ -22,6 +23,7 @@ function AppRoutes() {
         <Route path="/animesDublados" element={<AnimesDub />} />
         <Route path="/animes/:slug/*" element={<SingleAnimePage />} />
         <Route path="/animes/:slug/:titleSlug/:languageEpisode/*" element={<SinglePlayPage />} />
+        <Route path="/search/" element={<SearchAnime />} /> {/* Defina a rota para SearchAnime */}
       </Routes>
     <Rodape />
   </BrowserRouter>

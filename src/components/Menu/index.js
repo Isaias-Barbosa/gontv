@@ -3,14 +3,14 @@ import { FiMenu, FiX } from 'react-icons/fi';
 import { BsDiscord, BsAndroid2 } from 'react-icons/bs';
 import { IoLogInOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
-
-
+import Search from 'components/Search';
 
 export default function Menu() {
 
   const [isMobile, setIsMobile] = useState(false);
-  const [islogin, setIsLogin] = useState(false)
+  const [isLogin, setIsLogin] = useState(false);
   const [searchSize, setSearchSize] = useState('64');
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -36,7 +36,6 @@ export default function Menu() {
     };
   }, []);
 
-  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -64,15 +63,7 @@ export default function Menu() {
 
         <div className="flex items-center bg-black-light p-2">
           <div className="flex justify-center flex-grow">
-            <div className="flex items-center ms-7 border-b-2 bg-black-light rounded-lg justify-center ">
-              <input
-                type="search"
-                placeholder="Pesquisar"
-                className={`bg-transparent items-center text-white px-1 py-1 rounded-lg focus:outline-none w-${searchSize} sm:w-32 md:w-48 lg:w-56 xl:w-80 2xl:w-96`}
-                onChange={handleSearchChange}
-              />
-              <a className='text-white border bg-gray-900 rounded-md w-12 text-center mx-3' href='#'>Filtro</a>
-            </div>
+            <Search handleSearchChange={handleSearchChange} />
             {!isMobile && (
               <div className="flex items-center ml-3 ">
                 <BsDiscord className="text-white mx-3" size={34} />
@@ -82,9 +73,9 @@ export default function Menu() {
           </div>
           {!isMobile && (
             <button className="bg-emerald-700 hover:bg-emerald-500 text-white px-4 py-2 mx-2 rounded-lg flex items-center">
-            <IoLogInOutline className="mr-2" size={20} />
-            <span className='text-center'>Login</span>
-          </button>
+              <IoLogInOutline className="mr-2" size={20} />
+              <span className="text-center">Login</span>
+            </button>
           )}
         </div>
 
@@ -133,7 +124,7 @@ export default function Menu() {
                   </a>
                 </li>
               </ul>
-              {!islogin && (
+              {!isLogin && (
                 <button className="bg-emerald-700 hover:bg-emerald-500 text-white  px-7 py-3 rounded-lg">
                   Login
                 </button>

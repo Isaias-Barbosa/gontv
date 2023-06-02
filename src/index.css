@@ -80,6 +80,18 @@ code {
 
 /* TELA DE ADICIONADOS */
 
+@media (min-width: 1366px) {
+  .mobile-img {
+    display: inline-block;
+    width: 1%;
+    margin-right:2rem;
+    margin-bottom: 2rem;
+  }
+  .mobile-img:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 640px) {
   .custom-height-last {
     height: 28vh;

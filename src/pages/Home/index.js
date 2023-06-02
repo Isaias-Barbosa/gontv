@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { MdPlayCircleFilled } from 'react-icons/md';
 import LastAddedAnimes from "components/LastAddedAnimes";
 import LastAddedAnimesDublado from 'components/LastAddedAnimesDublado';
+import { Link } from 'react-router-dom';
 import animes from 'json/animes.json';
 
 export default function Home() {
@@ -58,8 +59,8 @@ export default function Home() {
               <span className="border-b-4 border-emerald-600 pb-1"> Lançamentos</span>
             </h2>
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
-                {animes.map((anime, index) => (
-                  <a href="" key={index}>
+                {animes.slice(0,20).map((anime, index) => (
+                  <Link to={`/animes/${anime.slug}/${anime.episodes[0].titleSlug}/${anime.episodes[0].languageEpisode}`} key={index}>
                     <div
                       className="p-1"
                       style={{ maxWidth: '320px', height: '100%' }}
@@ -73,13 +74,14 @@ export default function Home() {
                           </div>
                         )}
                         <div className="absolute bg-emerald-700 rounded-none m-2 p-1">
-                          <p className="text-white text-xs font-bold">{anime.episodes[0].resolution}</p>
+                          <p className="text-white text-xs font-bold">{anime.resoAnime}</p>
                         </div>
                         <img src={anime.episodes[0].thumbnail} alt={anime.title} className="w-full h-full object-cover" />
                       </div>
                       <h3 className="text-center text-white font-bold text-base sm:text-lg md:text-xl xl:text-lg 2xl:text-lg">{truncateTitle(anime.title)}</h3>
                       <p className="text-base text-gray-500 text-center font-bold sm:text-sm md:text-base xl:text-sm 2xl:text-md">{anime.episodes[0].titleEpisodio}</p>
-                    </div></a>
+                    </div>
+                    </Link>
                 ))}
               </div>
             </div>
