@@ -24,7 +24,7 @@ export default function SingleAnime({ anime }) {
               <div className="flex flex-col xl:flex-row lg:flex-row 2xl:flex-row md:flex-row  items-start relative">
                 <div className="flex flex-col p-4 md:p-8 md:w-1/2 md:h-auto md:items-start md:justify-center md:flex-row md:flex-wrap md">
                   <div className="w-full h-auto mx-auto md:ml-0 " style={{ position: "relative", boxShadow: "0 0 60px rgba(0, 0, 0, 0.9)", opacity: 0.9 }}>
-                    <img src={anime.coverImage} alt={anime.title} className="w-full h-full rounded-lg " style={{ position: "relative" }} />
+                    <img src={anime.coverImage} alt={anime.title} className="w-full h-96 rounded-lg " style={{ position: "relative" }} />
                   </div>
                 </div>
                 <div className="flex flex-col md:col-span-3e py-1 p-3 mt-5 md:mt-0 md:ml-5">
