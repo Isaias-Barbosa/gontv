@@ -21,7 +21,7 @@ function AppRoutes() {
     <Routes>
     <Route path="/" element={<Home />} />
         <Route path="/animes/" element={<Animes />} />
-        <Route path="/AnimesLancamentos/*" element={<AnimesLancamentos />} />
+        <Route path="/lancamentos/*" element={<AnimesLancamentos />} />
         <Route path="/animesDublados" element={<AnimesDub />} />
         <Route path="/animes/:slug/*" element={<SingleAnimePage />} />
         <Route path="/animes/:slug/:titleSlug/:languageEpisode/*" element={<SinglePlayPage />} />

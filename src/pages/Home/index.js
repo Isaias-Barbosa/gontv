@@ -59,7 +59,7 @@ export default function Home() {
               <span className="border-b-4 border-emerald-600 pb-1"> Lançamentos</span>
             </h2>
             <div className="text-end ">
-            <Link to="/AnimesLancamentos" className="text-emerald-600 hover:text-emerald-500 text-end font-bold">
+            <Link to="/lancamentos" className="text-emerald-600 hover:text-emerald-500 text-end font-bold">
               Ver Todos
             </Link>
             </div>
