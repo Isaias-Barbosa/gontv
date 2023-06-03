@@ -24,6 +24,7 @@ export default function SearchAnime() {
     const filteredAnimes = animes.filter((anime) =>
         anime.title.toLowerCase().includes(searchQuery.toLowerCase())
     );
+    
     return (
         <div className='bg-black-light py-4'>
       <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">

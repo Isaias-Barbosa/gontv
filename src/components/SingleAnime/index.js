@@ -78,25 +78,21 @@ export default function SingleAnime({ anime }) {
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-3">
               {anime.episodes.map((episode) => (
                 <div key={episode.id} className="aspect-ratio-box w-full">
-                  <Link
-                    to={`/animes/${anime.slug}/${episode.titleSlug}/${episode.languageEpisode}`}
-                  >
-                    <div className="relative">
+                  <Link to={`/animes/${anime.slug}/${episode.titleSlug}/${episode.languageEpisode}`}>
+                    <div className="thumbnail relative">
                       <img
                         src={episode.thumbnail}
                         alt={episode.titleEpisodio}
-                        className="w-full h-full object-cover"
+                        className="absolute inset-0 w-full h-full object-cover"
                       />
-                      <div className="overlay">
-                        <button className="play-button">
-                          <MdPlayCircleFilled className="text-white text-5xl" />
-                        </button>
-                      </div>
+                      <div className="overlay"></div>
+
+                      <button className="play-button absolute inset-0 flex items-center justify-center">
+                        <MdPlayCircleFilled className="text-white text-5xl" />
+                      </button>
                     </div>
+                    <p className="text-white text-lg text-center mt-2">{episode.titleEpisodio}</p>
                   </Link>
-                  <p className="text-white text-lg text-center ms-3 font-">
-                    {episode.titleEpisodio}
-                  </p>
                 </div>
               ))}
             </div>
