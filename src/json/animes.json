@@ -10,12 +10,16 @@
     "director": "Diretor do Anime",
     "year": 2023,
     "episodeDuration": "30 minutos",
-    "genres": ["Ação", "Drama", "Supernatural"],
+    "genres": [
+      "Ação",
+      "Drama",
+      "Supernatural"
+    ],
     "Premiered": "Fall 2021",
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/2sjBP5dC2cNOX4HfYQTkCmWEsYA.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/2sjBP5dC2cNOX4HfYQTkCmWEsYA.jpg",
     "top": false,
     "synopsis": "Ai Hoshino, de dezesseis anos, é uma idol talentosa e bonita que é adorada por seus fãs. Ela é a personificação de uma jovem donzela pura. Mas nem tudo que reluz é ouro. \n\n Gorou Amemiya é um ginecologista do interior e um grande fã de Ai. Então, quando o ídolo grávido aparece em seu hospital, ele fica perplexo. Gorou promete a ela um parto seguro. Mal sabe ele, um encontro com uma figura misteriosa resultaria em sua morte prematura - ou assim ele pensava. \n\n Abrindo os olhos no colo de seu amado ídolo, Gorou descobre que renasceu como Aquamarine Hoshino - o filho recém-nascido de Ai! Com seu mundo virado de cabeça para baixo, Gorou logo descobre que o mundo do showbiz é cheio de espinhos, onde o talento nem sempre gera sucesso. Será que ele conseguirá proteger o sorriso de Ai, que ele tanto ama, com a ajuda de um aliado excêntrico e inesperado?",
     "episodes": [
@@ -30,14 +34,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/rvy4W28wYkct3IFxU0RGF2uHppG.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/rvy4W28wYkct3IFxU0RGF2uHppG.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -52,14 +56,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/klFBxM7QHRtYvuqBcHGSoJaY5ES.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/klFBxM7QHRtYvuqBcHGSoJaY5ES.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -74,14 +78,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/47JdOZPYzuypScNqDFMaBUuOWrx.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/47JdOZPYzuypScNqDFMaBUuOWrx.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -96,14 +100,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/h44DwOqXqq44KzNHOzkNpcTRVRR.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/h44DwOqXqq44KzNHOzkNpcTRVRR.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -118,14 +122,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/bmIyVqU5c5iw1g1S8ENY5bKpf4P.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/bmIyVqU5c5iw1g1S8ENY5bKpf4P.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -140,14 +144,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/dTnNfowpkkjSG8fxDprhHxJD465.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/dTnNfowpkkjSG8fxDprhHxJD465.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -162,14 +166,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/culBlCRSAeAbCmOqw6QnCo0z7td.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/culBlCRSAeAbCmOqw6QnCo0z7td.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -186,12 +190,16 @@
     "director": "Diretor do Anime",
     "year": 2011,
     "episodeDuration": "24 minutos",
-    "genres": ["Drama", "Sci-Fi", "Suspense"],
+    "genres": [
+      "Drama",
+      "Sci-Fi",
+      "Suspense"
+    ],
     "Premiered": "Fall 2021",
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/36Ech63X2KU8JUXIBAo167kIC2k.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/36Ech63X2KU8JUXIBAo167kIC2k.jpg",
     "top": false,
     "synopsis": "Rintaro é um auto-proclamado cientista louco que acredita que uma organização internacional está conspirando para remodelar o mundo de acordo com seus próprios interesses. Ele e seu amigo Itaru inadvertidamente criam um dispositivo capaz de enviar mensagens para o passado. A descoberta e experimentação deste instrumento torna-se o catalisador de alterações fundamentais para o presente. Alheio das consequências de suas ações, Rintaro e seus amigos acabam criando modificações de proporções graves. Agora ele deve tentar encontrar uma maneira de voltar a linha do tempo para o mais próximo possível do original, para salvar os preciosos membros do laboratório.",
     "episodes": [
@@ -206,14 +214,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/h953aDKT4NE5PAXrsNzrowaxehu.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/h953aDKT4NE5PAXrsNzrowaxehu.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -228,14 +236,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/mIRuPZNEoGt0oyE9bL4BqEcmquq.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/mIRuPZNEoGt0oyE9bL4BqEcmquq.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -250,14 +258,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/p78yoSbi7wXww1rEGYGbYSUm3wl.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/p78yoSbi7wXww1rEGYGbYSUm3wl.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -272,14 +280,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/jOvUzKQUbqdkNAtIAzQpL7GuUx.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/jOvUzKQUbqdkNAtIAzQpL7GuUx.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -294,14 +302,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/92SFTY8Z4jj7AykgKlF5v4EMBxj.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/92SFTY8Z4jj7AykgKlF5v4EMBxj.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -316,14 +324,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/suWPFexRgjwhJTy1E7yTtTrXpyt.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/suWPFexRgjwhJTy1E7yTtTrXpyt.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -338,14 +346,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/8AXyRwdJhDmfESjlLbJzBWtYvfO.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/8AXyRwdJhDmfESjlLbJzBWtYvfO.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -360,14 +368,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/l6fhgZvTOEMosDnzo5a9TNc9xyj.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/l6fhgZvTOEMosDnzo5a9TNc9xyj.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -382,14 +390,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/nlVR9hXGFfpfk8YmK116Co400QQ.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/nlVR9hXGFfpfk8YmK116Co400QQ.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -404,14 +412,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/vrNGd6OZnXnaadq5GRcmLraLPJX.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/vrNGd6OZnXnaadq5GRcmLraLPJX.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -428,12 +436,18 @@
     "director": "Sotozaki Haruo",
     "year": "2021",
     "episodeDuration": "24 min. per episode",
-    "genres": ["Action", "Demons", "Historical", "Shounen", "Supernatural"],
+    "genres": [
+      "Action",
+      "Demons",
+      "Historical",
+      "Shounen",
+      "Supernatural"
+    ],
     "Premiered": "Fall 2021",
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/b9PEZeiSu1Ux2oweuoaeHmpaFIC.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/b9PEZeiSu1Ux2oweuoaeHmpaFIC.jpg",
     "top": true,
     "synopsis": "Tanjiro após a batalha no Distrito do Entretenimento danifica sua espada, então ele parte para a Vila dos Ferreiros com o intuito de falar com o Hotaru Haganezuka para reparar sua espada, enquanto isso, Muzan se reuni com as Luas Superiores.",
     "episodes": [
@@ -448,14 +462,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/cqDCLZ050JmmumJyTA9FbuQe6a3.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/cqDCLZ050JmmumJyTA9FbuQe6a3.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -470,14 +484,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/uvT1yTTx3rfAIP8AtqxtSM0ZxRB.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/uvT1yTTx3rfAIP8AtqxtSM0ZxRB.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -492,14 +506,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/6DnrHG7XHYwULDnyyv8UrM68yRT.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/6DnrHG7XHYwULDnyyv8UrM68yRT.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -514,14 +528,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/7CJiq7TcX6V6OcY9SnhMQMs0exV.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/7CJiq7TcX6V6OcY9SnhMQMs0exV.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -536,14 +550,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/7DvvdeA0bY3VIhicNYRuD19W28N.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/7DvvdeA0bY3VIhicNYRuD19W28N.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -558,14 +572,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/79Tm5PlbrWkMCVIgX4Gb9PTqb7Z.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/79Tm5PlbrWkMCVIgX4Gb9PTqb7Z.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -580,14 +594,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/lhbtnegSVHc5VpnCzBBfxrzU8a5.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/lhbtnegSVHc5VpnCzBBfxrzU8a5.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -602,14 +616,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/twKgIalhN0PeahBx8mwk8UaMhvh.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/twKgIalhN0PeahBx8mwk8UaMhvh.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -624,14 +638,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/6EgVImJC0fn0jshgw12NHRf5Rzd.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/6EgVImJC0fn0jshgw12NHRf5Rzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -648,12 +662,18 @@
     "director": "Chikara Sakurai",
     "year": "2020",
     "episodeDuration": "23 min. por episódio",
-    "genres": ["Ação", "Aventura", "Demônios", "Histórico", "Sobrenatural"],
+    "genres": [
+      "Ação",
+      "Aventura",
+      "Demônios",
+      "Histórico",
+      "Sobrenatural"
+    ],
     "Premiered": "Spring 2023",
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/cTvQ1cIqFvytOGlD65WV56jB4fQ.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/cTvQ1cIqFvytOGlD65WV56jB4fQ.jpg",
     "top": false,
     "synopsis": "Gabimaru, um ninja condenado à morte, recebe uma segunda chance em troca de participar de uma missão perigosa para encontrar o elixir da imortalidade em uma ilha remota habitada por criaturas mortais.",
     "episodes": [
@@ -668,14 +688,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/wZc16WQeTitqtocNNp6g1c2Zho7.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/wZc16WQeTitqtocNNp6g1c2Zho7.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -690,14 +710,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/7Ok1gElid8AfPplK4JRyluFpCVh.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/7Ok1gElid8AfPplK4JRyluFpCVh.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -727,7 +747,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/wYisyC5IeuAN5WB5X81eMDcUdwu.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/wYisyC5IeuAN5WB5X81eMDcUdwu.jpg",
     "top": true,
     "synopsis": "Eren Yeager e seus aliados continuam sua luta contra os Titãs enquanto revelam os segredos do mundo e lutam pela liberdade da humanidade.",
     "episodes": [
@@ -742,14 +762,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/eqRF1ZQSzx31iLkyeJa95hMnWSr.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/eqRF1ZQSzx31iLkyeJa95hMnWSr.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -764,14 +784,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/aV2M59hZVguSbVTj7WkVx1icFxl.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/aV2M59hZVguSbVTj7WkVx1icFxl.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -801,7 +821,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/cmziOVMQrqvVfrjjQdadMdi2bGL.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/cmziOVMQrqvVfrjjQdadMdi2bGL.jpg",
     "top": false,
     "synopsis": "Os Sete Pecados Capitais enfrentam novos inimigos enquanto a verdade sobre a maldição dos demônios é revelada e o destino do mundo está em jogo.",
     "episodes": [
@@ -816,14 +836,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/tXVgH9qTbxErdPeaPymZFJLAmOT.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/tXVgH9qTbxErdPeaPymZFJLAmOT.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -838,14 +858,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/88gwF5YNgQwqS6HmT7hQhgO0gW5.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/88gwF5YNgQwqS6HmT7hQhgO0gW5.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -875,7 +895,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/1u0iRO0kFHlgol3FjUpntxT8Ebs.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/1u0iRO0kFHlgol3FjUpntxT8Ebs.jpg",
     "top": true,
     "synopsis": "Monkey D. Luffy e sua tripulação de piratas buscam o tesouro supremo, o One Piece, e enfrentam desafios perigosos ao longo do caminho em um mundo cheio de piratas, marinheiros e poderes misteriosos.",
     "episodes": [
@@ -890,14 +910,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/jQFsHzYKQDxvIpX42PqszYUmpn5.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/jQFsHzYKQDxvIpX42PqszYUmpn5.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -912,14 +932,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/him2IAMOhTToCMGwCzBxHCD9cPf.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/him2IAMOhTToCMGwCzBxHCD9cPf.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -936,12 +956,18 @@
     "director": "Susumu Mitsunaka",
     "year": "2014-2020",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Comédia", "Drama", "Escolar", "Esportes", "Shounen"],
+    "genres": [
+      "Comédia",
+      "Drama",
+      "Escolar",
+      "Esportes",
+      "Shounen"
+    ],
     "Premiered": "Spring 2014",
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/12mYMPE7Jy7rhDv0rn95GEtF94V.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/12mYMPE7Jy7rhDv0rn95GEtF94V.jpg",
     "top": false,
     "synopsis": "Shouyou Hinata, inspirado por um jogador de vôlei lendário apelidado de 'Pequeno Gigante', se junta a um clube de vôlei e luta para se tornar um jogador excepcional e levar sua equipe ao campeonato nacional.",
     "episodes": [
@@ -956,14 +982,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/csL84eGtjaJ0vJdNncNj0ItaTFj.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/csL84eGtjaJ0vJdNncNj0ItaTFj.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -978,14 +1004,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/13veoxgCDkHWZ7udNunYUoYYmyx.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/13veoxgCDkHWZ7udNunYUoYYmyx.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -1002,12 +1028,18 @@
     "director": "Tatsuya Yoshihara",
     "year": "2017-2021",
     "episodeDuration": "23 min. por episódio",
-    "genres": ["Ação", "Comédia", "Fantasia", "Magia", "Shounen"],
+    "genres": [
+      "Ação",
+      "Comédia",
+      "Fantasia",
+      "Magia",
+      "Shounen"
+    ],
     "Premiered": "Fall 2017",
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/7bGvtyA2m16jcCTCdhoiiFF7ibe.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/7bGvtyA2m16jcCTCdhoiiFF7ibe.jpg",
     "top": true,
     "synopsis": "Asta e Yuno são órfãos que cresceram juntos em um mundo onde magia é tudo. Asta, que não tem magia, busca se tornar o Rei Mago e proteger o reino dos perigos que ameaçam a humanidade.",
     "episodes": [
@@ -1022,14 +1054,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/6BBR8YE8SPkBiL4urWhVXgS2jKe.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/6BBR8YE8SPkBiL4urWhVXgS2jKe.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -1044,14 +1076,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/mgjnfc5WNJHqc1fcjs142i4FQoV.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/mgjnfc5WNJHqc1fcjs142i4FQoV.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -1068,12 +1100,17 @@
     "director": "Sunghoo Park",
     "year": "2020-2021",
     "episodeDuration": "23 min. por episódio",
-    "genres": ["Ação", "Demônios", "Escolar", "Sobrenatural"],
+    "genres": [
+      "Ação",
+      "Demônios",
+      "Escolar",
+      "Sobrenatural"
+    ],
     "Premiered": "Fall 2020",
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/nIHp6fz2MX33blJKYa9BSbhct7W.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/nIHp6fz2MX33blJKYa9BSbhct7W.jpg",
     "top": true,
     "synopsis": "Yuji Itadori, um estudante colegial com habilidades físicas excepcionais, se envolve em uma guerra entre feiticeiros e criaturas amaldiçoadas, enquanto ele se torna o hospedeiro de um poderoso demônio.",
     "episodes": [
@@ -1088,14 +1125,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/iKKQpS7Utuxupv7mOqd1YlAfNWw.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/iKKQpS7Utuxupv7mOqd1YlAfNWw.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -1110,14 +1147,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/7IBoZgraHqJHqEW5een8lEeq0CU.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/7IBoZgraHqJHqEW5een8lEeq0CU.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -1136,7 +1173,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/vFMXmS8uS83bINXJp2ct3F2iRZM.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/vFMXmS8uS83bINXJp2ct3F2iRZM.jpg",
     "top": true,
     "episodeDuration": "23 min. por episódio",
     "genres": [
@@ -1161,14 +1198,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/gM9LTtEg3G831yQkiwt30krYLxP.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/gM9LTtEg3G831yQkiwt30krYLxP.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -1183,14 +1220,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/An7cmBwndUCkLrtDEFUb9AH1IM1.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/An7cmBwndUCkLrtDEFUb9AH1IM1.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -1207,12 +1244,18 @@
     "director": "Daisuke Nishio",
     "year": "1989-1996",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Ação", "Aventura", "Comédia", "Fantasia", "Super Poder"],
+    "genres": [
+      "Ação",
+      "Aventura",
+      "Comédia",
+      "Fantasia",
+      "Super Poder"
+    ],
     "Premiered": "Spring 1989",
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/96fP2e5cuIZnB6wskpNfZrLkrm4.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/96fP2e5cuIZnB6wskpNfZrLkrm4.jpg",
     "top": false,
     "synopsis": "Goku e seus amigos protegem a Terra de ameaças poderosas, enfrentando guerreiros extraterrestres, androides e seres místicos enquanto desbloqueiam seu verdadeiro poder.",
     "episodes": [
@@ -1227,14 +1270,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/vsI19Gvmbym9URI36Yjiiq6o8r0.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/vsI19Gvmbym9URI36Yjiiq6o8r0.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -1249,14 +1292,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/oT9fI9LELlQXkhG7CgNDx5ZCjir.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oT9fI9LELlQXkhG7CgNDx5ZCjir.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -1273,12 +1316,18 @@
     "director": "Kenji Nagasaki",
     "year": "2016-",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Ação", "Comédia", "Escolar", "Shounen", "Super Poder"],
+    "genres": [
+      "Ação",
+      "Comédia",
+      "Escolar",
+      "Shounen",
+      "Super Poder"
+    ],
     "Premiered": "Spring 2016",
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/3ILMlmC30QUnYkY3XEBOyJ82Dqu.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/3ILMlmC30QUnYkY3XEBOyJ82Dqu.jpg",
     "top": true,
     "synopsis": "Izuku Midoriya sonha em se tornar um herói, mas nasce sem qualquer poder. Após receber o poder do maior herói do mundo, ele frequenta uma escola para heróis em treinamento e enfrenta vilões poderosos.",
     "episodes": [
@@ -1293,14 +1342,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/5S4t7vjGUahG8ieEUTDNPi1DPBh.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/5S4t7vjGUahG8ieEUTDNPi1DPBh.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -1315,14 +1364,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/m9qwJgfm1eVo70CsRDc2MDFiUcM.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/m9qwJgfm1eVo70CsRDc2MDFiUcM.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -1339,12 +1388,18 @@
     "director": "Koichi Hatsumi",
     "year": "2021",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Ação", "Drama", "Escolar", "Shounen", "Viagem no Tempo"],
+    "genres": [
+      "Ação",
+      "Drama",
+      "Escolar",
+      "Shounen",
+      "Viagem no Tempo"
+    ],
     "Premiered": "Spring 2021",
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/zYIFOocMfsKAEysBjhZ8akfXFdB.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/zYIFOocMfsKAEysBjhZ8akfXFdB.jpg",
     "top": false,
     "synopsis": "Takemichi Hanagaki, um homem desempregado de 26 anos, descobre que a garota por quem ele costumava se apaixonar foi assassinada. Ao ser empurrado para os trilhos do trem, ele viaja no tempo para quando estava no ensino médio e jura mudar seu destino e salvar a garota.",
     "episodes": [
@@ -1359,14 +1414,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/6FcmZTXklg6ONMC11H0sqiMBpZ7.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/6FcmZTXklg6ONMC11H0sqiMBpZ7.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -1381,14 +1436,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/sRDPlgmp6pr12GpvRMKGzjiIgqJ.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/sRDPlgmp6pr12GpvRMKGzjiIgqJ.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -1405,12 +1460,18 @@
     "director": "Noriyuki Abe",
     "year": "2004-2012",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Ação", "Aventura", "Comédia", "Shounen", "Sobrenatural"],
+    "genres": [
+      "Ação",
+      "Aventura",
+      "Comédia",
+      "Shounen",
+      "Sobrenatural"
+    ],
     "Premiered": "Fall 2004",
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/qtfMr08KQsWXnCHY0a96N8NpQ2l.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/qtfMr08KQsWXnCHY0a96N8NpQ2l.jpg",
     "top": true,
     "synopsis": "Ichigo Kurosaki, um estudante com a habilidade de ver espíritos, se torna um Shinigami (Ceifador de Almas) e protege a humanidade dos espíritos malignos enquanto enfrenta poderosas ameaças.",
     "episodes": [
@@ -1425,14 +1486,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/6FX8jzbR42V9RjFD1W9PygvnJkX.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/6FX8jzbR42V9RjFD1W9PygvnJkX.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -1447,14 +1508,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/zJ9OYjNIRFlXjAXiT4iRvPLV5MH.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/zJ9OYjNIRFlXjAXiT4iRvPLV5MH.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -1471,12 +1532,19 @@
     "director": "Shinji Ishihira",
     "year": "2009-2019",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Ação", "Aventura", "Comédia", "Fantasia", "Magia", "Shounen"],
+    "genres": [
+      "Ação",
+      "Aventura",
+      "Comédia",
+      "Fantasia",
+      "Magia",
+      "Shounen"
+    ],
     "Premiered": "Fall 2009",
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/fANxNeH9JCXPrzNEfriGu1Y95dF.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/fANxNeH9JCXPrzNEfriGu1Y95dF.jpg",
     "top": false,
     "synopsis": "Lucy Heartfilia, uma jovem maga, se junta à Guilda Fairy Tail, onde ela forma uma equipe com Natsu Dragneel, um Dragon Slayer do Fogo, e embarca em missões emocionantes e perigosas.",
     "episodes": [
@@ -1491,14 +1559,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/jDHOICuTalFR1pJHbUI3TsG9qMZ.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/jDHOICuTalFR1pJHbUI3TsG9qMZ.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -1513,14 +1581,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/yre6WWqcIzRctIcmbZxC0NoGCTR.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/yre6WWqcIzRctIcmbZxC0NoGCTR.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -1537,12 +1605,18 @@
     "director": "Hiroshi Koujina",
     "year": "2011-2014",
     "episodeDuration": "23 min. por episódio",
-    "genres": ["Ação", "Aventura", "Fantasia", "Shounen", "Super Poder"],
+    "genres": [
+      "Ação",
+      "Aventura",
+      "Fantasia",
+      "Shounen",
+      "Super Poder"
+    ],
     "Premiered": "Fall 2011",
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/sjyobk8kdUzNlkejRhv68tNRJeB.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/sjyobk8kdUzNlkejRhv68tNRJeB.jpg",
     "top": true,
     "synopsis": "Gon Freecss descobre que seu pai, que ele acreditava estar morto, é um Hunter - um membro de elite da sociedade com habilidades incríveis. Gon embarca em uma jornada para se tornar um Hunter e encontrar seu pai.",
     "episodes": [
@@ -1557,14 +1631,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/7ppEotl1YMs1adTscDdMoLhQaQ3.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/7ppEotl1YMs1adTscDdMoLhQaQ3.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -1579,14 +1653,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/qEX0cNZhtRdvXkqalV3cg1yiJhB.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/qEX0cNZhtRdvXkqalV3cg1yiJhB.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -1616,7 +1690,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/lY12qhlsm9JJ3I2PyAZNkpU9a5h.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/lY12qhlsm9JJ3I2PyAZNkpU9a5h.jpg",
     "top": true,
     "synopsis": "Os irmãos Edward e Alphonse Elric usam a alquimia em uma tentativa desesperada de ressuscitar sua mãe, mas acabam pagando um preço terrível. Eles embarcam em uma jornada para encontrar a Pedra Filosofal e restaurar seus corpos.",
     "episodes": [
@@ -1631,14 +1705,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/9OQdBV5ca27OhfoCWKjJT4Pq0AB.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/9OQdBV5ca27OhfoCWKjJT4Pq0AB.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -1653,14 +1727,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/7nj2xLJvjNecLnftoCSmC8QTk6t.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/7nj2xLJvjNecLnftoCSmC8QTk6t.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -1690,7 +1764,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/5hS2OIuZSKGkR8R5l3bY5zh04Ce.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/5hS2OIuZSKGkR8R5l3bY5zh04Ce.jpg",
     "top": false,
     "synopsis": "Numa realidade alternativa, Lelouch Lamperouge, um jovem príncipe, obtém o poder do Geass e se torna o vigilante mascarado conhecido como Zero, liderando uma rebelião contra o opressivo Império Britânico.",
     "episodes": [
@@ -1705,14 +1779,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/uXgJMmux25CrTLOQ4PObkD2uszM.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/uXgJMmux25CrTLOQ4PObkD2uszM.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -1727,14 +1801,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/wuAngVVMPf1lEj54NmlWJxydbuD.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/wuAngVVMPf1lEj54NmlWJxydbuD.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -1762,7 +1836,7 @@
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
-    "background":"https://www.themoviedb.org/t/p/original/ouWGzM6ISz0DlcRG81bvUP6tvhY.jpg",
+    "background": "https://www.themoviedb.org/t/p/original/ouWGzM6ISz0DlcRG81bvUP6tvhY.jpg",
     "top": false,
     "synopsis": "Light Yagami, um estudante do ensino médio, descobre um misterioso caderno chamado Death Note. Com o poder de matar qualquer pessoa cujo nome seja escrito nele, Light decide usar esse poder para livrar o mundo do mal e criar uma utopia onde ele é o deus do novo mundo.",
     "episodes": [
@@ -1777,14 +1851,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
@@ -1799,14 +1873,14 @@
           },
           {
             "resolution": "HD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           },
           {
             "resolution": "SD",
-            "url":"https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
           }
         ],
-        "thumbnail":"https://www.themoviedb.org/t/p/original/b0BSIfkkoYbf4KKTJlY0XOoQxY1.jpg",
+        "thumbnail": "https://www.themoviedb.org/t/p/original/b0BSIfkkoYbf4KKTJlY0XOoQxY1.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -1823,7 +1897,13 @@
     "director": "Yasuhiro Irie",
     "year": "2009-2010",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Ação", "Aventura", "Drama", "Fantasia", "Shounen"],
+    "genres": [
+      "Ação",
+      "Aventura",
+      "Drama",
+      "Fantasia",
+      "Shounen"
+    ],
     "Premiered": "Primavera 2009",
     "Fansub": "Oficial",
     "language": "Dublado",
@@ -1903,7 +1983,10 @@
     "director": "Hiroshi Hamasaki, Takuya Satou",
     "year": "2011",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Suspense", "Ficção Científica"],
+    "genres": [
+      "Suspense",
+      "Ficção Científica"
+    ],
     "Premiered": "Primavera 2011",
     "Fansub": "Oficial",
     "language": "Dublado",
@@ -1939,7 +2022,14 @@
     "director": "Yoichi Fujita",
     "year": "2011-2012",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Ação", "Comédia", "Histórico", "Paródia", "Samurai", "Shounen"],
+    "genres": [
+      "Ação",
+      "Comédia",
+      "Histórico",
+      "Paródia",
+      "Samurai",
+      "Shounen"
+    ],
     "Premiered": "Primavera 2011",
     "Fansub": "Oficial",
     "language": "Dublado",
@@ -1975,7 +2065,14 @@
     "director": "Yoichi Fujita",
     "year": "2015-2016",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Ação", "Comédia", "Histórico", "Paródia", "Samurai", "Shounen"],
+    "genres": [
+      "Ação",
+      "Comédia",
+      "Histórico",
+      "Paródia",
+      "Samurai",
+      "Shounen"
+    ],
     "Premiered": "Primavera 2015",
     "Fansub": "Oficial",
     "language": "Dublado",
@@ -2011,7 +2108,14 @@
     "director": "Yoichi Fujita",
     "year": "2012-2013",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Ação", "Comédia", "Histórico", "Paródia", "Samurai", "Shounen"],
+    "genres": [
+      "Ação",
+      "Comédia",
+      "Histórico",
+      "Paródia",
+      "Samurai",
+      "Shounen"
+    ],
     "Premiered": "Outono 2012",
     "Fansub": "Oficial",
     "language": "Dublado",
@@ -2047,7 +2151,14 @@
     "director": "Gorou Taniguchi",
     "year": "2008",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Ação", "Militar", "Sci-Fi", "Superpoder", "Drama", "Mecha"],
+    "genres": [
+      "Ação",
+      "Militar",
+      "Sci-Fi",
+      "Superpoder",
+      "Drama",
+      "Mecha"
+    ],
     "Premiered": "Primavera 2008",
     "Fansub": "Oficial",
     "language": "Dublado",
@@ -2083,7 +2194,13 @@
     "director": "Shingo Natsume",
     "year": "2015",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Ação", "Comédia", "Paródia", "Sci-Fi", "Sobrenatural"],
+    "genres": [
+      "Ação",
+      "Comédia",
+      "Paródia",
+      "Sci-Fi",
+      "Sobrenatural"
+    ],
     "Premiered": "Outono 2015",
     "Fansub": "Oficial",
     "language": "Dublado",
@@ -2163,7 +2280,13 @@
     "director": "Kyōhei Ishiguro",
     "year": "2014-2015",
     "episodeDuration": "22 min. por episódio",
-    "genres": ["Drama", "Música", "Romance", "Escolar", "Shounen"],
+    "genres": [
+      "Drama",
+      "Música",
+      "Romance",
+      "Escolar",
+      "Shounen"
+    ],
     "Premiered": "Outono 2014",
     "Fansub": "Oficial",
     "language": "Dublado",
@@ -2199,7 +2322,13 @@
     "director": "Susumu Mitsunaka",
     "year": "2014-2020",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Comédia", "Drama", "Escolar", "Shounen", "Esporte"],
+    "genres": [
+      "Comédia",
+      "Drama",
+      "Escolar",
+      "Shounen",
+      "Esporte"
+    ],
     "Premiered": "Primavera 2014",
     "Fansub": "Oficial",
     "language": "Dublado",
@@ -2235,7 +2364,14 @@
     "director": "Shinichiro Watanabe",
     "year": "1998-1999",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Ação", "Aventura", "Comédia", "Drama", "Sci-Fi", "Espaço"],
+    "genres": [
+      "Ação",
+      "Aventura",
+      "Comédia",
+      "Drama",
+      "Sci-Fi",
+      "Espaço"
+    ],
     "Premiered": "Outono 1998",
     "Fansub": "Oficial",
     "language": "Dublado",
@@ -2271,7 +2407,13 @@
     "director": "Hideaki Anno",
     "year": "1995-1996",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Ação", "Drama", "Mecha", "Psicológico", "Sci-Fi"],
+    "genres": [
+      "Ação",
+      "Drama",
+      "Mecha",
+      "Psicológico",
+      "Sci-Fi"
+    ],
     "Premiered": "Outono 1995",
     "Fansub": "Oficial",
     "language": "Dublado",
@@ -2351,7 +2493,13 @@
     "director": "Tatsuya Ishihara",
     "year": "2008-2009",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Slice of Life", "Comédia", "Drama", "Romance", "Supernatural"],
+    "genres": [
+      "Slice of Life",
+      "Comédia",
+      "Drama",
+      "Romance",
+      "Supernatural"
+    ],
     "Premiered": "Outono 2008",
     "Fansub": "Oficial",
     "language": "Dublado",
@@ -2387,7 +2535,12 @@
     "director": "Tatsuyuki Nagai",
     "year": "2008-2009",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Slice of Life", "Comédia", "Romance", "Escola"],
+    "genres": [
+      "Slice of Life",
+      "Comédia",
+      "Romance",
+      "Escola"
+    ],
     "Premiered": "Outono 2008",
     "Fansub": "Oficial",
     "language": "Dublado",
@@ -2423,7 +2576,13 @@
     "director": "Masayuki Kojima",
     "year": "2004-2005",
     "episodeDuration": "24 min. por episódio",
-    "genres": ["Mistério", "Drama", "Horror", "Psicológico", "Thriller"],
+    "genres": [
+      "Mistério",
+      "Drama",
+      "Horror",
+      "Psicológico",
+      "Thriller"
+    ],
     "Premiered": "Primavera 2004",
     "Fansub": "Oficial",
     "language": "Dublado",
@@ -2459,7 +2618,13 @@
     "director": "Masayuki Kojima",
     "year": "2017",
     "episodeDuration": "25 min. por episódio",
-    "genres": ["Aventura", "Mistério", "Drama", "Fantasia", "Sci-Fi"],
+    "genres": [
+      "Aventura",
+      "Mistério",
+      "Drama",
+      "Fantasia",
+      "Sci-Fi"
+    ],
     "Premiered": "Verão 2017",
     "Fansub": "Oficial",
     "language": "Dublado",
@@ -2538,7 +2703,14 @@
     "director": "Kenichi Shimizu",
     "year": "2014-2015",
     "episodeDuration": "23 min. por episódio",
-    "genres": ["Ação", "Drama", "Horror", "Psicológico", "Sci-Fi", "Seinen"],
+    "genres": [
+      "Ação",
+      "Drama",
+      "Horror",
+      "Psicológico",
+      "Sci-Fi",
+      "Seinen"
+    ],
     "Premiered": "Outono 2014",
     "Fansub": "Oficial",
     "language": "Dublado",
@@ -2560,6 +2732,612 @@
         "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
+      }
+    ]
+  },
+  {
+    "id": 242,
+    "Type": "Filme",
+    "title": "Koe no Katachi",
+    "slug": "koe-no-katachi",
+    "subtitule": "A Voz do Silêncio",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1347/134168l.jpg",
+    "studio": "Kyoto Animation",
+    "director": "Naoko Yamada",
+    "year": "2016",
+    "episodeDuration": "2h. 10m.",
+    "Fansub": "Oficial",
+    "language": "Legendado",
+    "resoAnime": "FHD",
+    "genres": [
+      "Drama",
+      "Escolar",
+      "Romance"
+    ],
+    "synopsis": "Koe no Katachi conta a emocionante história do reencontro de Shouya com Shouko e de suas sinceras tentativas de se redimir, tudo isso enquanto é continuamente assombrado pelas sombras de seu passado.",
+    "episodes": [
+      {
+        "id": 3031,
+        "titleEpisodio": "Episodio 01",
+        "titleSlug": "episodio-1",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/rvy4W28wYkct3IFxU0RGF2uHppG.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 3032,
+        "titleEpisodio": "Episodio 02",
+        "titleSlug": "episodio-2",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/klFBxM7QHRtYvuqBcHGSoJaY5ES.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      }
+    ]
+  },
+  {
+    "id": 243,
+    "Type": "Filme",
+    "title": "Violet Evergarden Movie",
+    "slug": "violet-evergarden-movie",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1825/110716l.jpg",
+    "studio": "Kyoto Animation",
+    "director": "Taichi Ishidate",
+    "year": "2020",
+    "episodeDuration": "2h. 20m.",
+    "Fansub": "Oficial",
+    "language": "Legendado",
+    "resoAnime": "FHD",
+    "genres": [
+      "Drama",
+      "Fantasia",
+      "Slice of Life"
+    ],
+    "synopsis": "Vários anos se passaram desde o fim da Grande Guerra. À medida que a torre de rádio em Leidenschaftlich continua a ser construída, os telefones logo se tornarão mais relevantes, levando a um declínio na demanda por 'bonecos de memória automática'. Mesmo assim, Violet Evergarden continua a ganhar fama após seu constante sucesso em escrever cartas. No entanto, às vezes, a única coisa que você deseja é a única coisa que não aparece. \n\n Violet Evergarden Movie segue Violet enquanto ela continua a compreender o conceito de emoção e o significado do amor. Ao mesmo tempo, ela persegue um vislumbre de esperança de que o homem que uma vez lhe disse 'eu te amo' ainda esteja vivo mesmo depois de muitos anos que se passaram.",
+    "episodes": [
+      {
+        "id": 3033,
+        "titleEpisodio": "Episodio 01",
+        "titleSlug": "episodio-1",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/rvy4W28wYkct3IFxU0RGF2uHppG.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 3034,
+        "titleEpisodio": "Episodio 02",
+        "titleSlug": "episodio-2",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/klFBxM7QHRtYvuqBcHGSoJaY5ES.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      }
+    ]
+  },
+  {
+    "id": 244,
+    "Type": "Filme",
+    "title": "Kimi no Na wa.",
+    "slug": "kimi-no-na-wa",
+    "subtitule": "Your Name.",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/5/87048l.jpg",
+    "studio": "CoMix Wave Films",
+    "director": "Makoto Shinkai",
+    "year": "2016",
+    "episodeDuration": "1hr 46m.",
+    "Fansub": "Oficial",
+    "language": "Legendado",
+    "resoAnime": "FHD",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Fantasia"
+    ],
+    "synopsis": "Mitsuha Miyamizu, uma estudante do ensino médio, deseja viver a vida de um garoto na agitada cidade de Tóquio - um sonho que contrasta fortemente com sua vida atual no campo. Enquanto isso, na cidade, Taki Tachibana leva uma vida agitada como estudante do ensino médio, conciliando seu emprego de meio período e suas esperanças de um futuro na arquitetura. Um dia, Mitsuha acorda em um quarto que não é o seu e de repente se vê vivendo a vida dos seus sonhos em Tóquio - mas no corpo de Taki! Enquanto isso, Taki se encontra vivendo a vida de Mitsuha na humilde zona rural. Em busca de uma resposta para esse estranho fenômeno, eles começam a procurar um ao outro. Kimi no Na wa. gira em torno das ações de Mitsuha e Taki, que começam a ter um impacto dramático na vida um do outro, entrelaçando-os em um tecido mantido pela destinação e circunstância.",
+    "episodes": [
+      {
+        "id": 3035,
+        "titleEpisodio": "Episodio 01",
+        "titleSlug": "episodio-1",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/rvy4W28wYkct3IFxU0RGF2uHppG.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 3036,
+        "titleEpisodio": "Episodio 02",
+        "titleSlug": "episodio-2",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/klFBxM7QHRtYvuqBcHGSoJaY5ES.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      }
+    ]
+  },
+  {
+    "id": 245,
+    "Type": "Filme",
+    "title": "Sen to Chihiro no Kamikakushi",
+    "slug": "sen-to-chihiro-no-kamikakushi",
+    "subtitule": "A Viagem de Chihiro",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/6/79597l.jpg",
+    "studio": "Studio Ghibli",
+    "director": "Hayao Miyazaki",
+    "year": "2001",
+    "episodeDuration": "2h. 4m.",
+    "Fansub": "Oficial",
+    "language": "Legendado",
+    "resoAnime": "FHD",
+    "genres": [
+      "Aventura",
+      "Fantasia",
+      "Drama"
+    ],
+    "synopsis": "Chihiro Ogino, uma garota de 10 anos teimosa, mimada e ingênua, fica menos do que satisfeita quando ela e seus pais descobrem um parque de diversões abandonado a caminho de sua nova casa. Ao se aventurar com cautela dentro do parque, ela percebe que há mais nesse lugar do que aparenta, pois coisas estranhas começam a acontecer quando o anoitecer chega. Aparições fantasmas e comida que transforma seus pais em porcos são apenas o começo - Chihiro cruzou inadvertidamente para o mundo dos espíritos. Agora presa, ela precisa reunir coragem para viver e trabalhar entre os espíritos, contando com a ajuda do enigmático Haku e do elenco de personagens únicos que ela conhece ao longo do caminho. Vívido e intrigante, Sen to Chihiro no Kamikakushi conta a história da jornada de Chihiro por um mundo desconhecido, enquanto ela se esforça para salvar seus pais e retornar para casa. ",
+    "episodes": [
+      {
+        "id": 3037,
+        "titleEpisodio": "Episodio 01",
+        "titleSlug": "episodio-1",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/rvy4W28wYkct3IFxU0RGF2uHppG.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 3038,
+        "titleEpisodio": "Episodio 02",
+        "titleSlug": "episodio-2",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/klFBxM7QHRtYvuqBcHGSoJaY5ES.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      }
+    ]
+  },
+  {
+    "id": 246,
+    "Type": "Filme",
+    "title": "Mononoke Hime",
+    "slug": "mononoke-hime",
+    "subtitule": "A Princesa Mononoke",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1643/119089l.jpg",
+    "studio": "Studio Ghibli",
+    "director": "Hayao Miyazaki",
+    "year": "1997",
+    "episodeDuration": "2h. 13m.",
+    "Fansub": "Oficial",
+    "language": "Legendado",
+    "resoAnime": "FHD",
+    "genres": [
+      "Aventura",
+      "Fantasia",
+      "Histórico"
+    ],
+    "synopsis": "Quando uma vila Emishi é atacada por um feroz javali demoníaco, o jovem príncipe Ashitaka arrisca sua vida para defender sua tribo. Com seu último suspiro, a fera amaldiçoa o braço do príncipe, concedendo-lhe poderes demoníacos enquanto drena gradualmente sua vida. Instruído pelos anciãos da vila a viajar para o oeste em busca de uma cura, Ashitaka chega a Tatara, a Cidade de Ferro, onde se vê envolvido em um conflito feroz: Lady Eboshi de Tatara, promovendo o desmatamento constante, confronta a Princesa San e os espíritos sagrados da floresta, que estão furiosos com a destruição causada pelos humanos. À medida que as forças opostas da natureza e da humanidade começam a se chocar em uma luta desesperada pela sobrevivência, Ashitaka tenta buscar a harmonia entre os dois, ao mesmo tempo em que luta contra o demônio latente dentro de si. Princesa Mononoke é uma história que retrata a conexão entre tecnologia e natureza, ao mesmo tempo em que mostra o caminho para a harmonia que poderia ser alcançada por meio da aceitação mútua.",
+    "episodes": [
+      {
+        "id": 3039,
+        "titleEpisodio": "Episodio 01",
+        "titleSlug": "episodio-1",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/rvy4W28wYkct3IFxU0RGF2uHppG.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 3040,
+        "titleEpisodio": "Episodio 02",
+        "titleSlug": "episodio-2",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/klFBxM7QHRtYvuqBcHGSoJaY5ES.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      }
+    ]
+  },
+  {
+    "id": 247,
+    "Type": "Filme",
+    "title": "Howl no Ugoku Shiro",
+    "slug": "howl-no-ugoku-shiro",
+    "subtitule": "O Castelo Animado",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1539/127896l.jpg",
+    "studio": "Studio Ghibli",
+    "director": "Hayao Miyazaki",
+    "year": "2004",
+    "episodeDuration": "1h. 59m.",
+    "Fansub": "Oficial",
+    "language": "Legendado",
+    "resoAnime": "FHD",
+    "genres": [
+      "Aventura",
+      "Fantasia",
+      "Romance"
+    ],
+    "synopsis": "Aquela peça de arquitetura confusa, aquela cacofonia de vapor assobiante e juntas rangentes, com fumaça saindo enquanto se move sozinho... Aquele castelo é lar do magnífico mago Howl, famoso tanto por sua habilidade mágica quanto por ser um conquistador de mulheres - pelo menos é o que dizem os rumores na pequena cidade de Sophie Hatter. Sophie, como a simples filha de um chapéuzeiro, não espera muito do seu futuro e está contente em trabalhar duro na loja. Entretanto, a vida simples de Sophie toma um rumo emocionante quando ela se vê envolvida em uma situação perturbadora e o misterioso mago aparece para resgatá-la. Infelizmente, esse encontro, por mais breve que seja, desperta a bruxa vaidosa e vingativa, a Bruxa do Desperdício - em um acesso de ciúmes causado por um desentendimento anterior com Howl - a lançar uma maldição na jovem, transformando-a em uma velha senhora. Na tentativa de voltar ao normal, Sophie precisa acompanhar Howl e uma variedade de companheiros excêntricos - que vão desde um poderoso demônio de fogo até um espantalho saltitante - em seu castelo ambulante, em uma perigosa aventura enquanto uma guerra violenta dilacera seu reino.",
+    "episodes": [
+      {
+        "id": 3041,
+        "titleEpisodio": "Episodio 01",
+        "titleSlug": "episodio-1",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/rvy4W28wYkct3IFxU0RGF2uHppG.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 3042,
+        "titleEpisodio": "Episodio 02",
+        "titleSlug": "episodio-2",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/klFBxM7QHRtYvuqBcHGSoJaY5ES.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      }
+    ]
+  },
+  {
+    "id": 248,
+    "Type": "Filme",
+    "title": "Evangelion: 3.0+1.0 Thrice Upon a Time",
+    "slug": "evangelion-30-10-thrice-upon-a-time",
+    "subtitule": "",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1422/113533l.jpg",
+    "studio": "Khara",
+    "director": "Hideaki Anno",
+    "year": "2021",
+    "episodeDuration": "2h. 35m.",
+    "Fansub": "Oficial",
+    "language": "Legendado",
+    "resoAnime": "FHD",
+    "genres": [
+      "Ação",
+      "Mecha",
+      "Drama",
+      "Psicológico",
+      "Sci-Fi"
+    ],
+    "synopsis": "Após a tentativa fracassada da NERV de recuperar as Lanças de Longinus e realizar o Projeto de Instrumentalidade Humana, a destruição causada pelo Quarto Impacto foi em grande parte evitada. Em um estado de desordem, Shinji Ikari, Asuka Langley Shikinami e Rei Ayanami viajam para a Vila 3 - um assentamento de sobreviventes livre da ruína da Terra. Lá, Shinji aos poucos aceita seu passado, desenvolvendo uma vida completamente diferente dos seus dias como piloto de Evangelion. Enquanto isso, a NERV se prepara para continuar o Projeto de Instrumentalidade por meio de um novo Impacto. Quando a principal nave de batalha aérea da WILLE chega à vila, Shinji decide embarcar, acreditando que pode ajudar pilotando um Evangelion. À medida que novos segredos são revelados e uma batalha entre a WILLE e a NERV se aproxima, o futuro da Terra fica em jogo. Será que Shinji poderá salvar a humanidade e o resto do mundo mais uma vez?",
+    "episodes": [
+      {
+        "id": 3043,
+        "titleEpisodio": "Episodio 01",
+        "titleSlug": "episodio-1",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/rvy4W28wYkct3IFxU0RGF2uHppG.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 3044,
+        "titleEpisodio": "Episodio 02",
+        "titleSlug": "episodio-2",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/klFBxM7QHRtYvuqBcHGSoJaY5ES.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      }
+    ]
+  },
+  {
+    "id": 249,
+    "Type": "Filme",
+    "title": "Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai",
+    "slug": "seishun-buta-yarou-wa-yumemiru-shoujo-no-yume-wo-minai",
+    "subtitule": "Rascal Does Not Dream of a Dreaming Girl",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1774/111679l.jpg",
+    "studio": "CloverWorks",
+    "director": "Sōichi Masui",
+    "year": "2019",
+    "episodeDuration": "1h. 30m.",
+    "Fansub": "Oficial",
+    "language": "Legendado",
+    "resoAnime": "FHD",
+    "genres": [
+      "Comédia",
+      "Drama",
+      "Romance",
+      "Escolar"
+    ],
+    "synopsis": "Há seis meses, Sakuta Azusagawa teve um encontro fortuito com uma garota coelhinha em uma biblioteca. Desde então, ele tem sido incrivelmente feliz com sua namorada, Mai Sakurajima, a mesma garota coelhinha. No entanto, o reaparecimento de sua misteriosa primeira paixão, a agora adulta Shouko Makinohara, adiciona uma nova complicação à sua relação com Mai. Para piorar as coisas, ele então encontra uma Shouko do ensino médio no hospital, sofrendo de uma grave doença. Misteriosamente, suas antigas cicatrizes começam a latejar sempre que ele está perto dela. Com a situação bizarra de Shouko de alguma forma girando em torno dele, Sakuta precisará lidar com seus próprios sentimentos conflitantes, para o melhor ou para o pior. Com a vida de uma garota em suas mãos, o que ele pode fazer?",
+    "episodes": [
+      {
+        "id": 3045,
+        "titleEpisodio": "Episodio 01",
+        "titleSlug": "episodio-1",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/rvy4W28wYkct3IFxU0RGF2uHppG.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 3046,
+        "titleEpisodio": "Episodio 02",
+        "titleSlug": "episodio-2",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/klFBxM7QHRtYvuqBcHGSoJaY5ES.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      }
+    ]
+  },
+  {
+    "id": 250,
+    "Type": "Filme",
+    "title": "Kimi no Suizou wo Tabetai",
+    "slug": "kimi-no-suizou-wo-tabetai",
+    "subtitule": "Eu Quero Comer Seu Pâncreas",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1768/93291l.jpg",
+    "studio": "Studio VOLN",
+    "director": "Shin'ichirō Ushijima",
+    "year": "2018",
+    "episodeDuration": "1h. 48m.",
+    "Fansub": "Oficial",
+    "language": "Legendado",
+    "resoAnime": "FHD",
+    "genres": [
+      "Drama",
+      "Escolar",
+      "Romance"
+    ],
+    "synopsis": "O protagonista distante: um rato de biblioteca que está profundamente desconectado do mundo em que vive. Ele não tem interesse em outras pessoas e está firmemente convencido de que ninguém tem interesse nele também. Sua história começa quando ele tropeça em um livro escrito à mão, intitulado Viver com a Morte. Ele logo o identifica como um diário secreto pertencente à sua colega de classe popular e animada, Sakura Yamauchi. Ela então confia nele sobre a doença pancreática da qual está sofrendo e que seu tempo restante é limitado. Apenas sua família sabe de sua doença terminal; nem mesmo seus melhores amigos têm conhecimento. Apesar dessa revelação, ele não demonstra nenhuma simpatia por sua situação, mas envolvido nas ondas do otimismo persistente de Sakura, ele eventualmente cede e decide acompanhá-la em seus últimos dias. À medida que esse par de opostos interage, sua conexão se fortalece, entrelaçando-se por meio das escolhas feitas a cada dia que passa. A aparente despreocupação e imprevisibilidade de Sakura perturbam o fluxo impassível da vida do protagonista, abrindo gradualmente seu coração enquanto ele descobre e abraça o verdadeiro significado de viver.",
+    "episodes": [
+      {
+        "id": 3047,
+        "titleEpisodio": "Episodio 01",
+        "titleSlug": "episodio-1",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/rvy4W28wYkct3IFxU0RGF2uHppG.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 3048,
+        "titleEpisodio": "Episodio 02",
+        "titleSlug": "episodio-2",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/klFBxM7QHRtYvuqBcHGSoJaY5ES.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
       }
     ]
   }

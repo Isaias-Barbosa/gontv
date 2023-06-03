@@ -10,6 +10,7 @@ import SinglePlayPage from "pages/SinglePlayPage";
 import AnimesDub from "pages/AnimesDub";
 import SearchAnime from "pages/SearchAnime";
 import AnimesLancamentos from "pages/AnimesLancamentos";
+import Filmes from "pages/Filmes";
 
 
 
@@ -23,6 +24,7 @@ function AppRoutes() {
         <Route path="/animes/" element={<Animes />} />
         <Route path="/lancamentos/*" element={<AnimesLancamentos />} />
         <Route path="/animesDublados" element={<AnimesDub />} />
+        <Route path="/filmes/" element={<Filmes />} />
         <Route path="/animes/:slug/*" element={<SingleAnimePage />} />
         <Route path="/animes/:slug/:titleSlug/:languageEpisode/*" element={<SinglePlayPage />} />
         <Route path="/search/" element={<SearchAnime />} /> {/* Defina a rota para SearchAnime */}

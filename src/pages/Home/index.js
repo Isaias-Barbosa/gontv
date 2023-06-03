@@ -6,6 +6,7 @@ import LastAddedAnimes from "components/LastAddedAnimes";
 import LastAddedAnimesDublado from 'components/LastAddedAnimesDublado';
 import { Link } from 'react-router-dom';
 import animes from 'json/animes.json';
+import LastAddedFilmes from "components/LastAddedFilmes";
 
 export default function Home() {
 
@@ -20,27 +21,6 @@ export default function Home() {
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const lancamentos = animes.slice(0, 20);
-
-  const animeList = [
-    { title: 'Boku no Hero', episode: 'Episódio 10', resolution: 'FHD', image: 'https://i0.wp.com/img1.ak.crunchyroll.com/i/spire3-tmb/33c2d010cf4238ce66cc01f9335055cd1499180836_full.jpg' },
-    { title: 'Isekai Shoukan wa Nidome desu', episode: 'Episódio 15', resolution: 'FHD', image: 'https://i.pinimg.com/originals/30/f8/85/30f885fa822e31d2c57015739beaeb12.png' },
-    { title: 'Otonari ni Ginga', episode: 'Episódio 3', resolution: 'FHD', image: 'https://www.themoviedb.org/t/p/original/sqEwNXhe06Kbq9iQH77J5E8Uqvq.jpg' },
-    { title: 'Yamada-kun to Lv999 no Koi wo Suru', episode: 'Episódio 4', resolution: 'FHD', image: 'https://img1.ak.crunchyroll.com/i/spire1/9cd1a6410f3e1e09dc1d22fd39036d591684755429_main.jpg' },
-    { title: 'Edens Zero 2', episode: 'Episódio 10 ', resolution: 'FHD', image: 'https://i0.wp.com/img1.ak.crunchyroll.com/i/spire3-tmb/33c2d010cf4238ce66cc01f9335055cd1499180836_full.jpg' },
-    { title: 'Megami no Café Terrace', episode: 'Episódio 15', resolution: 'FHD', image: 'https://i.pinimg.com/originals/30/f8/85/30f885fa822e31d2c57015739beaeb12.png' },
-    { title: 'Mahou Shoujo Magical Destroyers', episode: 'Episódio 3', resolution: 'FHD', image: 'https://www.themoviedb.org/t/p/original/sqEwNXhe06Kbq9iQH77J5E8Uqvq.jpg' },
-    { title: 'Tengoku Daimakyou', episode: 'Episódio 4', resolution: 'FHD', image: 'https://img1.ak.crunchyroll.com/i/spire1/9cd1a6410f3e1e09dc1d22fd39036d591684755429_main.jpg' },
-    { title: 'Rokudou no Onna-tachi', episode: 'Episódio 10', resolution: 'FHD', image: 'https://i0.wp.com/img1.ak.crunchyroll.com/i/spire3-tmb/33c2d010cf4238ce66cc01f9335055cd1499180836_full.jpg' },
-    { title: 'Tonikaku Kawaii 2', episode: 'Episódio 15', resolution: 'FHD', image: 'https://i.pinimg.com/originals/30/f8/85/30f885fa822e31d2c57015739beaeb12.png' },
-    { title: 'Mashle', episode: 'Episódio 3', resolution: 'FHD', image: 'https://www.themoviedb.org/t/p/original/sqEwNXhe06Kbq9iQH77J5E8Uqvq.jpg' },
-    { title: 'Isekai One Turn Kill Neesan', episode: 'Episódio 4', resolution: 'FHD', image: 'https://img1.ak.crunchyroll.com/i/spire1/9cd1a6410f3e1e09dc1d22fd39036d591684755429_main.jpg' },
-    { title: 'Yuusha ga Shinda!', episode: 'Episódio 10', resolution: 'FHD', image: 'https://i0.wp.com/img1.ak.crunchyroll.com/i/spire3-tmb/33c2d010cf4238ce66cc01f9335055cd1499180836_full.jpg' },
-    { title: 'Mahoutsukai no Yome 2', episode: 'Episódio 1', resolution: 'FHD', image: 'https://i.pinimg.com/originals/30/f8/85/30f885fa822e31d2c57015739beaeb12.png' },
-    { title: 'Ousama Ranking: Yuuki no Takarabako', episode: 'Episódio 3', resolution: 'FHD', image: 'https://www.themoviedb.org/t/p/original/sqEwNXhe06Kbq9iQH77J5E8Uqvq.jpg' },
-    { title: 'Dr. Stone: New World', episode: ' Episódio 4', resolution: 'FHD', image: 'https://img1.ak.crunchyroll.com/i/spire1/9cd1a6410f3e1e09dc1d22fd39036d591684755429_main.jpg' },
-    // Adicione mais animes aqui...
-  ];
 
   return (
 
@@ -58,7 +38,7 @@ export default function Home() {
               <h2 className="text-2xl text-start text-white font-bold mb-1 p-1 ">
                 <span className="border-b-4 border-emerald-600 pb-1"> Lançamentos</span>
               </h2>
-              <div className="text-end ">
+              <div className="text-end mb-2">
                 <Link to="/lancamentos" className="text-emerald-600 hover:text-emerald-500 text-end font-bold">
                   Ver Todos
                 </Link>
@@ -78,12 +58,17 @@ export default function Home() {
                           alt={anime.title}
                           className="w-full h-auto"
                         />
-                       {hoveredIndex === index && (
+                        {hoveredIndex === index && (
                           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
                             <MdPlayCircleFilled className="text-white text-5xl" />
                           </div>
                         )}
-                        <div className="absolute top-0 left-0 bg-emerald-700 rounded-none m-2 p-1">
+                        <div className="absolute top-0 left-8 flex items-center justify-center ms-1 p-2">
+                          <div className={`text-xs font-bold ${anime.language === 'Legendado' ? 'bg-rose-500 text-white' : 'bg-blue-500 text-white'} rounded-md px-2 py-1`}>
+                            {anime.language === 'Legendado' ? 'LEG' : 'Dub'}
+                          </div>
+                        </div>
+                        <div className="absolute top-0 left-0 bg-emerald-700 rounded-md m-2 p-1">
                           <p className="text-white text-xs font-bold">{anime.resoAnime}</p>
                         </div>
                       </div>
@@ -96,11 +81,14 @@ export default function Home() {
 
             </div>
           </div>
-          <div className="section">
+          <div className="section animes-legendados">
             <LastAddedAnimes animes={animes} />
           </div>
-          <div className="section">
+          <div className="section animes-dublados">
             <LastAddedAnimesDublado animes={animes} />
+          </div>
+          <div className="section filmes-animes">
+            <LastAddedFilmes animes={animes} />
           </div>
         </main>
       </div>

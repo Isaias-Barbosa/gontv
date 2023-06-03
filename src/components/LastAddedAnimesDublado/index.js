@@ -59,34 +59,39 @@ export default function LastAddedAnimesDublado({ animes }) {
   return (
     <>
       <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
-        <h2 className="text-2xl text-white font-bold text-start mb-6 p-1">
+        <h2 className="text-2xl text-white font-bold text-start mb-1 p-1">
           <span className="border-b-4 border-emerald-600 pb-1">Novos Animes Dublados</span>
         </h2>
-        <Slider {...settings}>
-            {limitedAnimes && limitedAnimes.length > 0 ? (
-              limitedAnimes.map((anime) => (
-                <div className="aspect-ratio-box" >
-                  <div key={anime.id} className="relative">
-                    <Link to={`/animes/${anime.slug}`}>
-                      <div className="anime-cover">
-                        <img src={anime.coverImage} alt={anime.title}
-                          className="w-full h-auto px-1 object-cover custom-height-last mb-1"
-                        />
-                        <div className="overlay"></div>
-                        <button className="play-button">
-                          <MdPlayCircleFilled className="text-white text-4xl" />
-                        </button>
-                      </div>
-                    </Link>
-                    <h3 className="text-md text-white text-center font-semibold">{truncateTitle(anime.title)}</h3>
-                  </div>
-                </div>
-              ))
-            ) : (
-              <div>Nenhum anime encontrado.</div>
-            )}
-          </Slider>
+        <div className="text-end mb-2">
+          <Link to="/animesDublados" className="text-emerald-600 hover:text-emerald-500 text-end font-bold">
+            Ver Todos
+          </Link>
         </div>
+        <Slider {...settings}>
+          {limitedAnimes && limitedAnimes.length > 0 ? (
+            limitedAnimes.map((anime) => (
+              <div className="aspect-ratio-box" >
+                <div key={anime.id} className="relative">
+                  <Link to={`/animes/${anime.slug}`}>
+                    <div className="anime-cover">
+                      <img src={anime.coverImage} alt={anime.title}
+                        className="w-full h-auto px-1 object-cover custom-height-last mb-1"
+                      />
+                      <div className="overlay"></div>
+                      <button className="play-button">
+                        <MdPlayCircleFilled className="text-white text-4xl" />
+                      </button>
+                    </div>
+                  </Link>
+                  <h3 className="text-md text-white text-center font-semibold">{truncateTitle(anime.title)}</h3>
+                </div>
+              </div>
+            ))
+          ) : (
+            <div>Nenhum anime encontrado.</div>
+          )}
+        </Slider>
+      </div>
 
     </>
   )

@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
-import lastAddedAnimeData from 'json/animes.json'
 import { MdPlayCircleFilled } from 'react-icons/md';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-export default function LastAddedAnimes() {
+export default function LastAddedFilmes({ animes }) {
+
+    const filmesAnimes = animes.filter((anime) => anime.Type === "Filme");
 
   const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
 
@@ -16,7 +17,7 @@ export default function LastAddedAnimes() {
     return title;
   };
 
-  const limitedAnimes = lastAddedAnimeData.slice(0, 10);
+  const limitedAnimes = filmesAnimes.slice(0, 10);
 
   const settings = {
     dots: true,
@@ -55,15 +56,16 @@ export default function LastAddedAnimes() {
 
   };
 
+
   return (
     <>
       <div className="py-6">
         <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
           <h2 className="text-2xl text-white text-start items-center font-bold mb-1 p-1">
-            <span className="border-b-4 border-emerald-600 pb-1">Novos Animes Legendados</span>
+            <span className="border-b-4 border-emerald-600 pb-1">Novos Filmes Adicionados</span>
           </h2>
           <div className="text-end mb-2">
-            <Link to="/animes" className="text-emerald-600 hover:text-emerald-500 text-end font-bold">
+            <Link to="/filmes" className="text-emerald-600 hover:text-emerald-500 text-end font-bold">
                   Ver Todos
             </Link>
           </div>
