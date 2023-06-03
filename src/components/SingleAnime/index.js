@@ -10,7 +10,7 @@ export default function SingleAnime({ anime }) {
             <div
               className="w-full h-auto bg-cover bg-center rounded-lg"
               style={{
-                backgroundImage: `url(${anime.background})`,
+                backgroundImage: `url(${anime.background ? anime.background : anime.coverImage})`,
                 filter: "brightness(0.7) contrast(1.1) opacity(0.4)",
                 boxShadow: "0 0 10px rgba(0, 0, 0, 0.8)",
                 position: "absolute",
