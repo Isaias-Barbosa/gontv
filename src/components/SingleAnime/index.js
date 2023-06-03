@@ -83,7 +83,7 @@ export default function SingleAnime({ anime }) {
                       <img
                         src={episode.thumbnail}
                         alt={episode.titleEpisodio}
-                        className="absolute inset-0 w-full h-full object-cover"
+                        className="absolute inset-0 w-full h-auto"
                       />
                       <div className="overlay"></div>
 

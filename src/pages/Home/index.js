@@ -11,12 +11,12 @@ export default function Home() {
 
   const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
 
-    const truncateTitle = (title) => {
-        if (title.length > MAX_TITLE_LENGTH) {
-            return title.substring(0, MAX_TITLE_LENGTH) + '...';
-        }
-        return title;
-    };
+  const truncateTitle = (title) => {
+    if (title.length > MAX_TITLE_LENGTH) {
+      return title.substring(0, MAX_TITLE_LENGTH) + '...';
+    }
+    return title;
+  };
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -55,38 +55,42 @@ export default function Home() {
           <div className="section">
 
             <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
-            <h2 className="text-2xl text-start text-white font-bold mb-1 p-1 ">
-              <span className="border-b-4 border-emerald-600 pb-1"> Lançamentos</span>
-            </h2>
-            <div className="text-end ">
-            <Link to="/lancamentos" className="text-emerald-600 hover:text-emerald-500 text-end font-bold">
-              Ver Todos
-            </Link>
-            </div>
+              <h2 className="text-2xl text-start text-white font-bold mb-1 p-1 ">
+                <span className="border-b-4 border-emerald-600 pb-1"> Lançamentos</span>
+              </h2>
+              <div className="text-end ">
+                <Link to="/lancamentos" className="text-emerald-600 hover:text-emerald-500 text-end font-bold">
+                  Ver Todos
+                </Link>
+              </div>
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
-                {animes.slice(0,20).map((anime, index) => (
+                {animes.slice(0, 20).map((anime, index) => (
                   <Link to={`/animes/${anime.slug}/${anime.episodes[0].titleSlug}/${anime.episodes[0].languageEpisode}`} key={index}>
                     <div
-                      className="p-1"
+                      className="p-1 relative"
                       style={{ maxWidth: '320px', height: '100%' }}
                       onMouseEnter={() => setHoveredIndex(index)}
                       onMouseLeave={() => setHoveredIndex(null)}
                     >
-                      <div className="relative">
-                        {hoveredIndex === index && (
+                      <div className="relative thumbnail">
+                        <img
+                          src={anime.episodes[0].thumbnail}
+                          alt={anime.title}
+                          className="w-full h-auto"
+                        />
+                       {hoveredIndex === index && (
                           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
                             <MdPlayCircleFilled className="text-white text-5xl" />
                           </div>
                         )}
-                        <div className="absolute bg-emerald-700 rounded-none m-2 p-1">
+                        <div className="absolute top-0 left-0 bg-emerald-700 rounded-none m-2 p-1">
                           <p className="text-white text-xs font-bold">{anime.resoAnime}</p>
                         </div>
-                        <img src={anime.episodes[0].thumbnail} alt={anime.title} className="w-full h-full object-cover" />
                       </div>
                       <h3 className="text-center text-white font-bold text-base sm:text-lg md:text-xl xl:text-lg 2xl:text-lg">{truncateTitle(anime.title)}</h3>
                       <p className="text-base text-gray-500 text-center font-bold sm:text-sm md:text-base xl:text-sm 2xl:text-md">{anime.episodes[0].titleEpisodio}</p>
                     </div>
-                </Link>
+                  </Link>
                 ))}
               </div>
 

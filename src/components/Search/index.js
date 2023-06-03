@@ -12,6 +12,9 @@ export default function Search() {
     if (event.key === 'Enter' && searchValue.trim() !== '') {
       // Redirecionar para a página de resultados
       navigate(`/search?query=${encodeURIComponent(searchValue)}`);
+
+      //Limpar o campo de pesquisa
+      setSearchValue('');
     }
   };
 
@@ -19,12 +22,7 @@ export default function Search() {
     setSearchValue(event.target.value);
   };
 
-  const handleSendClick = () => {
-    if (searchValue.trim() !== '') {
-      // Redirecionar para a página de resultados
-      navigate(`/search?query=${encodeURIComponent(searchValue)}`);
-    }
-  };
+
 
 
 
