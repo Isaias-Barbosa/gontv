@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import {Link, useNavigate } from 'react-router-dom';
 import { Player, ControlBar, ReplayControl, PlayToggle } from 'video-react';
 import 'video-react/dist/video-react.css';
+import { AiOutlineLike, AiOutlineDislike, AiOutlineEye, AiOutlineDownload, AiOutlineLeft, AiOutlineRight, AiOutlineBars } from 'react-icons/ai';
+import './Episodio.css';
 
 
-export default function Episodio({ anime, episodio }) {
+export default function Episodio({ anime, episodio, slug, titleSlug, languageEpisode }) {
   const navigate = useNavigate();
-  const [episodeData, setEpisodeData] = useState(null);
+  const [episodeData, setEpisodeData] = useState({});
   const [currentResolution, setCurrentResolution] = useState(0);
+  const [liked, setLiked] = useState(false);
+  const [disliked, setDisliked] = useState(false);
+  const [viewed, setViewed] = useState(false);
+  const [episodeNumber, setEpisodeNumber] = useState(episodio); // Adicionada a variável de estado episodeNumber
 
 
   useEffect(() => {
@@ -20,52 +26,165 @@ export default function Episodio({ anime, episodio }) {
     }
   }, [anime, episodio, navigate]);
 
+  const handleLike = () => {
+    if (liked) {
+      setLiked(false);
+    } else {
+      setLiked(true);
+      setDisliked(false); // Desmarca o botão de dislike ao clicar em like
+    }
+  };
+
+  const handleDislike = () => {
+    if (disliked) {
+      setDisliked(false);
+    } else {
+      setDisliked(true);
+      setLiked(false); // Desmarca o botão de like ao clicar em dislike
+    }
+  };
+
+  const handleView = () => {
+    if (viewed) {
+      setViewed(false);
+    } else {
+      setViewed(true);
+    }
+  };
+
+  const handleDownload = () => {
+    // Lógica de download do episódio
+    console.log('Realizando o download do episódio');
+  };
+
+  if (Object.keys(episodeData).length === 0) {
+    // Dados do episódio ainda estão sendo carregados, exibir um loader ou uma mensagem de carregamento
+    return <div>Carregando...</div>;
+  }
+
   if (!episodeData) {
     // Episódio não encontrado, exibir mensagem de erro
     return <div>Episódio não encontrado</div>;
   }
 
   const { titleEpisodio, videoUrl } = episodeData;
+  const defaultViews = 12345; // Número padrão de visualizações
 
-  // Array de resoluções de vídeo
   const resolutions = videoUrl.map((url) => url.resolution);
-
-  // URL do vídeo atual com base na resolução selecionada
   const mp4Url = videoUrl[currentResolution]?.url;
 
-  // Função para alternar entre as resoluções de vídeo
   const changeResolution = (index) => {
     setCurrentResolution(index);
   };
 
+  const handlePrevious = () => {
+    const currentEpisodeIndex = anime.episodes.findIndex((episode) => episode.id === episodio.id);
+    const previousEpisodeIndex = currentEpisodeIndex - 1;
+  
+    if (previousEpisodeIndex >= 0) {
+      const previousEpisode = anime.episodes[previousEpisodeIndex];
+      navigate(`/animes/${slug}/${previousEpisode.slug}/${languageEpisode}`);
+    }
+  };
+
+  const handleNext = () => {
+    const currentEpisodeIndex = anime.episodes.findIndex((episode) => episode.id === episodio.id);
+    const nextEpisodeIndex = currentEpisodeIndex + 1;
+  
+    if (nextEpisodeIndex < anime.episodes.length) {
+      const nextEpisode = anime.episodes[nextEpisodeIndex];
+      navigate(`/animes/${slug}/${nextEpisode.slug}/${languageEpisode}`);
+    }
+  };
+
+  const previousEpisodeNumber = episodio - 1;
+  const nextEpisodeNumber = episodio + 1;
+
+  const handleEpisodesList = () => {
+    navigate(`/animes/${anime.slug}`);
+  };
+
   return (
-    <div className="bg-black-light  py-12">
-      <main className="container mx-auto py-12 items-center flex justify-center">
-      <div className="player-container py-3">
+    <div className="bg-black-light py-12">
+      <main className="container mx-auto py-12">
+      <div className="player-container relative">
+        <div className="top-button-container">
+        {previousEpisodeNumber > 0 && (
+              <div className="top-button-left">
+                <Link to={`/animes/${slug}/${titleSlug}/${languageEpisode}/${previousEpisodeNumber}`}>
+                  <button className="top-icon-button">
+                    <AiOutlineLeft />
+                    Anterior
+                  </button>
+                </Link>
+              </div>
+          )}
+          <div className="top-button-menu-container">
+            <button className="top-button-menu" onClick={handleEpisodesList}>
+              <AiOutlineBars />
+              Lista de Eps.
+            </button>
+          </div>
+          {nextEpisodeNumber <= anime.episodes.length && (
+              <div className="top-button-right">
+                <Link to={`/animes/${slug}/${titleSlug}/${languageEpisode}/${nextEpisodeNumber}`}>
+                  <button className="top-icon-button">
+                    Próximo
+                    <AiOutlineRight />
+                  </button>
+                </Link>
+              </div>
+          )}
+        </div>
           <div className="player-wrapper">
-            <Player src={mp4Url} fluid={false} width={800} height={450}>
-              <ControlBar>
-                <ReplayControl seconds={10} order={2.1} />
-                <PlayToggle />
-              </ControlBar>
-            </Player>
+            <div className="aspect-ratio-container">
+              <div className="aspect-ratio-inner">
+                <Player src={mp4Url} fluid={true}>
+                  <ControlBar>
+                    <ReplayControl seconds={10} order={2.1} />
+                    <PlayToggle />
+                  </ControlBar>
+                </Player>
+              </div>
+            </div>
           </div>
-          <div className="info-container items-start">
-            <h3 className="text-2xl text-white text-start font-bold mb-1">{titleEpisodio}</h3>
+        </div>
+
+        <div className="info-container flex items-center md:flex-row md:justify-between md:items-center">
+          <div className="views-container text-white text-left md:text-right mb-2 md:mb-0">
+            <span className="text-lg">Visualizações: {defaultViews}</span>
           </div>
-          <div className="resolution-buttons">
-            {resolutions.map((resolution, index) => (
-              <button
-                key={index}
-                className={`resolution-button hover:bg-gray-900 hover:text-white ${currentResolution === index ? 'active' : ''}`}
-                onClick={() => changeResolution(index)}
-              >
-                {resolution}
-              </button>
-            ))}
+          <div className="button-container flex justify-end">
+            <button onClick={handleLike} className={`icon-button ${liked ? 'active' : ''}`}>
+              <AiOutlineLike />
+            </button>
+            <button onClick={handleDislike} className={`icon-button ${disliked ? 'active' : ''}`}>
+              <AiOutlineDislike />
+            </button>
+            <button onClick={handleView} className={`icon-button ${viewed ? 'active' : ''}`}>
+              <AiOutlineEye />
+            </button>
+            <button onClick={handleDownload} className="icon-button">
+              <AiOutlineDownload />
+            </button>
           </div>
+        </div>
+        <div className="title-container">
+          <h3 className="text-2xl text-white text-center font-bold ">{titleEpisodio}</h3>
+        </div>
+        <div className="resolution-container flex flex-wrap justify-center py-2">
+          {resolutions.map((resolution, index) => (
+            <button
+              key={index}
+              className={`resolution-button bg-emerald-700 hover:bg-emerald-400 hover:text-white ${currentResolution === index ? 'active' : ''
+                }`}
+              onClick={() => changeResolution(index)}
+            >
+              {resolution}
+            </button>
+          ))}
         </div>
       </main>
     </div>
-  )
+  );
 }

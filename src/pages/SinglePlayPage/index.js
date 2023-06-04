@@ -22,7 +22,10 @@ export default function SinglePlayPage() {
     return <div>Episódio não encontrado</div>;
   }
 
-  return <Episodio anime={anime} episodio={episode} />;
+  return <Episodio anime={anime} episodio={episode} 
+  slug={slug}
+  titleSlug={titleSlug}
+  languageEpisode={languageEpisode} />;
   }
   
   

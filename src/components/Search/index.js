@@ -21,10 +21,6 @@ export default function Search() {
     setSearchValue(event.target.value);
   };
 
-
-
-
-
   const [searchSize, setSearchSize] = useState('64');
 
   return (
