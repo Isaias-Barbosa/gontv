@@ -10,6 +10,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.18",
+    "@jwplayer/jwplayer-react": "^1.1.2",
     "@mui/material": "^5.13.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -31,6 +32,9 @@
     "slick-carousel": "^1.8.1",
     "sort-by": "^1.2.0",
     "uuid": "^9.0.0",
+    "video-react": "^0.16.0",
+    "video.js": "^8.3.0",
+    "videojs-youtube": "^3.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

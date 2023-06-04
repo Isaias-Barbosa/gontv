@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from 'assets/Gon_Freecss.png';
+
 
 
 export default function Rodape() {

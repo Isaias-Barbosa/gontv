@@ -135,21 +135,18 @@ export default function Menu() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-white hover:text-emerald-500">
-                  Listona
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white hover:text-emerald-500">
+                <Link to="/calendar" className="text-white hover:text-emerald-500">
                   Calendário
-                </a>
+                </Link>
               </li>
-            </ul>
-            {!isLogin && (
-              <button className="bg-emerald-700 hover:bg-emerald-500 text-white  px-7 py-3 rounded-lg">
+              {!isLogin && (
+              <div className="py-2">
+              <button className="bg-emerald-700 hover:bg-emerald-500 text-white px-7 py-3 rounded-lg">
                 Login
               </button>
+              </div>
             )}
+            </ul>
           </nav>
         </div>
         </div>
