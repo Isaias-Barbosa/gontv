@@ -5,6 +5,7 @@ import { IoLogInOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import Search from 'components/Search';
 import logo from 'assets/logo.png';
+import { FcCalendar } from "react-icons/fc";
 
 export default function Menu() {
 
@@ -52,11 +53,11 @@ export default function Menu() {
     <>
 
       {isOpen && (
-        <div className="fixed inset-0 bg-black-light  opacity-80 z-50"></div>
+        <div className="fixed inset-0 bg-black-dark  opacity-80 z-50"></div>
       )}
 
       <button
-        className="fixed py-3 left-4 text-white p-1 z-50  md:fixed md:top-1 md:left-2 md:bg-transparent md:text-white md:p-0 md:w-12 md:h-12 md:flex md:justify-center md:items-center"
+        className="fixed py-6 left-4 text-white p-1 z-50  md:fixed md:top-4 md:left-2 md:bg-transparent md:text-white md:p-0 md:w-12 md:h-12 md:flex md:justify-center md:items-center"
         onClick={toggleMenu}
       >
         <FiMenu size={34} />
@@ -64,13 +65,16 @@ export default function Menu() {
 
 
 
-      <div className="flex items-center bg-black-light p-2">
+      <div className="flex items-center bg-black-dark p-5">
         <div className="flex justify-center flex-grow">
           <Search handleSearchChange={handleSearchChange} />
           {!isMobile && (
             <div className="flex items-center ml-3 ">
+              <Link to="/calendar">
+              <FcCalendar className="text-green-500 ml-3" size={34} />
+              </Link>
               <BsDiscord className="text-white mx-3" size={34} />
-              <BsAndroid2 className="text-white" size={34} />
+              <BsAndroid2 className="text-white" size={34} />           
             </div>
           )}
         </div>
@@ -153,7 +157,7 @@ export default function Menu() {
 
       {!isOpen && !isMobile && (
         <Link to="/">
-          <div className="fixed top-0 md:py-3 md:left-10 ms-4 left-14 z-50 flex items-center">
+          <div className="fixed top-3 md:py-3 md:left-10 ms-4 left-14 z-50 flex items-center">
             <img src={logo} alt="Logo" className="w-10 h-auto md:w-6 md:h-auto" />
             <span className="text-emerald-400 text-xl ml-2">{siteTitle}</span>
           </div>

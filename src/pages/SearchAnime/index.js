@@ -2,12 +2,13 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import animes from 'json/animes.json';
 import { MdPlayCircleFilled } from 'react-icons/md';
+import { useParams } from 'react-router-dom';
 
 
 
 export default function SearchAnime() {
-
-    const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
+ 
+  const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
 
     const truncateTitle = (title) => {
         if (title.length > MAX_TITLE_LENGTH) {
@@ -19,17 +20,36 @@ export default function SearchAnime() {
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     const searchQuery = queryParams.get('query') || '';
+    const letter = useParams().letter || '';
 
     // Filtra os animes com base na consulta de pesquisa
-    const filteredAnimes = animes.filter((anime) =>
-        anime.title.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    
+    const filteredAnimes = animes.filter((anime) => {
+        const animeTitle = anime.title.toLowerCase();
+        if (searchQuery) {
+          return animeTitle.includes(searchQuery.toLowerCase());
+        } else if (letter) {
+          return animeTitle.startsWith(letter.toLowerCase());
+        }
+        return true;
+        });
+
+      
+
     return (
         <div className='bg-black-light py-4'>
       <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
-        <h1 className='text-lg text-white text-center py-8'>Resultados da pesquisa para: 
-        <span className="text-emerald-400 mx-3">"{searchQuery}"</span></h1>
+        <h1 className='text-lg text-white text-center py-8'>
+        {searchQuery ? (
+          <>
+          Resultados da pesquisa para: <span className="text-emerald-400 mx-3">"{searchQuery}"</span>
+          </>
+        ) : (
+          <>
+          Resultados da pesquisa para a letra: <span className="text-emerald-400 mx-3">"{letter}"</span>
+          </>
+        )}
+       
+       </h1>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
           {filteredAnimes.map((anime) => (
             <div className="aspect-ratio-box" key={anime.id}>

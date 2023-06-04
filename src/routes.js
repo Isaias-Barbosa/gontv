@@ -11,6 +11,7 @@ import AnimesDub from "pages/AnimesDub";
 import SearchAnime from "pages/SearchAnime";
 import AnimesLancamentos from "pages/AnimesLancamentos";
 import Filmes from "pages/Filmes";
+import CalendarPage from "pages/CalendarPage";
 
 
 
@@ -28,6 +29,8 @@ function AppRoutes() {
         <Route path="/animes/:slug/*" element={<SingleAnimePage />} />
         <Route path="/animes/:slug/:titleSlug/:languageEpisode/*" element={<SinglePlayPage />} />
         <Route path="/search/" element={<SearchAnime />} /> {/* Defina a rota para SearchAnime */}
+        <Route path="/search/:letter"element={<SearchAnime />} />
+        <Route path="/calendar" element={<CalendarPage />} />
       </Routes>
     <Rodape />
   </BrowserRouter>

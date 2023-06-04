@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FiSend } from 'react-icons/fi';
 
 
 export default function Search() {
