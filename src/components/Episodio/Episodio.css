@@ -137,3 +137,17 @@
   .top-button-right svg {
     margin-right: 5px;
   }
+
+  .center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .top-button-menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

@@ -60,7 +60,7 @@ export default function Menu() {
         className="fixed py-6 left-4 text-white p-1 z-50  md:fixed md:top-4 md:left-2 md:bg-transparent md:text-white md:p-0 md:w-12 md:h-12 md:flex md:justify-center md:items-center"
         onClick={toggleMenu}
       >
-        <FiMenu size={34} />
+        <FiMenu size={35} />
       </button>
 
 
@@ -69,12 +69,10 @@ export default function Menu() {
         <div className="flex justify-center flex-grow">
           <Search handleSearchChange={handleSearchChange} />
           {!isMobile && (
-            <div className="flex items-center ml-3 ">
+            <div className="flex items-center ml-1 ">
               <Link to="/calendar">
               <FcCalendar className="text-green-500 ml-3" size={34} />
-              </Link>
-              <BsDiscord className="text-white mx-3" size={34} />
-              <BsAndroid2 className="text-white" size={34} />           
+              </Link>     
             </div>
           )}
         </div>

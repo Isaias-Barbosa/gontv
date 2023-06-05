@@ -6,14 +6,14 @@ import { AiOutlineLike, AiOutlineDislike, AiOutlineEye, AiOutlineDownload, AiOut
 import './Episodio.css';
 
 
-export default function Episodio({ anime, episodio, slug, titleSlug, languageEpisode }) {
+export default function Episodio({anime, episodio, slug, languageEpisode}) {
   const navigate = useNavigate();
+  const episodioIndex = anime.episodes.findIndex((episode) => episode.id=== episodio.id);
   const [episodeData, setEpisodeData] = useState({});
   const [currentResolution, setCurrentResolution] = useState(0);
   const [liked, setLiked] = useState(false);
   const [disliked, setDisliked] = useState(false);
   const [viewed, setViewed] = useState(false);
-  const [episodeNumber, setEpisodeNumber] = useState(episodio); // Adicionada a variável de estado episodeNumber
 
 
   useEffect(() => {
@@ -77,29 +77,6 @@ export default function Episodio({ anime, episodio, slug, titleSlug, languageEpi
     setCurrentResolution(index);
   };
 
-  const handlePrevious = () => {
-    const currentEpisodeIndex = anime.episodes.findIndex((episode) => episode.id === episodio.id);
-    const previousEpisodeIndex = currentEpisodeIndex - 1;
-  
-    if (previousEpisodeIndex >= 0) {
-      const previousEpisode = anime.episodes[previousEpisodeIndex];
-      navigate(`/animes/${slug}/${previousEpisode.slug}/${languageEpisode}`);
-    }
-  };
-
-  const handleNext = () => {
-    const currentEpisodeIndex = anime.episodes.findIndex((episode) => episode.id === episodio.id);
-    const nextEpisodeIndex = currentEpisodeIndex + 1;
-  
-    if (nextEpisodeIndex < anime.episodes.length) {
-      const nextEpisode = anime.episodes[nextEpisodeIndex];
-      navigate(`/animes/${slug}/${nextEpisode.slug}/${languageEpisode}`);
-    }
-  };
-
-  const previousEpisodeNumber = episodio - 1;
-  const nextEpisodeNumber = episodio + 1;
-
   const handleEpisodesList = () => {
     navigate(`/animes/${anime.slug}`);
   };
@@ -109,30 +86,30 @@ export default function Episodio({ anime, episodio, slug, titleSlug, languageEpi
       <main className="container mx-auto py-12">
       <div className="player-container relative">
         <div className="top-button-container">
-        {previousEpisodeNumber > 0 && (
+        {episodioIndex > 0 && (
               <div className="top-button-left">
-                <Link to={`/animes/${slug}/${titleSlug}/${languageEpisode}/${previousEpisodeNumber}`}>
-                  <button className="top-icon-button">
+              <Link to={`/animes/${slug}/${anime.episodes[episodioIndex - 1].titleSlug}/${languageEpisode}`}>                  
+              <button className="top-icon-button">
                     <AiOutlineLeft />
                     Anterior
                   </button>
-                </Link>
+                  </Link>
               </div>
           )}
           <div className="top-button-menu-container">
-            <button className="top-button-menu" onClick={handleEpisodesList}>
+            <button className="top-button-menu center" onClick={handleEpisodesList}>
               <AiOutlineBars />
               Lista de Eps.
             </button>
           </div>
-          {nextEpisodeNumber <= anime.episodes.length && (
+          {episodioIndex < anime.episodes.length - 1 && (
               <div className="top-button-right">
-                <Link to={`/animes/${slug}/${titleSlug}/${languageEpisode}/${nextEpisodeNumber}`}>
+                   <Link to={`/animes/${slug}/${anime.episodes[episodioIndex + 1].titleSlug}/${languageEpisode}`}>
                   <button className="top-icon-button">
                     Próximo
                     <AiOutlineRight />
                   </button>
-                </Link>
+                  </Link>
               </div>
           )}
         </div>
