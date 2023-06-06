@@ -14,12 +14,26 @@
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <script src="
-    https://cdn.jsdelivr.net/npm/jwplayer@1.0.3/index.min.js
-    "></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>    
     <title>Gon.tv</title>
+
+    <script>
+    
+      var disqus_config = function () {
+      this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = currentEpisodeSlug; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+    
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://gon-tv.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -34,5 +48,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script id="dsq-count-scr" src="//gon-tv.disqus.com/count.js" async></script>
   </body>
 </html>

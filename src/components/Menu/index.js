@@ -88,7 +88,7 @@ export default function Menu() {
 
 
       {isOpen && (
-        <div className="fixed top-0 bottom-0 left-0 right-0 z-50" onClick={toggleMenu}>
+        <div className="fixed top-0 bottom-0 left-0 right-0 z-50 " onClick={toggleMenu}>
         <div className="fixed top-0 left-0 bg-black-light w-55 h-full z-50">
           <nav className="flex flex-col justify-between items-center bg-black-light  p-10">
             <div className="flex justify-between w-full">

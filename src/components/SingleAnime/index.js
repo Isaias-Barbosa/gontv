@@ -86,11 +86,11 @@ export default function SingleAnime({ anime }) {
             <h3 className="text-2xl text-center text-white font-bold mb-4">
               <span className="border-b-2 border-emerald-400"> Episódios </span>
             </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-3 ">
               {anime.episodes.map((episode) => (
                 <div key={episode.id} className="aspect-ratio-box w-full">
                   <Link to={`/animes/${anime.slug}/${episode.titleSlug}/${episode.languageEpisode}`}>
-                    <div className="thumbnail relative">
+                    <div className="thumbnail relative border-b-2 rounded-sm border-lime-600">
                       <img
                         src={episode.thumbnail}
                         alt={episode.titleEpisodio}

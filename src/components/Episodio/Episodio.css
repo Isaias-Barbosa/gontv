@@ -1,4 +1,5 @@
 .player-container {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -8,11 +9,10 @@
 
 .player-wrapper {
   position: relative;
-  width: 100%;/* Proporção 16:9 (dividindo a altura pela largura) */
+  width: 100%;
   overflow: hidden;
-
+  margin-bottom: 1em; /* Distanciamento de 1px do player para os botões */
 }
-
 
 .aspect-ratio-container{
   display:flex;
@@ -34,16 +34,18 @@
 
 .info-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 1em;
+  width: 100%;
+  padding-left: 18%;
+  padding-right: 18%;
 }
 
 .views-container {
   color: #fff;
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 15px;
+  align-items: center;
+  margin-bottom: 19px;
 }
 
 .resolution-container {
@@ -54,7 +56,8 @@
 }
 
 .resolution-button {
-  margin-right: 8px;
+  margin-right: 5px;
+  margin-bottom: 6px;
   background-color: #292220;
   color: #fff;
   padding: 8px 16px;
@@ -73,14 +76,15 @@
 
 .button-container {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  margin-left: auto;
 }
 
 .icon-button {
   background-color: #292220;
   color: #fff;
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 2px;
   margin-right: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -93,12 +97,15 @@
 @media (max-width: 768px) {
   .info-container {
     flex-direction: column;
-    align-items: center;
+    display: flex;
+    align-items: start;
+
     margin-top: 16px;
   }
 
+
   .resolution-container {
-    margin-bottom: 16px;
+    margin-bottom: 2%;
   }
 
   .button-container {
@@ -107,67 +114,64 @@
 }
 
   
-  .top-button-container {
-    position: absolute;
-    top: -45px;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .top-button-menu-container {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .top-button-menu {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  
-  .top-icon-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  .top-button-left,
-  .top-button-right {
-    display: flex;
-    align-items: center;
-    color: white;
-  }
-  
-  .top-button-left svg,
-  .top-button-right svg {
-    margin-right: 5px;
-  }
+.top-button-container {
+  position: relative;
+  top: -10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 17.5%; /* Use uma porcentagem para o padding */
+  box-sizing: border-box; /* Adicione essa propriedade para incluir o padding no cálculo do tamanho total */
+}
 
-  @media (max-width: 768px) {
-    .top-button-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .top-button-left,
-    .top-button-right {
-      margin-bottom: 0.5rem;
-    }
-  }
+.top-button-menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-  /* Ajuste de posicionamento */
+.top-button-menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.top-icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.top-button-left,
+.top-button-right {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.top-button-left svg,
+.top-button-right svg {
+  margin-right: 5px;
+}
+
+/* Ajuste de posicionamento */
 .top-button-right {
   margin-left: auto;
 }
+
+.top-button-left{
+  margin-right: auto;
+}
+
+
