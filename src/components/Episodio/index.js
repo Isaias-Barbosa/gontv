@@ -4,7 +4,8 @@ import 'video-react/dist/video-react.css';
 import { AiOutlineDownload, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import './Episodio.css';
 import DPlayer from 'dplayer';
-import { Recommendations } from 'disqus-react';
+import Discus from 'components/Discus';
+
 
 
 export default function Episodio({ anime, episodio, slug, languageEpisode }) {
@@ -16,13 +17,6 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
 
   const currentEpisodeSlug = episodio.titleSlug; // Obtém o slug do episódio atual
   const currentEpisodeTitle = episodio.titleEpisodio // Obtém o titulo do episódio atual
-
-  const disqusConfig = {
-    shortname: 'https://gon-tv.disqus.com/embed.js',
-    config: { identifier: currentEpisodeSlug, title: currentEpisodeTitle },
-  };
-  
-
 
   useEffect(() => {
     const episode = anime.episodes.find((episode) => episode.id === episodio.id);
@@ -79,11 +73,11 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
   const defaultViews = 12345; // Número padrão de visualizações
 
   const resolutions = videoUrl.map((url) => url.resolution);
-  const playerKey = `${episodio.id}-${currentResolution}`; // Identificador único para o componente Player
 
 
   const changeResolution = (index) => {
     setCurrentResolution(index);
+    
   };
 
   return (
@@ -153,7 +147,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
               <span className="views-text font-bold ">Visualizações: {defaultViews}</span>
            </div>
         </div>
-        <div className="py-12" id="disqus_thread" key={playerKey} {...disqusConfig}></div>
+        <Discus identifier={currentEpisodeSlug} title={currentEpisodeTitle} />
       </main>
     </div>
   );
