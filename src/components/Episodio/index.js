@@ -23,6 +23,10 @@ export default function Episodio({anime, episodio, slug, languageEpisode}) {
       navigate('/erro');
     } else {
       setEpisodeData(episode);
+      setCurrentResolution(0); // Reinicia a resolução do vídeo quando o episódio muda
+      setLiked(false); // Reinicia o estado de curtida quando o episódio muda
+      setDisliked(false); // Reinicia o estado de descurtida quando o episódio muda
+      setViewed(false); // Reinicia o estado de visualização quando o episódio muda
     }
   }, [anime, episodio, navigate]);
 
@@ -82,86 +86,76 @@ export default function Episodio({anime, episodio, slug, languageEpisode}) {
   };
 
   return (
-    <div className="bg-black-light py-12">
-      <main className="container mx-auto py-12">
+    <div className="bg-black-light py-8">
+    <div className="title-container">
+      <h3 className="text-2xl text-white text-center font-bold">
+        <Link to={`/animes/${slug}`}><span className="border-b-2 border-emerald-400">{anime.title}</span>
+        </Link> - {titleEpisodio}</h3>
+    </div>
+    <main className="container mx-auto py-8">
       <div className="player-container relative">
         <div className="top-button-container">
-        {episodioIndex > 0 && (
-              <div className="top-button-left">
-              <Link to={`/animes/${slug}/${anime.episodes[episodioIndex - 1].titleSlug}/${languageEpisode}`}>                  
-              <button className="top-icon-button">
-                    <AiOutlineLeft />
-                    Anterior
-                  </button>
-                  </Link>
-              </div>
+          {episodioIndex > 0 && (
+            <div className="top-button-left">
+              <Link to={`/animes/${slug}/${anime.episodes[episodioIndex - 1].titleSlug}/${languageEpisode}`}>
+                <button className="top-icon-button">
+                  <AiOutlineLeft />
+                  Anterior
+                </button>
+              </Link>
+            </div>
           )}
-          <div className="top-button-menu-container">
-            <button className="top-button-menu center" onClick={handleEpisodesList}>
-              <AiOutlineBars />
-              Lista de Eps.
-            </button>
-          </div>
+          <div className="top-button-menu-container"></div>
           {episodioIndex < anime.episodes.length - 1 && (
-              <div className="top-button-right">
-                   <Link to={`/animes/${slug}/${anime.episodes[episodioIndex + 1].titleSlug}/${languageEpisode}`}>
-                  <button className="top-icon-button">
-                    Próximo
-                    <AiOutlineRight />
-                  </button>
-                  </Link>
-              </div>
+            <div className="top-button-right">
+              <Link to={`/animes/${slug}/${anime.episodes[episodioIndex + 1].titleSlug}/${languageEpisode}`}>
+                <button className="top-icon-button">
+                  Próximo
+                  <AiOutlineRight />
+                </button>
+              </Link>
+            </div>
           )}
         </div>
-          <div className="player-wrapper">
-            <div className="aspect-ratio-container">
-              <div className="aspect-ratio-inner">
-                <Player src={mp4Url} fluid={true}>
-                  <ControlBar>
-                    <ReplayControl seconds={10} order={2.1} />
-                    <PlayToggle />
-                  </ControlBar>
-                </Player>
-              </div>
+        <div className="player-wrapper">
+          <div className="aspect-ratio-container">
+            <div className="aspect-ratio-inner">
+              <Player src={mp4Url} fluid={true}>
+                <ControlBar>
+                  <ReplayControl seconds={10} order={2.1} />
+                  <PlayToggle />
+                </ControlBar>
+              </Player>
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="info-container flex items-center">
-          <div className="views-container text-white text-left md:text-right mb-2 md:mb-0">
-            <span className="text-lg">Visualizações: {defaultViews}</span>
-          </div>
-          <div className="button-container flex justify-end">
-            <button onClick={handleLike} className={`icon-button ${liked ? 'active' : ''}`}>
-              <AiOutlineLike />
-            </button>
-            <button onClick={handleDislike} className={`icon-button ${disliked ? 'active' : ''}`}>
-              <AiOutlineDislike />
-            </button>
-            <button onClick={handleView} className={`icon-button ${viewed ? 'active' : ''}`}>
-              <AiOutlineEye />
-            </button>
-            <button onClick={handleDownload} className="icon-button">
-              <AiOutlineDownload />
-            </button>
-          </div>
-        </div>
-        <div className="title-container">
-          <h3 className="text-2xl text-white text-center font-bold ">{titleEpisodio}</h3>
-        </div>
-        <div className="resolution-container flex flex-wrap justify-center py-2">
-          {resolutions.map((resolution, index) => (
-            <button
-              key={index}
-              className={`resolution-button bg-emerald-700 hover:bg-emerald-400 hover:text-white ${currentResolution === index ? 'active' : ''
-                }`}
-              onClick={() => changeResolution(index)}
-            >
-              {resolution}
-            </button>
-          ))}
-        </div>
-      </main>
+      <div className="info-container">
+      <div className="views-container">
+      <span className="views-text">Visualizações: {defaultViews}</span>
     </div>
+       <div className="resolution-container">
+          {resolutions.map((resolution, index) => (
+      <button
+        key={index}
+        className={`resolution-button bg-emerald-700 hover:bg-emerald-400 hover:text-white ${
+          currentResolution === index ? 'active' : ''
+        }`}
+        onClick={() => changeResolution(index)}
+      >
+        {resolution}
+      </button>
+    ))}
+      <div className="button-container">
+    <button onClick={handleDownload} className="icon-button">
+      <AiOutlineDownload />
+    </button>
+  </div>
+  </div>
+
+      </div>
+    </main>
+  </div>
   );
 }
