@@ -153,7 +153,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
               <span className="views-text font-bold ">Visualizações: {defaultViews}</span>
            </div>
         </div>
-        <div className="py-12" id="disqus_thread" key={playerKey}></div>
+        <div className="py-12" id="disqus_thread" key={playerKey} {...disqusConfig}></div>
       </main>
     </div>
   );
