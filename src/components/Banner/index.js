@@ -16,7 +16,6 @@ export default function Banner() {
 
 }, []);
 
-  const limitedAnimes = animes.slice(0, 3);
 
   const MAX_TITLE_LENGTH = 350; // Define o número máximo de caracteres do título
 
@@ -27,32 +26,6 @@ export default function Banner() {
         return title;
     };
 
-    const carouselImages = [
-      {
-        id: 1,
-        title: 'One Piece',
-        genero: 'Ação',
-        genero2: 'Super Poder',
-        text: 'Era uma vez um grande pirata, conhecido como o maior pirata de todos os tempos, Gol D. Roger. Ele conseguiu fama, poder, dinheiro. Só que um dia ele foi capturado pelas forças da Marinha. ',
-        image: 'https://cdn2.tfx.company/images/clickwallpapers-OnePiece-4k-img1.jpg',
-      },
-      {
-        id: 2,
-        title: 'Megami no Café Terrace',
-        genero: 'Ação',
-        genero2: 'Super Poder',
-        text: 'A história acompanha Kasukabe Hayato, um jovem universitário que decide voltar para sua cidade natal ao descobrir que sua avó morreu. ',
-        image: 'https://www.themoviedb.org/t/p/original/n01pg5coiHIVt9zdlPK6trBfBHv.jpg',
-      },
-      {
-        id: 3,
-        title: 'Kimetsu no Yaiba',
-        genero: 'Ação',
-        genero2: 'Super Poder',
-        text: 'Desde os tempos antigos, abundam os rumores sobre demônios devoradores de homens à espreita na floresta. Por causa disso, os moradores locais nunca se aventuram externamente durante a noite.',
-        image: 'https://www.themoviedb.org/t/p/original/5iilESGDr44JUO5as6KzejxkvJd.jpg',
-      },
-      ];
 
   return (
 

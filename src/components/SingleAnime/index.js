@@ -5,8 +5,6 @@ import Discus from 'components/Discus';
 
 export default function SingleAnime({ anime }) {
 
-  const episodioIndex = anime.episodes.findIndex((info) => info.id === info.id);
-
   const currentAnimeSlug = anime.slug; // Obtém o slug da pagina atual
   const currentAnimeTitle = anime.title // Obtém o titulo da pagina tual
   

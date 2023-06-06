@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { BsDiscord, BsAndroid2 } from 'react-icons/bs';
 import { IoLogInOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import Search from 'components/Search';

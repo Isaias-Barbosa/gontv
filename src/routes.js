@@ -12,6 +12,7 @@ import SearchAnime from "pages/SearchAnime";
 import AnimesLancamentos from "pages/AnimesLancamentos";
 import Filmes from "pages/Filmes";
 import CalendarPage from "pages/CalendarPage";
+import AzListPage from "pages/AzListPage";
 
 
 
@@ -31,6 +32,7 @@ function AppRoutes() {
         <Route path="/search/" element={<SearchAnime />} /> {/* Defina a rota para SearchAnime */}
         <Route path="/search/:letter"element={<SearchAnime />} />
         <Route path="/calendar" element={<CalendarPage />} />
+        <Route path="/az-list/:letter" element={<AzListPage />} />
       </Routes>
     <Rodape />
   </BrowserRouter>
