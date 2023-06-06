@@ -7,6 +7,8 @@ import 'slick-carousel/slick/slick-theme.css';
 
 export default function LastAddedAnimes() {
 
+  
+
   const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
 
   const truncateTitle = (title) => {

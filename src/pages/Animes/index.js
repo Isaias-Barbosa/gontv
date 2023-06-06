@@ -14,7 +14,7 @@ export default function Animes() {
     };
 
     // Filtra os animes legendados
-    const legendadoAnimes = animes.filter((anime) => anime.language === 'Legendado');
+    const legendadoAnimes = animes.filter((anime) => anime.Type === 'TV' && anime.language === 'Legendado');
 
     return (
         <div className="bg-black-light py-8">

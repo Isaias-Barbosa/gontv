@@ -1,153 +1,220 @@
+
+.title-container {
+  margin-bottom: 1rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
+.border-emerald-400 {
+  border-bottom-color: #68d391;
+}
+
+.container {
+  width: 60%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width:375px) {
+  .container{
+    width: 80%;
+  }
+}
+
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.py-12 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .player-container {
-    width: 100%;
-    padding-bottom: 28%; /* Proporção 16:9 (dividindo a altura pela largura) */
-    position: relative;
-  }
-  
-  .player-wrapper {
-    position: relative;
-    width: 100%;
-    height: 0;
-  }
-  
-  .aspect-ratio-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .aspect-ratio-inner {
-    width: 100%;
-    height: 100%;
-  }
-  
-  @media (min-width: 768px) {
-    .player-container {
-      width: 50%;
-      margin: 0 auto;
-    }
-  }
-  
-  .info-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  
-  .views-container {
-    color: white;
-    font-size: 16px;
-    margin-right: 10px;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .icon-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 30px;
-    margin-left: 10px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .icon-button.active {
-    color: rgb(16 185 129 / var(--tw-bg-opacity)); /* Cor quando o botão está ativo */
-  }
-  
-  .title-container {
-    margin-top: 20px;
-  }
-  
-  .resolution-container {
-    display: flex;
-    justify-content: center;
-    
-  }
-  
-  .resolution-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin-right: 10px;
-    color: rgb(16 185 129 / var(--tw-bg-opacity));
-  }
-  
-  .resolution-button.active {
-    font-weight: bold; /* Estilo quando o botão de resolução está ativo */
-  }
+  position: relative;
 
-  
-  .top-button-container {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .top-button-menu-container {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .top-button-menu {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  
-  .top-icon-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  .top-button-left,
-  .top-button-right {
-    display: flex;
-    align-items: center;
-    color: white;
-  }
-  
-  .top-button-left svg,
-  .top-button-right svg {
-    margin-right: 5px;
-  }
+}
 
-  .center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
+.top-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.top-button-menu-container{
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1rem;
+}
 
-  .top-button-menu-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
+.top-button-left,
+.top-button-right {
+  display: flex;
+  align-items: end;
+}
+
+.top-icon-button {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.top-icon-button:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.player-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.aspect-ratio-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.aspect-ratio-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.resolution-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.resolution-button {
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  color: #fff;
+  background-color: #38a169;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.resolution-button:hover {
+  background-color: #68d391;
+}
+
+.resolution-button.active {
+  background-color: #2d3748;
+  font-weight: 700;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+.download-button {
+  padding: 0.5rem;
+  color: #fff;
+  background-color: #2d3748;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.download-button:hover{
+  background-color: #38a169;
+}
+
+.view-button {
+  padding: 0.5rem;
+  color: #fff;
+  background-color: #63b3ed;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.view-button.active {
+  background-color: #3182ce;
+}
+
+.views-text {
+  display: block;
+  margin-top: 0.5rem;
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.bg-gray-800 {
+  background-color: #2d3748;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.views-text {
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

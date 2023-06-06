@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { MdPlayCircleFilled } from "react-icons/md";
+import './SingleAnime.css';
+
 
 export default function SingleAnime({ anime }) {
+
   return (
     <div className="relative">
       <div className="bg-black-light">
@@ -11,7 +14,7 @@ export default function SingleAnime({ anime }) {
               className="w-full h-auto bg-cover bg-center rounded-lg"
               style={{
                 backgroundImage: `url(${anime.background ? anime.background : anime.coverImage})`,
-                filter: "brightness(0.7) contrast(1.1) opacity(0.4)",
+                filter: "brightness(0.7) contrast(1.1) opacity(0.5)",
                 boxShadow: "0 0 10px rgba(0, 0, 0, 0.8)",
                 position: "absolute",
                 top: 0,
@@ -31,7 +34,7 @@ export default function SingleAnime({ anime }) {
                   <h1 className="text-3xl text-white font-bold mb-2">
                     {anime.title}
                   </h1>
-                  <h2 className="text-xl text-white hover:text-emerald-400 mb-4">{anime.subtitle}</h2>
+                  <h2 className="text-xl text-white hover:text-emerald-400 mb-4">{anime.subtitule}</h2>
                   <p className="text-white ">
                     <strong className="hover:text-emerald-400">Tipo: </strong> {anime.Type}
                   </p>
@@ -57,7 +60,15 @@ export default function SingleAnime({ anime }) {
                     <strong className="hover:text-emerald-400">Fansub: </strong> {anime.Fansub}
                   </p>
                   <p className="text-white">
-                    <strong className="hover:text-emerald-400">Gêneros:</strong> {anime.genres.join(", ")}
+                    <strong className="hover:text-emerald-400">Status: </strong> {anime.Status}
+                  </p>
+                  <p className="text-white">
+                    <strong className="hover:text-emerald-400">Gêneros: </strong>
+                    {anime.genres.map((genre, index) => (
+                      <span key={index} className="genre-tag">
+                        {genre}
+                      </span>
+                    ))}
                   </p>
                 </div>
               </div >
@@ -65,15 +76,15 @@ export default function SingleAnime({ anime }) {
           </div>
           <div className="my-5">
             <h3 className="text-2xl text-white font-bold mb-4 text-center">
-              Sinopse
+              <span className="border-b-2 border-emerald-400">Sinopse</span>
             </h3>
-            <div className="border border-white rounded-none p-3">
+            <div className="border-b-2 border-lime-400 bg-gray-950 rounded-lg p-3">
               <p className="text-white text-1xl text-justify">{anime.synopsis}</p>
             </div>
           </div>
           <div>
             <h3 className="text-2xl text-center text-white font-bold mb-4">
-              Episódios
+              <span className="border-b-2 border-emerald-400"> Episódios </span>
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-3">
               {anime.episodes.map((episode) => (

@@ -1,0 +1,8 @@
+.genre-tag {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    margin-right: 0.3rem;
+    border-radius: 20px;
+    background-color: #159895;
+    color: #fff;
+  }

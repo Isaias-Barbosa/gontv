@@ -22,7 +22,7 @@ export default function AnimesLancamentos() {
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
             {animes.map((anime, index) => (
-              <Link to={`/animes/${anime.slug}`} key={index}>
+             <Link to={`/animes/${anime.slug}/${anime.episodes[0].titleSlug}/${anime.episodes[0].languageEpisode}`} key={index}>
                 <div className="p-1">
                   <div className="relative">
                     <div className="absolute top-0 left-8 flex items-center justify-center ms-1 p-2">

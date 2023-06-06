@@ -10,6 +10,7 @@
     "studio": "Doga Kobo",
     "director": "Diretor do Anime",
     "year": 2023,
+    "Status": "Finalizado",
     "episodeDuration": "30 minutos",
     "genres": [
       "Ação",
@@ -28,6 +29,7 @@
         "id": 1,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
+        "lancamento": true,
         "videoUrl": [
           {
             "resolution": "FHD",
@@ -50,6 +52,7 @@
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
+        "lancamento": false,
         "videoUrl": [
           {
             "resolution": "FHD",
@@ -191,6 +194,7 @@
     "studio": "White Fox",
     "director": "Diretor do Anime",
     "year": 2011,
+    "Status": "Finalizado",
     "episodeDuration": "24 minutos",
     "genres": [
       "Drama",
@@ -234,15 +238,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/mIRuPZNEoGt0oyE9bL4BqEcmquq.jpg",
@@ -256,15 +260,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/p78yoSbi7wXww1rEGYGbYSUm3wl.jpg",
@@ -278,15 +282,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/jOvUzKQUbqdkNAtIAzQpL7GuUx.jpg",
@@ -300,15 +304,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/92SFTY8Z4jj7AykgKlF5v4EMBxj.jpg",
@@ -322,15 +326,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/suWPFexRgjwhJTy1E7yTtTrXpyt.jpg",
@@ -344,15 +348,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/8AXyRwdJhDmfESjlLbJzBWtYvfO.jpg",
@@ -366,15 +370,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/l6fhgZvTOEMosDnzo5a9TNc9xyj.jpg",
@@ -388,15 +392,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/nlVR9hXGFfpfk8YmK116Co400QQ.jpg",
@@ -410,15 +414,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/vrNGd6OZnXnaadq5GRcmLraLPJX.jpg",
@@ -438,6 +442,7 @@
     "studio": "ufotable",
     "director": "Sotozaki Haruo",
     "year": "2021",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. per episode",
     "genres": [
       "Action",
@@ -483,15 +488,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/uvT1yTTx3rfAIP8AtqxtSM0ZxRB.jpg",
@@ -505,15 +510,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/6DnrHG7XHYwULDnyyv8UrM68yRT.jpg",
@@ -527,15 +532,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/7CJiq7TcX6V6OcY9SnhMQMs0exV.jpg",
@@ -549,15 +554,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/7DvvdeA0bY3VIhicNYRuD19W28N.jpg",
@@ -571,15 +576,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/79Tm5PlbrWkMCVIgX4Gb9PTqb7Z.jpg",
@@ -593,15 +598,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/lhbtnegSVHc5VpnCzBBfxrzU8a5.jpg",
@@ -615,15 +620,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/twKgIalhN0PeahBx8mwk8UaMhvh.jpg",
@@ -637,15 +642,15 @@
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/6EgVImJC0fn0jshgw12NHRf5Rzd.jpg",
@@ -665,6 +670,7 @@
     "studio": "Liden Films",
     "director": "Chikara Sakurai",
     "year": "2020",
+    "Status": "Finalizado",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Ação",
@@ -682,7 +688,7 @@
     "synopsis": "Gabimaru, um ninja condenado à morte, recebe uma segunda chance em troca de participar de uma missão perigosa para encontrar o elixir da imortalidade em uma ilha remota habitada por criaturas mortais.",
     "episodes": [
       {
-        "id": 1,
+        "id": 1401,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
@@ -704,21 +710,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 1402,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/7Ok1gElid8AfPplK4JRyluFpCVh.jpg",
@@ -738,6 +744,7 @@
     "studio": "MAPPA",
     "director": "Yasuko Kobayashi",
     "year": "2020-2021",
+    "Status": "Finalizado",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Ação",
@@ -757,7 +764,7 @@
     "synopsis": "Eren Yeager e seus aliados continuam sua luta contra os Titãs enquanto revelam os segredos do mundo e lutam pela liberdade da humanidade.",
     "episodes": [
       {
-        "id": 1,
+        "id": 1501,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
@@ -779,21 +786,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 1502,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/aV2M59hZVguSbVTj7WkVx1icFxl.jpg",
@@ -813,6 +820,7 @@
     "studio": "Studio Deen",
     "director": "Susumu Nishizawa",
     "year": "2021",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -832,7 +840,7 @@
     "synopsis": "Os Sete Pecados Capitais enfrentam novos inimigos enquanto a verdade sobre a maldição dos demônios é revelada e o destino do mundo está em jogo.",
     "episodes": [
       {
-        "id": 1,
+        "id": 1601,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
@@ -854,21 +862,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 1602,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/88gwF5YNgQwqS6HmT7hQhgO0gW5.jpg",
@@ -888,6 +896,7 @@
     "studio": "Toei Animation",
     "director": "Kounosuke Uda, Munehisa Sakai, Hiroaki Miyamoto",
     "year": "1999-",
+    "Status": "Em Lançamento",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -907,7 +916,7 @@
     "synopsis": "Monkey D. Luffy e sua tripulação de piratas buscam o tesouro supremo, o One Piece, e enfrentam desafios perigosos ao longo do caminho em um mundo cheio de piratas, marinheiros e poderes misteriosos.",
     "episodes": [
       {
-        "id": 1,
+        "id": 1701,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
@@ -929,21 +938,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 1802,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/him2IAMOhTToCMGwCzBxHCD9cPf.jpg",
@@ -963,6 +972,7 @@
     "studio": "Production I.G",
     "director": "Susumu Mitsunaka",
     "year": "2014-2020",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Comédia",
@@ -980,7 +990,7 @@
     "synopsis": "Shouyou Hinata, inspirado por um jogador de vôlei lendário apelidado de 'Pequeno Gigante', se junta a um clube de vôlei e luta para se tornar um jogador excepcional e levar sua equipe ao campeonato nacional.",
     "episodes": [
       {
-        "id": 1,
+        "id": 1901,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
@@ -1002,21 +1012,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 1902,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/13veoxgCDkHWZ7udNunYUoYYmyx.jpg",
@@ -1036,6 +1046,7 @@
     "studio": "Studio Pierrot",
     "director": "Tatsuya Yoshihara",
     "year": "2017-2021",
+    "Status": "Finalizado",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Ação",
@@ -1053,7 +1064,7 @@
     "synopsis": "Asta e Yuno são órfãos que cresceram juntos em um mundo onde magia é tudo. Asta, que não tem magia, busca se tornar o Rei Mago e proteger o reino dos perigos que ameaçam a humanidade.",
     "episodes": [
       {
-        "id": 1,
+        "id": 2001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
@@ -1075,21 +1086,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 2022,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/mgjnfc5WNJHqc1fcjs142i4FQoV.jpg",
@@ -1109,6 +1120,7 @@
     "studio": "MAPPA",
     "director": "Sunghoo Park",
     "year": "2020-2021",
+    "Status": "Em Lançamento",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Ação",
@@ -1125,7 +1137,7 @@
     "synopsis": "Yuji Itadori, um estudante colegial com habilidades físicas excepcionais, se envolve em uma guerra entre feiticeiros e criaturas amaldiçoadas, enquanto ele se torna o hospedeiro de um poderoso demônio.",
     "episodes": [
       {
-        "id": 1,
+        "id": 2101,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
@@ -1147,21 +1159,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 2222,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/7IBoZgraHqJHqEW5een8lEeq0CU.jpg",
@@ -1181,6 +1193,7 @@
     "studio": "Studio Pierrot",
     "director": "Hayato Date",
     "year": "2002-2007",
+    "Status": "Finalizado",
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
@@ -1199,21 +1212,21 @@
     "synopsis": "Naruto Uzumaki, um jovem ninja hiperativo, busca se tornar o Hokage, o líder de sua vila, enquanto enfrenta desafios perigosos e faz amizades ao longo do caminho.",
     "episodes": [
       {
-        "id": 1,
+        "id": 2301,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/gM9LTtEg3G831yQkiwt30krYLxP.jpg",
@@ -1221,21 +1234,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 2302,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/An7cmBwndUCkLrtDEFUb9AH1IM1.jpg",
@@ -1255,6 +1268,7 @@
     "studio": "Toei Animation",
     "director": "Daisuke Nishio",
     "year": "1989-1996",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1272,21 +1286,21 @@
     "synopsis": "Goku e seus amigos protegem a Terra de ameaças poderosas, enfrentando guerreiros extraterrestres, androides e seres místicos enquanto desbloqueiam seu verdadeiro poder.",
     "episodes": [
       {
-        "id": 1,
+        "id": 2401,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/vsI19Gvmbym9URI36Yjiiq6o8r0.jpg",
@@ -1294,21 +1308,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 2402,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/oT9fI9LELlQXkhG7CgNDx5ZCjir.jpg",
@@ -1328,6 +1342,7 @@
     "studio": "Bones",
     "director": "Kenji Nagasaki",
     "year": "2016-",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1345,21 +1360,21 @@
     "synopsis": "Izuku Midoriya sonha em se tornar um herói, mas nasce sem qualquer poder. Após receber o poder do maior herói do mundo, ele frequenta uma escola para heróis em treinamento e enfrenta vilões poderosos.",
     "episodes": [
       {
-        "id": 1,
+        "id": 2501,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/5S4t7vjGUahG8ieEUTDNPi1DPBh.jpg",
@@ -1367,21 +1382,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 2502,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/m9qwJgfm1eVo70CsRDc2MDFiUcM.jpg",
@@ -1401,6 +1416,7 @@
     "studio": "LidENFILMS",
     "director": "Koichi Hatsumi",
     "year": "2021",
+    "Status": "Em Lançamento",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1418,21 +1434,21 @@
     "synopsis": "Takemichi Hanagaki, um homem desempregado de 26 anos, descobre que a garota por quem ele costumava se apaixonar foi assassinada. Ao ser empurrado para os trilhos do trem, ele viaja no tempo para quando estava no ensino médio e jura mudar seu destino e salvar a garota.",
     "episodes": [
       {
-        "id": 1,
+        "id": 2601,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/6FcmZTXklg6ONMC11H0sqiMBpZ7.jpg",
@@ -1440,21 +1456,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 2602,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/sRDPlgmp6pr12GpvRMKGzjiIgqJ.jpg",
@@ -1474,6 +1490,7 @@
     "studio": "Studio Pierrot",
     "director": "Noriyuki Abe",
     "year": "2004-2012",
+    "Status": "Em Lançamento",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1491,21 +1508,21 @@
     "synopsis": "Ichigo Kurosaki, um estudante com a habilidade de ver espíritos, se torna um Shinigami (Ceifador de Almas) e protege a humanidade dos espíritos malignos enquanto enfrenta poderosas ameaças.",
     "episodes": [
       {
-        "id": 1,
+        "id": 2701,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/6FX8jzbR42V9RjFD1W9PygvnJkX.jpg",
@@ -1513,21 +1530,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 2702,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/zJ9OYjNIRFlXjAXiT4iRvPLV5MH.jpg",
@@ -1547,6 +1564,7 @@
     "studio": "A-1 Pictures, Satelight, Bridge",
     "director": "Shinji Ishihira",
     "year": "2009-2019",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1565,21 +1583,21 @@
     "synopsis": "Lucy Heartfilia, uma jovem maga, se junta à Guilda Fairy Tail, onde ela forma uma equipe com Natsu Dragneel, um Dragon Slayer do Fogo, e embarca em missões emocionantes e perigosas.",
     "episodes": [
       {
-        "id": 1,
+        "id": 2801,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/jDHOICuTalFR1pJHbUI3TsG9qMZ.jpg",
@@ -1587,21 +1605,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 2802,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/yre6WWqcIzRctIcmbZxC0NoGCTR.jpg",
@@ -1621,6 +1639,7 @@
     "studio": "Madhouse",
     "director": "Hiroshi Koujina",
     "year": "2011-2014",
+    "Status": "Finalizado",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Ação",
@@ -1638,21 +1657,21 @@
     "synopsis": "Gon Freecss descobre que seu pai, que ele acreditava estar morto, é um Hunter - um membro de elite da sociedade com habilidades incríveis. Gon embarca em uma jornada para se tornar um Hunter e encontrar seu pai.",
     "episodes": [
       {
-        "id": 1,
+        "id": 2901,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/7ppEotl1YMs1adTscDdMoLhQaQ3.jpg",
@@ -1660,21 +1679,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 2902,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/qEX0cNZhtRdvXkqalV3cg1yiJhB.jpg",
@@ -1694,6 +1713,7 @@
     "studio": "Bones",
     "director": "Yasuhiro Irie",
     "year": "2009-2010",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1713,21 +1733,21 @@
     "synopsis": "Os irmãos Edward e Alphonse Elric usam a alquimia em uma tentativa desesperada de ressuscitar sua mãe, mas acabam pagando um preço terrível. Eles embarcam em uma jornada para encontrar a Pedra Filosofal e restaurar seus corpos.",
     "episodes": [
       {
-        "id": 1,
+        "id": 3001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/9OQdBV5ca27OhfoCWKjJT4Pq0AB.jpg",
@@ -1735,21 +1755,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 3002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/7nj2xLJvjNecLnftoCSmC8QTk6t.jpg",
@@ -1769,6 +1789,7 @@
     "studio": "Sunrise",
     "director": "Goro Taniguchi",
     "year": "2006-2007",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1788,21 +1809,21 @@
     "synopsis": "Numa realidade alternativa, Lelouch Lamperouge, um jovem príncipe, obtém o poder do Geass e se torna o vigilante mascarado conhecido como Zero, liderando uma rebelião contra o opressivo Império Britânico.",
     "episodes": [
       {
-        "id": 19,
+        "id": 3101,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/uXgJMmux25CrTLOQ4PObkD2uszM.jpg",
@@ -1810,21 +1831,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 19,
+        "id": 3102,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/wuAngVVMPf1lEj54NmlWJxydbuD.jpg",
@@ -1844,6 +1865,7 @@
     "studio": "Madhouse",
     "director": "Tetsurō Araki",
     "year": "2006-2007",
+    "Status": "Finalizado",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Mistério",
@@ -1861,21 +1883,21 @@
     "synopsis": "Light Yagami, um estudante do ensino médio, descobre um misterioso caderno chamado Death Note. Com o poder de matar qualquer pessoa cujo nome seja escrito nele, Light decide usar esse poder para livrar o mundo do mal e criar uma utopia onde ele é o deus do novo mundo.",
     "episodes": [
       {
-        "id": 20,
+        "id": 3201,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
@@ -1883,21 +1905,21 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 20,
+        "id": 3202,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
           {
             "resolution": "FHD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
           },
           {
             "resolution": "HD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
           },
           {
             "resolution": "SD",
-            "url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D"
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/b0BSIfkkoYbf4KKTJlY0XOoQxY1.jpg",
@@ -1917,6 +1939,7 @@
     "studio": "Bones",
     "director": "Yasuhiro Irie",
     "year": "2009-2010",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1933,18 +1956,46 @@
     "synopsis": "Edward Elric e Alphonse Elric são dois irmãos alquimistas que estão em busca da Pedra Filosofal para recuperarem seus corpos perdidos. No caminho, eles enfrentam diversos desafios e desvendam uma conspiração envolvendo o governo.",
     "episodes": [
       {
-        "id": 1,
+        "id": 5001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 5002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -1961,6 +2012,7 @@
     "studio": "Wit Studio",
     "director": "Tetsurō Araki",
     "year": "2013",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1979,18 +2031,46 @@
     "synopsis": "Há várias décadas, a humanidade é ameaçada por gigantes humanoides conhecidos como Titãs. Eren Yeager e seus amigos se juntam ao exército para lutar contra essas criaturas e desvendar os mistérios por trás de sua existência.",
     "episodes": [
       {
-        "id": 1,
+        "id": 6001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 6002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2007,6 +2087,7 @@
     "studio": "White Fox",
     "director": "Hiroshi Hamasaki, Takuya Satou",
     "year": "2011",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Suspense",
@@ -2020,18 +2101,46 @@
     "synopsis": "Rintarou Okabe, um autoproclamado cientista maluco, acidentalmente inventa uma máquina do tempo. À medida que ele e seus amigos experimentam viagens no tempo, eles se veem envolvidos em uma conspiração e precisam evitar consequências desastrosas.",
     "episodes": [
       {
-        "id": 1,
+        "id": 7001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 7002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2048,6 +2157,7 @@
     "studio": "Sunrise",
     "director": "Yoichi Fujita",
     "year": "2011-2012",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2065,18 +2175,46 @@
     "synopsis": "A vida de Gintoki Sakata, um samurai preguiçoso, mas habilidoso, muda quando alienígenas chamados Amanto invadem a Terra. Ele se torna um freelancer fazendo qualquer trabalho para sobreviver em um Japão feudal futurista cheio de paródias e referências.",
     "episodes": [
       {
-        "id": 1,
+        "id": 8001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 8002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2093,6 +2231,7 @@
     "studio": "BN Pictures",
     "director": "Yoichi Fujita",
     "year": "2015-2016",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2110,18 +2249,46 @@
     "synopsis": "Continuação das aventuras de Gintoki Sakata e seus amigos em um Japão feudal futurista cheio de comédia, paródias e referências.",
     "episodes": [
       {
-        "id": 1,
+        "id": 9001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 9002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2138,6 +2305,7 @@
     "studio": "Sunrise",
     "director": "Yoichi Fujita",
     "year": "2012-2013",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2155,18 +2323,46 @@
     "synopsis": "Continuação das hilárias aventuras de Gintoki Sakata e seus amigos em um Japão feudal futurista cheio de comédia, paródias e referências.",
     "episodes": [
       {
-        "id": 1,
+        "id": 10001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 10002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2183,6 +2379,7 @@
     "studio": "Sunrise",
     "director": "Gorou Taniguchi",
     "year": "2008",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2200,18 +2397,46 @@
     "synopsis": "A história continua após os eventos da primeira temporada de Code Geass. Lelouch vi Britannia retorna como Zero e se envolve em uma guerra complexa enquanto busca sua vingança contra o Império Britânico.",
     "episodes": [
       {
-        "id": 1,
+        "id": 11001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 11002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2228,6 +2453,7 @@
     "studio": "Madhouse",
     "director": "Shingo Natsume",
     "year": "2015",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2244,18 +2470,46 @@
     "synopsis": "Saitama é um super-herói incrivelmente poderoso que derrota seus inimigos com apenas um soco. No entanto, ele fica entediado por ser invencível e busca um adversário verdadeiramente desafiador.",
     "episodes": [
       {
-        "id": 1,
+        "id": 12001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 12002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2272,6 +2526,7 @@
     "studio": "Studio Pierrot",
     "director": "Shuhei Morita",
     "year": "2014",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2290,18 +2545,46 @@
     "synopsis": "Em um mundo onde humanos são caçados por criaturas conhecidas como ghouls, Kaneki Ken, um estudante universitário, se torna meio humano e meio ghoul após um encontro fatídico. Ele precisa lidar com sua nova vida e a sociedade secreta dos ghouls.",
     "episodes": [
       {
-        "id": 1,
+        "id": 13001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 13002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2318,6 +2601,7 @@
     "studio": "A-1 Pictures",
     "director": "Kyōhei Ishiguro",
     "year": "2014-2015",
+    "Status": "Finalizado",
     "episodeDuration": "22 min. por episódio",
     "genres": [
       "Drama",
@@ -2334,18 +2618,46 @@
     "synopsis": "Kōsei Arima, um prodígio do piano, perde sua habilidade de tocar após a morte de sua mãe. No entanto, quando ele conhece uma violinista chamada Kaori Miyazono, sua vida muda e ele redescobre a beleza da música.",
     "episodes": [
       {
-        "id": 1,
+        "id": 14001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 14002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2362,6 +2674,7 @@
     "studio": "Production I.G",
     "director": "Susumu Mitsunaka",
     "year": "2014-2020",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Comédia",
@@ -2378,18 +2691,46 @@
     "synopsis": "Shōyō Hinata se inspira em um jogador de vôlei conhecido como 'Pequeno Gigante' e se junta ao clube de vôlei da escola. Ele se esforça para se tornar um grande jogador e levar sua equipe à vitória, superando desafios e competindo em torneios de alto nível.",
     "episodes": [
       {
-        "id": 1,
+        "id": 15001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 15002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2406,6 +2747,7 @@
     "studio": "Sunrise",
     "director": "Shinichiro Watanabe",
     "year": "1998-1999",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2423,18 +2765,46 @@
     "synopsis": "Spike Spiegel e Jet Black são caçadores de recompensas que viajam pelo espaço em busca de criminosos. Ao longo do caminho, eles se juntam a outros personagens excêntricos e enfrentam desafios que testam suas habilidades e passados ​​misteriosos.",
     "episodes": [
       {
-        "id": 1,
+        "id": 16001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 16002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2451,6 +2821,7 @@
     "studio": "Gainax",
     "director": "Hideaki Anno",
     "year": "1995-1996",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2467,18 +2838,46 @@
     "synopsis": "No ano de 2015, a humanidade enfrenta ameaças de criaturas misteriosas conhecidas como Anjos. O adolescente Shinji Ikari é chamado para pilotar um gigante robô chamado Evangelion e lutar contra os Anjos para proteger a humanidade e descobrir sua verdadeira identidade.",
     "episodes": [
       {
-        "id": 1,
+        "id": 17001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 17002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2495,6 +2894,7 @@
     "studio": "Wit Studio",
     "director": "Tetsurō Araki",
     "year": "2019",
+    "Status": "Finalizado",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Ação",
@@ -2513,18 +2913,46 @@
     "synopsis": "A terceira temporada de Shingeki no Kyojin continua a história da humanidade lutando contra os Titãs. Eren Yeager e seus aliados se preparam para o confronto final contra os segredos do mundo e a verdade por trás dos Titãs.",
     "episodes": [
       {
-        "id": 1,
+        "id": 18001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 18002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2541,6 +2969,7 @@
     "studio": "Kyoto Animation",
     "director": "Tatsuya Ishihara",
     "year": "2008-2009",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Slice of Life",
@@ -2557,18 +2986,46 @@
     "synopsis": "Clannad: After Story é a sequência direta de Clannad, que continua a história de Tomoya Okazaki e Nagisa Furukawa. A série retrata o crescimento dos personagens, seus desafios pessoais e a importância das relações familiares e amorosas em suas vidas.",
     "episodes": [
       {
-        "id": 1,
+        "id": 19001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 19002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2585,6 +3042,7 @@
     "studio": "J.C.Staff",
     "director": "Tatsuyuki Nagai",
     "year": "2008-2009",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Slice of Life",
@@ -2600,18 +3058,46 @@
     "synopsis": "Toradora! segue a história de Ryuji Takasu, um estudante com uma aparência intimidante, e Taiga Aisaka, uma garota pequena, mas feroz. À medida que os dois se aproximam para ajudar um ao outro a conquistar seus amores secretos, eles acabam descobrindo sentimentos mais profundos.",
     "episodes": [
       {
-        "id": 1,
+        "id": 20001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 20002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2628,6 +3114,7 @@
     "studio": "Madhouse",
     "director": "Masayuki Kojima",
     "year": "2004-2005",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Mistério",
@@ -2644,18 +3131,46 @@
     "synopsis": "Monster segue a história do brilhante neurocirurgião Kenzou Tenma, que se vê envolvido em uma conspiração após salvar a vida de um garoto em vez de um importante político. Enquanto ele procura pela verdade, Tenma se vê perseguido por um assassino em série conhecido como 'O Monstro'.",
     "episodes": [
       {
-        "id": 1,
+        "id": 30001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 30002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2672,6 +3187,7 @@
     "studio": "Kinema Citrus",
     "director": "Masayuki Kojima",
     "year": "2017",
+    "Status": "Finalizado",
     "episodeDuration": "25 min. por episódio",
     "genres": [
       "Aventura",
@@ -2688,18 +3204,46 @@
     "synopsis": "Made in Abyss segue a história de Riko, uma órfã que sonha em se tornar uma Aventureira, e seu encontro com um robô humanoide chamado Reg. Juntos, eles exploram a misteriosa e perigosa Abyss, uma imensa fenda que guarda segredos e maravilhas desconhecidas.",
     "episodes": [
       {
-        "id": 1,
+        "id": 40001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 40002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2716,6 +3260,7 @@
     "studio": "Madhouse",
     "director": "Morio Asaka",
     "year": "2006-2007",
+    "Status": "Finalizado",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Comédia",
@@ -2733,18 +3278,46 @@
     "synopsis": "Nana segue a história de duas jovens mulheres, ambas chamadas Nana, que se encontram no trem para Tóquio. Apesar de suas personalidades e origens diferentes, elas decidem se tornar colegas de quarto e apoiar uma à outra em suas jornadas pessoais e musicais.",
     "episodes": [
       {
-        "id": 1,
+        "id": 50001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 50002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2761,6 +3334,7 @@
     "studio": "Madhouse",
     "director": "Kenichi Shimizu",
     "year": "2014-2015",
+    "Status": "Finalizado",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Ação",
@@ -2778,18 +3352,46 @@
     "synopsis": "Kiseijuu: Sei no Kakuritsu é ambientado em um mundo onde criaturas alienígenas chamadas Parasitas invadem e tomam controle dos corpos humanos. Shinichi Izumi, um estudante do ensino médio, acaba tendo sua mão direita parasitada. Agora, ele e seu Parasita, Migi, precisam aprender a conviver e enfrentar outros Parasitas.",
     "episodes": [
       {
-        "id": 1,
+        "id": 60001,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       },
       {
-        "id": 2,
+        "id": 60002,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ&pp=ygUNb3NoaSBuaSBrbyBvcA%3D%3D",
+         "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://cdn.coverr.co/videos/coverr-surfer-catching-a-wave-on-a-surfboard-4149/1080p.mp4"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://joy1.videvo.net/videvo_files/video/free/video0485/large_watermarked/_import_624e701eba64a0.34411893_preview.mp4"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://cdn.coverr.co/videos/coverr-running-with-a-kite-8106/1080p.mp4"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/oHfZ0b3zPAqsVe0ekdYJi2fTDzd.jpg",
         "duration": "24 minutos",
         "languageEpisode": "dublado"
       }
@@ -2806,6 +3408,7 @@
     "studio": "Kyoto Animation",
     "director": "Naoko Yamada",
     "year": "2016",
+    "Status": "Finalizado",
     "episodeDuration": "2h. 10m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -2819,7 +3422,7 @@
     "synopsis": "Koe no Katachi conta a emocionante história do reencontro de Shouya com Shouko e de suas sinceras tentativas de se redimir, tudo isso enquanto é continuamente assombrado pelas sombras de seu passado.",
     "episodes": [
       {
-        "id": 3031,
+        "id": 30031,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
@@ -2841,7 +3444,7 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 3032,
+        "id": 30032,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
@@ -2875,6 +3478,7 @@
     "studio": "Kyoto Animation",
     "director": "Taichi Ishidate",
     "year": "2020",
+    "Status": "Finalizado",
     "episodeDuration": "2h. 20m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -2888,7 +3492,7 @@
     "synopsis": "Vários anos se passaram desde o fim da Grande Guerra. À medida que a torre de rádio em Leidenschaftlich continua a ser construída, os telefones logo se tornarão mais relevantes, levando a um declínio na demanda por 'bonecos de memória automática'. Mesmo assim, Violet Evergarden continua a ganhar fama após seu constante sucesso em escrever cartas. No entanto, às vezes, a única coisa que você deseja é a única coisa que não aparece. \n\n Violet Evergarden Movie segue Violet enquanto ela continua a compreender o conceito de emoção e o significado do amor. Ao mesmo tempo, ela persegue um vislumbre de esperança de que o homem que uma vez lhe disse 'eu te amo' ainda esteja vivo mesmo depois de muitos anos que se passaram.",
     "episodes": [
       {
-        "id": 3033,
+        "id": 30033,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
@@ -2910,7 +3514,7 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 3034,
+        "id": 30034,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
@@ -2944,6 +3548,7 @@
     "studio": "CoMix Wave Films",
     "director": "Makoto Shinkai",
     "year": "2016",
+    "Status": "Finalizado",
     "episodeDuration": "1hr 46m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -2957,7 +3562,7 @@
     "synopsis": "Mitsuha Miyamizu, uma estudante do ensino médio, deseja viver a vida de um garoto na agitada cidade de Tóquio - um sonho que contrasta fortemente com sua vida atual no campo. Enquanto isso, na cidade, Taki Tachibana leva uma vida agitada como estudante do ensino médio, conciliando seu emprego de meio período e suas esperanças de um futuro na arquitetura. Um dia, Mitsuha acorda em um quarto que não é o seu e de repente se vê vivendo a vida dos seus sonhos em Tóquio - mas no corpo de Taki! Enquanto isso, Taki se encontra vivendo a vida de Mitsuha na humilde zona rural. Em busca de uma resposta para esse estranho fenômeno, eles começam a procurar um ao outro. Kimi no Na wa. gira em torno das ações de Mitsuha e Taki, que começam a ter um impacto dramático na vida um do outro, entrelaçando-os em um tecido mantido pela destinação e circunstância.",
     "episodes": [
       {
-        "id": 3035,
+        "id": 30035,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
@@ -2979,7 +3584,7 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 3036,
+        "id": 30036,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
@@ -3013,6 +3618,7 @@
     "studio": "Studio Ghibli",
     "director": "Hayao Miyazaki",
     "year": "2001",
+    "Status": "Finalizado",
     "episodeDuration": "2h. 4m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -3026,7 +3632,7 @@
     "synopsis": "Chihiro Ogino, uma garota de 10 anos teimosa, mimada e ingênua, fica menos do que satisfeita quando ela e seus pais descobrem um parque de diversões abandonado a caminho de sua nova casa. Ao se aventurar com cautela dentro do parque, ela percebe que há mais nesse lugar do que aparenta, pois coisas estranhas começam a acontecer quando o anoitecer chega. Aparições fantasmas e comida que transforma seus pais em porcos são apenas o começo - Chihiro cruzou inadvertidamente para o mundo dos espíritos. Agora presa, ela precisa reunir coragem para viver e trabalhar entre os espíritos, contando com a ajuda do enigmático Haku e do elenco de personagens únicos que ela conhece ao longo do caminho. Vívido e intrigante, Sen to Chihiro no Kamikakushi conta a história da jornada de Chihiro por um mundo desconhecido, enquanto ela se esforça para salvar seus pais e retornar para casa. ",
     "episodes": [
       {
-        "id": 3037,
+        "id": 30037,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
@@ -3048,7 +3654,7 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 3038,
+        "id": 30038,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
@@ -3082,6 +3688,7 @@
     "studio": "Studio Ghibli",
     "director": "Hayao Miyazaki",
     "year": "1997",
+    "Status": "Finalizado",
     "episodeDuration": "2h. 13m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -3095,7 +3702,7 @@
     "synopsis": "Quando uma vila Emishi é atacada por um feroz javali demoníaco, o jovem príncipe Ashitaka arrisca sua vida para defender sua tribo. Com seu último suspiro, a fera amaldiçoa o braço do príncipe, concedendo-lhe poderes demoníacos enquanto drena gradualmente sua vida. Instruído pelos anciãos da vila a viajar para o oeste em busca de uma cura, Ashitaka chega a Tatara, a Cidade de Ferro, onde se vê envolvido em um conflito feroz: Lady Eboshi de Tatara, promovendo o desmatamento constante, confronta a Princesa San e os espíritos sagrados da floresta, que estão furiosos com a destruição causada pelos humanos. À medida que as forças opostas da natureza e da humanidade começam a se chocar em uma luta desesperada pela sobrevivência, Ashitaka tenta buscar a harmonia entre os dois, ao mesmo tempo em que luta contra o demônio latente dentro de si. Princesa Mononoke é uma história que retrata a conexão entre tecnologia e natureza, ao mesmo tempo em que mostra o caminho para a harmonia que poderia ser alcançada por meio da aceitação mútua.",
     "episodes": [
       {
-        "id": 3039,
+        "id": 30039,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
@@ -3117,7 +3724,7 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 3040,
+        "id": 30040,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
@@ -3151,6 +3758,7 @@
     "studio": "Studio Ghibli",
     "director": "Hayao Miyazaki",
     "year": "2004",
+    "Status": "Finalizado",
     "episodeDuration": "1h. 59m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -3164,7 +3772,7 @@
     "synopsis": "Aquela peça de arquitetura confusa, aquela cacofonia de vapor assobiante e juntas rangentes, com fumaça saindo enquanto se move sozinho... Aquele castelo é lar do magnífico mago Howl, famoso tanto por sua habilidade mágica quanto por ser um conquistador de mulheres - pelo menos é o que dizem os rumores na pequena cidade de Sophie Hatter. Sophie, como a simples filha de um chapéuzeiro, não espera muito do seu futuro e está contente em trabalhar duro na loja. Entretanto, a vida simples de Sophie toma um rumo emocionante quando ela se vê envolvida em uma situação perturbadora e o misterioso mago aparece para resgatá-la. Infelizmente, esse encontro, por mais breve que seja, desperta a bruxa vaidosa e vingativa, a Bruxa do Desperdício - em um acesso de ciúmes causado por um desentendimento anterior com Howl - a lançar uma maldição na jovem, transformando-a em uma velha senhora. Na tentativa de voltar ao normal, Sophie precisa acompanhar Howl e uma variedade de companheiros excêntricos - que vão desde um poderoso demônio de fogo até um espantalho saltitante - em seu castelo ambulante, em uma perigosa aventura enquanto uma guerra violenta dilacera seu reino.",
     "episodes": [
       {
-        "id": 3041,
+        "id": 30041,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
@@ -3186,7 +3794,7 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 3042,
+        "id": 30042,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
@@ -3220,6 +3828,7 @@
     "studio": "Khara",
     "director": "Hideaki Anno",
     "year": "2021",
+    "Status": "Finalizado",
     "episodeDuration": "2h. 35m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -3235,7 +3844,7 @@
     "synopsis": "Após a tentativa fracassada da NERV de recuperar as Lanças de Longinus e realizar o Projeto de Instrumentalidade Humana, a destruição causada pelo Quarto Impacto foi em grande parte evitada. Em um estado de desordem, Shinji Ikari, Asuka Langley Shikinami e Rei Ayanami viajam para a Vila 3 - um assentamento de sobreviventes livre da ruína da Terra. Lá, Shinji aos poucos aceita seu passado, desenvolvendo uma vida completamente diferente dos seus dias como piloto de Evangelion. Enquanto isso, a NERV se prepara para continuar o Projeto de Instrumentalidade por meio de um novo Impacto. Quando a principal nave de batalha aérea da WILLE chega à vila, Shinji decide embarcar, acreditando que pode ajudar pilotando um Evangelion. À medida que novos segredos são revelados e uma batalha entre a WILLE e a NERV se aproxima, o futuro da Terra fica em jogo. Será que Shinji poderá salvar a humanidade e o resto do mundo mais uma vez?",
     "episodes": [
       {
-        "id": 3043,
+        "id": 30043,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
@@ -3257,7 +3866,7 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 3044,
+        "id": 30044,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
@@ -3291,6 +3900,7 @@
     "studio": "CloverWorks",
     "director": "Sōichi Masui",
     "year": "2019",
+    "Status": "Finalizado",
     "episodeDuration": "1h. 30m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -3305,7 +3915,7 @@
     "synopsis": "Há seis meses, Sakuta Azusagawa teve um encontro fortuito com uma garota coelhinha em uma biblioteca. Desde então, ele tem sido incrivelmente feliz com sua namorada, Mai Sakurajima, a mesma garota coelhinha. No entanto, o reaparecimento de sua misteriosa primeira paixão, a agora adulta Shouko Makinohara, adiciona uma nova complicação à sua relação com Mai. Para piorar as coisas, ele então encontra uma Shouko do ensino médio no hospital, sofrendo de uma grave doença. Misteriosamente, suas antigas cicatrizes começam a latejar sempre que ele está perto dela. Com a situação bizarra de Shouko de alguma forma girando em torno dele, Sakuta precisará lidar com seus próprios sentimentos conflitantes, para o melhor ou para o pior. Com a vida de uma garota em suas mãos, o que ele pode fazer?",
     "episodes": [
       {
-        "id": 3045,
+        "id": 30045,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
@@ -3327,7 +3937,7 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 3046,
+        "id": 30046,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
@@ -3361,6 +3971,7 @@
     "studio": "Studio VOLN",
     "director": "Shin'ichirō Ushijima",
     "year": "2018",
+    "Status": "Finalizado",
     "episodeDuration": "1h. 48m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -3374,7 +3985,7 @@
     "synopsis": "O protagonista distante: um rato de biblioteca que está profundamente desconectado do mundo em que vive. Ele não tem interesse em outras pessoas e está firmemente convencido de que ninguém tem interesse nele também. Sua história começa quando ele tropeça em um livro escrito à mão, intitulado Viver com a Morte. Ele logo o identifica como um diário secreto pertencente à sua colega de classe popular e animada, Sakura Yamauchi. Ela então confia nele sobre a doença pancreática da qual está sofrendo e que seu tempo restante é limitado. Apenas sua família sabe de sua doença terminal; nem mesmo seus melhores amigos têm conhecimento. Apesar dessa revelação, ele não demonstra nenhuma simpatia por sua situação, mas envolvido nas ondas do otimismo persistente de Sakura, ele eventualmente cede e decide acompanhá-la em seus últimos dias. À medida que esse par de opostos interage, sua conexão se fortalece, entrelaçando-se por meio das escolhas feitas a cada dia que passa. A aparente despreocupação e imprevisibilidade de Sakura perturbam o fluxo impassível da vida do protagonista, abrindo gradualmente seu coração enquanto ele descobre e abraça o verdadeiro significado de viver.",
     "episodes": [
       {
-        "id": 3047,
+        "id": 30047,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "videoUrl": [
@@ -3396,7 +4007,7 @@
         "languageEpisode": "legendado"
       },
       {
-        "id": 3048,
+        "id": 30048,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "videoUrl": [
