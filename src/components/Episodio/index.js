@@ -15,8 +15,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
   const [currentResolution, setCurrentResolution] = useState(0);
   const playerRef = useRef(null); // Referência ao elemento de contêiner do DPlayer
 
-  const currentEpisodeSlug = episodio.titleSlug; // Obtém o slug do episódio atual
-  const currentEpisodeTitle = episodio.titleEpisodio // Obtém o titulo do episódio atual
+
 
   useEffect(() => {
     const episode = anime.episodes.find((episode) => episode.id === episodio.id);
@@ -74,19 +73,38 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
 
   const resolutions = videoUrl.map((url) => url.resolution);
 
+  const currentEpisodeSlug = episodio.titleSlug; // Obtém o slug do episódio atual
+  const currentEpisodeTitle = episodio.titleEpisodio // Obtém o titulo do episódio atual
+  const currentEpisodeId = episodio.id;
+  const identifier = `${currentEpisodeSlug}-${currentEpisodeId}`;
+
+  const disqusConfig = {
+    shortname: 'https://gon-tv.disqus.com/embed.js',
+    config: { identifier: `${currentEpisodeSlug}-${currentEpisodeId}`, title: currentEpisodeTitle },
+  };
+
 
   const changeResolution = (index) => {
     setCurrentResolution(index);
-    
+    setTimeout(() => {
+      // Renderizar o Disqus novamente
+      const disqusThread = document.getElementById('disqus_thread');
+      if (disqusThread) {
+        disqusThread.innerHTML = ''; // Limpar o conteúdo existente do elemento
+        window.DISQUS.reset({ reload: true, config: disqusConfig }); // Chamar a função de reset do Disqus com a nova configuração
+      }
+    }, 500); // Aguardar 500 milissegundos (0,5 segundos) antes de renderizar o Disqus novamente
   };
 
   return (
+
     <div className="bg-black-light py-8">
       <div className="title-container">
         <h3 className="text-2xl text-white text-center font-bold">
           <Link to={`/animes/${slug}`}><span className="border-b-2 border-emerald-400">{anime.title}</span>
           </Link> - {titleEpisodio}</h3>
       </div>
+
       <main className="container mx-auto py-8">
         <div className="player-container relative">
           <div className="top-button-container">
@@ -126,7 +144,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
 
 
         <div className="info-container">
-          <div className="resolution-container">      
+          <div className="resolution-container">
             {resolutions.map((resolution, index) => (
               <button
                 key={index}
@@ -141,13 +159,15 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
                 <AiOutlineDownload />
               </button>
             </div>
-   
+
           </div>
           <div className="views-container">
-              <span className="views-text font-bold ">Visualizações: {defaultViews}</span>
-           </div>
+            <span className="views-text font-bold ">Visualizações: {defaultViews}</span>
+          </div>
         </div>
-        <Discus identifier={currentEpisodeSlug} title={currentEpisodeTitle} />
+        <div className="py-12 my-12">
+        <Discus identifier={identifier} title={currentEpisodeTitle} />
+        </div>
       </main>
     </div>
   );

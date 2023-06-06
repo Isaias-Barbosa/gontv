@@ -1,15 +1,21 @@
 import { Link } from "react-router-dom";
 import { MdPlayCircleFilled } from "react-icons/md";
 import './SingleAnime.css';
-
+import Discus from 'components/Discus';
 
 export default function SingleAnime({ anime }) {
+
+  const episodioIndex = anime.episodes.findIndex((info) => info.id === info.id);
+
+  const currentAnimeSlug = anime.slug; // Obtém o slug da pagina atual
+  const currentAnimeTitle = anime.title // Obtém o titulo da pagina tual
+  
 
   return (
     <div className="relative">
       <div className="bg-black-light">
         <main className="container mx-auto py-7 relative" style={{ position: "relative", overflow: "hidden" }}>
-          <div className="background-container relative">
+          <div className="background-container relative rounded-lg border-b-2 border-lime-400">
             <div
               className="w-full h-auto bg-cover bg-center rounded-lg"
               style={{
@@ -107,6 +113,9 @@ export default function SingleAnime({ anime }) {
                 </div>
               ))}
             </div>
+          </div>
+          <div className="py-10">
+          <Discus  identifier={currentAnimeSlug} title={currentAnimeTitle} />
           </div>
         </main >
       </div >
