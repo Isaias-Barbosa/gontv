@@ -60,7 +60,7 @@ export default function Calendar({ animesByDate }) {
           <span className="border-b-2 border-emerald-400">Calendário</span>
         </h2>
         {Object.entries(animesByDate).map(([date, animes]) => (
-          <div key={date} className="mb-4">
+          <div key={date}>
             <h2 className="text-2xl font-bold text-white ms-1 flex justify-start mb-3">
               <span className="border-b-2 border-emerald-400">{date}</span>
               </h2>
@@ -71,7 +71,7 @@ export default function Calendar({ animesByDate }) {
                   <Link to={`/animes/${anime.slug}`}>
                     <div className="anime-cover">
                       <img
-                        className="w-full h-auto px-1 object-cover custom-height-last mb-1"
+                        className="w-full h-auto bg- object-cover custom-height-last"
                         src={anime.coverImage} alt={anime.title} />
                       <div className="overlay"></div>
                       <button className="play-button">

@@ -45,7 +45,6 @@ export default function Animes() {
                 <h2 className="text-2xl text-white text-start font-bold mb-8 p-1">
                     <span className="border-b-4 border-emerald-600 pb-1"> Animes Legendados</span>
                 </h2>
-                <div class="container mx-auto">
                     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
                         {currentAnimes.map((anime) => (
                             <div className="aspect-ratio-box" >
@@ -55,8 +54,7 @@ export default function Animes() {
                                             <img
                                                 src={anime.coverImage}
                                                 alt={anime.title}
-                                                className="h-auto w-full custom-height-animes rounded-none object-cover"
-
+                                                className="w-full h-auto  object-cover custom-height-last"
                                             />
                                             <div className="overlay"></div>
                                             <button className="play-button">
@@ -69,7 +67,6 @@ export default function Animes() {
                             </div>
                         ))}
                     </div>
-                </div>
                 {/* Paginação */}
                 {legendadoAnimes.length > itemsPerPage && (
                     <div className="flex justify-center mt-6">

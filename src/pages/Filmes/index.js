@@ -55,7 +55,7 @@ export default function Filmes() {
                       <img
                         src={anime.coverImage}
                         alt={anime.title}
-                        className="h-auto w-full custom-height-animes rounded-none object-cover"
+                        className="w-full h-auto  object-cover custom-height-last"
 
                       />
                       <div className="overlay"></div>

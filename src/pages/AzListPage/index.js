@@ -69,7 +69,7 @@ export default function AzListPage() {
                                     <div className="relative">
                                         <Link to={`/animes/${anime.slug}`}>
                                             <div className="anime-cover">
-                                                <img src={anime.coverImage} alt={anime.title} className="h-auto w-full custom-height-animes rounded-none object-cover" />
+                                                <img src={anime.coverImage} alt={anime.title} className="w-full h-auto  object-cover custom-height-last" />
                                                 <div className="overlay"></div>
                                                 <button className="play-button">
                                                     <MdPlayCircleFilled className="text-white text-5xl" />
