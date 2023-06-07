@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdPlayCircleFilled } from 'react-icons/md';
 import animes from 'json/animes.json';
@@ -13,6 +13,29 @@ export default function AnimesLancamentos() {
     return title;
   };
 
+  const itemsPerPage = 32; // Número de animes por página
+
+  // Estado para controlar a página atual
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Cálculo dos índices inicial e final dos animes a serem exibidos
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  // Animes da página atual
+  const currentAnimes = animes.slice(startIndex, endIndex);
+
+  // Função para navegar para a página anterior
+  const goToPreviousPage = () => {
+    setCurrentPage((prevPage) => prevPage - 1);
+  };
+
+  // Função para navegar para a próxima página
+  const goToNextPage = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+
+
   return (
     <section>
       <div className="bg-black-light py-10">
@@ -21,8 +44,8 @@ export default function AnimesLancamentos() {
             <span className="border-b-4 border-emerald-600 pb-1">Todos os Lancamentos</span>
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
-            {animes.map((anime, index) => (
-             <Link to={`/animes/${anime.slug}/${anime.episodes[0].titleSlug}/${anime.episodes[0].languageEpisode}`} key={index}>
+            {currentAnimes.map((anime, index) => (
+              <Link to={`/animes/${anime.slug}/${anime.episodes[0].titleSlug}/${anime.episodes[0].languageEpisode}`} key={index}>
                 <div className="p-1">
                   <div className="relative">
                     <div className="absolute top-0 left-8 flex items-center justify-center ms-1 p-2">
@@ -45,6 +68,26 @@ export default function AnimesLancamentos() {
             ))}
           </div>
         </div>
+        {animes.length > itemsPerPage && (
+          <div className="flex justify-center mt-6">
+            {currentPage > 1 && (
+              <button
+                className="px-4 py-2 bg-emerald-400 text-white rounded-md hover:bg-emerald-500 focus:outline-none focus:bg-emerald-500"
+                onClick={goToPreviousPage}
+              >
+                Anterior
+              </button>
+            )}
+            {endIndex < animes.length && (
+              <button
+                className="px-4 py-2 bg-emerald-400 text-white rounded-md hover:bg-emerald-500 focus:outline-none focus:bg-emerald-500"
+                onClick={goToNextPage}
+              >
+                Próxima
+              </button>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );
