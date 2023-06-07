@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 export default function Search() {
@@ -33,9 +33,9 @@ export default function Search() {
         onChange={handleSearchChange}
         onKeyPress={handleKeyPress}
       />
-      <a className="text-white border bg-gray-900 rounded-md w-12 text-center mx-3" href="#">
+      <Link to="/filtro" className="text-white border bg-gray-900 rounded-md w-12 text-center mx-3" href="#">
         Filtro
-      </a>
+      </Link>
 
     </div>
   );
