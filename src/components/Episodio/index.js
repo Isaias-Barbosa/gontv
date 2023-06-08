@@ -105,7 +105,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
           </Link> - {titleEpisodio}</h3>
       </div>
 
-      <main className="container mx-auto py-8">
+      <main className="container mx-auto">
         <div className="player-container relative">
           <div className="top-button-container">
             {episodioIndex > 0 && (

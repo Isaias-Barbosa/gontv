@@ -71,7 +71,7 @@ export default function Calendar({ animesByDate }) {
                   <Link to={`/animes/${anime.slug}`}>
                     <div className="anime-cover">
                       <img
-                        className="w-full h-auto bg- object-cover custom-height-last"
+                        className="px-1 object-cover custom-height mb-1"
                         src={anime.coverImage} alt={anime.title} />
                       <div className="overlay"></div>
                       <button className="play-button">

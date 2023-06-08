@@ -39,8 +39,8 @@ export default function LastAddedFilmes({ animes }) {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 4,
+          slidesToScroll: 4,
 
         },
       },
@@ -77,7 +77,7 @@ export default function LastAddedFilmes({ animes }) {
                     <Link to={`/animes/${anime.slug}`}>
                       <div className="anime-cover">
                         <img src={anime.coverImage} alt={anime.title}
-                          className="w-full h-auto px-1 object-cover custom-height-last mb-1"
+                          className="px-1 object-cover custom-height mb-1"
                         />
                         <div className="overlay"></div>
                         <button className="play-button">

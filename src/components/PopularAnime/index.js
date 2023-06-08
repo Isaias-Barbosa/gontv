@@ -51,39 +51,30 @@ export default function PopularAnime() {
         centerMode: false,
         centerPadding: '15px',
         responsive: [
-            {
-                breakpoint: 1366,
-                settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 5,
-                    infinite: true, // Definir como true nas telas menores
-                },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+    
             },
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                    infinite: true, // Definir como true nas telas menores
-
-                },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+    
             },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true, // Definir como true nas telas menores
-                },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+    
             },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: true, // Definir como true nas telas menores
-                },
-            },
+          },
         ],
 
     };
@@ -105,7 +96,7 @@ export default function PopularAnime() {
                     <img
                       src={anime.coverImage}
                       alt={anime.title}
-                      className={`w-full h-auto px-1 object-cover  ${isMobile ? 'custom-height-last' : 'custom-height'}`}
+                      className="px-1 object-cover custom-height "
                     />
                     <div className="overlay"></div>
                     <button className="play-button">
