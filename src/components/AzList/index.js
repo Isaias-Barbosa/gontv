@@ -9,9 +9,9 @@ export default function AzList({ selectedLetter}) {
 
   return (
     <div>
-      <ul className="flex justify-between">
+      <ul className="flex justify-center  flex-wrap mb-3">
         {modifiedAlphabet.map((letter) => (
-          <li key={letter} className="mx-2 border-b-2" >
+          <li key={letter} className="mx-1 border-b-2" >
             <Link
               to={`/az-list/${letter}`}
               className={`text-white bg-neutral-800 hover:text-emerald-500 text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-xl px-2 ${
