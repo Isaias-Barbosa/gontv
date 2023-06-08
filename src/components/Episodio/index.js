@@ -135,7 +135,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
             <div className="aspect-ratio-container">
               <div className="aspect-ratio-inner">
                 <div className="aspect-ratio-inner">
-                  <div className="dplayer-container" ref={playerRef}></div>
+                <div className={`dplayer-container ${currentResolution < 1280 ? 'small-player' : ''}`} ref={playerRef}></div>
                 </div>
               </div>
             </div>
@@ -165,7 +165,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
             <span className="views-text font-bold ">Visualizações: {defaultViews}</span>
           </div>
         </div>
-        <div className="py-12 my-12">
+        <div className=" my-12">
         <Discus identifier={identifier} title={currentEpisodeTitle} />
         </div>
       </main>

@@ -23,7 +23,7 @@ export default function FiltroPage() {
     const [filtro, setFiltro] = useState({
         tipo: '',
         language: '',
-        genero: '',
+        generos: [],
         estudio: '',
         diretor: '',
         ano: '',
@@ -101,6 +101,12 @@ export default function FiltroPage() {
     };
 
     const handleFilterButtonClick = () => {
+
+        if (Object.values(filtro).every((value) => value === '')) {
+            setAnimesFiltrados(data);
+            return;
+        }
+
         const filteredAnimes = data.filter((anime) => {
             let matchesFiltro = true;
 
@@ -112,9 +118,11 @@ export default function FiltroPage() {
                 matchesFiltro = false;
             }
 
-            if (filtro.genero && anime.genres && !anime.genres.includes(filtro.genero)) {
+
+            if (filtro.generos && filtro.generos.length > 0 && (!anime.genres || !anime.genres.some((genero) => genero && filtro.generos.includes(genero)))) {
                 matchesFiltro = false;
-            }
+              }
+
 
             if (filtro.estudio && anime.studio && !anime.studio.includes(filtro.estudio)) {
                 matchesFiltro = false;
@@ -153,29 +161,26 @@ export default function FiltroPage() {
     useEffect(() => {
         const params = new URLSearchParams(location.search);
         const filtroFromParams = {};
-      
-        for (let [key, value] of params.entries()) {
-          filtroFromParams[key] = value;
+
+        if (params.toString()) {
+            for (let [key, value] of params.entries()) {
+                filtroFromParams[key] = value;
+            }
         }
-      
+
         setFiltro(filtroFromParams);
         handleFilterButtonClick();
     }, []);
 
-    const handleButtonClick = () => {
-        handleFilterButtonClick();
-      };
 
-      
 
-      
     return (
         <div className="bg-black-light py-8">
             <h1 className="text-white text-center font-bold text-xl">
                 <span className="border-b-2 border-emerald-400">Página de Filtro</span>
             </h1>
             <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
-                <Filtro options={options} filtro={filtro} onFiltroChange={handleFiltroChange} />
+                <Filtro options={options} filtro={filtro} setFiltro={setFiltro} onFiltroChange={handleFiltroChange} />
                 <div className="flex justify-center w-full mb-10">
                     <button
                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -186,10 +191,10 @@ export default function FiltroPage() {
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-6 gap-3">
                     {animesFiltrados.length > 0 ? (
-                        animesFiltrados.map((anime) => (
-                            <div className="aspect-ratio-box" >
-                                <div className="relative">
-                                    <Link to={`/animes/${anime.slug}`} key={anime.id}>
+                        animesFiltrados.map((anime, index) => (
+                            <div className="aspect-ratio-box" key={index}>
+                                <div className="relative" >
+                                    <Link to={`/animes/${anime.slug}`}>
                                         <div className="anime-cover">
                                             <img
                                                 src={anime.coverImage}

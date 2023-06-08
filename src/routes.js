@@ -14,6 +14,7 @@ import Filmes from "pages/Filmes";
 import CalendarPage from "pages/CalendarPage";
 import AzListPage from "pages/AzListPage";
 import FiltroPage from "pages/FiltroPage";
+import SearchGenero from "pages/SearchGenero";
 
 
 
@@ -34,6 +35,7 @@ function AppRoutes() {
         <Route path="/search/:letter"element={<SearchAnime />} />
         <Route path="/calendar" element={<CalendarPage />} />
         <Route path="/az-list/:letter" element={<AzListPage />} />
+        <Route path="/search-genero/:genero" element={<SearchGenero />} />
         <Route path="/filtro" element={<FiltroPage />} />
       </Routes>
     <Rodape />

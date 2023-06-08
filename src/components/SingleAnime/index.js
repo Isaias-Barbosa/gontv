@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { MdPlayCircleFilled } from "react-icons/md";
 import './SingleAnime.css';
 import Discus from 'components/Discus';
+import Genero from "components/Genero";
 
 export default function SingleAnime({ anime }) {
 
@@ -69,9 +70,7 @@ export default function SingleAnime({ anime }) {
                   <p className="text-white">
                     <strong className="hover:text-emerald-400">Gêneros: </strong>
                     {anime.genres.map((genre, index) => (
-                      <span key={index} className="genre-tag">
-                        {genre}
-                      </span>
+                        <Genero key={index} genero={genre} />
                     ))}
                   </p>
                 </div>
@@ -90,7 +89,7 @@ export default function SingleAnime({ anime }) {
             <h3 className="text-2xl text-center text-white font-bold mb-4">
               <span className="border-b-2 border-emerald-400"> Episódios </span>
             </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-3 ">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-3 my-10 ">
               {anime.episodes.map((episode) => (
                 <div key={episode.id} className="aspect-ratio-box w-full">
                   <Link to={`/animes/${anime.slug}/${episode.titleSlug}/${episode.languageEpisode}`}>
@@ -112,7 +111,7 @@ export default function SingleAnime({ anime }) {
               ))}
             </div>
           </div>
-          <div className="py-10">
+          <div className="mx-2">
           <Discus  identifier={currentAnimeSlug} title={currentAnimeTitle} />
           </div>
         </main >
