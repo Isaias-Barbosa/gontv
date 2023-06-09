@@ -30,18 +30,43 @@
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "lancamento": true,
-        "videoUrl": "tt21030032",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/rvy4W28wYkct3IFxU0RGF2uHppG.jpg",
         "duration": "24 minutos",
-        "languageEpisode": "legendado",
-        "dataCreator": "08/06/2023: 22:40"
+        "languageEpisode": "legendado"
       },
       {
         "id": 2,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
         "lancamento": false,
-        "videoUrl": "tt21030032",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/klFBxM7QHRtYvuqBcHGSoJaY5ES.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
@@ -50,7 +75,20 @@
         "id": 3,
         "titleEpisodio": "Episodio 03",
         "titleSlug": "episodio-3",
-        "videoUrl": "tt21030032",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/47JdOZPYzuypScNqDFMaBUuOWrx.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
@@ -59,7 +97,20 @@
         "id": 4,
         "titleEpisodio": "Episodio 04",
         "titleSlug": "episodio-4",
-        "videoUrl": "tt21030032",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/h44DwOqXqq44KzNHOzkNpcTRVRR.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
@@ -68,7 +119,20 @@
         "id": 5,
         "titleEpisodio": "Episodio 05",
         "titleSlug": "episodio-5",
-        "videoUrl": "tt21030032",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/bmIyVqU5c5iw1g1S8ENY5bKpf4P.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
@@ -77,7 +141,20 @@
         "id": 6,
         "titleEpisodio": "Episodio 06",
         "titleSlug": "episodio-6",
-        "videoUrl": "tt21030032",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/dTnNfowpkkjSG8fxDprhHxJD465.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
@@ -86,17 +163,21 @@
         "id": 7,
         "titleEpisodio": "Episodio 07",
         "titleSlug": "episodio-7",
-        "videoUrl": "tt21030032",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/culBlCRSAeAbCmOqw6QnCo0z7td.jpg",
-        "duration": "24 minutos",
-        "languageEpisode": "legendado"
-      },
-      {
-        "id": 8,
-        "titleEpisodio": "Episodio 08",
-        "titleSlug": "episodio-7",
-        "videoUrl": "tt21030032",
-        "thumbnail": "https://www.themoviedb.org/t/p/original/seThNZ54ZQmRlaF6E5dCUQzjFT0.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }
@@ -129,91 +210,221 @@
     "synopsis": "Rintaro é um auto-proclamado cientista louco que acredita que uma organização internacional está conspirando para remodelar o mundo de acordo com seus próprios interesses. Ele e seu amigo Itaru inadvertidamente criam um dispositivo capaz de enviar mensagens para o passado. A descoberta e experimentação deste instrumento torna-se o catalisador de alterações fundamentais para o presente. Alheio das consequências de suas ações, Rintaro e seus amigos acabam criando modificações de proporções graves. Agora ele deve tentar encontrar uma maneira de voltar a linha do tempo para o mais próximo possível do original, para salvar os preciosos membros do laboratório.",
     "episodes": [
       {
-        "id": 1,
+        "id": 1212,
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
-        "videoUrl": "tt1910272",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/h953aDKT4NE5PAXrsNzrowaxehu.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
       {
-        "id": 2,
+        "id": 1213,
         "titleEpisodio": "Episodio 02",
         "titleSlug": "episodio-2",
-        "videoUrl": "tt1910272",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/mIRuPZNEoGt0oyE9bL4BqEcmquq.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
       {
-        "id": 3,
+        "id": 1214,
         "titleEpisodio": "Episodio 03",
         "titleSlug": "episodio-3",
-        "videoUrl": "tt1910272",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/p78yoSbi7wXww1rEGYGbYSUm3wl.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
       {
-        "id": 4,
+        "id": 1215,
         "titleEpisodio": "Episodio 04",
         "titleSlug": "episodio-4",
-        "videoUrl": "tt1910272",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/jOvUzKQUbqdkNAtIAzQpL7GuUx.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
       {
-        "id": 5,
+        "id": 1216,
         "titleEpisodio": "Episodio 05",
         "titleSlug": "episodio-5",
-        "videoUrl": "tt1910272",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/92SFTY8Z4jj7AykgKlF5v4EMBxj.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
       {
-        "id": 6,
+        "id": 1217,
         "titleEpisodio": "Episodio 06",
         "titleSlug": "episodio-6",
-        "videoUrl": "tt1910272",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/suWPFexRgjwhJTy1E7yTtTrXpyt.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
       {
-        "id": 7,
+        "id": 1218,
         "titleEpisodio": "Episodio 07",
         "titleSlug": "episodio-7",
-        "videoUrl": "tt1910272",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/8AXyRwdJhDmfESjlLbJzBWtYvfO.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
       {
-        "id": 8,
+        "id": 1219,
         "titleEpisodio": "Episodio 08",
         "titleSlug": "episodio-8",
-        "videoUrl": "tt1910272",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/l6fhgZvTOEMosDnzo5a9TNc9xyj.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
       {
-        "id": 9,
+        "id": 1220,
         "titleEpisodio": "Episodio 09",
         "titleSlug": "episodio-9",
-        "videoUrl": "tt1910272",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/nlVR9hXGFfpfk8YmK116Co400QQ.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       },
       {
-        "id": 10,
+        "id": 1221,
         "titleEpisodio": "Episodio 10",
         "titleSlug": "episodio-10",
-        "videoUrl": "tt1910272",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/vrNGd6OZnXnaadq5GRcmLraLPJX.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
