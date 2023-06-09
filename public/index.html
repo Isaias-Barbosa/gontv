@@ -19,6 +19,29 @@
     <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>    
     <title>Gon.tv</title>
 
+    <script>
+      var type = [];
+      var imdb = [];
+      var season = [];
+      var episode = [];
+      warezPlugin(type, imdb, season, episode);
+
+      function warezPlugin(type, imdb, season, episode) {
+        if (type == "serie") {
+          season = "";
+          episode = "";
+        } else {
+          if (season !== "") {
+            season = "/" + season;
+          }
+          if (episode !== "") {
+            episode = "/" + episode;
+          }
+        }
+        var frame = document.getElementById('embedWarezCdn');
+        frame.innerHTML += '<iframe src="https://embed.warezcdn.net/' + type + '/' + imdb + season + episode + '" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>';
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

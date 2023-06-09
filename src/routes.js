@@ -18,13 +18,14 @@ import SearchGenero from "pages/SearchGenero";
 
 
 
+
 function AppRoutes() {
   return (
     <BrowserRouter>
     <ScrollToTop />
     <Menu />
     <Routes>
-    <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/animes/" element={<Animes />} />
         <Route path="/lancamentos/*" element={<AnimesLancamentos />} />
         <Route path="/animesDublados" element={<AnimesDub />} />

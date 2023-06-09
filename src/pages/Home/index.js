@@ -44,8 +44,13 @@ export default function Home() {
                 </Link>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
-                {animes.slice(0, 20).map((anime, index) => (
-                  <Link to={`/animes/${anime.slug}/${anime.episodes[0].titleSlug}/${anime.episodes[0].languageEpisode}`} key={index}>
+                {animes.slice(0, 20).map((anime, index) => {
+                  const lastEpisode = anime.episodes[anime.episodes.length - 1];
+                  return (
+                  <Link 
+                  to={`/animes/${anime.slug}/${lastEpisode.titleSlug}/${lastEpisode.languageEpisode}`}
+                  key={index}
+                >
                     <div
                       className="p-1 relative"
                       style={{ maxWidth: '320px', height: '100%' }}
@@ -54,8 +59,8 @@ export default function Home() {
                     >
                       <div className="relative thumbnail">
                         <img
-                          src={anime.episodes[0].thumbnail}
-                          alt={anime.title}
+                           src={anime.episodes[anime.episodes.length - 1].thumbnail}
+                            alt={anime.title}
                           className="w-full h-auto"
                         />
                         {hoveredIndex === index && (
@@ -73,10 +78,11 @@ export default function Home() {
                         </div>
                       </div>
                       <h3 className="text-center text-white font-bold text-base sm:text-lg md:text-xl xl:text-lg 2xl:text-lg">{truncateTitle(anime.title)}</h3>
-                      <p className="text-base text-gray-500 text-center font-bold sm:text-sm md:text-base xl:text-sm 2xl:text-md">{anime.episodes[0].titleEpisodio}</p>
+                      <p className="text-base text-gray-500 text-center font-bold sm:text-sm md:text-base xl:text-sm 2xl:text-md">{anime.episodes[anime.episodes.length - 1].titleEpisodio}</p>
                     </div>
                   </Link>
-                ))}
+                  );
+                        })}
               </div>
 
             </div>
