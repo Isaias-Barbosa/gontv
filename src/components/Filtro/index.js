@@ -10,15 +10,12 @@ export default function Filtro({ options, filtro, setFiltro, onFiltroChange }) {
     const handleGeneroClick = (genero) => {
       setFiltro((prevState) => {
         const { generos = [] } = prevState;
-        const generosSelecionados = [...generos];
-
-        if (generosSelecionados.includes(genero)) {
-          const index = generosSelecionados.indexOf(genero);
-          generosSelecionados.splice(index, 1);
-        } else {
-          generosSelecionados.push(genero);
-        }
-
+    
+        // Verifica se todos os gêneros selecionados estão presentes nos animes filtrados
+        const generosSelecionados = generos.includes(genero)
+          ? generos.filter((g) => g !== genero)
+          : [...generos, genero];
+    
         return {
           ...prevState,
           generos: generosSelecionados,

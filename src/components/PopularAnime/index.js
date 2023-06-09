@@ -9,7 +9,20 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 
+import { BeatLoader } from 'react-spinners';
+
+
 export default function PopularAnime() {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+
+  useEffect(() => {
+    // Simulação de uma requisição assíncrona
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Tempo de simulação de carregamento (2 segundos)
+  }, []);
 
     const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
 
@@ -87,7 +100,13 @@ export default function PopularAnime() {
         <h2 className="text-2xl text-start text-white font-bold mb-4 p-1">
           <span className="border-b-4 border-emerald-600 pb-1">Animes Populares</span>
         </h2>
-        <Slider {...settings}>
+        {isLoading ? (
+          // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados
+          <div className="flex justify-center">
+            <BeatLoader color="#00b894" loading={isLoading} size={20} />
+          </div>
+        ) : (
+                  <Slider {...settings}>
           {popularAnimeList.map((anime) => (
             <div className="aspect-ratio-box" key={anime.id}>
               <div className={`relative ${isMobile ? 'mobile-img' : ''}`}>
@@ -109,6 +128,9 @@ export default function PopularAnime() {
             </div>
           ))}
         </Slider>
+        
+                )}
+                
       </div>
     </section>
     )

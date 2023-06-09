@@ -10,7 +10,7 @@
     "studio": "Doga Kobo",
     "director": "Diretor do Anime",
     "year": "2023",
-    "Status": "Finalizado",
+    "Status": "Em Lançamento",
     "episodeDuration": "30 minutos",
     "genres": [
       "Ação",
@@ -30,6 +30,7 @@
         "titleEpisodio": "Episodio 01",
         "titleSlug": "episodio-1",
         "lancamento": true,
+        "dataCreateEpisode": "2023-06-01 02:51:55",
         "videoUrl": [
           {
             "resolution": "FHD",
@@ -442,7 +443,7 @@
     "studio": "ufotable",
     "director": "Sotozaki Haruo",
     "year": "2021",
-    "Status": "Finalizado",
+    "Status": "Em Lançamento",
     "episodeDuration": "24 min. per episode",
     "genres": [
       "Ação",
@@ -670,7 +671,7 @@
     "studio": "Liden Films",
     "director": "Chikara Sakurai",
     "year": "2020",
-    "Status": "Finalizado",
+    "Status": "Em Lançamento",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Ação",
@@ -744,7 +745,7 @@
     "studio": "MAPPA",
     "director": "Yasuko Kobayashi",
     "year": "2020",
-    "Status": "Finalizado",
+    "Status": "Em Lançamento",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Ação",
@@ -1342,7 +1343,7 @@
     "studio": "Bones",
     "director": "Kenji Nagasaki",
     "year": "2016",
-    "Status": "Finalizado",
+    "Status": "Em Lançamento",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1490,7 +1491,7 @@
     "studio": "Studio Pierrot",
     "director": "Noriyuki Abe",
     "year": "2004",
-    "Status": "Em Lançamento",
+    "Status": "Finalizado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1923,6 +1924,79 @@
           }
         ],
         "thumbnail": "https://www.themoviedb.org/t/p/original/b0BSIfkkoYbf4KKTJlY0XOoQxY1.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "Type": "TV",
+    "title": "Bleach: Sennen Kessen-hen",
+    "slug": "bleach-sennen-kessen-hen",
+    "subtitule": "Bleach: Thousand-Year Blood War",
+    "date": "Quinta-Feira",
+    "coverImage": "https://cdn.myanimelist.net/images/anime/1908/135431l.jpg",
+    "studio": "Studio Pierrot",
+    "director": "Tomohisa Taguchi",
+    "year": "2022",
+    "Status": "Em Lançamento",
+    "episodeDuration": "24 min. por episódio",
+    "genres": [
+      "Ação",
+      "Aventura",
+      "Fantasia",
+      "Shounen"
+    ],
+    "Premiered": "Fall 2022",
+    "Fansub": "Oficial",
+    "language": "Legendado",
+    "resoAnime": "FHD",
+    "background": "https://www.themoviedb.org/t/p/original/o0NsbcIvsllg6CJX0FBFY8wWbsn.jpg",
+    "top": true,
+    "synopsis": "Substituto Soul Reaper Ichigo Kurosaki passa seus dias lutando contra Hollows, perigosos espíritos malignos que ameaçam a cidade de Karakura. Ichigo realiza sua busca com seus aliados mais próximos: Orihime Inoue, sua amiga de infância com talento para a cura; Yasutora Sado, seu colega de escola com força sobre-humana; e Uryuu Ishida, rival Quincy de Ichigo. A rotina vigilante de Ichigo é interrompida pelo súbito aparecimento de Asguiaro Ebern, um perigoso Arrancar que anuncia o retorno de Yhwach, um antigo rei Quincy. Yhwach busca reacender a histórica rixa de sangue entre Soul Reaper e Quincy, e ele se concentra em apagar o mundo humano e a Soul Society para sempre. Yhwach lança uma invasão dupla na Soul Society e no Hueco Mundo, a casa de Hollows e Arrancar. Em retaliação, Ichigo e seus amigos devem lutar ao lado de antigos aliados e inimigos para acabar com a campanha de carnificina de Yhwach antes que o próprio mundo acabe.",
+    "episodes": [
+      {
+        "id": 27001,
+        "titleEpisodio": "Episodio 01",
+        "titleSlug": "episodio-1",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/wh0G2DV1rR914iMKmFlqgmXH7AC.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 27002,
+        "titleEpisodio": "Episodio 02",
+        "titleSlug": "episodio-2",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/kr2uO8KP5gwboImDDbEHv5BFyPg.jpg",
         "duration": "24 minutos",
         "languageEpisode": "legendado"
       }

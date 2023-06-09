@@ -52,7 +52,7 @@ export default function Menu() {
     <>
 
       {isOpen && (
-        <div className="fixed inset-0 bg-black-dark  opacity-80 z-50"></div>
+        <div className="fixed inset-0 bg-black-dark  opacity-80 z-50 "></div>
       )}
 
       <button
@@ -89,7 +89,7 @@ export default function Menu() {
       {isOpen && (
         <div className="fixed top-0 bottom-0 left-0 right-0 z-50 " onClick={toggleMenu}>
         <div className="fixed top-0 left-0 bg-black-light w-55 h-full z-50">
-          <nav className="flex flex-col justify-between items-center bg-black-light  p-10">
+          <nav className="flex flex-col justify-between items-center bg-black-light  p-10 transition-transform duration-500 ease-in-out transform translate-x-0">
             <div className="flex justify-between w-full">
               <div className="text-white font-bold text-xl mb-8">
                 <Link to="/">
@@ -124,6 +124,11 @@ export default function Menu() {
               <li>
                 <Link to="/animesDublados" className="text-white hover:text-emerald-500">
                   Animes Dublados
+                </Link>
+              </li>
+              <li>
+                <Link to="/tvAnimes" className="text-white hover:text-emerald-500">
+                  TV Animes
                 </Link>
               </li>
               <li>

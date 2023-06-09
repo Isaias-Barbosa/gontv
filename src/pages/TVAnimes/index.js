@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom'
 import { MdPlayCircleFilled } from 'react-icons/md';
 import React, { useState } from 'react';
 
-export default function Animes() {
-
+export default function TVAnimes() {
     const MAX_TITLE_LENGTH = 15; // Define o número máximo de caracteres do título
 
     const truncateTitle = (title) => {
@@ -14,8 +13,8 @@ export default function Animes() {
         return title;
     };
 
-    // Filtra os animes legendados
-    const legendadoAnimes = animes.filter((anime) => anime.Type === 'TV' && anime.language === 'Legendado');
+    // Filtra os animes com status de Lançamento
+    const tvAnimes = animes.filter((anime) => anime.Status === 'Em Lançamento');
 
     const itemsPerPage = 36; // Número de animes por página
 
@@ -27,7 +26,7 @@ export default function Animes() {
     const endIndex = startIndex + itemsPerPage;
 
     // Animes da página atual
-    const currentAnimes = legendadoAnimes.slice(startIndex, endIndex);
+    const currentAnimes = tvAnimes.slice(startIndex, endIndex);
 
     // Função para navegar para a página anterior
     const goToPreviousPage = () => {
@@ -43,7 +42,7 @@ export default function Animes() {
         <div className="bg-black-light py-8">
             <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
                 <h2 className="text-2xl text-white text-start font-bold mb-8 p-1">
-                    <span className="border-b-4 border-emerald-600 pb-1"> Animes Legendados</span>
+                    <span className="border-b-4 border-emerald-600 pb-1"> Animes Em Lançamento</span>
                 </h2>
                 <div class="container mx-auto">
                 <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-6 gap-3">
@@ -74,7 +73,7 @@ export default function Animes() {
                 </div>
                 
                 {/* Paginação */}
-                {legendadoAnimes.length > itemsPerPage && (
+                {tvAnimes.length > itemsPerPage && (
                     <div className="flex justify-center mt-6">
                         {currentPage > 1 && (
                             <button
@@ -84,7 +83,7 @@ export default function Animes() {
                                 Anterior
                             </button>
                         )}
-                        {endIndex < legendadoAnimes.length && (
+                        {endIndex < tvAnimes.length && (
                             <button
                                 className="px-4 py-2 bg-emerald-400 text-white rounded-md hover:bg-emerald-500 focus:outline-none focus:bg-emerald-500"
                                 onClick={goToNextPage}

@@ -3,8 +3,20 @@ import { MdPlayCircleFilled } from 'react-icons/md';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import React, { useState, useEffect } from 'react';
+import { BeatLoader } from 'react-spinners';
 
 export default function LastAddedFilmes({ animes }) {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+
+  useEffect(() => {
+    // Simulação de uma requisição assíncrona
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Tempo de simulação de carregamento (2 segundos)
+  }, []);
 
     const filmesAnimes = animes.filter((anime) => anime.Type === "Filme");
 
@@ -69,6 +81,12 @@ export default function LastAddedFilmes({ animes }) {
                   Ver Todos
             </Link>
           </div>
+          {isLoading ? (
+          // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados
+          <div className="flex justify-center">
+            <BeatLoader color="#00b894" loading={isLoading} size={20} />
+          </div>
+        ) : (
           <Slider {...settings}>
             {limitedAnimes && limitedAnimes.length > 0 ? (
               limitedAnimes.map((anime) => (
@@ -93,6 +111,7 @@ export default function LastAddedFilmes({ animes }) {
               <div>Nenhum anime encontrado.</div>
             )}
           </Slider>
+                )}
         </div>
       </div>
     </>

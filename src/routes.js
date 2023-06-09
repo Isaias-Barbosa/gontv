@@ -15,6 +15,7 @@ import CalendarPage from "pages/CalendarPage";
 import AzListPage from "pages/AzListPage";
 import FiltroPage from "pages/FiltroPage";
 import SearchGenero from "pages/SearchGenero";
+import TVAnimes from "pages/TVAnimes";
 
 
 
@@ -28,6 +29,7 @@ function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/animes/" element={<Animes />} />
         <Route path="/lancamentos/*" element={<AnimesLancamentos />} />
+        <Route path="/tvAnimes/*" element={<TVAnimes />} />
         <Route path="/animesDublados" element={<AnimesDub />} />
         <Route path="/filmes/" element={<Filmes />} />
         <Route path="/animes/:slug/*" element={<SingleAnimePage />} />

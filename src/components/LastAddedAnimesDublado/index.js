@@ -3,8 +3,20 @@ import { MdPlayCircleFilled } from 'react-icons/md';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import React, { useState, useEffect } from 'react';
+import { BeatLoader } from 'react-spinners';
 
 export default function LastAddedAnimesDublado({ animes }) {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+
+  useEffect(() => {
+    // Simulação de uma requisição assíncrona
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Tempo de simulação de carregamento (2 segundos)
+  }, []);
 
   const dubladoAnimes = animes.filter((anime) => anime.language === "Dublado");
 
@@ -67,30 +79,37 @@ export default function LastAddedAnimesDublado({ animes }) {
             Ver Todos
           </Link>
         </div>
-        <Slider {...settings}>
-          {limitedAnimes && limitedAnimes.length > 0 ? (
-            limitedAnimes.map((anime) => (
-              <div className="aspect-ratio-box" >
-                <div key={anime.id} className="relative">
-                  <Link to={`/animes/${anime.slug}`}>
-                    <div className="anime-cover">
-                      <img src={anime.coverImage} alt={anime.title}
-                        className="w-full h-auto px-1 object-cover custom-height mb-1"
-                      />
-                      <div className="overlay"></div>
-                      <button className="play-button">
-                        <MdPlayCircleFilled className="text-white text-4xl" />
-                      </button>
-                    </div>
-                  </Link>
-                  <h3 className="text-md text-white text-center font-semibold">{truncateTitle(anime.title)}</h3>
+        {isLoading ? (
+          // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados
+          <div className="flex justify-center">
+            <BeatLoader color="#00b894" loading={isLoading} size={20} />
+          </div>
+        ) : (
+          <Slider {...settings}>
+            {limitedAnimes && limitedAnimes.length > 0 ? (
+              limitedAnimes.map((anime) => (
+                <div className="aspect-ratio-box" >
+                  <div key={anime.id} className="relative">
+                    <Link to={`/animes/${anime.slug}`}>
+                      <div className="anime-cover">
+                        <img src={anime.coverImage} alt={anime.title}
+                          className="object-cover custom-height px-1"
+                        />
+                        <div className="overlay"></div>
+                        <button className="play-button">
+                          <MdPlayCircleFilled className="text-white text-4xl" />
+                        </button>
+                      </div>
+                    </Link>
+                    <h3 className="text-md text-white text-center font-semibold">{truncateTitle(anime.title)}</h3>
+                  </div>
                 </div>
-              </div>
-            ))
-          ) : (
-            <div>Nenhum anime encontrado.</div>
-          )}
-        </Slider>
+              ))
+            ) : (
+              <div>Nenhum anime encontrado.</div>
+            )}
+          </Slider>
+        )}
       </div>
 
     </>

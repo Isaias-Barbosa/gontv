@@ -1,14 +1,26 @@
 import Banner from "components/Banner";
 import PopularAnime from "components/PopularAnime";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MdPlayCircleFilled } from 'react-icons/md';
 import LastAddedAnimes from "components/LastAddedAnimes";
 import LastAddedAnimesDublado from 'components/LastAddedAnimesDublado';
 import { Link } from 'react-router-dom';
 import animes from 'json/animes.json';
 import LastAddedFilmes from "components/LastAddedFilmes";
+import 'tailwindcss/tailwind.css';
+import { BeatLoader } from 'react-spinners';
 
 export default function Home() {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+
+  useEffect(() => {
+    // Simulação de uma requisição assíncrona
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Tempo de simulação de carregamento (2 segundos)
+  }, []);
 
   const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
 
@@ -25,8 +37,9 @@ export default function Home() {
   return (
 
     <>
-      <Banner />
+     
       <div className="bg-black-light">
+      <Banner />
         <main className="container mx-auto py-8">
           <div className="section">
             <PopularAnime />
@@ -43,48 +56,55 @@ export default function Home() {
                   Ver Todos
                 </Link>
               </div>
+              {isLoading ? (
+                  // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados
+                  <div className="flex justify-center">
+                    <BeatLoader color="#00b894" loading={isLoading} size={20} />
+                  </div>
+                ) : (
+                  // Exibir os dados reais dos animes quando estiverem carregados
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
-                {animes.slice(0, 20).map((anime, index) => {
-                  const lastEpisode = anime.episodes[anime.episodes.length - 1];
-                  return (
-                  <Link 
-                  to={`/animes/${anime.slug}/${lastEpisode.titleSlug}/${lastEpisode.languageEpisode}`}
-                  key={index}
-                >
-                    <div
-                      className="p-1 relative"
-                      style={{ maxWidth: '320px', height: '100%' }}
-                      onMouseEnter={() => setHoveredIndex(index)}
-                      onMouseLeave={() => setHoveredIndex(null)}
-                    >
-                      <div className="relative thumbnail">
-                        <img
-                           src={anime.episodes[anime.episodes.length - 1].thumbnail}
-                            alt={anime.title}
-                          className="w-full h-auto"
-                        />
-                        {hoveredIndex === index && (
-                          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                            <MdPlayCircleFilled className="text-white text-5xl" />
+                  {animes.slice(0, 20).map((anime, index) => {
+                    const lastEpisode = anime.episodes[anime.episodes.length - 1];
+                    return (
+                      <Link
+                        to={`/animes/${anime.slug}/${lastEpisode.titleSlug}/${lastEpisode.languageEpisode}`}
+                        key={index}
+                      >
+                        <div
+                          className="p-1 relative"
+                          style={{ maxWidth: '320px', height: '100%' }}
+                          onMouseEnter={() => setHoveredIndex(index)}
+                          onMouseLeave={() => setHoveredIndex(null)}
+                        >
+                          <div className="relative thumbnail">
+                            <img
+                              src={anime.episodes[anime.episodes.length - 1].thumbnail}
+                              alt={anime.title}
+                              className="w-full h-auto"
+                            />
+                            {hoveredIndex === index && (
+                              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                <MdPlayCircleFilled className="text-white text-5xl" />
+                              </div>
+                            )}
+                            <div className="absolute top-0 left-8 flex items-center justify-center ms-1 p-2">
+                              <div className={`text-xs font-bold ${anime.language === 'Legendado' ? 'bg-rose-500 text-white' : 'bg-blue-500 text-white'} rounded-md px-2 py-1`}>
+                                {anime.language === 'Legendado' ? 'LEG' : 'Dub'}
+                              </div>
+                            </div>
+                            <div className="absolute top-0 left-0 bg-emerald-700 rounded-md m-2 p-1">
+                              <p className="text-white text-xs font-bold">{anime.resoAnime}</p>
+                            </div>
                           </div>
-                        )}
-                        <div className="absolute top-0 left-8 flex items-center justify-center ms-1 p-2">
-                          <div className={`text-xs font-bold ${anime.language === 'Legendado' ? 'bg-rose-500 text-white' : 'bg-blue-500 text-white'} rounded-md px-2 py-1`}>
-                            {anime.language === 'Legendado' ? 'LEG' : 'Dub'}
-                          </div>
+                          <h3 className="text-center text-white font-bold text-base sm:text-lg md:text-xl xl:text-lg 2xl:text-lg">{truncateTitle(anime.title)}</h3>
+                          <p className="text-base text-gray-500 text-center font-bold sm:text-sm md:text-base xl:text-sm 2xl:text-md">{anime.episodes[anime.episodes.length - 1].titleEpisodio}</p>
                         </div>
-                        <div className="absolute top-0 left-0 bg-emerald-700 rounded-md m-2 p-1">
-                          <p className="text-white text-xs font-bold">{anime.resoAnime}</p>
-                        </div>
-                      </div>
-                      <h3 className="text-center text-white font-bold text-base sm:text-lg md:text-xl xl:text-lg 2xl:text-lg">{truncateTitle(anime.title)}</h3>
-                      <p className="text-base text-gray-500 text-center font-bold sm:text-sm md:text-base xl:text-sm 2xl:text-md">{anime.episodes[anime.episodes.length - 1].titleEpisodio}</p>
-                    </div>
-                  </Link>
-                  );
-                        })}
+                      </Link>
+                    )
+                            })}        
               </div>
-
+              )}
             </div>
           </div>
           <div className="section animes-legendados">

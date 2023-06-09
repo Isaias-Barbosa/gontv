@@ -101,7 +101,7 @@ export default function SingleAnime({ anime }) {
                       />
                       <div className="overlay"></div>
 
-                      <button className="play-button absolute inset-0 flex items-center justify-center">
+                      <button className="play-button absolute items-center justify-center">
                         <MdPlayCircleFilled className="text-white text-5xl" />
                       </button>
                     </div>

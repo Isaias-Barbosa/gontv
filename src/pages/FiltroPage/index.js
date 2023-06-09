@@ -119,7 +119,11 @@ export default function FiltroPage() {
             }
 
 
-            if (filtro.generos && filtro.generos.length > 0 && (!anime.genres || !anime.genres.some((genero) => genero && filtro.generos.includes(genero)))) {
+            if (
+                filtro.generos &&
+                filtro.generos.length > 0 &&
+                (!anime.genres || !filtro.generos.every((genero) => anime.genres.includes(genero)))
+              ) {
                 matchesFiltro = false;
               }
 
@@ -175,7 +179,7 @@ export default function FiltroPage() {
 
 
     return (
-        <div className="bg-black-light py-8">
+        <div className="bg-black-light py-8 ">
             <h1 className="text-white text-center font-bold text-xl">
                 <span className="border-b-2 border-emerald-400">Página de Filtro</span>
             </h1>
@@ -199,7 +203,7 @@ export default function FiltroPage() {
                                             <img
                                                 src={anime.coverImage}
                                                 alt={anime.title}
-                                                className="w-full h-full object-cover custom-height"
+                                                className="object-cover custom-height"
                                             />
                                             <div className="overlay"></div>
                                             <button className="play-button">
@@ -209,10 +213,11 @@ export default function FiltroPage() {
                                     </Link>
                                     <h3 className="text-lg text-white text-center mb-3 px-2 font-semibold">{truncateTitle(anime.title)}</h3>
                                 </div>
+                                
                             </div>
-                        ))
+                        ))                        
                     ) : (
-                        <h1 className="text-white font-bold">Nenhum anime encontrado com os filtros selecionados.</h1>
+                        <h1 className="text-white font-bold text-center">Nenhum anime encontrado com os filtros selecionados.</h1>
                     )}
                 </div>
             </div>
