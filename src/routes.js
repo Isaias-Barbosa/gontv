@@ -16,8 +16,7 @@ import AzListPage from "pages/AzListPage";
 import FiltroPage from "pages/FiltroPage";
 import SearchGenero from "pages/SearchGenero";
 import TVAnimes from "pages/TVAnimes";
-
-
+import LoginPage from "pages/LoginPage";
 
 
 function AppRoutes() {
@@ -40,6 +39,7 @@ function AppRoutes() {
         <Route path="/az-list/:letter" element={<AzListPage />} />
         <Route path="/search-genero/:genero" element={<SearchGenero />} />
         <Route path="/filtro" element={<FiltroPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     <Rodape />
   </BrowserRouter>

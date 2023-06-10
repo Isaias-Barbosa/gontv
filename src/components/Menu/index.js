@@ -70,16 +70,18 @@ export default function Menu() {
           {!isMobile && (
             <div className="flex items-center ml-1 ">
               <Link to="/calendar">
-              <FcCalendar className="text-green-500 ml-3" size={34} />
-              </Link>     
+                <FcCalendar className="text-green-500 ml-3" size={34} />
+              </Link>
             </div>
           )}
         </div>
         {!isMobile && (
+          <Link to="/login">
           <button className="bg-emerald-700 hover:bg-emerald-500 text-white px-4 py-2 mx-2 rounded-lg flex items-center">
             <IoLogInOutline className="mr-2" size={20} />
             <span className="text-center">Login</span>
           </button>
+          </Link>
         )}
       </div>
 
@@ -88,69 +90,71 @@ export default function Menu() {
 
       {isOpen && (
         <div className="fixed top-0 bottom-0 left-0 right-0 z-50 " onClick={toggleMenu}>
-        <div className="fixed top-0 left-0 bg-black-light w-55 h-full z-50">
-          <nav className="flex flex-col justify-between items-center bg-black-light  p-10 transition-transform duration-500 ease-in-out transform translate-x-0">
-            <div className="flex justify-between w-full">
-              <div className="text-white font-bold text-xl mb-8">
-                <Link to="/">
-                  <div className="flex items-center px-3">
-                    <img
-                      src={logo}
-                      alt="Logo"
-                      className="w-10 h-auto md:w-12 md:h-12 "
-                    />
-                    <span className="text-emerald-400 text-xl ml-2">{siteTitle}</span>
+          <div className="fixed top-0 left-0 bg-black-light w-55 h-full z-50">
+            <nav className="flex flex-col justify-between items-center bg-black-light  p-10 transition-transform duration-500 ease-in-out transform translate-x-0">
+              <div className="flex justify-between w-full">
+                <div className="text-white font-bold text-xl mb-8">
+                  <Link to="/">
+                    <div className="flex items-center px-3">
+                      <img
+                        src={logo}
+                        alt="Logo"
+                        className="w-10 h-auto md:w-12 md:h-12 "
+                      />
+                      <span className="text-emerald-400 text-xl ml-2">{siteTitle}</span>
+                    </div>
+                  </Link>
+                </div>
+                <button
+                  className="text-white focus:outline-none flex items-center justify-center"
+                  onClick={toggleMenu}
+                >
+                  <FiX className="w-7 h-7 md:w-8 md:h-8" />
+                </button>
+              </div>
+              <ul className="space-y-4">
+                <li>
+                  <Link to="/" className="text-white hover:text-emerald-500 border-b-2 border-b-emerald-500">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/animes" className="text-white hover:text-emerald-500">
+                    Animes
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/animesDublados" className="text-white hover:text-emerald-500">
+                    Animes Dublados
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/tvAnimes" className="text-white hover:text-emerald-500">
+                    TV Animes
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/filmes" className="text-white hover:text-emerald-500">
+                    Filmes
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/calendar" className="text-white hover:text-emerald-500">
+                    Calendário
+                  </Link>
+                </li>
+                {!isLogin && (
+                  <div className="py-2">
+                    <Link to="/login">
+                      <button className="bg-emerald-700 hover:bg-emerald-500 text-white px-7 py-3 rounded-lg">
+                        Login
+                      </button>
+                    </Link>
                   </div>
-                </Link>
-              </div>
-              <button
-          className="text-white focus:outline-none flex items-center justify-center"
-          onClick={toggleMenu}
-        >
-          <FiX className="w-7 h-7 md:w-8 md:h-8" />
-        </button>
-            </div>
-            <ul className="space-y-4">
-              <li>
-                <Link to="/" className="text-white hover:text-emerald-500 border-b-2 border-b-emerald-500">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/animes" className="text-white hover:text-emerald-500">
-                  Animes
-                </Link>
-              </li>
-              <li>
-                <Link to="/animesDublados" className="text-white hover:text-emerald-500">
-                  Animes Dublados
-                </Link>
-              </li>
-              <li>
-                <Link to="/tvAnimes" className="text-white hover:text-emerald-500">
-                  TV Animes
-                </Link>
-              </li>
-              <li>
-                <Link to="/filmes" className="text-white hover:text-emerald-500">
-                  Filmes
-                </Link>
-              </li>
-              <li>
-                <Link to="/calendar" className="text-white hover:text-emerald-500">
-                  Calendário
-                </Link>
-              </li>
-              {!isLogin && (
-              <div className="py-2">
-              <button className="bg-emerald-700 hover:bg-emerald-500 text-white px-7 py-3 rounded-lg">
-                Login
-              </button>
-              </div>
-            )}
-            </ul>
-          </nav>
-        </div>
+                )}
+              </ul>
+            </nav>
+          </div>
         </div>
       )}
 
