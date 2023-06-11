@@ -52,7 +52,7 @@ export default function AzListPage() {
 
 
     return (
-        <div className="bg-black-light py-1">
+        <div className="bg-black-light h-screen">
             <div>
                 <h1 className="text-white font-bold text-lg text-center py-2">
                     <span className="border-b-2 border-emerald-400">Ordene por Letras</span></h1>
