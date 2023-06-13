@@ -116,7 +116,7 @@ export default function Menu() {
                     )}
                     <li>
                       <Link
-                        to="/profile"
+                        to="/profile/meuperfil"
                         className="block px-4 py-2 text-white hover:bg-emerald-500"
                       >
                         Meu Perfil

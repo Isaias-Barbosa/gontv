@@ -5,7 +5,7 @@ import Tables from './components/Tables';
 
 export default function Admin({ username }) {
   return (
-    <div>
+    <div className="">
       <Navbar />
       <div className="flex justify-center">
         <Sidebar username={username} />

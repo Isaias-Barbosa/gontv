@@ -7,12 +7,15 @@ export function RequireAuth({ children }) {
 
   if (!user) {
     // Redirecionar para a página de login se o usuário não estiver autenticado
-    navigate('/login');
+    navigate('/404');
     return null;
   }
 
-  if (!user.isAdmin) {
-    // Redirecionar para a página NotFoundPage se o usuário não for administrador
+   // Verificar se a rota atual é a do dashboard/admin
+   const isDashboardRoute = window.location.pathname.includes('/dashboard/admin');
+
+   if (isDashboardRoute && !user.isAdmin) {
+    // Redirecionar para a página NotFoundPage se o usuário não for administrador e estiver tentando acessar a rota do dashboard/admin
     return <Navigate to="*" replace />;
   }
 

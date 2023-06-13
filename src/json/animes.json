@@ -9,8 +9,9 @@
     "coverImage": "https://cdn.myanimelist.net/images/anime/1987/135628l.jpg",
     "studio": "Doga Kobo",
     "director": "Diretor do Anime",
-    "year": "2023",
+    "year": "2023",  
     "Status": "Em Lançamento",
+    "status": "favorito",
     "episodeDuration": "30 minutos",
     "genres": [
       "Ação",
@@ -196,6 +197,7 @@
     "director": "Diretor do Anime",
     "year": "2011",
     "Status": "Finalizado",
+    "status": "favorito",
     "episodeDuration": "24 minutos",
     "genres": [
       "Drama",
@@ -444,6 +446,8 @@
     "director": "Sotozaki Haruo",
     "year": "2021",
     "Status": "Em Lançamento",
+        "status": "favorito",
+    
     "episodeDuration": "24 min. per episode",
     "genres": [
       "Ação",
@@ -672,6 +676,8 @@
     "director": "Chikara Sakurai",
     "year": "2020",
     "Status": "Em Lançamento",
+        "status": "favorito",
+    
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Ação",
@@ -746,6 +752,8 @@
     "director": "Yasuko Kobayashi",
     "year": "2020",
     "Status": "Em Lançamento",
+        "status": "favorito",
+    
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Ação",
@@ -822,6 +830,8 @@
     "director": "Susumu Nishizawa",
     "year": "2021",
     "Status": "Finalizado",
+  
+        "status": "assistindo",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -898,6 +908,8 @@
     "director": "Kounosuke Uda, Munehisa Sakai, Hiroaki Miyamoto",
     "year": "1999",
     "Status": "Em Lançamento",
+        "status": "assistindo",
+    
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -974,6 +986,8 @@
     "director": "Susumu Mitsunaka",
     "year": "2014",
     "Status": "Finalizado",
+  
+        "status": "assistindo",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Comédia",
@@ -1048,6 +1062,8 @@
     "director": "Tatsuya Yoshihara",
     "year": "2017",
     "Status": "Finalizado",
+  
+        "status": "assistindo",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Ação",
@@ -1122,6 +1138,8 @@
     "director": "Sunghoo Park",
     "year": "2020",
     "Status": "Em Lançamento",
+        "status": "assistindo",
+    
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Ação",
@@ -1195,6 +1213,8 @@
     "director": "Hayato Date",
     "year": "2002",
     "Status": "Finalizado",
+  
+        "status": "assistindo",
     "Fansub": "Oficial",
     "language": "Legendado",
     "resoAnime": "FHD",
@@ -1270,6 +1290,8 @@
     "director": "Daisuke Nishio",
     "year": "1989",
     "Status": "Finalizado",
+  
+        "status": "assistindo",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1344,6 +1366,8 @@
     "director": "Kenji Nagasaki",
     "year": "2016",
     "Status": "Em Lançamento",
+        "status": "pausado",
+    
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1418,6 +1442,8 @@
     "director": "Koichi Hatsumi",
     "year": "2021",
     "Status": "Em Lançamento",
+        "status": "pausado",
+    
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1492,6 +1518,8 @@
     "director": "Noriyuki Abe",
     "year": "2004",
     "Status": "Finalizado",
+  
+        "status": "pausado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1566,6 +1594,8 @@
     "director": "Shinji Ishihira",
     "year": "2009",
     "Status": "Finalizado",
+  
+        "status": "pausado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1641,6 +1671,8 @@
     "director": "Hiroshi Koujina",
     "year": "2011",
     "Status": "Finalizado",
+  
+        "status": "pausado",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Ação",
@@ -1715,6 +1747,8 @@
     "director": "Yasuhiro Irie",
     "year": "2009",
     "Status": "Finalizado",
+  
+        "status": "pausado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1791,6 +1825,8 @@
     "director": "Goro Taniguchi",
     "year": "2006",
     "Status": "Finalizado",
+  
+        "status": "pausado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -1867,6 +1903,8 @@
     "director": "Tetsurō Araki",
     "year": "2006",
     "Status": "Finalizado",
+  
+        "status": "pausado",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Mistério",
@@ -1941,6 +1979,8 @@
     "director": "Tomohisa Taguchi",
     "year": "2022",
     "Status": "Em Lançamento",
+        "status": "dropado",
+    
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2014,6 +2054,8 @@
     "director": "Yasuhiro Irie",
     "year": "2009",
     "Status": "Finalizado",
+  
+        "status": "dropado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2087,6 +2129,8 @@
     "director": "Tetsurō Araki",
     "year": "2013",
     "Status": "Finalizado",
+  
+        "status": "dropado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2162,6 +2206,8 @@
     "director": "Hiroshi Hamasaki, Takuya Satou",
     "year": "2011",
     "Status": "Finalizado",
+  
+        "status": "dropado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Suspense",
@@ -2232,6 +2278,8 @@
     "director": "Yoichi Fujita",
     "year": "2011",
     "Status": "Finalizado",
+  
+        "status": "dropado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2306,6 +2354,8 @@
     "director": "Yoichi Fujita",
     "year": "2015",
     "Status": "Finalizado",
+  
+        "status": "dropado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2380,6 +2430,8 @@
     "director": "Yoichi Fujita",
     "year": "2012",
     "Status": "Finalizado",
+  
+        "status": "dropado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2454,6 +2506,8 @@
     "director": "Gorou Taniguchi",
     "year": "2008",
     "Status": "Finalizado",
+  
+        "status": "dropado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2528,6 +2582,8 @@
     "director": "Shingo Natsume",
     "year": "2015",
     "Status": "Finalizado",
+  
+        "status": "dropado",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2601,6 +2657,8 @@
     "director": "Shuhei Morita",
     "year": "2014",
     "Status": "Finalizado",
+  
+        "status": "pretendo-ver",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2676,6 +2734,8 @@
     "director": "Kyōhei Ishiguro",
     "year": "2014",
     "Status": "Finalizado",
+  
+        "status": "pretendo-ver",
     "episodeDuration": "22 min. por episódio",
     "genres": [
       "Drama",
@@ -2749,6 +2809,8 @@
     "director": "Susumu Mitsunaka",
     "year": "2014",
     "Status": "Finalizado",
+  
+        "status": "pretendo-ver",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Comédia",
@@ -2822,6 +2884,8 @@
     "director": "Shinichiro Watanabe",
     "year": "1998",
     "Status": "Finalizado",
+  
+        "status": "pretendo-ver",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2896,6 +2960,8 @@
     "director": "Hideaki Anno",
     "year": "1995",
     "Status": "Finalizado",
+  
+        "status": "pretendo-ver",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Ação",
@@ -2969,6 +3035,8 @@
     "director": "Tetsurō Araki",
     "year": "2019",
     "Status": "Finalizado",
+  
+        "status": "pretendo-ver",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Ação",
@@ -3044,6 +3112,8 @@
     "director": "Tatsuya Ishihara",
     "year": "2008",
     "Status": "Finalizado",
+  
+        "status": "pretendo-ver",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Slice of Life",
@@ -3117,6 +3187,8 @@
     "director": "Tatsuyuki Nagai",
     "year": "2008",
     "Status": "Finalizado",
+  
+        "status": "pretendo-ver",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Slice of Life",
@@ -3189,6 +3261,8 @@
     "director": "Masayuki Kojima",
     "year": "2004",
     "Status": "Finalizado",
+  
+        "status": "pretendo-ver",
     "episodeDuration": "24 min. por episódio",
     "genres": [
       "Mistério",
@@ -3262,6 +3336,8 @@
     "director": "Masayuki Kojima",
     "year": "2017",
     "Status": "Finalizado",
+  
+        "status": "pretendo-ver",
     "episodeDuration": "25 min. por episódio",
     "genres": [
       "Aventura",
@@ -3335,6 +3411,8 @@
     "director": "Morio Asaka",
     "year": "2006",
     "Status": "Finalizado",
+  
+        "status": "favorito",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Comédia",
@@ -3409,6 +3487,8 @@
     "director": "Kenichi Shimizu",
     "year": "2014",
     "Status": "Finalizado",
+  
+        "status": "favorito",
     "episodeDuration": "23 min. por episódio",
     "genres": [
       "Ação",
@@ -3483,6 +3563,8 @@
     "director": "Naoko Yamada",
     "year": "2016",
     "Status": "Finalizado",
+  
+        "status": "favorito",
     "episodeDuration": "2h. 10m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -3553,6 +3635,8 @@
     "director": "Taichi Ishidate",
     "year": "2020",
     "Status": "Finalizado",
+  
+        "status": "favorito",
     "episodeDuration": "2h. 20m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -3623,6 +3707,8 @@
     "director": "Makoto Shinkai",
     "year": "2016",
     "Status": "Finalizado",
+  
+        "status": "favorito",
     "episodeDuration": "1hr 46m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -3693,6 +3779,8 @@
     "director": "Hayao Miyazaki",
     "year": "2001",
     "Status": "Finalizado",
+  
+        "status": "favorito",
     "episodeDuration": "2h. 4m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -3763,6 +3851,8 @@
     "director": "Hayao Miyazaki",
     "year": "1997",
     "Status": "Finalizado",
+  
+        "status": "favorito",
     "episodeDuration": "2h. 13m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -3833,6 +3923,8 @@
     "director": "Hayao Miyazaki",
     "year": "2004",
     "Status": "Finalizado",
+  
+        "status": "favorito",
     "episodeDuration": "1h. 59m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -3903,6 +3995,8 @@
     "director": "Hideaki Anno",
     "year": "2021",
     "Status": "Finalizado",
+  
+        "status": "favorito",
     "episodeDuration": "2h. 35m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -3975,6 +4069,8 @@
     "director": "Sōichi Masui",
     "year": "2019",
     "Status": "Finalizado",
+  
+        "status": "favorito",
     "episodeDuration": "1h. 30m.",
     "Fansub": "Oficial",
     "language": "Legendado",
@@ -4046,6 +4142,8 @@
     "director": "Shin'ichirō Ushijima",
     "year": "2018",
     "Status": "Finalizado",
+  
+        "status": "favorito",
     "episodeDuration": "1h. 48m.",
     "Fansub": "Oficial",
     "language": "Legendado",

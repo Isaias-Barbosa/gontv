@@ -3,6 +3,7 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
+
 router.post('/', (req, res) => {
   const { email, password } = req.body;
   const db = req.db; // Obtenha a variável 'db' do objeto 'req'
@@ -19,7 +20,7 @@ router.post('/', (req, res) => {
         if (passwordMatch) {
         const secretKey = process.env.JWT_SECRET;
         const token = jwt.sign(
-            { id: user.id, email: user.email, isAdmin: user.nivel_id === 1 && user.nivel_id === 3},
+            { id: user.id, email: user.email, isAdmin: user.nivel_id === 1},
             secretKey
           );
           res.json({ token, user });

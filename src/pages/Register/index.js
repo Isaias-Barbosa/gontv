@@ -3,61 +3,65 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 export default function Register() {
-    const [nome, setNome] = useState('');
-    const [nome_perfil, setNomePerfil] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [sexo, setSexo] = useState('');
-    const [error, setError] = useState('');
-    const navigate = useNavigate();
-    const [successMessage, setSuccessMessage] = useState('');
+  const [nome, setNome] = useState('');
+  const [nome_perfil, setNomePerfil] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [sexo, setSexo] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+  const [successMessage, setSuccessMessage] = useState('');
 
-    const handleNomeChange = (event) => {
-        setNome(event.target.value);
-      };
+  const handleNomeChange = (event) => {
+    setNome(event.target.value);
+  };
 
-      const handleNomePerfilChange = (event) => {
-        setNomePerfil(event.target.value);
-      };
-    
-      const handleEmailChange = (event) => {
-        setEmail(event.target.value);
-      };
-    
-      const handlePasswordChange = (event) => {
-        setPassword(event.target.value);
-      };
+  const handleNomePerfilChange = (event) => {
+    setNomePerfil(event.target.value);
+  };
 
-      const handleSexChange = (event) => {
-        setSexo(event.target.value);
-      };
-      const handleSubmit = async (event) => {
-        event.preventDefault();
-        
-    
-        try {
-          await axios.post('http://localhost:3006/api/register', {
-            nome,
-            nome_perfil,
-            email,
-            password,
-            sexo
-          });
-    
-          setSuccessMessage('Usuário registrado com sucesso!');
-          navigate('/login');
-          // Redirecionar para a página de login ou exibir uma mensagem de sucesso
-        } catch (error) {
-          console.error('Erro ao cadastrar usuário:', error);
-          setError('Ocorreu um erro ao cadastrar usuário. Por favor, tente novamente.');
-        }
-    
-        setNome('');
-        setNomePerfil('');
-        setEmail('');
-        setPassword('');
-        setSexo('');
-      };
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleSexChange = (event) => {
+    setSexo(event.target.value);
+  };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+
+    try {
+      await axios.post('http://localhost:3006/api/register', {
+        nome,
+        nome_perfil,
+        email,
+        password,
+        sexo
+      });
+
+      setSuccessMessage('Usuário registrado com sucesso! Você será redirecionado para a página de Login....');
+      setTimeout(() => {
+        setSuccessMessage('');
+        window.location.reload();
+      }, 3000);
+      navigate('/login');
+      // Redirecionar para a página de login ou exibir uma mensagem de sucesso
+    } catch (error) {
+      console.error('Erro ao cadastrar usuário:', error);
+      setError('Ocorreu um erro ao cadastrar usuário. Por favor, tente novamente.');
+    }
+
+    setNome('');
+    setNomePerfil('');
+    setEmail('');
+    setPassword('');
+    setSexo('');
+  };
 
 
   return (

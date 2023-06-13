@@ -26,7 +26,7 @@ export function AuthProvider({ children}) {
         });
   
         if (response.data.isAdmin) {
-          setUser((prevUser) => ({ ...prevUser, isAdmin: true }));
+          setUser((prevUser) => ({ ...prevUser, isAdmin: true}));
         } else {
           setUser((prevUser) => ({ ...prevUser, isAdmin: false }));
         }
@@ -51,7 +51,7 @@ export function AuthProvider({ children}) {
       if (passwordMatch) {
         localStorage.setItem('token', token);
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-        setUser({ ...userData, isAdmin: false });
+        setUser({ ...userData, isAdmin: false , isStaff: false});
         navigate('/');
         checkUserIsAdmin();
         return response.data;

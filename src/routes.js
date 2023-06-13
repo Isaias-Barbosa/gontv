@@ -20,6 +20,7 @@ import { RequireAuth } from "Auth/RequireAuth";
 import NotFoundPage from "pages/NotFoundPage";
 import Layout from "Layout";
 import Register from "pages/Register";
+import MeuPerfil from "pages/Profile/MeuPerfil";
 
 
 
@@ -48,12 +49,9 @@ function AppRoutes() {
         <Route path="/filtro" element={<Layout><FiltroPage /></Layout>} />
         <Route path="/login" element={<Layout><LoginPage /></Layout>} />
         <Route path="/register" element={<Layout><Register /></Layout>} />
-        {user && user.isAdmin ? (
-          <Route path="/dashboard/admin/*" element={<RequireAuth><Admin /></RequireAuth>} />
-        ) : (
-          <Route path="/dashboard/admin/*" element={<Layout><NotFoundPage /></Layout>} />
-        )}
-        <Route path="/404" element={<Layout><NotFoundPage /></Layout>} />
+        <Route path="/dashboard/admin/*" element={<RequireAuth><Admin /></RequireAuth>} />
+        <Route path="/profile/meuperfil/*" element={<RequireAuth><Layout><MeuPerfil /></Layout></RequireAuth>} />
+        <Route path="*" element={<Layout><NotFoundPage /></Layout>} />
       </Routes>
     </>
   )

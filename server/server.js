@@ -64,6 +64,9 @@ app.use('/api/register', registerRoute);
 const editRouter = require('./routes/edit'); // Importe o arquivo edit.js
 app.use('/api/users', editRouter); // Use a rota '/api/users' para o roteador editRouter
 
+const DeletRouter = require('./routes/delet'); // Importe o arquivo edit.js
+app.use('/api/users', DeletRouter); // Use a rota '/api/users' para o roteador editRouter
+
 app.listen(port, () => {
   console.log(`Servidor iniciado na porta ${port}`);
 });
