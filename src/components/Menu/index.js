@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
+import { FiChevronDown, FiChevronsDown, FiMenu, FiX } from 'react-icons/fi';
 import { IoLogInOutline } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 import Search from 'components/Search';
 import logo from 'assets/logo.png';
 import { FcCalendar } from "react-icons/fc";
+import { useAuth } from 'Auth/auth';
+import { useNavigate } from 'react-router-dom';
 
 export default function Menu() {
-
+  const { user, logout } = useAuth(); // Obtenha o usuário e a função de logout do useAuth
   const [isMobile, setIsMobile] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
   const [searchSize, setSearchSize] = useState('64');
   const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -42,11 +46,23 @@ export default function Menu() {
     setIsOpen(!isOpen);
   };
 
+  const toggleMenu2 = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+
+
   const handleSearchChange = (event) => {
     setSearchSize(event.target.value.length > 0 ? 'full' : '64');
   };
 
   const siteTitle = 'Gon.tv'
+
+
+
+
+  console.log(user);
+
 
   return (
     <>
@@ -76,12 +92,56 @@ export default function Menu() {
           )}
         </div>
         {!isMobile && (
-          <Link to="/login">
-          <button className="bg-emerald-700 hover:bg-emerald-500 text-white px-4 py-2 mx-2 rounded-lg flex items-center">
-            <IoLogInOutline className="mr-2" size={20} />
-            <span className="text-center">Login</span>
-          </button>
-          </Link>
+          <div className="flex items-center ml-1 z-10">
+            {user ? (
+              <div className="relative">
+                <button
+                  className="bg-transparent hover:bg-emerald-500 text-white px-4 py-2 mx-2 rounded-lg flex items-center"
+                  onClick={toggleMenu2}
+                >
+                  <span className="mr-2">Minha Conta</span>
+                  <FiChevronDown size={20} />
+                </button>
+                {isDropdownOpen && (
+                  <ul className="absolute right-0 mt-2 bg-black-light rounded-lg shadow-lg">
+                    {user.isAdmin && (
+                      <li>
+                        <Link
+                          to="/dashboard/admin"
+                          className="block px-4 py-2 text-white hover:bg-emerald-500"
+                        >
+                          Painel Adm
+                        </Link>
+                      </li>
+                    )}
+                    <li>
+                      <Link
+                        to="/profile"
+                        className="block px-4 py-2 text-white hover:bg-emerald-500"
+                      >
+                        Meu Perfil
+                      </Link>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => logout(navigate)}
+                        className="block w-full text-left px-4 py-2 text-white hover:bg-emerald-500"
+                      >
+                        Sair
+                      </button>
+                    </li>
+                  </ul>
+                )}
+              </div>
+            ) : (
+              <Link to="/login">
+                <button className="bg-emerald-700 hover:bg-emerald-500 text-white px-4 py-2 mx-2 rounded-lg flex items-center">
+                  <IoLogInOutline className="mr-2" size={20} />
+                  <span className="text-center">Login</span>
+                </button>
+              </Link>
+            )}
+          </div>
         )}
       </div>
 
