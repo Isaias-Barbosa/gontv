@@ -52,8 +52,9 @@ export function AuthProvider({ children}) {
         localStorage.setItem('token', token);
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
         setUser({ ...userData, isAdmin: false , isStaff: false});
-        navigate('/');
         checkUserIsAdmin();
+        navigate('/');
+
         return response.data;
       } else {
         console.error('Credenciais inválidas');

@@ -3,7 +3,6 @@ const app = express();
 const cors = require('cors');
 const mysql = require('mysql');
 const jwt = require('jsonwebtoken');
-const axios = require('axios');
 require('dotenv').config({ path: '../config/.env' });
 
 const port = process.env.PORT || 3006;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FiChevronDown, FiChevronsDown, FiMenu, FiX } from 'react-icons/fi';
+import { FiChevronDown, FiMenu, FiX } from 'react-icons/fi';
 import { IoLogInOutline } from 'react-icons/io5';
 import { Link, } from 'react-router-dom';
 import Search from 'components/Search';
@@ -120,6 +120,14 @@ export default function Menu() {
                         className="block px-4 py-2 text-white hover:bg-emerald-500"
                       >
                         Meu Perfil
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/profile/minhaconta"
+                        className="block px-4 py-2 text-white hover:bg-emerald-500"
+                      >
+                        MInha Conta
                       </Link>
                     </li>
                     <li>

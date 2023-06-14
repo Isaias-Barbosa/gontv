@@ -110,8 +110,8 @@ export default function MeuPerfil() {
                     <div className="content-container flex flex-col items-start px-4 py-6 rounded-lg">
                         <div className="flex flex-col xl:flex-row lg:flex-row 2xl:flex-row md:flex-row items-start relative">
                             <div className="flex flex-col p-4 md:p-8 md:w-1/2 md:h-auto md:items-start md:justify-center md:flex-row md:flex-wrap md">
-                                <div className="w-full h-auto mx-auto md:ml-0" style={{ position: "relative", boxShadow: "0 0 60px rgba(0, 0, 0, 0.9)", opacity: 0.9 }}>
-                                    <img src={perfil.coverImage} alt="imagem de perfil" className="w-full h-96 rounded-lg" style={{ position: "relative" }} />
+                                <div className="w-full h-auto mx-auto md:ml-0" style={{ position: "relative" }}>
+                                    <img src={perfil.coverImage} alt="imagem de perfil" className="w-full h-96 rounded-full" style={{ position: "relative" }} />
                                 </div>
                             </div>
                             <div className="relative mb-8 ms-8 flex items-center justify-start">

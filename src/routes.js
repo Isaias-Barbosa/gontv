@@ -15,19 +15,15 @@ import SearchGenero from "pages/SearchGenero";
 import TVAnimes from "pages/TVAnimes";
 import LoginPage from "pages/LoginPage";
 import Admin from "pages/Dashboard/Admin";
-import { useAuth } from "Auth/auth";
 import { RequireAuth } from "Auth/RequireAuth";
 import NotFoundPage from "pages/NotFoundPage";
 import Layout from "Layout";
 import Register from "pages/Register";
 import MeuPerfil from "pages/Profile/MeuPerfil";
-
+import MinhaConta from "pages/Profile/MinhaConta";
 
 
 function AppRoutes() {
-  const { user } = useAuth();
-
-
 
   return (
     <>
@@ -51,6 +47,7 @@ function AppRoutes() {
         <Route path="/register" element={<Layout><Register /></Layout>} />
         <Route path="/dashboard/admin/*" element={<RequireAuth><Admin /></RequireAuth>} />
         <Route path="/profile/meuperfil/*" element={<RequireAuth><Layout><MeuPerfil /></Layout></RequireAuth>} />
+        <Route path="/profile/minhaconta/*" element={<RequireAuth><Layout><MinhaConta /></Layout></RequireAuth>} />
         <Route path="*" element={<Layout><NotFoundPage /></Layout>} />
       </Routes>
     </>

@@ -7,7 +7,7 @@ export function RequireAuth({ children }) {
 
   if (!user) {
     // Redirecionar para a página de login se o usuário não estiver autenticado
-    navigate('/404');
+    navigate('/login');
     return null;
   }
 
