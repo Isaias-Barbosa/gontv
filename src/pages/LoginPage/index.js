@@ -1,12 +1,9 @@
-import { useAuth } from 'Auth/auth';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function LoginPage() {
-  const { login } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -22,26 +19,6 @@ function LoginPage() {
     setPassword(event.target.value);
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    try {
-      const response = await login(email, password);
-
-    if (response && response.user) {
-      navigate('/');
-    } else {
-      setError('Email ou senha inválidos');
-    }
-  } catch (error) {
-    console.error('Erro ao fazer login:', error);
-    setError('Ocorreu um erro ao fazer login. Por favor, tente novamente.');
-  }
-
-  setEmail('');
-  setPassword('');
-};
-
   const handleRegisterClick = () => {
 
     navigate('/register');
@@ -51,11 +28,9 @@ function LoginPage() {
     <div className="login-page">
       <div className="flex justify-center items-center h-screen">
         <form
-          onSubmit={handleSubmit}
           className="w-auto sm:w-96 md:w-80 lg:w-1/3 xl:w-96 2xl:w-96 p-10 bg-white rounded-lg shadow-lg"
         >
           <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
-          {error && <div className="text-red-500 text-center mb-4">{error}</div>}
           <div className="mb-6">
             <label htmlFor="email" className="block mb-2 text-sm font-bold">
               Email:

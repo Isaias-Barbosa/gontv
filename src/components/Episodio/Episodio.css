@@ -94,9 +94,9 @@
 .icon-button {
   background-color: #292220;
   color: #fff;
-  padding: 8px 16px;
-  border-radius: 2px;
-  margin-right: 8px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-right: 9px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }

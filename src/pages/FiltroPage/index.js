@@ -193,7 +193,7 @@ export default function FiltroPage() {
                         Filtrar
                     </button>
                 </div>
-                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-6 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-3">
                     {animesFiltrados.length > 0 ? (
                         animesFiltrados.map((anime, index) => (
                             <div className="aspect-ratio-box" key={index}>

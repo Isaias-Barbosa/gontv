@@ -28,6 +28,7 @@ export default function SinglePlayPage() {
   slug={slug}
   titleSlug={titleSlug}
   languageEpisode={languageEpisode} />;
+  
   }
   
   

@@ -3,7 +3,6 @@ import animes from 'json/animes.json'; // Importe seu arquivo animes.json
 import { Link } from 'react-router-dom';
 import { MdPlayCircleFilled } from "react-icons/md";
 import perfilData from 'json/perfil.json';
-import { useAuth } from 'Auth/auth';
 
 
 export default function MeuPerfil() {
@@ -24,7 +23,6 @@ export default function MeuPerfil() {
     const animesDropado = animes.filter(anime => anime.status === 'dropado');
     const animesPretendoVer = animes.filter(anime => anime.status === 'pretendo-ver');
 
-    const { user } = useAuth();
     const [perfil, setPerfil] = useState({});
 
     useEffect(() => {
@@ -116,7 +114,7 @@ export default function MeuPerfil() {
                             </div>
                             <div className="relative mb-8 ms-8 flex items-center justify-start">
                                 <div className="bg-black-light bg-opacity-75 rounded-lg p-4 backdrop-filter backdrop-blur-lg backdrop-opacity-50">
-                                    <h1 className="text-3xl font-bold text-white py-8">Olá, <span className="text-emerald-400">{user.nome}</span></h1>
+                                    <h1 className="text-3xl font-bold text-white py-8">Olá, <span className="text-emerald-400">Gon Freecss</span></h1>
                                     <p className="text-white">Quantidade de Animes Vistos: <span className="text-emerald-400">{animes.length}</span></p>
                                     <p className="text-white">Quantidade de Animes Favoritados: <span className="text-emerald-400">{animesFavoritos.length}</span></p>
                                     <p className="text-white">Quantidade de Animes Marcados como Gostei: <span className="text-emerald-400">{animes.filter(anime => anime.avaliacao === 'gostei').length}</span></p>

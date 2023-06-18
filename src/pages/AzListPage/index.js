@@ -57,17 +57,17 @@ export default function AzListPage() {
                 <h1 className="text-white font-bold text-lg text-center py-2">
                     <span className="border-b-2 border-emerald-400">Ordene por Letras</span></h1>
             </div>
-            <div className="container py-4 mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
+            <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
                 <AzList selectedLetter={letter} />
                 {filteredAnimes.length === 0 ? (
                     <h1 className="text-white text-xl font-bold text-center py-8">Não há animes com essa letra.</h1>
                 ) : (
-                    <>
-                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-6 gap-3 py-9">
+                    <div class="container mx-auto py-7">
+                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-3">
                             {currentAnimes.map((anime) => (
-                                <div className="aspect-ratio-box" key={anime.id}>
+                                <div className="aspect-ratio-box">
                                     <div className="relative">
-                                        <Link to={`/animes/${anime.slug}`}>
+                                        <Link to={`/animes/${anime.slug}`}  key={anime.id}>
                                             <div className="anime-cover">
                                                 <img src={anime.coverImage} alt={anime.title} className="object-cover custom-height" />
                                                 <div className="overlay"></div>
@@ -101,7 +101,7 @@ export default function AzListPage() {
                                 )}
                             </div>
                         )}
-                    </>
+                    </div>
                 )}
             </div>
         </div>

@@ -105,7 +105,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
           </Link> - {titleEpisodio}</h3>
       </div>
 
-      <main className="container mx-auto">
+      <main className="container mx-auto py-4">
         <div className="player-container relative">
           <div className="top-button-container">
             {episodioIndex > 0 && (
@@ -155,9 +155,11 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
               </button>
             ))}
             <div className="button-container">
-              <button onClick={handleDownload} className="icon-button">
+            <Link to={`/animes/${slug}/${currentEpisodeSlug}/${languageEpisode}/download`} >
+              <button onClick={handleDownload} className="icon-button ">
                 <AiOutlineDownload />
               </button>
+              </Link>
             </div>
 
           </div>

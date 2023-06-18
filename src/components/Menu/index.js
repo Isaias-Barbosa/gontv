@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { FiChevronDown, FiMenu, FiX } from 'react-icons/fi';
-import { IoLogInOutline } from 'react-icons/io5';
-import { Link, } from 'react-router-dom';
-import Search from 'components/Search';
-import logo from 'assets/logo.png';
+import React, { useState, useEffect } from "react";
+import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
+import { IoLogInOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import Search from "components/Search";
+import logo from "assets/logo.png";
 import { FcCalendar } from "react-icons/fc";
-import { useAuth } from 'Auth/auth';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export default function Menu() {
-  const { user, logout } = useAuth(); // Obtenha o usuário e a função de logout do useAuth
   const [isMobile, setIsMobile] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
-  const [searchSize, setSearchSize] = useState('64');
+  const [searchSize, setSearchSize] = useState("64");
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const navigate = useNavigate();
@@ -22,7 +20,6 @@ export default function Menu() {
       const windowWidth = window.innerWidth;
       setIsMobile(windowWidth < 640);
       setIsLogin(windowWidth > 640);
-
 
       if (windowWidth < 768) {
         setSearchSize(28); // Tamanho no mobile
@@ -34,39 +31,26 @@ export default function Menu() {
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
-
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const toggleMenu2 = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-
 
   const handleSearchChange = (event) => {
-    setSearchSize(event.target.value.length > 0 ? 'full' : '64');
+    setSearchSize(event.target.value.length > 0 ? "full" : "64");
   };
 
-  const siteTitle = 'Gon.tv'
-
-
-
-
-  console.log(user);
-
+  const siteTitle = "Gon.tv";
 
   return (
     <>
-
       {isOpen && (
         <div className="fixed inset-0 bg-black-dark  opacity-80 z-50 "></div>
       )}
@@ -77,8 +61,6 @@ export default function Menu() {
       >
         <FiMenu size={35} />
       </button>
-
-
 
       <div className="flex items-center bg-black-dark p-5">
         <div className="flex justify-center flex-grow">
@@ -93,71 +75,21 @@ export default function Menu() {
         </div>
         {!isMobile && (
           <div className="flex items-center ml-1 z-10">
-            {user ? (
-              <div className="relative">
-                <button
-                  className="bg-transparent hover:bg-emerald-500 text-white px-4 py-2 mx-2 rounded-lg flex items-center"
-                  onClick={toggleMenu2}
-                >
-                  <span className="mr-2">Minha Conta</span>
-                  <FiChevronDown size={20} />
-                </button>
-                {isDropdownOpen && (
-                  <ul className="absolute right-0 mt-2 bg-black-light rounded-lg shadow-lg">
-                    {user.isAdmin && (
-                      <li>
-                        <Link
-                          to="/dashboard/admin"
-                          className="block px-4 py-2 text-white hover:bg-emerald-500"
-                        >
-                          Painel Adm
-                        </Link>
-                      </li>
-                    )}
-                    <li>
-                      <Link
-                        to="/profile/meuperfil"
-                        className="block px-4 py-2 text-white hover:bg-emerald-500"
-                      >
-                        Meu Perfil
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/profile/minhaconta"
-                        className="block px-4 py-2 text-white hover:bg-emerald-500"
-                      >
-                        MInha Conta
-                      </Link>
-                    </li>
-                    <li>
-                      <button
-                        onClick={() => logout(navigate)}
-                        className="block w-full text-left px-4 py-2 text-white hover:bg-emerald-500"
-                      >
-                        Sair
-                      </button>
-                    </li>
-                  </ul>
-                )}
-              </div>
-            ) : (
-              <Link to="/login">
-                <button className="bg-emerald-700 hover:bg-emerald-500 text-white px-4 py-2 mx-2 rounded-lg flex items-center">
-                  <IoLogInOutline className="mr-2" size={20} />
-                  <span className="text-center">Login</span>
-                </button>
-              </Link>
-            )}
+            <Link to="/login">
+              <button className="bg-emerald-700 hover:bg-emerald-500 text-white px-4 py-2 mx-2 rounded-lg flex items-center">
+                <IoLogInOutline className="mr-2" size={20} />
+                <span className="text-center">Login</span>
+              </button>
+            </Link>
           </div>
         )}
       </div>
 
-
-
-
       {isOpen && (
-        <div className="fixed top-0 bottom-0 left-0 right-0 z-50 " onClick={toggleMenu}>
+        <div
+          className="fixed top-0 bottom-0 left-0 right-0 z-50 "
+          onClick={toggleMenu}
+        >
           <div className="fixed top-0 left-0 bg-black-light w-55 h-full z-50">
             <nav className="flex flex-col justify-between items-center bg-black-light  p-10 transition-transform duration-500 ease-in-out transform translate-x-0">
               <div className="flex justify-between w-full">
@@ -169,7 +101,9 @@ export default function Menu() {
                         alt="Logo"
                         className="w-10 h-auto md:w-12 md:h-12 "
                       />
-                      <span className="text-emerald-400 text-xl ml-2">{siteTitle}</span>
+                      <span className="text-emerald-400 text-xl ml-2">
+                        {siteTitle}
+                      </span>
                     </div>
                   </Link>
                 </div>
@@ -182,32 +116,50 @@ export default function Menu() {
               </div>
               <ul className="space-y-4">
                 <li>
-                  <Link to="/" className="text-white hover:text-emerald-500 border-b-2 border-b-emerald-500">
+                  <Link
+                    to="/"
+                    className="text-white hover:text-emerald-500 border-b-2 border-b-emerald-500"
+                  >
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link to="/animes" className="text-white hover:text-emerald-500">
+                  <Link
+                    to="/animes"
+                    className="text-white hover:text-emerald-500"
+                  >
                     Animes
                   </Link>
                 </li>
                 <li>
-                  <Link to="/animesDublados" className="text-white hover:text-emerald-500">
+                  <Link
+                    to="/animesDublados"
+                    className="text-white hover:text-emerald-500"
+                  >
                     Animes Dublados
                   </Link>
                 </li>
                 <li>
-                  <Link to="/tvAnimes" className="text-white hover:text-emerald-500">
+                  <Link
+                    to="/tvAnimes"
+                    className="text-white hover:text-emerald-500"
+                  >
                     TV Animes
                   </Link>
                 </li>
                 <li>
-                  <Link to="/filmes" className="text-white hover:text-emerald-500">
+                  <Link
+                    to="/filmes"
+                    className="text-white hover:text-emerald-500"
+                  >
                     Filmes
                   </Link>
                 </li>
                 <li>
-                  <Link to="/calendar" className="text-white hover:text-emerald-500">
+                  <Link
+                    to="/calendar"
+                    className="text-white hover:text-emerald-500"
+                  >
                     Calendário
                   </Link>
                 </li>
@@ -229,12 +181,15 @@ export default function Menu() {
       {!isOpen && !isMobile && (
         <Link to="/">
           <div className="fixed top-3 md:py-3 md:left-10 ms-4 left-14 z-50 flex items-center">
-            <img src={logo} alt="Logo" className="w-10 h-auto md:w-6 md:h-auto" />
+            <img
+              src={logo}
+              alt="Logo"
+              className="w-10 h-auto md:w-6 md:h-auto"
+            />
             <span className="text-emerald-400 text-xl ml-2">{siteTitle}</span>
           </div>
         </Link>
       )}
-
     </>
   );
-};
+}
