@@ -33,7 +33,7 @@ export default function SinglePlayPage() {
       episodio={episode}
       slug={slug}
       titleSlug={titleSlug}
-      languageEpisode={languageEpisode} />;
+      languageEpisode={languageEpisode} />
   </>
 }
 

@@ -167,7 +167,14 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
             <span className="views-text font-bold ">Visualizações: {defaultViews}</span>
           </div>
         </div>
-        <div className=" my-12">
+        <div className="py-8"></div>
+        <div className="py-5">
+          <h3 className="text-2xl text-white text-center font-bold my-6">
+            <span className="border-b-2 border-emerald-400">Comentários</span>
+          </h3>
+          <p className="text-white text-center text-lg font-bold bg-rose-600 h-auto lg:h-10 xl:h-10 2xl:h-10 flex items-center justify-center">Cuidado com os Spoilers, utilize &lt;spoiler&gt;Seu spoiler aqui&lt;/spoiler&gt; na hora que for comentar.</p>
+        </div>
+        <div className="my-4">
         <Discus identifier={identifier} title={currentEpisodeTitle} />
         </div>
       </main>
