@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IoLogInOutline } from "react-icons/io5";
+import { LuDices } from "react-icons/lu";
 import { Link , useLocation} from "react-router-dom";
 import Search from "components/Search";
 import logo from "assets/logo.png";
@@ -13,6 +14,7 @@ export default function Menu() {
   const [searchSize, setSearchSize] = useState("64");
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
 
   useEffect(() => {
@@ -49,6 +51,7 @@ export default function Menu() {
 
   const siteTitle = "Gon.tv";
 
+
   return (
     <>
       {isOpen && (
@@ -75,6 +78,13 @@ export default function Menu() {
         </div>
         {!isMobile && (
           <div className="flex items-center ml-1 z-10">
+            <button
+            className="text-white hover:text-emerald-400 px-4 py-2 mx-2 rounded-lg flex items-center"
+            onClick={() => navigate(`/animes/random`)}
+          >
+            <LuDices className="mr-2" size={20} />
+            <span className="text-center">Random</span>
+          </button>
             <Link to="/login">
               <button className="bg-emerald-700 hover:bg-emerald-500 text-white px-4 py-2 mx-2 rounded-lg flex items-center">
                 <IoLogInOutline className="mr-2" size={20} />
@@ -109,7 +119,7 @@ export default function Menu() {
                         alt="Logo"
                         className="w-10 h-auto md:w-12 md:h-12 "
                       />
-                      <span className="text-emerald-400 text-xl ml-2">
+                      <span className="text-emerald-400 font-bold text-xl ml-2">
                         {siteTitle}
                       </span>
                     </div>
@@ -200,7 +210,7 @@ export default function Menu() {
               alt="Logo"
               className="w-10 h-auto md:w-6 md:h-auto"
             />
-            <span className="text-emerald-400 text-xl ml-2">{siteTitle}</span>
+            <span className="text-emerald-400 text-xl font-bold ml-2">{siteTitle}</span>
           </div>
         </Link>
       )}
