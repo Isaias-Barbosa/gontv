@@ -1,7 +1,15 @@
+import { Helmet } from "react-helmet";
 
 export default function MinhaConta() {
 
+  const pageTitle = 'Gon.TV - MinhaConta'
+
   return (
+    <>
+    <Helmet>
+        <title>{pageTitle}</title>
+    </Helmet>
+
     <div className="bg-black-light ">
       <div className="container mx-auto py-2 h-screen">
         <h1 className="text-white text-3xl font-bold mb-4 text-center my-5">Minha Conta</h1>
@@ -31,5 +39,6 @@ export default function MinhaConta() {
         </div>
       </div>
     </div>
+    </>
   );
 }

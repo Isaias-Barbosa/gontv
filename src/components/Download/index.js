@@ -25,7 +25,7 @@ export default function Download({ anime, coverImage, animeTitle, episodeTitle, 
     return (
         <div className="bg-black-light py-8">
             <div className="flex justify-center">
-                <div className="w-3/4 p-8 bg-zinc-800 rounded-lg shadow-lg">
+                <div className="w-3/4 p-8 bg-zinc-900 rounded-lg shadow-lg">
                     <div className="flex items-center justify-center">
                         <h3 className="text-2xl font-bold mr-2 text-white"><span className="border-b-2 border-emerald-400 ">Download</span></h3>
                         <AiOutlineDownload className="text-3xl text-white" />
@@ -70,7 +70,7 @@ export default function Download({ anime, coverImage, animeTitle, episodeTitle, 
                             )}
                         </div>
                     </div>
-                    <div className="mt-8 flex items-center justify-center">
+                    <div className="mt-8 flex items-center justify-center ">
                         <img src={coverImage} alt="Imagem do Anime" className="w-auto md:w-96 lg:w-3/4 xl:w-2/3 2xl:w-2/3 mr-4" />
                     </div>
                     <div className="mt-8">

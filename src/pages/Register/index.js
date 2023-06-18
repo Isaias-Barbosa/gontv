@@ -1,6 +1,18 @@
+import { Helmet } from "react-helmet"
 
 export default function Register() {
+
+  const pageTitle = "Gon.TV - Cadastro de Usuário"
+
+
   return (
+
+    <>
+    <Helmet>
+        <title>{pageTitle}</title>
+    </Helmet>
+
+
     <div className="login-page">
       <div className="flex justify-center items-center h-screen">
         <form
@@ -93,5 +105,6 @@ export default function Register() {
         </form>
       </div>
     </div>
+    </>
   )
 }

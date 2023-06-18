@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
 function LoginPage() {
+
+  const pageTitle = "Gon.TV - Login"
+  
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -25,6 +29,13 @@ function LoginPage() {
   };
 
   return (
+
+    <>
+    <Helmet>
+        <title>{pageTitle}</title>
+    </Helmet>
+
+
     <div className="login-page">
       <div className="flex justify-center items-center h-screen">
         <form
@@ -76,6 +87,7 @@ function LoginPage() {
         </form>
       </div>
     </div>
+    </>
   );
 }
   

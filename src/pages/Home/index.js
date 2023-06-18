@@ -9,9 +9,12 @@ import animes from 'json/animes.json';
 import LastAddedFilmes from "components/LastAddedFilmes";
 import 'tailwindcss/tailwind.css';
 import { BeatLoader } from 'react-spinners';
+import { Helmet } from "react-helmet";
+
 
 export default function Home() {
 
+  const pageTitle = `Gon.TV - Animes Online em FHD`;
   const [isLoading, setIsLoading] = useState(true);
 
 
@@ -37,7 +40,9 @@ export default function Home() {
   return (
 
     <>
-     
+     <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
       <div className="bg-black-light">
       <Banner />
         <main className="container mx-auto py-8">

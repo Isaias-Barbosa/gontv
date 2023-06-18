@@ -1,8 +1,18 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 export default function NotFoundPage() {
+
+  const pageTitle = 'Gon.TV - Page Not Found'
+
   return (
+    <>
+    <Helmet>
+        <title>{pageTitle}</title>
+    </Helmet>
+
+
     <div className="flex flex-col items-center justify-center h-screen bg-gray-900">
       <h1 className="text-4xl font-bold text-white mb-6">Essa Página Não Existe</h1>
       <img
@@ -16,5 +26,6 @@ export default function NotFoundPage() {
       </button>
       </Link>
     </div>
+    </>
   );
 }

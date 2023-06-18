@@ -2,8 +2,11 @@ import animes from 'json/animes.json'
 import { Link } from 'react-router-dom'
 import { MdPlayCircleFilled } from 'react-icons/md';
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 export default function Filmes() {
+
+  const pageTitle = `Gon.TV - Lista de Filmes`;
 
   const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
 
@@ -40,6 +43,13 @@ export default function Filmes() {
   };
 
   return (
+
+    <>
+
+    <Helmet>
+        <title>{pageTitle}</title>
+    </Helmet>
+
     <div className="bg-black-light py-8">
       <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
         <h2 className="text-2xl text-white text-start font-bold mb-4 pb-1 py-7">
@@ -93,5 +103,6 @@ export default function Filmes() {
         )}
       </div>
     </div>
+    </>
   )
 }
