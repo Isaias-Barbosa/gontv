@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IoLogInOutline } from "react-icons/io5";
 import { LuDices } from "react-icons/lu";
-import { Link , useLocation} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Search from "components/Search";
 import logo from "assets/logo.png";
 import { FcCalendar } from "react-icons/fc";
@@ -79,12 +79,12 @@ export default function Menu() {
         {!isMobile && (
           <div className="flex items-center ml-1 z-10">
             <button
-            className="text-white hover:text-emerald-400 px-4 py-2 mx-2 rounded-lg flex items-center"
-            onClick={() => navigate(`/animes/random`)}
-          >
-            <LuDices className="mr-2" size={20} />
-            <span className="text-center">Random</span>
-          </button>
+              className="text-white hover:text-emerald-400 px-4 py-2 mx-2 rounded-lg flex items-center"
+              onClick={() => navigate(`/animes/random`)}
+            >
+              <LuDices className="mr-2" size={20} />
+              <span className="text-center">Random</span>
+            </button>
             <Link to="/login">
               <button className="bg-emerald-700 hover:bg-emerald-500 text-white px-4 py-2 mx-2 rounded-lg flex items-center">
                 <IoLogInOutline className="mr-2" size={20} />
@@ -102,14 +102,14 @@ export default function Menu() {
         >
           <div className="fixed top-0 left-0 bg-black-light w-55 h-full z-50">
             <nav className="flex flex-col justify-between items-center bg-black-light  p-10 transition-transform duration-500 ease-in-out transform translate-x-0">
-            <button
-                  className="text-white focus:outline-none flex items-center justify-center"
-                  onClick={toggleMenu}
-                >
-            <h1 className="outline outline-offset-2 outline-emerald-500 rounded-full p-1 ">
-              <span className="hover:text-emerald-400">Fechar Menu</span>
-              </h1>
-            </button>
+              <button
+                className="text-white focus:outline-none flex items-center justify-center"
+                onClick={toggleMenu}
+              >
+                <h1 className="outline outline-offset-2 outline-emerald-500 rounded-full p-1 ">
+                  <span className="hover:text-emerald-400">Fechar Menu</span>
+                </h1>
+              </button>
               <div className="flex justify-between w-full py-4">
                 <div className="text-white font-bold text-xl mb-8">
                   <Link to="/">
@@ -124,15 +124,14 @@ export default function Menu() {
                       </span>
                     </div>
                   </Link>
-                </div>            
+                </div>
               </div>
               <ul className="space-y-4">
-              <li>
+                <li>
                   <Link
                     to="/"
-                    className={`text-white hover:text-emerald-500 ${
-                      location.pathname === "/" ? "border-b-2 border-b-emerald-500" : ""
-                    }`}
+                    className={`text-white hover:text-emerald-500 ${location.pathname === "/" ? "border-b-2 border-b-emerald-500" : ""
+                      }`}
                   >
                     Home
                   </Link>
@@ -140,9 +139,8 @@ export default function Menu() {
                 <li>
                   <Link
                     to="/animes"
-                    className={`text-white hover:text-emerald-500 ${
-                      location.pathname === "/animes" ? "border-b-2 border-b-emerald-500" : ""
-                    }`}
+                    className={`text-white hover:text-emerald-500 ${location.pathname === "/animes" ? "border-b-2 border-b-emerald-500" : ""
+                      }`}
                   >
                     Animes
                   </Link>
@@ -150,9 +148,8 @@ export default function Menu() {
                 <li>
                   <Link
                     to="/animesDublados"
-                    className={`text-white hover:text-emerald-500 ${
-                      location.pathname === "/animesDublados" ? "border-b-2 border-b-emerald-500" : ""
-                    }`}
+                    className={`text-white hover:text-emerald-500 ${location.pathname === "/animesDublados" ? "border-b-2 border-b-emerald-500" : ""
+                      }`}
                   >
                     Animes Dublados
                   </Link>
@@ -160,9 +157,8 @@ export default function Menu() {
                 <li>
                   <Link
                     to="/tvAnimes"
-                    className={`text-white hover:text-emerald-500 ${
-                      location.pathname === "/tvAnimes" ? "border-b-2 border-b-emerald-500" : ""
-                    }`}
+                    className={`text-white hover:text-emerald-500 ${location.pathname === "/tvAnimes" ? "border-b-2 border-b-emerald-500" : ""
+                      }`}
                   >
                     TV Animes
                   </Link>
@@ -170,9 +166,8 @@ export default function Menu() {
                 <li>
                   <Link
                     to="/filmes"
-                    className={`text-white hover:text-emerald-500 ${
-                      location.pathname === "/filmes" ? "border-b-2 border-b-emerald-500" : ""
-                    }`}
+                    className={`text-white hover:text-emerald-500 ${location.pathname === "/filmes" ? "border-b-2 border-b-emerald-500" : ""
+                      }`}
                   >
                     Filmes
                   </Link>
@@ -180,12 +175,20 @@ export default function Menu() {
                 <li>
                   <Link
                     to="/calendar"
-                    className={`text-white hover:text-emerald-500 ${
-                      location.pathname === "/calendar" ? "border-b-2 border-b-emerald-500" : ""
-                    }`}
+                    className={`text-white hover:text-emerald-500 ${location.pathname === "/calendar" ? "border-b-2 border-b-emerald-500" : ""
+                      }`}
                   >
                     Calendário
                   </Link>
+                </li>
+                <li>
+                  <button
+                    className="text-white hover:text-emerald-400 py-2 mx-2 rounded-lg flex items-center"
+                    onClick={() => navigate(`/animes/random`)}
+                  >
+                    <LuDices className="mr-2" size={20} />
+                    <span className="text-center">Random</span>
+                  </button>
                 </li>
                 {!isLogin && (
                   <div className="py-2">
