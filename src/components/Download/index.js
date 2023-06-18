@@ -43,8 +43,8 @@ export default function Download({ anime, coverImage, animeTitle, episodeTitle, 
                             </Link>
                         )}
                     </div>
-                    <div className="flex flex-grow justify-around">
-                        <div className="mt-8 flex ">
+                    <div className="flex flex-row  justify-center">
+                        <div className="mt-8 flex">
                             {!isFirstPage && (
                                 <Link
                                     to={`/animes/${slug}/${anime.episodes[previousEpisodeIndex].titleSlug}/${languageEpisode}/download`}
@@ -57,7 +57,8 @@ export default function Download({ anime, coverImage, animeTitle, episodeTitle, 
                                 </Link>
                             )}
                         </div>
-                        <div className="mt-8 flex ">
+                        <div className="mx-12"></div>
+                        <div className="mt-8 flex">
                             {!isLastPage && (
                                 <Link
                                     to={`/animes/${slug}/${anime.episodes[nextEpisodeIndex].titleSlug}/${languageEpisode}/download`}

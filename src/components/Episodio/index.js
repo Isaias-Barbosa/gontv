@@ -135,7 +135,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
             <div className="aspect-ratio-container">
               <div className="aspect-ratio-inner">
                 <div className="aspect-ratio-inner">
-                <div className={`dplayer-container ${currentResolution < 1280 ? 'small-player' : ''}`} ref={playerRef}></div>
+                <div className={`dplayer-container ${currentResolution < 1280 ? 'small-player' : ''} ${window.innerWidth < 768 ? 'mobile-player' : ''}`} ref={playerRef}></div>
                 </div>
               </div>
             </div>
