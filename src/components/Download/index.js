@@ -31,7 +31,6 @@ export default function Download({ anime, coverImage, animeTitle, episodeTitle, 
                         <AiOutlineDownload className="text-3xl text-white" />
                     </div>
                     <div className="mt-8 flex ">
-                        {!isFirstPage && (
                             <Link
                                 to={`/animes/${slug}/${anime.episodes[episodeIndex].titleSlug}/${languageEpisode}`}
                                 className="text-emerald-400 hover:text-white"
@@ -41,7 +40,6 @@ export default function Download({ anime, coverImage, animeTitle, episodeTitle, 
                                     Voltar
                                 </button>
                             </Link>
-                        )}
                     </div>
                     <div className="flex flex-row  justify-center">
                         <div className="mt-8 flex">
