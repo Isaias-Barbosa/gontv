@@ -181,23 +181,26 @@ export default function Menu() {
                     Calendário
                   </Link>
                 </li>
-                <li>
-                  <button
-                    className="text-white hover:text-emerald-400 py-2 mx-2 rounded-lg flex items-center"
-                    onClick={() => navigate(`/animes/random`)}
-                  >
-                    <LuDices className="mr-2" size={20} />
-                    <span className="text-center">Random</span>
-                  </button>
-                </li>
                 {!isLogin && (
-                  <div className="py-2">
-                    <Link to="/login">
-                      <button className="bg-emerald-700 hover:bg-emerald-500 text-white px-7 py-3 rounded-lg">
-                        Login
+                  <>
+                    <li>
+                      <button
+                        className="text-white hover:text-emerald-400 py-2 mx-2 rounded-lg flex items-center"
+                        onClick={() => navigate(`/animes/random`)}
+                      >
+                        <LuDices className="mr-2" size={20} />
+                        <span className="text-center">Random</span>
                       </button>
-                    </Link>
-                  </div>
+                    </li>
+
+                    <div className="py-2">
+                      <Link to="/login">
+                        <button className="bg-emerald-700 hover:bg-emerald-500 text-white px-7 py-3 rounded-lg">
+                          Login
+                        </button>
+                      </Link>
+                    </div>
+                  </>
                 )}
               </ul>
             </nav>
