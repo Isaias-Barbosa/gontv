@@ -181,20 +181,6 @@ export default function Menu() {
                   </h1>
                 </button>
                 <div className="flex justify-between w-full py-4">
-                  <div className="text-white font-bold text-xl mb-8">
-                    <Link to="/">
-                      <div className="flex items-center px-3">
-                        <img
-                          src={logo}
-                          alt="Logo"
-                          className="w-10 h-auto md:w-12 md:h-12 "
-                        />
-                        <span className="text-emerald-400 font-bold text-xl ml-2">
-                          {siteTitle}
-                        </span>
-                      </div>
-                    </Link>
-                  </div>
                 </div>
                 <ul className="space-y-4">
                   <li>
