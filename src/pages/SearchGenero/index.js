@@ -33,7 +33,7 @@ export default function SearchGenero() {
             </Helmet>
 
 
-            <div className="bg-black-light py-8">
+            <div className="bg-black-dark py-8">
                 <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1 my-4" >
                     <h1 className="text-3xl text-white font-bold mb-2 text-center">Gênero - <span className="text-emerald-400">{genero}</span></h1>
                     <div class="container mx-auto py-8">

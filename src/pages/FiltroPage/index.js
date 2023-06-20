@@ -188,7 +188,7 @@ export default function FiltroPage() {
                 <title>{pageTitle}</title>
             </Helmet>
 
-            <div className="bg-black-light py-8">
+            <div className="bg-black-dark py-8">
                 <h1 className="text-white text-center font-bold text-xl">
                     <span className="border-b-2 border-emerald-400">Página de Filtro</span>
                 </h1>

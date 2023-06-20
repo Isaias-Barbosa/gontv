@@ -61,7 +61,7 @@ export default function SearchAnime() {
         <title>{pageTitle}</title>
       </Helmet>
 
-      <div className='bg-black-light py-8 min-h-screen '>
+      <div className='bg-black-dark py-8 min-h-screen '>
         <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
           <h1 className='text-lg text-white text-center py-8'>
             <>

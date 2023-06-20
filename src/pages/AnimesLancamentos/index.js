@@ -38,7 +38,7 @@ export default function AnimesLancamentos() {
 
   return (
     <section>
-      <div className="bg-black-light py-10">
+      <div className="bg-black-dark py-10">
         <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
           <h2 className="text-2xl text-start text-white font-bold mb-8 p-1">
             <span className="border-b-4 border-emerald-600 pb-1">Todos os Lancamentos</span>

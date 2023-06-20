@@ -44,7 +44,7 @@ export default function Home() {
         <title>{pageTitle}</title>
       </Helmet>
 
-      <div className="bg-black-light"
+      <div className="bg-black-dark"
       >
       <Banner />
         <main className="container mx-auto py-8">

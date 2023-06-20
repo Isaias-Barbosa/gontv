@@ -26,9 +26,9 @@ export default function Download({ anime, coverImage, animeTitle, episodeTitle, 
     const resolutions = episodeIndex !== -1 ? anime.episodes[episodeIndex].videoUrl : [];
 
     return (
-        <div className="bg-black-light py-8">
+        <div className="bg-black-dark py-8">
             <div className="flex justify-center">
-                <div className="w-3/4 p-8 bg-zinc-900 rounded-lg shadow-lg">
+                <div className="w-3/4 p-8 bg-black-light rounded-lg shadow-lg">
                     <div className="flex items-center justify-start">
                         <div className="my-2">
                             <Link

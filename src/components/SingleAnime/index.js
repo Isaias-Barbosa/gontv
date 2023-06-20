@@ -12,7 +12,7 @@ export default function SingleAnime({ anime }) {
 
   return (
     <div className="relative">
-      <div className="bg-black-light">
+      <div className="bg-black-dark">
         <main className="container mx-auto py-7 relative" style={{ position: "relative", overflow: "hidden" }}>
           <div className="background-container relative rounded-lg border-b-2 border-lime-400">
             <div

@@ -98,7 +98,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
 
   return (
 
-    <div className="bg-black-light py-8">
+    <div className="bg-black-dark py-8">
       <div className="title-container">
         <h3 className="text-2xl text-white text-center font-bold">
           <Link to={`/animes/${slug}`}><span className="border-b-2 border-emerald-400">{anime.title}</span>

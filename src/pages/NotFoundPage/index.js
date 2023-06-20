@@ -13,7 +13,7 @@ export default function NotFoundPage() {
     </Helmet>
 
 
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-900">
+    <div className="flex flex-col items-center justify-center h-screen bg-black-dark">
       <h1 className="text-4xl font-bold text-white mb-6">Essa Página Não Existe</h1>
       <img
         className="max-w-sm w-full mb-6"

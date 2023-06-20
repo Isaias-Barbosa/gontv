@@ -84,9 +84,9 @@ export default function Menu() {
       )}
 
       <nav class="flex
-            bg-black-dark">
+            bg-black">
 
-        <div className="flex flex-grow justify-center items-center bg-black-dark">
+        <div className="flex flex-grow justify-center items-center bg-black">
           {!isOpen && !isMobile && (
             <Link to="/">
               <div className="relative top-auto md:py-3 md:left-10 left-36 z-50 flex items-center ">
@@ -107,7 +107,7 @@ export default function Menu() {
           <FiMenu size={35} />
         </button>
 
-        <div className="flex items-center bg-black-dark p-5">
+        <div className="flex items-center bg-black p-5">
           <div className="flex flex-grow justify-end">
 
             {isMobile ? (
@@ -280,7 +280,10 @@ export default function Menu() {
 
         {isSearchModalOpen && (
           <div className="fixed inset-0 bg-black-dark opacity-90 z-50">
-            <div className="absolute top-96 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black-dark rounded-lg p-4" >
+            <div className="absolute inset-0 bg-black"  onClick={handleSearchModalClose}></div>
+            <div className="absolute top-96 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black-dark rounded-lg p-4"
+          
+              >
               <Search
                 handleSearchChange={handleSearchChange} onKeyDown={handleSearchInputKeyDown} />
               <button
