@@ -14,7 +14,7 @@ export default function Rodape() {
   };
 
   return (
-    <footer className="bg-gray-950 py-4 text-white text-center  ">
+    <footer className="bg-black py-4 text-white text-center  ">
      <h2 className="text-white font-bold ms-5 mb-3">ListaAZ <p>Pesquisa pela ordem do anime pelo nome do alfabeto de A a Z.</p></h2>     
       <ul className="flex justify-center ms-3 flex-wrap mb-1">
       {generateAlphabet().map((letter) => (

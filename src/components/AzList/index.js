@@ -8,7 +8,7 @@ export default function AzList({ selectedLetter}) {
   const modifiedAlphabet = ['All', '0-9', ...alphabet];
 
   return (
-    <div className="p-2">
+    <div className="p-2 ">
       <ul className="flex justify-center  flex-wrap mb-3">
         {modifiedAlphabet.map((letter) => (
           <li key={letter} className="mx-1 border-b-2" >

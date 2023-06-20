@@ -61,7 +61,7 @@ export default function SearchAnime() {
         <title>{pageTitle}</title>
       </Helmet>
 
-      <div className='bg-black-light py-8 '>
+      <div className='bg-black-light py-8 min-h-screen '>
         <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
           <h1 className='text-lg text-white text-center py-8'>
             <>
@@ -69,13 +69,13 @@ export default function SearchAnime() {
               <span className="text-emerald-400 mx-3">"{searchQuery}"</span>
             </>
           </h1>
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-3">
             {currentAnimes.map((anime) => (
               <div className="aspect-ratio-box" >
                 <div className="relative">
                   <Link to={`/animes/${anime.slug}`} key={anime.id}>
                     <div className="anime-cover">
-                      <img src={anime.coverImage} alt={anime.title} className="object-cover custom-height mb-1" />
+                      <img src={anime.coverImage} alt={anime.title} className="object-cover custom-height" />
                       <div className="overlay"></div>
                       <button className="play-button">
                         <MdPlayCircleFilled className="text-white text-5xl" />
