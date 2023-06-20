@@ -1,6 +1,28 @@
 {
   "compilerOptions": {
-      "baseUrl": "src"
+    "baseUrl": "src"
   },
-  "include": ["src", "server", "server", "index.js", "Auth", "routes.js", "Layout.js", "components/SingleAnime", "components/Search", "components/ScrollToTop", "components/Rodape", "components/Preload", "components/PopularAnime", "components/Menu", "components/LastAddedFilmes", "components/LastAddedAnimesDublado", "components/LastAddedAnimes", "components/Genero", "components/Filtro", "components/Episodio", "components/Discus", "components/Calendar", "components/Banner", "components/AzList"]
+  "include": [
+    "src",
+    "index.js",
+    "routes.js",
+    "Layout.js",
+    "components/SingleAnime",
+    "components/Search",
+    "components/ScrollToTop",
+    "components/Rodape",
+    "components/Preload",
+    "components/PopularAnime",
+    "components/Menu",
+    "components/LastAddedFilmes",
+    "components/LastAddedAnimesDublado",
+    "components/LastAddedAnimes",
+    "components/Genero",
+    "components/Filtro",
+    "components/Episodio",
+    "components/Discus",
+    "components/Calendar",
+    "components/Banner",
+    "components/AzList"
+  ]
 }

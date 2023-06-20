@@ -43,7 +43,9 @@ export default function Home() {
      <Helmet>
         <title>{pageTitle}</title>
       </Helmet>
-      <div className="bg-black-light">
+
+      <div className="bg-black-light"
+      >
       <Banner />
         <main className="container mx-auto py-8">
           <div className="section">
