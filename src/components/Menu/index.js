@@ -113,7 +113,7 @@ export default function Menu() {
             {isMobile ? (
               <>
                 <Link to="/">
-                  <div className="fixed top-1 my-1 mx-auto right-40 md:py-3 md:left-10  z-50 flex items-center">
+                  <div className="fixed top-2 my-1 mx-auto right-40 md:py-3 md:left-10  z-50 flex items-center">
                     <img
                       src={logo}
                       alt="Logo"
