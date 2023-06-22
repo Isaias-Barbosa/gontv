@@ -133,7 +133,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0 9.5%; /* Use uma porcentagem para o padding */
+  padding: 0 13.5%; /* Use uma porcentagem para o padding */
   box-sizing: border-box; /* Adicione essa propriedade para incluir o padding no cálculo do tamanho total */
 }
 
