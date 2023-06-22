@@ -32,7 +32,7 @@
 
 
 .aspect-ratio-inner {
-  width: 90%;
+  width: 85%;
   height: 100%;
   display:flex;
   justify-content:center;
@@ -48,7 +48,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-left: 9.4%;
+  padding-left: 13.6%;
   padding-right: 18%;
 }
 
