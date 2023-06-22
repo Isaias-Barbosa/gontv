@@ -244,7 +244,7 @@ export default function Menu() {
                     <BsShuffle className="inline-block mr-2 text-white" size={25} />
                     <Link
                       to="/generos"
-                      className={`text-white hover:text-emerald-500 ${location.pathname === "/calendar" ? "border-b-2 border-b-emerald-500" : ""
+                      className={`text-white hover:text-emerald-500 ${location.pathname === "/generos" ? "border-b-2 border-b-emerald-500" : ""
                         }`}
                     >
                       Gêneros
