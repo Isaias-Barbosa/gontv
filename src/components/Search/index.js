@@ -24,11 +24,11 @@ export default function Search({ onKeyDown }) {
   const [searchSize] = useState('64');
 
   return (
-    <div className="flex items-center ms-2 border-b-2 bg-black rounded-lg justify-center">
+    <div className="flex items-center ms-2 border-b-2 bg-black-dark rounded-full justify-center">
       <input
         type="search"
         placeholder="Pesquisar"
-        className={`bg-transparent items-center text-white px-1 py-1 rounded-lg focus:outline-none w-${searchSize} sm:w-32 md:w-48 lg:w-56 xl:w-80 2xl:w-96 h-12`}
+        className={`bg-black-dark  items-center text-white px-2 py-1 rounded-full focus:outline-none w-${searchSize} sm:w-32 md:w-48 lg:w-56 xl:w-80 2xl:w-96 h-12`}
         value={searchValue}
         onChange={handleSearchChange}
         onKeyPress={handleKeyPress}

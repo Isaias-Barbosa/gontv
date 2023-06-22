@@ -115,7 +115,7 @@ export default function PopularAnime() {
                     <img
                       src={anime.coverImage}
                       alt={anime.title}
-                      className="px-1 object-cover custom-height "
+                      className="px-1 object-cover custom-height "                
                     />
                     <div className="overlay"></div>
                     <button className="play-button">

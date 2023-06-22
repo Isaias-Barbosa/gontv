@@ -43,7 +43,7 @@ export default function Download({ anime, coverImage, animeTitle, episodeTitle, 
                         </div>
                     </div>
                     <div className="items-center ">
-                        <p className="text-2xl font-bold text-white text-center">
+                        <p className="text-xl font-bold text-white text-center">
                             <Link to={`/animes/${slug}`}>
                                 <span className="border-b-2 border-emerald-400">{animeTitle}</span></Link> - {episodeTitle}
                         </p>

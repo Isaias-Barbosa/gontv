@@ -20,6 +20,7 @@ import Register from "pages/Register";
 import MeuPerfil from "pages/Profile/MeuPerfil";
 import MinhaConta from "pages/Profile/MinhaConta";
 import DownloadEpisodio from "pages/DownloadEpisodio";
+import GenerosPage from "pages/GenerosPage";
 
 
 function AppRoutes() {
@@ -32,19 +33,21 @@ function AppRoutes() {
           <Route path="/animes/" element={<Layout><Animes /></Layout>} />
           <Route path="/lancamentos/*" element={<Layout><AnimesLancamentos /></Layout>} />
           <Route path="/tvAnimes/*" element={<Layout><TVAnimes /></Layout>} />
-          <Route path="/animesDublados" element={<Layout><AnimesDub /></Layout>} />
-          <Route path="/filmes/" element={<Layout><Filmes /></Layout>} />
+          <Route path="/animesDublados/*" element={<Layout><AnimesDub /></Layout>} />
+          <Route path="/filmes/*" element={<Layout><Filmes /></Layout>} />
           <Route path="/animes/:slug/*" element={<Layout><SingleAnimePage /></Layout>} />
           <Route path="/animes/:slug/:titleSlug/:languageEpisode/*" element={<Layout><SinglePlayPage /></Layout>} />
           <Route path="/animes/:slug/:titleSlug/:languageEpisode/:download/*" element={<Layout><DownloadEpisodio /></Layout>} />
           <Route path="/search/" element={<Layout><SearchAnime /></Layout>} />
-          <Route path="/search/:letter" element={<Layout><SearchAnime /></Layout>} />
-          <Route path="/calendar" element={<Layout><CalendarPage /></Layout>} />
-          <Route path="/az-list/:letter" element={<Layout><AzListPage /></Layout>} />
-          <Route path="/search-genero/:genero" element={<Layout><SearchGenero /></Layout>} />
-          <Route path="/filtro" element={<Layout><FiltroPage /></Layout>} />
-          <Route path="/login" element={<Layout><LoginPage /></Layout>} />
-          <Route path="/register" element={<Layout><Register /></Layout>} />
+          <Route path="/search/:letter/*" element={<Layout><SearchAnime /></Layout>} />
+          <Route path="/calendar/*" element={<Layout><CalendarPage /></Layout>} />
+          <Route path="/generos/*" element={<Layout><GenerosPage /></Layout>} />
+          <Route path="/filtro/*" element={<Layout><FiltroPage /></Layout>} />
+          <Route path="/az-list/:letter/*" element={<Layout><AzListPage /></Layout>} />
+          <Route path="/search-genero/:genero/*" element={<Layout><SearchGenero /></Layout>} />
+          <Route path="/filtro/*" element={<Layout><FiltroPage /></Layout>} />
+          <Route path="/login/*" element={<Layout><LoginPage /></Layout>} />
+          <Route path="/register/*" element={<Layout><Register /></Layout>} />
           <Route path="/profile/meuperfil/*" element={<Layout><MeuPerfil /></Layout>} />
           <Route path="/profile/minhaconta/*" element={<Layout><MinhaConta /></Layout>} />
 

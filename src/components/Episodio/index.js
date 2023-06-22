@@ -100,7 +100,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
 
     <div className="bg-black-dark py-8">
       <div className="title-container">
-        <h3 className="text-2xl text-white text-center font-bold">
+        <h3 className="text-xl text-white text-center font-bold">
           <Link to={`/animes/${slug}`}><span className="border-b-2 border-emerald-400">{anime.title}</span>
           </Link> - {titleEpisodio}</h3>
       </div>
@@ -111,7 +111,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
             {episodioIndex > 0 && (
               <div className="top-button-left">
                 <Link to={`/animes/${slug}/${anime.episodes[episodioIndex - 1].titleSlug}/${languageEpisode}`}>
-                  <button className="top-icon-button">
+                  <button className="top-icon-button hover:text-emerald-400">
                     <AiOutlineLeft />
                     Anterior
                   </button>
@@ -122,7 +122,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
             {episodioIndex < anime.episodes.length - 1 && (
               <div className="top-button-right">
                 <Link to={`/animes/${slug}/${anime.episodes[episodioIndex + 1].titleSlug}/${languageEpisode}`}>
-                  <button className="top-icon-button">
+                  <button className="top-icon-button hover:text-emerald-400">
                     Próximo
                     <AiOutlineRight />
                   </button>
@@ -168,7 +168,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
           </div>
         </div>
         <div className="py-8"></div>
-        <div className="py-5">
+        <div className="py-5 ">
           <h3 className="text-2xl text-white text-center font-bold my-6">
             <span className="border-b-2 border-emerald-400">Comentários</span>
           </h3>

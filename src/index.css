@@ -12,6 +12,32 @@ body {
   
 }
 
+nav.open {
+  animation: slide-in 0.4s ease-in-out;
+}
+
+nav.close {
+  animation: slide-out 0.4s ease-in-out;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 
 .login-page::before {
   content: '';
