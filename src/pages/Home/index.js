@@ -8,9 +8,8 @@ import { Link } from 'react-router-dom';
 import animes from 'json/animes.json';
 import LastAddedFilmes from "components/LastAddedFilmes";
 import 'tailwindcss/tailwind.css';
-import { BeatLoader } from 'react-spinners';
 import { Helmet } from "react-helmet";
-
+import { LinearProgress } from "@mui/material";
 
 export default function Home() {
 
@@ -22,7 +21,7 @@ export default function Home() {
     // Simulação de uma requisição assíncrona
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Tempo de simulação de carregamento (2 segundos)
+    }, 1000); // Tempo de simulação de carregamento (2 segundos)
   }, []);
 
   const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
@@ -44,6 +43,12 @@ export default function Home() {
         <title>{pageTitle}</title>
       </Helmet>
 
+      {isLoading ? (
+          // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados   
+          <div className="min-h-screen bg-black-dark flex justify-start flex-col">   
+             <LinearProgress />
+            </div>
+                ) : (
       <div className="bg-black-dark"
       >
       <Banner />
@@ -63,12 +68,7 @@ export default function Home() {
                   Ver Todos
                 </Link>
               </div>
-              {isLoading ? (
-                  // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados
-                  <div className="flex justify-center">
-                    <BeatLoader color="#00b894" loading={isLoading} size={20} />
-                  </div>
-                ) : (
+              
                   // Exibir os dados reais dos animes quando estiverem carregados
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
                   {animes.slice(0, 20).map((anime, index) => {
@@ -111,7 +111,7 @@ export default function Home() {
                     )
                             })}        
               </div>
-              )}
+             
             </div>
           </div>
           <div className="section animes-legendados">
@@ -125,6 +125,7 @@ export default function Home() {
           </div>
         </main>
       </div>
+       )}
     </>
 
 

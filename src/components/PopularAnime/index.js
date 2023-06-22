@@ -103,7 +103,7 @@ export default function PopularAnime() {
         {isLoading ? (
           // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados
           <div className="flex justify-center">
-            <BeatLoader color="#00b894" loading={isLoading} size={20} />
+            
           </div>
         ) : (
                   <Slider {...settings}>

@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 
 export default function AzListPage() {
 
-    
+
 
     const { letter } = useParams();
 
@@ -17,11 +17,33 @@ export default function AzListPage() {
 
     // Verifica se a letra selecionada é "All"
     const isAllSelected = letter === 'All';
+    const isNumericSelected = letter === '#';
 
-    // Filtra os animes pelo nome iniciado pela letra selecionada
-    const filteredAnimes = isAllSelected
-        ? animes
-        : animes.filter((anime) => anime.title.startsWith(letter));
+    // Filtra os animes pela letra selecionada
+    const filteredAnimes = animes.filter((anime) => {
+        if (isAllSelected) {
+            return true; // Retorna todos os animes
+        } else if (isNumericSelected) {
+            return /^[.0-9#[]/.test(anime.title); // Retorna animes com título começando por ".", números, "#" ou "["
+        } else if (letter === '#') {
+            return /^[.#[]/.test(anime.title); // Retorna animes com título começando por ".", "#" ou "["
+        } else {
+            return anime.title.startsWith(letter); // Retorna animes com título começando pela letra selecionada
+        }
+    });
+
+    // Ordena os animes por título em ordem alfabética
+    filteredAnimes.sort((anime1, anime2) => {
+        const title1 = anime1.title.toLowerCase();
+        const title2 = anime2.title.toLowerCase();
+        if (title1 < title2) {
+            return -1;
+        }
+        if (title1 > title2) {
+            return 1;
+        }
+        return 0;
+    });
 
     // Estado para controlar a página atual
     const [currentPage, setCurrentPage] = useState(1);

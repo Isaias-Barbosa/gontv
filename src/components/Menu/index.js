@@ -88,8 +88,8 @@ export default function Menu() {
         <div className="fixed inset-0 bg-black-dark  opacity-80 z-50 "></div>
       )}
 
-      <nav class="flex bg-black-dark flex-grow items-center h-20">
-        <div className="flex justify-end flex-grow">
+      <nav class="flex bg-black-light flex-grow items-center h-20">
+        <div className="flex justify-end flex-grow ">
           {!isOpen && !isMobile && (
             <Link to="/">
               <div className="relative top-auto md:py-3 md:left-10 left-36 z-50 flex items-center">
@@ -115,7 +115,7 @@ export default function Menu() {
           {isMobile ? (
             <>
               <Link to="/">
-                <div className="relative  my-3 mx-1 ms-20   z-50 flex items-center">
+                <div className="relative  my-3 mx-1 ms-16   z-50 flex items-center">
                   <img
                     src={logo}
                     alt="Logo"
@@ -173,8 +173,8 @@ export default function Menu() {
             className="fixed top-0 bottom-0 left-0 right-0 z-50 "
             onClick={toggleMenu}
           >
-            <div className="absolute top-16 left-7 h-full z-50">
-              <nav className={`flex flex-col justify-between items-center bg-zinc-900 w-60 h-auto ${isMenuOpen ? 'open' : ''} `} >
+            <div className="absolute top-16 left-2 2xl:left-7 h-full z-50">
+              <nav className={`flex flex-col justify-between items-center shadow-md border-x shadow-emerald-400 border-gray-700 rounded-xl bg-zinc-900 w-60 h-auto ${isMenuOpen ? 'open' : ''} `} >
                 <div className="flex justify-between w-full ">
                 </div>
                 <ul className="space-y-5 p-9 ">
@@ -257,14 +257,14 @@ export default function Menu() {
                           className="text-white hover:text-emerald-400 py-2  rounded-lg flex items-center"
                           onClick={() => navigate(`/animes/random`)}
                         >
-                          <LuDices className="mr-2" size={20} />
-                          <span className="text-center">Random</span>
+                          <LuDices className=" mr-2" size={20} />
+                          <span className="text-center ms-1">Random</span>
                         </button>
                       </li>
 
                       <div className="py-2">
                         <Link to="/login">
-                          <button className="bg-emerald-700 hover:bg-emerald-500 text-white px-7 py-3 rounded-lg">
+                          <button className="border hover:bg-emerald-500 text-white px-7 py-3 rounded-lg">
                             Login
                           </button>
                         </Link>

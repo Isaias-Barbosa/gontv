@@ -9,7 +9,7 @@ export default function Rodape() {
     const letters = Array.from({ length: 26 }, (_, index) =>
       String.fromCharCode(65 + index)
     );
-    const modifiedLetters = ['All', '0-9', ...letters];
+    const modifiedLetters = ['All', '#', ...letters];
     return modifiedLetters;
   };
 
@@ -20,7 +20,7 @@ export default function Rodape() {
       {generateAlphabet().map((letter) => (
           <li key={letter} className="mx-1">
             <Link
-              to={`/az-list/${letter}`}
+               to={`/az-list/${encodeURIComponent(letter)}`}
               className="text-white border-b-2 bg-neutral-800 hover:text-emerald-500 text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-xl px-2"
             >
              {letter}

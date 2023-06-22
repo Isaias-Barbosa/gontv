@@ -2043,6 +2043,155 @@
     ]
   },
   {
+    "id": 22,
+    "Type": "TV",
+    "title": "009-1",
+    "slug": "009-1",
+    "subtitule": "Zero Zero Nine One",
+    "date": "Terça-Feira",
+    "coverImage": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r1zbGhkKXmzZR8h5y7LQxiE8yW9.jpg",
+    "studio": "Ishimori Entertainment",
+    "director": "Atsuhiro Iwakami",
+    "year": "2006",
+    "Status": "Finalizado",
+        "status": "pretendo-ver",
+    
+    "episodeDuration": "25 min. por episódio",
+    "genres": [
+      "Ação",
+      "Sci-Fi",
+      "Mecha",
+      "Seinen"
+    ],
+    "Premiered": "Fall 2006",
+    "Fansub": "Oficial",
+    "language": "Legendado",
+    "resoAnime": "FHD",
+    "background": "https://www.themoviedb.org/t/p/original/byuLWybI5Am5I6f7tGVr8H1k3Kn.jpg",
+    "top": true,
+    "synopsis": "Mylene Hoffman, uma bela espiã ciborgue com o codinome '009-1' vive em um mundo alternativo onde a guerra fria nunca terminou, ocorrendo continuamente por 140 anos. O mundo está dividido em duas facções, o bloco ocidental e o bloco oriental. Uma máscara de paz entre os dois é lentamente dissipada à medida que o conflito ocorre. Através da política, as duas facções lutam pela supremacia sobre a tecnologia às ameaças de um ataque nuclear. Mylene Hoffman, juntando-se a três outros agentes, é cercada por engano, caos e rivalidade enquanto realiza missões atribuídas por seus superiores.",
+    "episodes": [
+      {
+        "id": 27031,
+        "titleEpisodio": "Episodio 01",
+        "titleSlug": "episodio-1",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/wh0G2DV1rR914iMKmFlqgmXH7AC.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 27032,
+        "titleEpisodio": "Episodio 02",
+        "titleSlug": "episodio-2",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/kr2uO8KP5gwboImDDbEHv5BFyPg.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "Type": "TV",
+    "title": ".hack//Roots",
+    "slug": "hack-roots",
+    "subtitule": ".hack//roots",
+    "date": "Quarta-Feira",
+    "coverImage": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9HugakJIKV07AWMotFzgZSvT99N.jpg",
+    "studio": "Bee Train",
+    "director": "Kouichi Mashimo",
+    "year": "2006",
+    "Status": "Finalizado",
+        "status": "assistindo",
+    
+    "episodeDuration": "24 min. por episódio",
+    "genres": [
+      "Aventura",
+      "Drama",
+      "Fantasia"
+    ],
+    "Premiered": "Spring 2006",
+    "Fansub": "Oficial",
+    "language": "Legendado",
+    "resoAnime": "FHD",
+    "background": "https://www.arquivosdowoo.com.br/wp-content/uploads/2020/09/hack-G.U.-Last-Recode_Arquivos-do-Woo.jpg",
+    "top": false,
+    "synopsis": "Em 2015, o data center da CC Corporation pegou fogo destruindo 'The World', um RPG online. Usando dados de um jogo diferente, a CC Corp conseguiu reconstruir o jogo. Em 2016, The World R:2 foi lançado. Neste mundo ligeiramente diferente, Haseo passa seu tempo com Shino e Ovan na guilda conhecida como Twilight Brigade. Eles estão em busca de um item lendário. Quando uma equipe rival os desafia, o conflito tem profundas repercussões dentro e fora do jogo e ameaça mudar os jogadores para sempre.",
+    "episodes": [
+      {
+        "id": 27041,
+        "titleEpisodio": "Episodio 01",
+        "titleSlug": "episodio-1",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/wh0G2DV1rR914iMKmFlqgmXH7AC.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      },
+      {
+        "id": 27042,
+        "titleEpisodio": "Episodio 02",
+        "titleSlug": "episodio-2",
+        "videoUrl": [
+          {
+            "resolution": "FHD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1920"
+          },
+          {
+            "resolution": "HD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=1280"
+          },
+          {
+            "resolution": "SD",
+            "url": "https://download.pexels.com/vimeo/121501042/pexels-oak-&-rumble-852338.mp4?fps=24.0&width=640"
+          }
+        ],
+        "thumbnail": "https://www.themoviedb.org/t/p/original/kr2uO8KP5gwboImDDbEHv5BFyPg.jpg",
+        "duration": "24 minutos",
+        "languageEpisode": "legendado"
+      }
+    ]
+  },
+  {
     "id": 123,
     "Type": "TV",
     "title": "Fullmetal Alchemist: Brotherhood - Dublado",
