@@ -15,7 +15,7 @@ export default function Animes() {
         // Simulação de uma requisição assíncrona
         setTimeout(() => {
             setIsLoading(false);
-        }, 1000); // Tempo de simulação de carregamento (2 segundos)
+        }, 2000); // Tempo de simulação de carregamento (2 segundos)
     }, []);
 
     const pageTitle = `Gon.TV - Lista de Animes Legendados`;

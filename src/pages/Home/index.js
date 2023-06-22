@@ -21,7 +21,7 @@ export default function Home() {
     // Simulação de uma requisição assíncrona
     setTimeout(() => {
       setIsLoading(false);
-    }, 1000); // Tempo de simulação de carregamento (2 segundos)
+    }, 2000); // Tempo de simulação de carregamento (2 segundos)
   }, []);
 
   const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
