@@ -3,12 +3,23 @@ import animes from 'json/animes.json';
 import { Link } from 'react-router-dom';
 import AzList from 'components/AzList';
 import { MdPlayCircleFilled } from 'react-icons/md';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+import { LinearProgress } from '@mui/material';
 
 export default function AzListPage() {
 
+    const [isLoading, setIsLoading] = useState(true);
 
+
+    useEffect(() => {
+        // Simulação de uma requisição assíncrona
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000); // Tempo de simulação de carregamento (2 segundos)
+    }, []);
 
     const { letter } = useParams();
 
@@ -65,14 +76,9 @@ export default function AzListPage() {
         return title;
     };
 
-    // Função para navegar para a página anterior
-    const goToPreviousPage = () => {
-        setCurrentPage((prevPage) => prevPage - 1);
-    };
-
-    // Função para navegar para a próxima página
-    const goToNextPage = () => {
-        setCurrentPage((prevPage) => prevPage + 1);
+    // Função para navegar para a página selecionada
+    const handlePageChange = (event, newPage) => {
+        setCurrentPage(newPage);
     };
 
     const pageTitle = `Gon.TV - AZ-List - ${letter}`
@@ -83,7 +89,12 @@ export default function AzListPage() {
             <Helmet>
                 <title>{pageTitle}</title>
             </Helmet>
-
+            {isLoading ? (
+        // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados   
+        <div className="min-h-screen bg-black-dark flex justify-start flex-col">
+          <LinearProgress />
+        </div>
+      ) : (
 
             <div className="bg-black-dark py-8 min-h-screen ">
                 <div>
@@ -115,29 +126,42 @@ export default function AzListPage() {
                                 ))}
                             </div>
                             {filteredAnimes.length > itemsPerPage && (
-                                <div className="flex justify-center mt-4">
-                                    {currentPage > 1 && (
-                                        <button
-                                            className="mr-2 px-4 py-2 bg-emerald-400 text-white rounded-md hover:bg-emerald-500 focus:outline-none focus:bg-emerald-500"
-                                            onClick={goToPreviousPage}
-                                        >
-                                            Anterior
-                                        </button>
-                                    )}
-                                    {endIndex < filteredAnimes.length && (
-                                        <button
-                                            className="px-4 py-2 bg-emerald-400 text-white rounded-md hover:bg-emerald-500 focus:outline-none focus:bg-emerald-500"
-                                            onClick={goToNextPage}
-                                        >
-                                            Próxima
-                                        </button>
-                                    )}
+                                <div className="flex justify-center mt-10">
+                                    <Stack spacing={2}>
+                                        <Pagination
+                                            className="bg-zinc-800"
+                                            size="large"
+                                            color="primary"
+                                            count={Math.ceil(filteredAnimes.length / itemsPerPage)}
+                                            page={currentPage}
+                                            onChange={handlePageChange}
+                                            sx={{
+                                                '& .Mui-selected': {
+                                                    color: 'white',
+                                                },
+                                                '& .MuiPaginationItem-root': {
+                                                    color: 'white',
+                                                },
+                                                '& .MuiPaginationItem-page.Mui-selected': {
+                                                    backgroundColor: '#00b894', // Defina a cor desejada para a bolinha selecionada
+                                                },
+                                                '& .MuiPaginationItem-page:hover': {
+                                                    backgroundColor: 'transparent',
+                                                    color: 'white',
+                                                },
+                                                '& .MuiPaginationItem-page.Mui-selected:hover': {
+                                                    backgroundColor: '#00b894',
+                                                },
+                                            }}
+                                        />
+                                    </Stack>
                                 </div>
                             )}
                         </div>
                     )}
                 </div>
             </div>
+      )}
         </>
     )
 }

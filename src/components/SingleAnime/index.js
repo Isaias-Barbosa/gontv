@@ -3,17 +3,35 @@ import { MdPlayCircleFilled } from "react-icons/md";
 import './SingleAnime.css';
 import Discus from 'components/Discus';
 import Genero from "components/Genero";
+import { useEffect } from "react";
+import { useState } from "react";
+import {  LinearProgress } from "@mui/material";
 
 export default function SingleAnime({ anime }) {
 
   const currentAnimeSlug = anime.slug; // Obtém o slug da pagina atual
   const currentAnimeTitle = anime.title // Obtém o titulo da pagina tual
-  
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulação de uma requisição assíncrona
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Tempo de simulação de carregamento (2 segundos)
+  }, []);
 
   return (
+    <>
+    {isLoading ? (
+      // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados   
+      <div className="min-h-screen bg-black-dark flex justify-start flex-col">
+      <LinearProgress />
+  </div>
+    ) : (
     <div className="relative">
       <div className="bg-black-dark">
         <main className="container mx-auto py-7 relative" style={{ position: "relative", overflow: "hidden" }}>
+
           <div className="background-container relative rounded-lg border-b-2 border-lime-400">
             <div
               className="w-full h-auto bg-cover bg-center rounded-lg"
@@ -77,6 +95,7 @@ export default function SingleAnime({ anime }) {
               </div >
             </div>
           </div>
+ 
           <div className="my-5">
             <h3 className="text-2xl text-white font-bold mb-4 text-center">
               <span className="border-b-2 border-emerald-400">Sinopse</span>
@@ -117,5 +136,7 @@ export default function SingleAnime({ anime }) {
         </main >
       </div >
     </div>
+             )}
+    </>
   );
 }

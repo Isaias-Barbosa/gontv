@@ -10,6 +10,9 @@ import LastAddedFilmes from "components/LastAddedFilmes";
 import 'tailwindcss/tailwind.css';
 import { Helmet } from "react-helmet";
 import { LinearProgress } from "@mui/material";
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+
 
 export default function Home() {
 
@@ -39,38 +42,36 @@ export default function Home() {
   return (
 
     <>
-     <Helmet>
+      <Helmet>
         <title>{pageTitle}</title>
       </Helmet>
 
       {isLoading ? (
-          // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados   
-          <div className="min-h-screen bg-black-dark flex justify-start flex-col">   
-             <LinearProgress />
+        // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados   
+        <div className="min-h-screen bg-black-dark flex justify-start flex-col">
+          <LinearProgress />
+        </div>
+      ) : (
+        <div className="bg-black-dark"
+        >
+          <Banner />
+          <main className="container mx-auto py-8">
+            <div className="section">
+              <PopularAnime />
             </div>
-                ) : (
-      <div className="bg-black-dark"
-      >
-      <Banner />
-        <main className="container mx-auto py-8">
-          <div className="section">
-            <PopularAnime />
-          </div>
 
-          <div className="section">
+            <div className="section">
 
-            <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
-              <h2 className="text-2xl text-start text-white font-bold mb-1 p-1 ">
-                <span className="border-b-4 border-emerald-600 pb-1"> Lançamentos</span>
-              </h2>
-              <div className="text-end mb-2">
-                <Link to="/lancamentos" className="text-emerald-600 hover:text-emerald-500 text-end font-bold">
-                  Ver Todos
-                </Link>
-              </div>
-              
-                  // Exibir os dados reais dos animes quando estiverem carregados
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
+              <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
+                <h2 className="text-2xl text-start text-white font-bold mb-1 p-1 ">
+                  <span className="border-b-4 border-emerald-600 pb-1"> Lançamentos</span>
+                </h2>
+                <div className="text-end">
+                  <Link to="/lancamentos" className="text-emerald-600 hover:text-emerald-500 text-end font-bold">
+                    Ver Todos
+                  </Link>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
                   {animes.slice(0, 20).map((anime, index) => {
                     const lastEpisode = anime.episodes[anime.episodes.length - 1];
                     return (
@@ -109,23 +110,23 @@ export default function Home() {
                         </div>
                       </Link>
                     )
-                            })}        
+                  })}
+                </div>
+
               </div>
-             
             </div>
-          </div>
-          <div className="section animes-legendados">
-            <LastAddedAnimes animes={animes} />
-          </div>
-          <div className="section animes-dublados">
-            <LastAddedAnimesDublado animes={animes} />
-          </div>
-          <div className="section filmes-animes">
-            <LastAddedFilmes animes={animes} />
-          </div>
-        </main>
-      </div>
-       )}
+            <div className="section animes-legendados">
+              <LastAddedAnimes animes={animes} />
+            </div>
+            <div className="section animes-dublados">
+              <LastAddedAnimesDublado animes={animes} />
+            </div>
+            <div className="section filmes-animes">
+              <LastAddedFilmes animes={animes} />
+            </div>
+          </main>
+        </div>
+      )}
     </>
 
 

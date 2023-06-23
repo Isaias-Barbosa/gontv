@@ -1,10 +1,22 @@
 import animes from 'json/animes.json'
 import { Link } from 'react-router-dom'
 import { MdPlayCircleFilled } from 'react-icons/md';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { Pagination, Stack } from '@mui/material';
+import { LinearProgress } from "@mui/material";
 
 export default function Filmes() {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+
+  useEffect(() => {
+    // Simulação de uma requisição assíncrona
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Tempo de simulação de carregamento (2 segundos)
+  }, []);
 
   const pageTitle = `Gon.TV - Lista de Filmes`;
 
@@ -32,77 +44,90 @@ export default function Filmes() {
   // Animes da página atual
   const currentAnimes = filmes.slice(startIndex, endIndex);
 
-  // Função para navegar para a página anterior
-  const goToPreviousPage = () => {
-    setCurrentPage((prevPage) => prevPage - 1);
-  };
-
-  // Função para navegar para a próxima página
-  const goToNextPage = () => {
-    setCurrentPage((prevPage) => prevPage + 1);
+  // Função para navegar para a página selecionada
+  const handlePageChange = (event, newPage) => {
+    setCurrentPage(newPage);
   };
 
   return (
 
     <>
 
-    <Helmet>
+      <Helmet>
         <title>{pageTitle}</title>
-    </Helmet>
+      </Helmet>
+      {isLoading ? (
+        // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados   
+        <div className="min-h-screen bg-black-dark flex justify-start flex-col">
+          <LinearProgress />
+        </div>
+      ) : (
+        <div className="bg-black-dark py-8">
+          <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
+            <h2 className="text-2xl text-white text-start font-bold mb-4 pb-1 py-7">
+              <span className="border-b-4 border-emerald-600 pb-1"> Filmes</span>
+            </h2>
+            <div class="container mx-auto">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-3">
+                {currentAnimes.map((anime) => (
+                  <div className="aspect-ratio-box" >
+                    <div className="relative">
+                      <Link to={`/animes/${anime.slug}`} key={anime.id}>
+                        <div className="anime-cover">
+                          <img
+                            src={anime.coverImage}
+                            alt={anime.title}
+                            className="object-cover custom-height"
 
-    <div className="bg-black-dark py-8">
-      <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
-        <h2 className="text-2xl text-white text-start font-bold mb-4 pb-1 py-7">
-          <span className="border-b-4 border-emerald-600 pb-1"> Filmes</span>
-        </h2>
-        <div class="container mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-3">
-            {currentAnimes.map((anime) => (
-              <div className="aspect-ratio-box" >
-                <div className="relative">
-                  <Link to={`/animes/${anime.slug}`} key={anime.id}>
-                    <div className="anime-cover">
-                      <img
-                        src={anime.coverImage}
-                        alt={anime.title}
-                        className="object-cover custom-height"
-
-                      />
-                      <div className="overlay"></div>
-                      <button className="play-button">
-                        <MdPlayCircleFilled className="text-white text-5xl" />
-                      </button>
+                          />
+                          <div className="overlay"></div>
+                          <button className="play-button">
+                            <MdPlayCircleFilled className="text-white text-5xl" />
+                          </button>
+                        </div>
+                      </Link>
+                      <h3 className="text-lg text-white text-center mb-3 px-2 font-semibold">{truncateTitle(anime.title)}</h3>
                     </div>
-                  </Link>
-                  <h3 className="text-lg text-white text-center mb-3 px-2 font-semibold">{truncateTitle(anime.title)}</h3>
-                </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            {/* Paginação */}
+            {Filmes.length > itemsPerPage && (
+              <div className="flex justify-center mt-10">
+                <Stack spacing={2}>
+                  <Pagination
+                    className="bg-zinc-800"
+                    size="large"
+                    color="primary"
+                    count={Math.ceil(Filmes.length / itemsPerPage)}
+                    page={currentPage}
+                    onChange={handlePageChange}
+                    sx={{
+                      '& .Mui-selected': {
+                        color: 'white',
+                      },
+                      '& .MuiPaginationItem-root': {
+                        color: 'white',
+                      },
+                      '& .MuiPaginationItem-page.Mui-selected': {
+                        backgroundColor: '#00b894', // Defina a cor desejada para a bolinha selecionada
+                      },
+                      '& .MuiPaginationItem-page:hover': {
+                        backgroundColor: 'transparent',
+                        color: 'white',
+                      },
+                      '& .MuiPaginationItem-page.Mui-selected:hover': {
+                        backgroundColor: '#00b894',
+                      },
+                    }}
+                  />
+                </Stack>
+              </div>
+            )}
           </div>
         </div>
-        {/* Paginação */}
-        {filmes.length > itemsPerPage && (
-          <div className="flex justify-center mt-6">
-            {currentPage > 1 && (
-              <button
-                className="mr-2 px-4 py-2 bg-emerald-400 text-white rounded-md hover:bg-emerald-500 focus:outline-none focus:bg-emerald-500"
-                onClick={goToPreviousPage}
-              >
-                Anterior
-              </button>
-            )}
-            {endIndex < filmes.length && (
-              <button
-                className="px-4 py-2 bg-emerald-400 text-white rounded-md hover:bg-emerald-500 focus:outline-none focus:bg-emerald-500"
-                onClick={goToNextPage}
-              >
-                Próxima
-              </button>
-            )}
-          </div>
-        )}
-      </div>
-    </div>
+      )}
     </>
   )
 }

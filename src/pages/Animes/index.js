@@ -5,6 +5,8 @@ import React, { useState } from 'react';
 import { Helmet } from "react-helmet";
 import { LinearProgress } from "@mui/material";
 import { useEffect } from 'react';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 
 export default function Animes() {
 
@@ -44,14 +46,9 @@ export default function Animes() {
     // Animes da página atual
     const currentAnimes = legendadoAnimes.slice(startIndex, endIndex);
 
-    // Função para navegar para a página anterior
-    const goToPreviousPage = () => {
-        setCurrentPage((prevPage) => prevPage - 1);
-    };
-
-    // Função para navegar para a próxima página
-    const goToNextPage = () => {
-        setCurrentPage((prevPage) => prevPage + 1);
+    // Função para navegar para a página selecionada
+    const handlePageChange = (event, newPage) => {
+        setCurrentPage(newPage);
     };
 
     return (
@@ -99,23 +96,35 @@ export default function Animes() {
 
                         {/* Paginação */}
                         {legendadoAnimes.length > itemsPerPage && (
-                            <div className="flex justify-center mt-6">
-                                {currentPage > 1 && (
-                                    <button
-                                        className="mr-2 px-4 py-2 bg-emerald-400 text-white rounded-md hover:bg-emerald-500 focus:outline-none focus:bg-emerald-500"
-                                        onClick={goToPreviousPage}
-                                    >
-                                        Anterior
-                                    </button>
-                                )}
-                                {endIndex < legendadoAnimes.length && (
-                                    <button
-                                        className="px-4 py-2 bg-emerald-400 text-white rounded-md hover:bg-emerald-500 focus:outline-none focus:bg-emerald-500"
-                                        onClick={goToNextPage}
-                                    >
-                                        Próxima
-                                    </button>
-                                )}
+                            <div className="flex justify-center mt-10">
+                                <Stack spacing={2}>
+                                    <Pagination
+                                        className="bg-zinc-800"
+                                        size="large"
+                                        color="primary"
+                                        count={Math.ceil(legendadoAnimes.length / itemsPerPage)}
+                                        page={currentPage}
+                                        onChange={handlePageChange}
+                                        sx={{
+                                            '& .Mui-selected': {
+                                                color: 'white',
+                                            },
+                                            '& .MuiPaginationItem-root': {
+                                                color: 'white',
+                                            },
+                                            '& .MuiPaginationItem-page.Mui-selected': {
+                                                backgroundColor: '#00b894', // Defina a cor desejada para a bolinha selecionada
+                                            },
+                                            '& .MuiPaginationItem-page:hover': {
+                                                backgroundColor: 'transparent',
+                                                color: 'white',
+                                            },
+                                            '& .MuiPaginationItem-page.Mui-selected:hover': {
+                                                backgroundColor: '#00b894',
+                                            },
+                                        }}
+                                    />
+                                </Stack>
                             </div>
                         )}
                     </div>

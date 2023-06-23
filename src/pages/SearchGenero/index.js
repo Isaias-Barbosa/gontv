@@ -1,12 +1,21 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import animes from 'json/animes.json';
 import { MdPlayCircleFilled } from 'react-icons/md';
 import { Helmet } from 'react-helmet';
+import { LinearProgress } from '@mui/material';
 
 export default function SearchGenero() {
 
-    
+    const [isLoading, setIsLoading] = useState(true);
+
+
+    useEffect(() => {
+        // Simulação de uma requisição assíncrona
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000); // Tempo de simulação de carregamento (2 segundos)
+    }, []);
 
     const MAX_TITLE_LENGTH = 15; // Define o número máximo de caracteres do título
 
@@ -32,7 +41,12 @@ export default function SearchGenero() {
                 <title>{pageTitle}</title>
             </Helmet>
 
-
+            {isLoading ? (
+        // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados   
+        <div className="min-h-screen bg-black-dark flex justify-start flex-col">
+          <LinearProgress />
+        </div>
+      ) : (
             <div className="bg-black-dark min-h-screen py-8">
                 <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1" >
                     <h1 className="text-3xl text-white font-bold mb-2 text-center">Gênero - <span className="text-emerald-400">{genero}</span></h1>
@@ -62,6 +76,7 @@ export default function SearchGenero() {
                     </div>
                 </div>
             </div>
+      )}
         </>
 
     )

@@ -1,11 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import animes from 'json/animes.json';
 import { MdPlayCircleFilled } from 'react-icons/md';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { LinearProgress } from '@mui/material';
 
 export default function SearchAnime() {
+
+
+  const [isLoading, setIsLoading] = useState(true);
+
+
+    useEffect(() => {
+        // Simulação de uma requisição assíncrona
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000); // Tempo de simulação de carregamento (2 segundos)
+    }, []);
+
+
   const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
 
   const truncateTitle = (title) => {
@@ -60,7 +74,12 @@ export default function SearchAnime() {
       <Helmet>
         <title>{pageTitle}</title>
       </Helmet>
-
+      {isLoading ? (
+        // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados   
+        <div className="min-h-screen bg-black-dark flex justify-start flex-col">
+          <LinearProgress />
+        </div>
+      ) : (
       <div className='bg-black-dark py-8 min-h-screen '>
         <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
           <h1 className='text-lg text-white text-center py-8'>
@@ -111,6 +130,7 @@ export default function SearchAnime() {
           )}
         </div>
       </div>
+      )}
     </>
   )
 }
