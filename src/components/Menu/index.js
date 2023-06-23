@@ -115,7 +115,7 @@ export default function Menu() {
           {isMobile ? (
             <>
               <Link to="/">
-                <div className="relative  my-3 mx-1 ms-16   z-50 flex items-center">
+                <div className="relative  my-3 mx-1 ms-20   z-50 flex items-center">
                   <img
                     src={logo}
                     alt="Logo"
@@ -126,7 +126,7 @@ export default function Menu() {
               </Link>
 
               <button
-                className="text-white ml-16 md:p-0 md:w-10 md:h-10 flex mx-auto items-center"
+                className="text-white ms-20 md:p-0 md:w-10 md:h-10 flex mx-auto items-center"
                 onClick={handleSearchIconClick}
               >
                 <FiSearch size={24} />

@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import animes from 'json/animes.json';
 import { MdPlayCircleFilled } from 'react-icons/md';
 import { Helmet } from 'react-helmet';
-import { LinearProgress } from '@mui/material';
+import { LinearProgress, Pagination, Stack } from '@mui/material';
 
 export default function SearchGenero() {
 
@@ -34,6 +34,23 @@ export default function SearchGenero() {
 
     const pageTitle = `Gon.TV - ${genero} `;
 
+    const itemsPerPage = 36; // Número de animes por página
+
+    // Estado para controlar a página atual
+    const [currentPage, setCurrentPage] = useState(1);
+
+    // Cálculo dos índices inicial e final dos animes a serem exibidos
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+
+     // Animes da página atual
+     const currentAnimes = animesPorGenero.slice(startIndex, endIndex);
+
+    // Função para navegar para a página selecionada
+    const handlePageChange = (event, newPage) => {
+        setCurrentPage(newPage);
+    };
+
     return (
 
         <>
@@ -52,7 +69,7 @@ export default function SearchGenero() {
                     <h1 className="text-3xl text-white font-bold mb-2 text-center">Gênero - <span className="text-emerald-400">{genero}</span></h1>
                     <div className="container mx-auto py-8">
                         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-3">
-                            {animesPorGenero.map((anime) => (
+                            {currentAnimes.map((anime) => (
                                 <div className="aspect-ratio-box" key={anime.id} >
                                     <div className="relative">
                                         <Link to={`/animes/${anime.slug}`}>
@@ -75,7 +92,41 @@ export default function SearchGenero() {
                         </div>
                     </div>
                 </div>
+                {/* Paginação */}
+                {animesPorGenero.length > itemsPerPage && (
+                            <div className="flex justify-center mt-10">
+                                <Stack spacing={2}>
+                                    <Pagination
+                                        className="bg-zinc-800"
+                                        size="large"
+                                        color="primary"
+                                        count={Math.ceil(animesPorGenero.length / itemsPerPage)}
+                                        page={currentPage}
+                                        onChange={handlePageChange}
+                                        sx={{
+                                            '& .Mui-selected': {
+                                                color: 'white',
+                                            },
+                                            '& .MuiPaginationItem-root': {
+                                                color: 'white',
+                                            },
+                                            '& .MuiPaginationItem-page.Mui-selected': {
+                                                backgroundColor: '#00b894', // Defina a cor desejada para a bolinha selecionada
+                                            },
+                                            '& .MuiPaginationItem-page:hover': {
+                                                backgroundColor: 'transparent',
+                                                color: 'white',
+                                            },
+                                            '& .MuiPaginationItem-page.Mui-selected:hover': {
+                                                backgroundColor: '#00b894',
+                                            },
+                                        }}
+                                    />
+                                </Stack>
+                            </div>
+                        )}
             </div>
+            
       )}
         </>
 
