@@ -146,21 +146,21 @@ export default function Menu() {
                 className="text-white  p-1 md:p-0 md:w-10 md:h-10 flex  items-center"
                 onClick={handleSearchIconClick}
               >
-                <FiSearch size={24} />
+                <FiSearch className="hover:text-emerald-400" size={26} />
               </button>
               <Link to="/calendar">
-                <FcCalendar className="text-green-500 ml-2" size={34} />
+                <RiCalendarEventLine className="text-white hover:text-emerald-400 ml-2" size={26} />
               </Link>
             </div>
             <button
               className="text-white hover:text-emerald-400 px-4 py-2 mx-auto rounded-lg flex items-center"
               onClick={() => navigate(`/animes/random`)}
             >
-              <LuDices className="" size={20} />
+              <LuDices className="" size={26} />
             </button>
             <Link to="/login">
               <button className="hover:text-emerald-500 text-white px-1 py-2 mx-2 rounded-lg flex items-center">
-                <IoLogInOutline className="mr-3" size={20} />
+                <IoLogInOutline className="mr-3" size={26} />
                 <span className="text-center mr-5">Login</span>
               </button>
             </Link>
