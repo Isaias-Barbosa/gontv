@@ -47,13 +47,12 @@ export default function Home() {
       </Helmet>
 
       {isLoading ? (
-        // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados   
+        // Exibir o progress de pré-carregamento enquanto os dados estão sendo carregados   
         <div className="min-h-screen bg-black-dark flex justify-start flex-col">
           <LinearProgress />
         </div>
       ) : (
-        <div className="bg-black-dark"
-        >
+        <div className="bg-black-dark">
           <Banner />
           <main className="container mx-auto py-8">
             <div className="section">
