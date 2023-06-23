@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import { MdPlayCircleFilled } from 'react-icons/md';
 import animes from 'json/animes.json';
 import { LinearProgress, Pagination, Stack } from '@mui/material';
+import { Helmet } from 'react-helmet';
 
 export default function AnimesLancamentos() {
+
+  const pageTitle = `Gon.TV - Ultimos Lançamentos`;
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -45,6 +48,10 @@ export default function AnimesLancamentos() {
 
 
   return (
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
     <section>
       {isLoading ? (
         // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados   
@@ -117,5 +124,6 @@ export default function AnimesLancamentos() {
         </div>
       )}
     </section>
+    </>
   );
 }
