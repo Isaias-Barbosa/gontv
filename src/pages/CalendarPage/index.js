@@ -10,12 +10,12 @@ export default function CalendarPage() {
   const [isLoading, setIsLoading] = useState(true);
 
 
-    useEffect(() => {
-        // Simulação de uma requisição assíncrona
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 2000); // Tempo de simulação de carregamento (2 segundos)
-    }, []);
+  useEffect(() => {
+    // Simulação de uma requisição assíncrona
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Tempo de simulação de carregamento (2 segundos)
+  }, []);
 
   const pageTitle = "Gon.TV - Calendário de Animes"
 
@@ -45,15 +45,21 @@ export default function CalendarPage() {
         <title>{pageTitle}</title>
       </Helmet>
       {isLoading ? (
-                // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados   
-                <div className="min-h-screen bg-black-dark flex justify-start flex-col">
-                    <LinearProgress />
-                </div>
-            ) : (
-      <div className="calendar-page">
-        <Calendar animesByDate={animesByDate} />
-      </div>
-            )}
+        // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados   
+        <div className="min-h-screen bg-black-dark flex justify-start flex-col">
+          <LinearProgress />
+        </div>
+      ) : (
+        <div className="bg-black-dark py-8">
+          <h2 className="text-white text-center text-2xl mb-4">
+            <span className="border-b-2 border-emerald-400">Calendário</span>
+          </h2>
+
+          <div className="calendar-page">
+            <Calendar animesByDate={animesByDate} />
+          </div>
+        </div>
+      )}
     </>
 
   )

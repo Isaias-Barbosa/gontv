@@ -10,8 +10,7 @@ import LastAddedFilmes from "components/LastAddedFilmes";
 import 'tailwindcss/tailwind.css';
 import { Helmet } from "react-helmet";
 import { LinearProgress } from "@mui/material";
-import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
+import Calendar from "components/Calendar";
 
 
 export default function Home() {
@@ -39,6 +38,16 @@ export default function Home() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
 
+  //Pegue a data do dia atual 
+  const date = new Date().toLocaleDateString('pt-BR', {
+    weekday: 'long',
+  }).toLowerCase();
+
+  const todayAnimes = animes.filter((anime) => anime.date.toLowerCase() === date);
+  const formattedDate = date.charAt(0).toUpperCase() + date.slice(1);
+
+
+
   return (
 
     <>
@@ -55,6 +64,14 @@ export default function Home() {
         <div className="bg-black-dark">
           <Banner />
           <main className="container mx-auto py-8">
+
+            <div className="calendar">
+              <h2 className="text-white text-center text-2xl font-bold">
+                <span className="border-b-2 border-emerald-400">Animes de Hoje:</span>
+              </h2>
+              <Calendar animesByDate={{ [formattedDate]: todayAnimes }} />
+            </div>
+
             <div className="section">
               <PopularAnime />
             </div>

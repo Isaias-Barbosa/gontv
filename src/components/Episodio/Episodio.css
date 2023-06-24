@@ -30,12 +30,12 @@
   justify-content:center;
 }
 
-
 .aspect-ratio-inner {
   width: 85%;
   height: 100%;
   display:flex;
   justify-content:center;
+  align-items: center;
 }
 
 .aspect-ratio-inner video {
@@ -105,18 +105,20 @@
   background-color: #00b894;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .info-container {
     flex-direction: column;
     display: flex;
     align-items: start;
+    padding-left: 9%;
 
-    margin-top: 16px;
   }
 
-
+.aspect-ratio-inner {
+  width: 90%;
+}
   .resolution-container {
-    margin-bottom: 2%;
+    margin-bottom:1%;
   }
 
   .button-container {
@@ -189,9 +191,4 @@
 .small-player {
   width: 100%;
   height: 100%;
-}
-
-.mobile-player {
-  width: 100%;
-  height: 300px; /* Defina a altura desejada para o player em telas menores */
 }

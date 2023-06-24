@@ -14,6 +14,8 @@ export default function Calendar({ animesByDate }) {
     return title;
   };
 
+  
+
 
   const settings = {
     dots: true,
@@ -56,9 +58,7 @@ export default function Calendar({ animesByDate }) {
   return (
     <div className="bg-black-dark py-4">
       <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
-        <h2 className="text-white text-center text-2xl mb-4">
-          <span className="border-b-2 border-emerald-400">Calendário</span>
-        </h2>
+
         {Object.entries(animesByDate).map(([date, animes]) => (
           <div key={date}>
             <h2 className="text-2xl font-bold text-white ms-1 flex justify-start mb-3">

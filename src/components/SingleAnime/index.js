@@ -32,7 +32,7 @@ export default function SingleAnime({ anime }) {
       <div className="bg-black-dark">
         <main className="container mx-auto py-7 relative" style={{ position: "relative", overflow: "hidden" }}>
 
-          <div className="background-container relative rounded-lg border-b-2 border-lime-400 mx-auto sm:mx-2 md:mx-2 lg:mx-2 xl:mx-2 2xl:mx-2 ">
+          <div className="background-container relative rounded-lg border-b-2 border-lime-400 mx-2 sm:mx-2 md:mx-2 lg:mx-2 xl:mx-2 2xl:mx-2 ">
             <div
               className="w-full h-auto bg-cover bg-center rounded-lg"
               style={{
@@ -96,7 +96,7 @@ export default function SingleAnime({ anime }) {
             </div>
           </div>
  
-          <div className="my-5 mx-auto sm:mx-2 md:mx-2 lg:mx-2 xl:mx-2 2xl:mx-2">
+          <div className="my-5 mx-2 sm:mx-2 md:mx-2 lg:mx-2 xl:mx-2 2xl:mx-2">
             <h3 className="text-2xl text-white font-bold mb-4 text-center">
               <span className="border-b-2 border-emerald-400">Sinopse</span>
             </h3>
@@ -108,7 +108,7 @@ export default function SingleAnime({ anime }) {
             <h3 className="text-2xl text-center text-white font-bold mb-4">
               <span className="border-b-2 border-emerald-400"> Episódios </span>
             </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-3 mx-auto sm:mx-2 md:mx-2 lg:mx-2 xl:mx-2 2xl:mx-2 my-10 ">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-3 mx-2 sm:mx-2 md:mx-2 lg:mx-2 xl:mx-2 2xl:mx-2 my-10 ">
               {anime.episodes.map((episode) => (
                 <div key={episode.id} className="aspect-ratio-box w-full">
                   <Link to={`/animes/${anime.slug}/${episode.titleSlug}/${episode.languageEpisode}`}>
@@ -130,7 +130,7 @@ export default function SingleAnime({ anime }) {
               ))}
             </div>
           </div>
-          <div className="mx-auto sm:mx-2 md:mx-3 lg:mx-3 xl:mx-3 2xl:mx-3">
+          <div className="mx-2 sm:mx-2 md:mx-3 lg:mx-3 xl:mx-3 2xl:mx-3">
           <Discus  identifier={currentAnimeSlug} title={currentAnimeTitle} />
           </div>
         </main >
