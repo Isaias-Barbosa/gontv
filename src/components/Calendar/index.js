@@ -37,8 +37,8 @@ export default function Calendar({ animesByDate }) {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 4,
+          slidesToScroll: 4,
 
         },
       },
@@ -56,13 +56,12 @@ export default function Calendar({ animesByDate }) {
 
 
   return (
-    <div className="bg-black-dark py-4">
-      <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
-
+    <div className="bg-black-dark py-2">
+      <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1 telona">
         {Object.entries(animesByDate).map(([date, animes]) => (
           <div key={date}>
             <h2 className="text-2xl font-bold text-white ms-1 flex justify-start mb-3">
-              <span className="border-b-2 border-emerald-400">{date}</span>
+              <span className="border-b-4 border-emerald-600">{date}</span>
               </h2>
               <Slider {...settings}>
               {animes.map((anime, index) => (

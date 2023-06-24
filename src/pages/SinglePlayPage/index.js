@@ -24,6 +24,7 @@ export default function SinglePlayPage() {
   if (!episode) {
     return <div>Episódio não encontrado</div>;
   }
+  
 
   return <>
     <Helmet>

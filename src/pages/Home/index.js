@@ -38,14 +38,16 @@ export default function Home() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
 
-  //Pegue a data do dia atual 
+  //Pegue a data do dia e compara com os dias da semana.
   const date = new Date().toLocaleDateString('pt-BR', {
     weekday: 'long',
   }).toLowerCase();
-
+  
+  //Filtra os animes que tem dentro da categoria "date" e compara o tamanho das letras
   const todayAnimes = animes.filter((anime) => anime.date.toLowerCase() === date);
-  const formattedDate = date.charAt(0).toUpperCase() + date.slice(1);
+  //const formattedDate = date.charAt(0).toUpperCase() + date.slice(1);
 
+  const title = `Animes de Hoje`;
 
 
   return (
@@ -65,11 +67,10 @@ export default function Home() {
           <Banner />
           <main className="container mx-auto py-8">
 
-            <div className="calendar">
-              <h2 className="text-white text-center text-2xl font-bold">
-                <span className="border-b-2 border-emerald-400">Animes de Hoje:</span>
-              </h2>
-              <Calendar animesByDate={{ [formattedDate]: todayAnimes }} />
+            <div className="calendar mb-5 items-center  mx-auto">
+              <div>
+              <Calendar animesByDate={{ [title]: todayAnimes }} />
+              </div>
             </div>
 
             <div className="section">
@@ -79,7 +80,7 @@ export default function Home() {
             <div className="section">
 
               <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
-                <h2 className="text-2xl text-start text-white font-bold mb-1 p-1 ">
+                <h2 className="text-2xl text-start text-white font-bold p-1 ">
                   <span className="border-b-4 border-emerald-600 pb-1"> Lançamentos</span>
                 </h2>
                 <div className="text-end">
