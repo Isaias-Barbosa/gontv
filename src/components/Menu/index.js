@@ -8,7 +8,6 @@ import { LuDices } from "react-icons/lu";
 import { Link, useLocation } from "react-router-dom";
 import Search from "components/Search";
 import logo from "assets/logo.png";
-import { FcCalendar } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import Hamburger from 'hamburger-react'
 

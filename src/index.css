@@ -183,20 +183,35 @@ footer {
   left: 0;
   width: 100%;
   padding: 1rem;
-  background-color: #212121;
   color: #ffffff;
 }
 
 .footer-content {
   margin-top: auto;
- justify-content: space-between;
-  align-items: flex-end;
+ justify-content: space-start;
+  align-items: flex-start;
 }
 
 .footer-content p {
-  margin: 1.3em;
+  margin: 1em;
 }
 
+.footer-container {
+  position: relative;
+}
+
+.footer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.desktopbackground.org/download/2560x960/2015/11/24/1047198_15-quality-hunter-x-hunter-wallpapers-anime-manga_3300x1862_h.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  filter: brightness(0.4) contrast(0.7) opacity(0.9);
+}
 
 .filtro-select {
   padding: 8px;
