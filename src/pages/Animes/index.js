@@ -1,38 +1,53 @@
-import animes from 'json/animes.json'
-import { Link } from 'react-router-dom'
-import { MdPlayCircleFilled } from 'react-icons/md';
 import React, { useState } from 'react';
 import { Helmet } from "react-helmet";
 import { LinearProgress } from "@mui/material";
 import { useEffect } from 'react';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import CardAnime from 'components/CardAnime';
 
 export default function Animes() {
-
+    // Estado para armazenar os dados dos animes
     const [isLoading, setIsLoading] = useState(true);
+    const [animesData, setAnimesData] = useState([]);
 
+    // Função para buscar os animes do servidor
+    const fetchAnimes = () => {
+        fetch('http://localhost:3001/animes')
+          .then(response => response.json())
+          .then(data => {
+            console.log(data); // Verifica se os dados estão sendo recebidos corretamente
+    
+            const currentAnimes = data.map(anime => ({
+              id:  anime.data.mal_id,
+              title: anime.data.title,
+              imageUrl: anime.data.images?.jpg?.large_image_url,
+              tv: anime.data.type,
+              // outras propriedades do anime que você deseja exibir
+              
+            }));
+    
+            console.log(currentAnimes); // Verifica os animes convertidos
+    
+            setAnimesData(currentAnimes);
+            setTimeout(() => {
+                setIsLoading(false);
+            }, 2000);
+          })
+          .catch(error => {
+            console.log('Ocorreu um erro:', error);
+          });
+      };
+    
+      useEffect(() => {
+        fetchAnimes();
+      }, []);
 
-    useEffect(() => {
-        // Simulação de uma requisição assíncrona
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 2000); // Tempo de simulação de carregamento (2 segundos)
-    }, []);
+    console.log(animesData)
 
     const pageTitle = `Gon.TV - Lista de Animes Legendados`;
 
-    const MAX_TITLE_LENGTH = 15; // Define o número máximo de caracteres do título
-
-    const truncateTitle = (title) => {
-        if (title.length > MAX_TITLE_LENGTH) {
-            return title.substring(0, MAX_TITLE_LENGTH) + '...';
-        }
-        return title;
-    };
-
     // Filtra os animes legendados
-    const legendadoAnimes = animes.filter((anime) => anime.Type === 'TV' && anime.language === 'Legendado');
 
     const itemsPerPage = 36; // Número de animes por página
 
@@ -44,7 +59,12 @@ export default function Animes() {
     const endIndex = startIndex + itemsPerPage;
 
     // Animes da página atual
-    const currentAnimes = legendadoAnimes.slice(startIndex, endIndex);
+    const TVAnimes = animesData.filter((anime) => anime.tv === 'TV');
+    const currentAnimes = TVAnimes ? TVAnimes.slice(startIndex, endIndex) : [];
+
+
+
+    console.log(currentAnimes)
 
     // Função para navegar para a página selecionada
     const handlePageChange = (event, newPage) => {
@@ -67,42 +87,28 @@ export default function Animes() {
                         <h2 className="text-2xl text-white text-start font-bold mb-8 p-1">
                             <span className="border-b-4 border-emerald-600 pb-1"> Animes Legendados</span>
                         </h2>
-                        <div class="container mx-auto">
+                        <div className="container mx-auto">
                             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-3">
                                 {currentAnimes.map((anime) => (
-                                    <div className="aspect-ratio-box" >
-                                        <div className="relative">
-                                            <Link to={`/animes/${anime.slug}`} key={anime.id}>
-                                                <div className="anime-cover">
-                                                    <img
-                                                        src={anime.coverImage}
-                                                        alt={anime.title}
-                                                        className="object-cover custom-height"
-                                                    />
-                                                    <div className="overlay"></div>
-                                                    <button className="play-button">
-                                                        <MdPlayCircleFilled className="text-white text-5xl" />
-                                                    </button>
-                                                </div>
-                                            </Link>
-                                            <h3 className="text-lg text-white text-center mb-3 px-2 font-semibold">{truncateTitle(anime.title)}</h3>
-                                        </div>
-                                    </div>
+                                 <CardAnime 
+                                 key={anime._id}
+                                 anime={{
+                                    title: anime.title,
+                                    coverImage: anime.imageUrl,
+                                 }}
+                                 />   
                                 ))}
-
                             </div>
-
                         </div>
-
                         {/* Paginação */}
-                        {legendadoAnimes.length > itemsPerPage && (
+                        {animesData.length > itemsPerPage && (
                             <div className="flex justify-center mt-10">
                                 <Stack spacing={2}>
                                     <Pagination
                                         className="bg-zinc-800"
                                         size="large"
                                         color="primary"
-                                        count={Math.ceil(legendadoAnimes.length / itemsPerPage)}
+                                        count={Math.ceil(animesData.length / itemsPerPage)}
                                         page={currentPage}
                                         onChange={handlePageChange}
                                         sx={{

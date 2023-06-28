@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import React, { useState, useEffect } from 'react';
 import { BeatLoader } from 'react-spinners';
+import CardAnime from 'components/CardAnime';
 
 export default function LastAddedFilmes({ animes }) {
 
@@ -90,21 +91,8 @@ export default function LastAddedFilmes({ animes }) {
           <Slider {...settings}>
             {limitedAnimes && limitedAnimes.length > 0 ? (
               limitedAnimes.map((anime) => (
-                <div className="aspect-ratio-box" >
-                  <div key={anime.id} className="relative">
-                    <Link to={`/animes/${anime.slug}`}>
-                      <div className="anime-cover">
-                        <img src={anime.coverImage} alt={anime.title}
-                          className="px-1 object-cover custom-height mb-1"
-                        />
-                        <div className="overlay"></div>
-                        <button className="play-button">
-                          <MdPlayCircleFilled className="text-white text-4xl" />
-                        </button>
-                      </div>
-                    </Link>
-                    <h3 className="text-md text-white text-center font-semibold">{truncateTitle(anime.title)}</h3>
-                  </div>
+                <div className="px-1">
+                <CardAnime anime={anime} />
                 </div>
               ))
             ) : (

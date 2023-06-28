@@ -5,32 +5,51 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Pagination, Stack } from '@mui/material';
 import { LinearProgress } from "@mui/material";
+import CardAnime from 'components/CardAnime';
 
 export default function Filmes() {
 
+  // Estado para armazenar os dados dos animes
   const [isLoading, setIsLoading] = useState(true);
+  const [animesData, setAnimesData] = useState([]);
 
+  // Função para buscar os animes do servidor
+  const fetchAnimes = () => {
+    fetch('http://localhost:3001/animes')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data); // Verifica se os dados estão sendo recebidos corretamente
 
-  useEffect(() => {
-    // Simulação de uma requisição assíncrona
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000); // Tempo de simulação de carregamento (2 segundos)
-  }, []);
+        const currentAnimes = data.map(anime => ({
+          id: anime.data.mal_id,
+          title: anime.data.title,
+          imageUrl: anime.data.images?.jpg?.large_image_url,
+          tv: anime.data.type,
+          // outras propriedades do anime que você deseja exibir
 
-  const pageTitle = `Gon.TV - Lista de Filmes`;
+        }));
 
-  const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
+        console.log(currentAnimes); // Verifica os animes convertidos
 
-  const truncateTitle = (title) => {
-    if (title.length > MAX_TITLE_LENGTH) {
-      return title.substring(0, MAX_TITLE_LENGTH) + '...';
-    }
-    return title;
+        setAnimesData(currentAnimes);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 2000);
+      })
+      .catch(error => {
+        console.log('Ocorreu um erro:', error);
+      });
   };
 
-  // Filtra os animes dublados
-  const filmes = animes.filter((anime) => anime.Type === 'Filme');
+  useEffect(() => {
+    fetchAnimes();
+  }, []);
+
+  console.log(animesData)
+
+  const pageTitle = `Gon.TV - Lista de Animes Legendados`;
+
+  // Filtra os animes legendados
 
   const itemsPerPage = 36; // Número de animes por página
 
@@ -42,7 +61,12 @@ export default function Filmes() {
   const endIndex = startIndex + itemsPerPage;
 
   // Animes da página atual
-  const currentAnimes = filmes.slice(startIndex, endIndex);
+  const TVAnimes = animesData.filter((anime) => anime.tv === 'Movie');
+  const currentAnimes = TVAnimes ? TVAnimes.slice(startIndex, endIndex) : [];
+
+
+
+  console.log(currentAnimes)
 
   // Função para navegar para a página selecionada
   const handlePageChange = (event, newPage) => {
@@ -70,37 +94,25 @@ export default function Filmes() {
             <div class="container mx-auto">
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-3">
                 {currentAnimes.map((anime) => (
-                  <div className="aspect-ratio-box" >
-                    <div className="relative">
-                      <Link to={`/animes/${anime.slug}`} key={anime.id}>
-                        <div className="anime-cover">
-                          <img
-                            src={anime.coverImage}
-                            alt={anime.title}
-                            className="object-cover custom-height"
-
-                          />
-                          <div className="overlay"></div>
-                          <button className="play-button">
-                            <MdPlayCircleFilled className="text-white text-5xl" />
-                          </button>
-                        </div>
-                      </Link>
-                      <h3 className="text-lg text-white text-center mb-3 px-2 font-semibold">{truncateTitle(anime.title)}</h3>
-                    </div>
-                  </div>
+                  <CardAnime
+                    key={anime._id}
+                    anime={{
+                      title: anime.title,
+                      coverImage: anime.imageUrl,
+                    }}
+                  />
                 ))}
               </div>
             </div>
             {/* Paginação */}
-            {Filmes.length > itemsPerPage && (
+            {animesData.length > itemsPerPage && (
               <div className="flex justify-center mt-10">
                 <Stack spacing={2}>
                   <Pagination
                     className="bg-zinc-800"
                     size="large"
                     color="primary"
-                    count={Math.ceil(Filmes.length / itemsPerPage)}
+                    count={Math.ceil(animesData.length / itemsPerPage)}
                     page={currentPage}
                     onChange={handlePageChange}
                     sx={{

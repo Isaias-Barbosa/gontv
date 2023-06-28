@@ -21,6 +21,7 @@ import MeuPerfil from "pages/Profile/MeuPerfil";
 import MinhaConta from "pages/Profile/MinhaConta";
 import DownloadEpisodio from "pages/DownloadEpisodio";
 import GenerosPage from "pages/GenerosPage";
+import AnimePage from "pages/AnimePage";
 
 
 function AppRoutes() {
@@ -31,6 +32,7 @@ function AppRoutes() {
         <Routes>
           <Route path="/" element={<Layout><Home /></Layout>} />
           <Route path="/animes/" element={<Layout><Animes /></Layout>} />
+          <Route path="/animesPage/" element={<Layout><AnimePage /></Layout>} />
           <Route path="/lancamentos/*" element={<Layout><AnimesLancamentos /></Layout>} />
           <Route path="/tvAnimes/*" element={<Layout><TVAnimes /></Layout>} />
           <Route path="/animesDublados/*" element={<Layout><AnimesDub /></Layout>} />

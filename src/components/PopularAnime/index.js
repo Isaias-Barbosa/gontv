@@ -7,6 +7,7 @@ import animeDetails from 'json/animes.json';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import CardAnime from 'components/CardAnime';
 
 export default function PopularAnime() {
 
@@ -104,23 +105,8 @@ export default function PopularAnime() {
         ) : (
                   <Slider {...settings}>
           {popularAnimeList.map((anime) => (
-            <div className="aspect-ratio-box" key={anime.id}>
-              <div className={`relative ${isMobile ? 'mobile-img' : ''}`}>
-                <Link to={`/animes/${anime.slug}`}>
-                  <div className="anime-cover">
-                    <img
-                      src={anime.coverImage}
-                      alt={anime.title}
-                      className="px-1 object-cover custom-height "                
-                    />
-                    <div className="overlay"></div>
-                    <button className="play-button">
-                      <MdPlayCircleFilled className="text-white text-5xl" />
-                    </button>
-                  </div>
-                </Link>
-                <h3 className="text-lg text-center text-white font-semibold">{truncateTitle(anime.title)}</h3>
-              </div>
+            <div className="px-1">
+            <CardAnime anime={anime} />
             </div>
           ))}
         </Slider>

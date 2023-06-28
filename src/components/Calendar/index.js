@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import CardAnime from 'components/CardAnime';
 
 export default function Calendar({ animesByDate }) {
   const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
@@ -64,22 +65,9 @@ export default function Calendar({ animesByDate }) {
               <span className="border-b-4 border-emerald-600">{date}</span>
               </h2>
               <Slider {...settings}>
-              {animes.map((anime, index) => (
-                <div className="aspect-ratio-box" >
-                  <div key={index} className="relative">
-                  <Link to={`/animes/${anime.slug}`}>
-                    <div className="anime-cover">
-                      <img
-                        className="px-1 object-cover custom-height mb-1"
-                        src={anime.coverImage} alt={anime.title} />
-                      <div className="overlay"></div>
-                      <button className="play-button">
-                        <MdPlayCircleFilled className="text-white text-4xl" />
-                      </button>
-                    </div>
-                    </Link>
-                  </div>
-                  <h3 className="text-center text-white font-bold mt-2">{truncateTitle(anime.title)}</h3>
+              {animes.map((anime) => (
+                <div className="px-1">
+                <CardAnime anime={anime} />
                 </div>
               ))}
           </Slider>
