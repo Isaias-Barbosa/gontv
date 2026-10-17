@@ -1,4 +1,3 @@
-import animes from 'json/animes.json'
 import { Link } from 'react-router-dom'
 import { MdPlayCircleFilled } from 'react-icons/md';
 import React, { useState, useEffect } from 'react';
@@ -6,8 +5,10 @@ import { Helmet } from "react-helmet";
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import { LinearProgress } from "@mui/material";
+import { usePublicAnimes } from 'context/AnimeCatalogContext';
 
 export default function AnimesDub() {
+  const animes = usePublicAnimes();
 
   const [isLoading, setIsLoading] = useState(true);
 

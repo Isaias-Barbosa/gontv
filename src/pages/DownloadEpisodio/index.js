@@ -1,11 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Download from 'components/Download';
-import animes from 'json/animes.json';
 import { Helmet } from 'react-helmet';
+import { usePublicAnimes } from 'context/AnimeCatalogContext';
 
 export default function DownloadEpisodio() {
-
+  const animes = usePublicAnimes();
 
   const { slug, titleSlug } = useParams();
 
@@ -29,7 +29,7 @@ export default function DownloadEpisodio() {
   // Obtém a linguagem do episódio
   const languageEpisode = episodeData ? episodeData.languageEpisode : '';
 
-  const pageTitle = ` Gon.TV - Baixar ${anime.title} - ${anime.language} - ${episodeTitle} - Online em FHD `;
+  const pageTitle = ` Gon.TV - Baixar  - Online em FHD `;
 
 
   return (

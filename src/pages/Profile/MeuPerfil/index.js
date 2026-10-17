@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import animes from 'json/animes.json'; // Importe seu arquivo animes.json
 import { Link } from 'react-router-dom';
 import { MdPlayCircleFilled } from "react-icons/md";
 import perfilData from 'json/perfil.json';
 import { Helmet } from 'react-helmet';
+import { usePublicAnimes } from 'context/AnimeCatalogContext';
 
 
 export default function MeuPerfil() {
+    const animes = usePublicAnimes();
 
     const pageTitle = 'Gon.TV - MeuPerfil'
 

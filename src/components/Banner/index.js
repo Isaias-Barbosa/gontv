@@ -1,12 +1,13 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Importe o estilo do carrossel
 import { Carousel } from "react-responsive-carousel"; // Importe o componente do carrossel
-import animes from "json/animes.json";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import { usePublicAnimes } from 'context/AnimeCatalogContext';
 
 import { BeatLoader } from 'react-spinners';
 
 export default function Banner() {
+  const animes = usePublicAnimes();
   const [popularAnimeList, setPopularAnimeList] = useState([]);
 
   const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +27,7 @@ export default function Banner() {
       .slice(0, 3);
     setPopularAnimeList(filteredList);
     return;
-  }, []);
+  }, [animes]);
 
   const MAX_TITLE_LENGTH = 350; // Define o número máximo de caracteres do título
 

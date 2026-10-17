@@ -1,4 +1,3 @@
-import animes from 'json/animes.json'
 import { Link } from 'react-router-dom'
 import { MdPlayCircleFilled } from 'react-icons/md';
 import React, { useState, useEffect } from 'react';
@@ -6,46 +5,25 @@ import { Helmet } from 'react-helmet';
 import { Pagination, Stack } from '@mui/material';
 import { LinearProgress } from "@mui/material";
 import CardAnime from 'components/CardAnime';
+import { usePublicAnimes } from 'context/AnimeCatalogContext';
 
 export default function Filmes() {
+  const animes = usePublicAnimes();
 
   // Estado para armazenar os dados dos animes
   const [isLoading, setIsLoading] = useState(true);
   const [animesData, setAnimesData] = useState([]);
 
-  // Função para buscar os animes do servidor
-  const fetchAnimes = () => {
-    fetch('http://localhost:3001/animes')
-      .then(response => response.json())
-      .then(data => {
-        console.log(data); // Verifica se os dados estão sendo recebidos corretamente
 
-        const currentAnimes = data.map(anime => ({
-          id: anime.data.mal_id,
-          title: anime.data.title,
-          imageUrl: anime.data.images?.jpg?.large_image_url,
-          tv: anime.data.type,
-          // outras propriedades do anime que você deseja exibir
 
-        }));
+ // Função para buscar os animes do servidor
+ useEffect(() => {
+    // Simulação de uma requisição assíncrona
+    setTimeout(() => {
+        setIsLoading(false);
+    }, 2000); // Tempo de simulação de carregamento (2 segundos)
+}, []);
 
-        console.log(currentAnimes); // Verifica os animes convertidos
-
-        setAnimesData(currentAnimes);
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 2000);
-      })
-      .catch(error => {
-        console.log('Ocorreu um erro:', error);
-      });
-  };
-
-  useEffect(() => {
-    fetchAnimes();
-  }, []);
-
-  console.log(animesData)
 
   const pageTitle = `Gon.TV - Lista de Animes Legendados`;
 
@@ -61,7 +39,7 @@ export default function Filmes() {
   const endIndex = startIndex + itemsPerPage;
 
   // Animes da página atual
-  const TVAnimes = animesData.filter((anime) => anime.tv === 'Movie');
+  const TVAnimes = animes.filter((anime) => anime.Type === 'Filme');
   const currentAnimes = TVAnimes ? TVAnimes.slice(startIndex, endIndex) : [];
 
 
@@ -97,8 +75,9 @@ export default function Filmes() {
                   <CardAnime
                     key={anime._id}
                     anime={{
+                      slug: anime.slug,
                       title: anime.title,
-                      coverImage: anime.imageUrl,
+                      coverImage: anime.coverImage,
                     }}
                   />
                 ))}

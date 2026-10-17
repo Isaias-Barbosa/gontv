@@ -1,12 +1,13 @@
-import animes from 'json/animes.json'
 import { Link } from 'react-router-dom'
 import { MdPlayCircleFilled } from 'react-icons/md';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { LinearProgress, Pagination, Stack } from "@mui/material";
+import { usePublicAnimes } from 'context/AnimeCatalogContext';
 
 
 export default function TVAnimes() {
+    const animes = usePublicAnimes();
 
     const [isLoading, setIsLoading] = useState(true);
 

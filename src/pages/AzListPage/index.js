@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
-import animes from 'json/animes.json';
 import { Link } from 'react-router-dom';
+import { usePublicAnimes } from 'context/AnimeCatalogContext';
 import AzList from 'components/AzList';
 import { MdPlayCircleFilled } from 'react-icons/md';
 import React, { useState, useEffect } from 'react';
@@ -10,6 +10,7 @@ import Stack from '@mui/material/Stack';
 import { LinearProgress } from '@mui/material';
 
 export default function AzListPage() {
+    const animes = usePublicAnimes();
 
     const [isLoading, setIsLoading] = useState(true);
 

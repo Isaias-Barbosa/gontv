@@ -1,13 +1,14 @@
 import Filtro from 'components/Filtro';
 import React, { useState, useEffect } from 'react';
-import data from 'json/animes.json';
 import { Link } from 'react-router-dom';
 import { MdPlayCircleFilled } from 'react-icons/md';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { LinearProgress } from "@mui/material";
+import { usePublicAnimes } from 'context/AnimeCatalogContext';
 
 export default function FiltroPage() {
+    const data = usePublicAnimes();
 
     const pageTitle = "Gon.TV - Filtro de Animes"
 

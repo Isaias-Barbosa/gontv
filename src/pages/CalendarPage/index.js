@@ -1,11 +1,12 @@
 import { LinearProgress } from '@mui/material';
 import Calendar from 'components/Calendar';
-import animes from 'json/animes.json';
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { usePublicAnimes } from 'context/AnimeCatalogContext';
 
 
 export default function CalendarPage() {
+  const animes = usePublicAnimes();
 
   const [isLoading, setIsLoading] = useState(true);
 

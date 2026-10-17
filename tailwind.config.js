@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme')
 
-export const content = [
+const content = [
   "./src/**/*.{js,jsx,ts,tsx}",
 ];
-export const theme = {
+const theme = {
   extend: {
     fontFamily: {
       sans: ['Inter var', ...defaultTheme.fontFamily.sans],
@@ -32,5 +32,7 @@ export const theme = {
     // => @media (min-width: 1536px) { ... }
   },
 };
-export const plugins = [];
+const plugins = [];
+
+module.exports = { content, theme, plugins }
 

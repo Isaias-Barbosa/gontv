@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: gontv-api
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm run start-server
+    healthCheckPath: /api/animes
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: NODE_ENV
+        value: production
+
+  - type: static
+    name: gontv-frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./build
+    envVars:
+      - key: REACT_APP_API_URL
+        sync: false

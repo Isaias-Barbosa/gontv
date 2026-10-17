@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import animes from 'json/animes.json';
 import { Helmet } from 'react-helmet';
+import { usePublicAnimes } from 'context/AnimeCatalogContext';
 
 export default function GenerosPage() {
+  const animes = usePublicAnimes();
 
   const pageTitle = `Gon.TV - Lista de Gêneros`;
 

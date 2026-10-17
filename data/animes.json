@@ -44,7 +44,6 @@
           }
         ],
         "title": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
-        "slug": "kimetsu-no-yaiba-katanakaji-no-sato-hen",
         "title_english": "Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc",
         "title_japanese": "鬼滅の刃 刀鍛冶の里編",
         "title_synonyms": [],
@@ -150,7 +149,8 @@
           }
         ]
       },
-      "id": 1
+      "id": 1,
+      "slug": "kimetsu-no-yaiba-katanakaji-no-sato-hen"
     },
     {
       "data": {
@@ -319,7 +319,8 @@
           }
         ]
       },
-      "id": 2
+      "id": 2,
+      "slug": "oshi-no-ko"
     },
     {
       "data": {
@@ -486,7 +487,8 @@
           }
         ]
       },
-      "id": 3
+      "id": 3,
+      "slug": "jigokuraku"
     },
     {
       "data": {
@@ -638,7 +640,8 @@
           }
         ]
       },
-      "id": 4
+      "id": 4,
+      "slug": "dr-stone-new-world"
     },
     {
       "data": {
@@ -819,7 +822,8 @@
           }
         ]
       },
-      "id": 5
+      "id": 5,
+      "slug": "mashle-magic-and-muscles"
     },
     {
       "data": {
@@ -987,7 +991,8 @@
           }
         ]
       },
-      "id": 6
+      "id": 6,
+      "slug": "tengoku-daimakyou"
     },
     {
       "data": {
@@ -1161,7 +1166,8 @@
         ],
         "demographics": []
       },
-      "id": 7
+      "id": 7,
+      "slug": "yamada-kun-to-lv999-no-koi-wo-suru"
     },
     {
       "data": {
@@ -1315,7 +1321,8 @@
         "themes": [],
         "demographics": []
       },
-      "id": 8
+      "id": 8,
+      "slug": "kono-subarashii-sekai-ni-bakuen-wo"
     },
     {
       "data": {
@@ -1470,7 +1477,8 @@
           }
         ]
       },
-      "id": 9
+      "id": 9,
+      "slug": "tonikaku-kawaii-2nd-season"
     },
     {
       "data": {
@@ -1643,7 +1651,8 @@
         ],
         "demographics": []
       },
-      "id": 10
+      "id": 10,
+      "slug": "isekai-de-cheat-skill-wo-te-ni-shita-ore-wa-genjitsu-sekai-wo-mo-musou-suru-level-up-wa-jinsei-wo-kaeta"
     },
     {
       "data": {
@@ -1811,7 +1820,8 @@
           }
         ]
       },
-      "id": 11
+      "id": 11,
+      "slug": "skip-to-loafer"
     },
     {
       "data": {
@@ -2004,7 +2014,8 @@
           }
         ]
       },
-      "id": 12
+      "id": 12,
+      "slug": "boku-no-kokoro-no-yabai-yatsu"
     },
     {
       "data": {
@@ -2186,7 +2197,8 @@
           }
         ]
       },
-      "id": 13
+      "id": 13,
+      "slug": "dead-mount-death-play"
     },
     {
       "data": {
@@ -2361,7 +2373,8 @@
           }
         ]
       },
-      "id": 14
+      "id": 14,
+      "slug": "kimi-wa-houkago-insomnia"
     },
     {
       "data": {
@@ -2551,7 +2564,8 @@
           }
         ]
       },
-      "id": 15
+      "id": 15,
+      "slug": "mahoutsukai-no-yome-season-2"
     },
     {
       "data": {
@@ -2736,7 +2750,8 @@
           }
         ]
       },
-      "id": 16
+      "id": 16,
+      "slug": "gintama-the-final"
     },
     {
       "data": {
@@ -2929,7 +2944,8 @@
           }
         ]
       },
-      "id": 17
+      "id": 17,
+      "slug": "koe-no-katachi"
     },
     {
       "data": {
@@ -3086,7 +3102,8 @@
         "themes": [],
         "demographics": []
       },
-      "id": 18
+      "id": 18,
+      "slug": "violet-evergarden-movie"
     },
     {
       "data": {
@@ -3255,7 +3272,8 @@
           }
         ]
       },
-      "id": 19
+      "id": 19,
+      "slug": "kaguya-sama-wa-kokurasetai-first-kiss-wa-owaranai"
     },
     {
       "data": {
@@ -3447,7 +3465,8 @@
         ],
         "demographics": []
       },
-      "id": 20
+      "id": 20,
+      "slug": "kimi-no-na-wa"
     },
     {
       "data": {
@@ -3611,7 +3630,8 @@
         ],
         "demographics": []
       },
-      "id": 21
+      "id": 21,
+      "slug": "kizumonogatari-iii-reiketsu-hen"
     },
     {
       "data": {
@@ -5936,6 +5956,131 @@
         "demographics": []
       },
       "id": 34
+    },
+    {
+      "data": {
+        "mal_id": 49283,
+        "url": "https://myanimelist.net/anime/49283/Bakuten_Movie",
+        "images": {
+          "jpg": {
+            "image_url": "https://cdn.myanimelist.net/images/anime/1579/123864.jpg",
+            "small_image_url": "https://cdn.myanimelist.net/images/anime/1579/123864t.jpg",
+            "large_image_url": "https://cdn.myanimelist.net/images/anime/1579/123864l.jpg"
+          },
+          "webp": {
+            "image_url": "https://cdn.myanimelist.net/images/anime/1579/123864.webp",
+            "small_image_url": "https://cdn.myanimelist.net/images/anime/1579/123864t.webp",
+            "large_image_url": "https://cdn.myanimelist.net/images/anime/1579/123864l.webp"
+          }
+        },
+        "trailer": {
+          "youtube_id": "cicrVkV1ths",
+          "url": "https://www.youtube.com/watch?v=cicrVkV1ths",
+          "embed_url": "https://www.youtube.com/embed/cicrVkV1ths?enablejsapi=1&wmode=opaque&autoplay=1",
+          "images": {
+            "image_url": "https://img.youtube.com/vi/cicrVkV1ths/default.jpg",
+            "small_image_url": "https://img.youtube.com/vi/cicrVkV1ths/sddefault.jpg",
+            "medium_image_url": "https://img.youtube.com/vi/cicrVkV1ths/mqdefault.jpg",
+            "large_image_url": "https://img.youtube.com/vi/cicrVkV1ths/hqdefault.jpg",
+            "maximum_image_url": "https://img.youtube.com/vi/cicrVkV1ths/maxresdefault.jpg"
+          }
+        },
+        "approved": true,
+        "titles": [
+          {
+            "type": "Default",
+            "title": "Bakuten!! Movie"
+          },
+          {
+            "type": "Japanese",
+            "title": "映画 バクテン!!"
+          },
+          {
+            "type": "English",
+            "title": "Backflip!! Movie"
+          }
+        ],
+        "title": "Bakuten!! Movie",
+        "title_english": "Backflip!! Movie",
+        "title_japanese": "映画 バクテン!!",
+        "title_synonyms": [],
+        "type": "Movie",
+        "source": "Original",
+        "episodes": 1,
+        "status": "Finished Airing",
+        "airing": false,
+        "aired": {
+          "from": "2022-07-02T00:00:00+00:00",
+          "to": null,
+          "prop": {
+            "from": {
+              "day": 2,
+              "month": 7,
+              "year": 2022
+            },
+            "to": {
+              "day": null,
+              "month": null,
+              "year": null
+            }
+          },
+          "string": "Jul 2, 2022"
+        },
+        "duration": "1 hr 30 min",
+        "rating": "PG-13 - Teens 13 or older",
+        "score": 7.49,
+        "scored_by": 1481,
+        "rank": 1763,
+        "popularity": 4920,
+        "members": 17161,
+        "favorites": 116,
+        "synopsis": "Follow-up anime film for Bakuten!!",
+        "background": null,
+        "season": null,
+        "year": null,
+        "broadcast": {
+          "day": null,
+          "time": null,
+          "timezone": null,
+          "string": null
+        },
+        "producers": [
+          {
+            "mal_id": 17,
+            "type": "anime",
+            "name": "Aniplex",
+            "url": "https://myanimelist.net/anime/producer/17/Aniplex"
+          }
+        ],
+        "licensors": [],
+        "studios": [
+          {
+            "mal_id": 218,
+            "type": "anime",
+            "name": "Zexcs",
+            "url": "https://myanimelist.net/anime/producer/218/Zexcs"
+          }
+        ],
+        "genres": [
+          {
+            "mal_id": 30,
+            "type": "anime",
+            "name": "Sports",
+            "url": "https://myanimelist.net/anime/genre/30/Sports"
+          }
+        ],
+        "explicit_genres": [],
+        "themes": [
+          {
+            "mal_id": 70,
+            "type": "anime",
+            "name": "Performing Arts",
+            "url": "https://myanimelist.net/anime/genre/70/Performing_Arts"
+          }
+        ],
+        "demographics": []
+      },
+      "id": 35
     }
   ]
 }

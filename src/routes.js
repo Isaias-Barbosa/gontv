@@ -21,8 +21,14 @@ import MeuPerfil from "pages/Profile/MeuPerfil";
 import MinhaConta from "pages/Profile/MinhaConta";
 import DownloadEpisodio from "pages/DownloadEpisodio";
 import GenerosPage from "pages/GenerosPage";
-import AnimePage from "pages/AnimePage";
-
+import TorrentPlayer from "pages/TorrentPlayer";
+import AdminLayout from "pages/Admin/AdminLayout";
+import AdminDashboard from "pages/Admin/AdminDashboard";
+import AnimeManager from "pages/Admin/AnimeManager";
+import AnimeForm from "pages/Admin/AnimeForm";
+import EpisodeManager from "pages/Admin/EpisodeManager";
+import EpisodeForm from "pages/Admin/EpisodeForm";
+import { Navigate } from "react-router-dom";
 
 function AppRoutes() {
 
@@ -32,7 +38,9 @@ function AppRoutes() {
         <Routes>
           <Route path="/" element={<Layout><Home /></Layout>} />
           <Route path="/animes/" element={<Layout><Animes /></Layout>} />
-          <Route path="/animesPage/" element={<Layout><AnimePage /></Layout>} />
+          <Route path="/torrent" element={<Layout><TorrentPlayer /></Layout>} />
+          <Route path="/animesPage/" element={<Navigate to="/admin/animes/new" replace />} />
+          <Route path="/animesEdit/" element={<Navigate to="/admin/animes" replace />} />
           <Route path="/lancamentos/*" element={<Layout><AnimesLancamentos /></Layout>} />
           <Route path="/tvAnimes/*" element={<Layout><TVAnimes /></Layout>} />
           <Route path="/animesDublados/*" element={<Layout><AnimesDub /></Layout>} />
@@ -52,6 +60,15 @@ function AppRoutes() {
           <Route path="/register/*" element={<Layout><Register /></Layout>} />
           <Route path="/profile/meuperfil/*" element={<Layout><MeuPerfil /></Layout>} />
           <Route path="/profile/minhaconta/*" element={<Layout><MinhaConta /></Layout>} />
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route index element={<AdminDashboard />} />
+            <Route path="animes" element={<AnimeManager />} />
+            <Route path="animes/new" element={<AnimeForm />} />
+            <Route path="animes/:id/edit" element={<AnimeForm />} />
+            <Route path="animes/:animeId/episodes" element={<EpisodeManager />} />
+            <Route path="animes/:animeId/episodes/new" element={<EpisodeForm />} />
+            <Route path="animes/:animeId/episodes/:episodeId/edit" element={<EpisodeForm />} />
+          </Route>
 
           <Route path="*" element={<Layout><NotFoundPage /></Layout>} />
         </Routes>

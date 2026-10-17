@@ -62,7 +62,7 @@ export default function AnimeForm() {
     console.log(animeData)
     return (
         <div className="container mx-auto p-4">
-            <h1 className="text-2xl font-bold mb-4 text-center">Detalhes do Anime</h1>
+            <h1 className="text-2xl font-bold mb-4 text-center">Detalhes do Anime (só precisa passar o id)</h1>
             <div className="flex mb-4 justify-center">
                 <input
                     type="text"

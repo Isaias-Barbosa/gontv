@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FiSearch, FiX } from "react-icons/fi";
+import { FiSearch, FiVideo, FiX } from "react-icons/fi";
 import { IoLogInOutline } from "react-icons/io5";
 import { AiOutlineHome } from 'react-icons/ai';
 import { BsPlayBtn, BsDisplay, BsShuffle } from 'react-icons/bs';
@@ -215,6 +215,15 @@ export default function Menu() {
                         }`}
                     >
                       Filmes
+                    </Link>
+                  </li>
+                  <li>
+                    <FiVideo className="inline-block mr-2 text-white" size={25} />
+                    <Link
+                      to="/torrent"
+                      className={`text-white hover:text-emerald-500 ${location.pathname === "/torrent" ? "border-b-2 border-b-emerald-500" : ""}`}
+                    >
+                      Player Torrent
                     </Link>
                   </li>
                   <li>

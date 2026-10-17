@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Gon.TV
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto de estudo em React para organizar um catálogo demonstrativo de animes e URLs de episódios. Os dados podem ser gravados localmente ou sincronizados com um Bin privado do Jsonbin.
 
-## Available Scripts
+## Executar localmente
 
-In the project directory, you can run:
+Instale as dependências com `npm install`. Em terminais separados, inicie a API e o React:
 
-### `npm start`
+```text
+npm run start-server
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A API local atende em `http://127.0.0.1:3001`; o React usa esse endereço por padrão. Se necessário, configure `REACT_APP_API_URL` no `.env`. Abra `http://localhost:3000`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Dashboard administrativa
 
-### `npm test`
+Acesse `http://localhost:3000/admin` para gerenciar o catálogo:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `/admin/animes`: listar, buscar, editar, publicar/rascunhar e excluir animes;
+- `/admin/animes/new`: cadastrar anime;
+- cada anime tem uma tela de gerenciamento de episódios, com cadastro, edição e exclusão;
+- episódios guardam URLs de demonstração por resolução. Não há upload nem hospedagem de vídeos.
 
-### `npm run build`
+O layout administrativo é separado do menu público. Esta versão é um protótipo de estudo e não implementa autenticação; não exponha o servidor da API à internet sem adicionar autenticação e autorização.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Unificação inicial dos dados
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`src/json/animes.json` contém o catálogo editorial usado pelo site. `data/animes.json` contém registros importados da Jikan. Gere o formato único executando:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```text
+npm run merge-animes
+```
 
-### `npm run eject`
+O comando cria `data/catalog.json`. Ele combina os registros pelo slug e, quando necessário, por título normalizado. Os campos editoriais e episódios existentes têm precedência; dados Jikan completam os campos ausentes. Registros sem correspondência são criados como rascunhos sem episódios. Execute a migração novamente apenas se quiser reconstruir o catálogo a partir dos dois arquivos de origem.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Jsonbin
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Copie `.env.example` para `.env` e informe sua chave master em `JSONBIN_MASTER_KEY`.
+2. Crie um Bin privado com o catálogo unificado:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```text
+   npm run create-jsonbin-bin
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Copie o `JSONBIN_BIN_ID` exibido para `.env`, sem compartilhar a chave master.
+4. Reinicie `npm run start-server`.
 
-## Learn More
+O React não recebe a chave: as leituras e gravações passam pelo servidor Express. Sem as duas variáveis `JSONBIN_MASTER_KEY` e `JSONBIN_BIN_ID`, o servidor usa `data/catalog.json` como armazenamento local. Se apenas uma variável estiver definida, a API informa erro de configuração em vez de alternar silenciosamente de armazenamento.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Outros comandos
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+npm run build
+npm test
+```

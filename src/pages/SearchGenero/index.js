@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import { Link, useParams } from 'react-router-dom';
-import animes from 'json/animes.json';
 import { MdPlayCircleFilled } from 'react-icons/md';
 import { Helmet } from 'react-helmet';
 import { LinearProgress, Pagination, Stack } from '@mui/material';
+import { usePublicAnimes } from 'context/AnimeCatalogContext';
 
 export default function SearchGenero() {
+    const animes = usePublicAnimes();
 
     const [isLoading, setIsLoading] = useState(true);
 

@@ -36,6 +36,7 @@
     "match-sorter": "^6.3.1",
     "mysql": "^2.18.1",
     "plyr": "^3.7.8",
+    "pg": "^8.16.3",
     "react": "^18.2.0",
     "react-content-loader": "^6.2.1",
     "react-dom": "^18.2.0",
@@ -44,6 +45,7 @@
     "react-loading-skeleton": "^3.3.1",
     "react-player": "^2.12.0",
     "react-preloaders": "^3.0.3",
+    "react-redux": "^8.1.3",
     "react-responsive": "^9.0.2",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.12.1",
@@ -51,6 +53,7 @@
     "react-slick": "^0.29.0",
     "react-spinner": "^0.2.7",
     "react-spinners": "^0.13.8",
+    "redux": "^4.2.1",
     "shaka-player": "^4.3.6",
     "slick-carousel": "^1.8.1",
     "sort-by": "^1.2.0",
@@ -58,11 +61,15 @@
     "video-react": "^0.16.0",
     "video.js": "^8.3.0",
     "videojs-youtube": "^3.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webtorrent": "^3.0.21"
   },
   "scripts": {
     "start": "react-scripts start",
-    "json-server": "json-server --watch data/animes.json --port 3001",
+    "start-server": "node server/index.js",
+    "create-jsonbin-bin": "node server/create-jsonbin-bin.js",
+    "merge-animes": "node server/merge-anime-data.js",
+    "migrate-postgres": "node server/migrate-to-postgres.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -73,6 +80,7 @@
       "react-app/jest"
     ]
   },
+  "proxy": "http://127.0.0.1:3001",
   "browserslist": {
     "production": [
       ">0.2%",

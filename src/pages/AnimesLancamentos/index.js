@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { MdPlayCircleFilled } from 'react-icons/md';
-import animes from 'json/animes.json';
 import { LinearProgress, Pagination, Stack } from '@mui/material';
 import { Helmet } from 'react-helmet';
+import { usePublicAnimes } from 'context/AnimeCatalogContext';
 
 export default function AnimesLancamentos() {
+  const animes = usePublicAnimes();
 
   const pageTitle = `Gon.TV - Ultimos Lançamentos`;
 
@@ -39,7 +40,8 @@ export default function AnimesLancamentos() {
   const endIndex = startIndex + itemsPerPage;
 
   // Animes da página atual
-  const currentAnimes = animes.slice(startIndex, endIndex);
+  const animeWithEpisodes = animes.filter((anime) => anime.episodes.length > 0);
+  const currentAnimes = animeWithEpisodes.slice(startIndex, endIndex);
 
   // Função para navegar para a página selecionada
   const handlePageChange = (event, newPage) => {
@@ -89,14 +91,14 @@ export default function AnimesLancamentos() {
               ))}
             </div>
           </div>
-          {animes.length > itemsPerPage && (
+          {animeWithEpisodes.length > itemsPerPage && (
             <div className="flex justify-center mt-10">
               <Stack spacing={2}>
                 <Pagination
                   className="bg-zinc-800"
                   size="large"
                   color="primary"
-                  count={Math.ceil(animes.length / itemsPerPage)}
+                  count={Math.ceil(animeWithEpisodes.length / itemsPerPage)}
                   page={currentPage}
                   onChange={handlePageChange}
                   sx={{
