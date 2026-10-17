@@ -6,7 +6,7 @@ import Genero from "components/Genero";
 import { useEffect } from "react";
 import { useState } from "react";
 import { LinearProgress } from "@mui/material";
-import { useDispatch } from 'react-redux';
+
 
 
 export default function SingleAnime({ anime }) {

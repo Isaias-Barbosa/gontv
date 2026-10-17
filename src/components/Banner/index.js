@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { usePublicAnimes } from 'context/AnimeCatalogContext';
 
-import { BeatLoader } from 'react-spinners';
+
 
 export default function Banner() {
   const animes = usePublicAnimes();

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { MdPlayCircleFilled } from 'react-icons/md';
+
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -10,7 +10,7 @@ import CardAnime from 'components/CardAnime';
 export default function LastAddedFilmes({animes}) {
 
   const [isLoading, setIsLoading] = useState(true);
-  const [animesData, setAnimesData] = useState([]);
+
 
 
   
@@ -23,14 +23,8 @@ export default function LastAddedFilmes({animes}) {
 
     const filmesAnimes = animes.filter((anime) => anime.Type === "Filme");
 
-  const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
 
-  const truncateTitle = (title) => {
-    if (title.length > MAX_TITLE_LENGTH) {
-      return title.substring(0, MAX_TITLE_LENGTH) + '...';
-    }
-    return title;
-  };
+
 
   const limitedAnimes = filmesAnimes.slice(0, 10);
 

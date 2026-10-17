@@ -14,7 +14,7 @@ import Hamburger from 'hamburger-react'
 export default function Menu() {
   const [isMobile, setIsMobile] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
-  const [searchSize, setSearchSize] = useState("64");
+  const [, setSearchSize] = useState("64");
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
   const location = useLocation();

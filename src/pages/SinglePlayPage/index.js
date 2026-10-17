@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+
 import { Helmet } from 'react-helmet';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Episodio from 'components/Episodio';
-import { useSelector } from 'react-redux';
-import { LinearProgress } from '@mui/material';
+
+
 import { usePublicAnimes } from 'context/AnimeCatalogContext';
 
 export default function SinglePlayPage() {

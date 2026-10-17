@@ -1,13 +1,13 @@
 import Slider from 'react-slick';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import CardAnime from 'components/CardAnime';
 
 export default function Calendarr({ animesByDate })  {
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [animesDay, setAnimesDay] = useState([])
+
+
 
 
   /*

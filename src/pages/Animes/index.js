@@ -11,7 +11,7 @@ export default function Animes() {
     const animes = usePublicAnimes();
     // Estado para armazenar os dados dos animes
     const [isLoading, setIsLoading] = useState(true);
-    const [animesData, setAnimesData] = useState([]);
+    const [animesData] = useState([]);
 
      /*   
     // Função para buscar os animes do servidor

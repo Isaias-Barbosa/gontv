@@ -1,10 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import 'video-react/dist/video-react.css';
-import { AiOutlineDownload, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
-import LinearProgress from '@mui/material/LinearProgress'; // Importando o LinearProgress do Material-UI
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import './Episodio.css';
-import DPlayer from 'dplayer';
+
 import Discus from 'components/Discus';
 
 export default function Episodio({ anime, episodio, slug, languageEpisode, onNextClick, onPrevClick }) {
@@ -36,10 +35,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode, onNex
 
 
 
-  const handleDownload = () => {
-    // Lógica de download do episódio
-    console.log('Realizando o download do episódio');
-  };
+
 
   if (Object.keys(episodeData).length === 0) {
     // Dados do episódio ainda estão sendo carregados, exibir um loader ou uma mensagem de carregamento
@@ -52,32 +48,18 @@ export default function Episodio({ anime, episodio, slug, languageEpisode, onNex
   }
 
   const { titleEpisodio, videoUrl } = episodeData;
-  const defaultViews = 12345; // Número padrão de visualizações
 
-  const resolutions = videoUrl.map((url) => url.resolution);
+
 
   const currentEpisodeSlug = episodio.titleSlug; // Obtém o slug do episódio atual
   const currentEpisodeTitle = episodio.titleEpisodio // Obtém o titulo do episódio atual
   const currentEpisodeId = episodio.id;
   const identifier = `${currentEpisodeSlug}-${currentEpisodeId}`;
 
-  const disqusConfig = {
-    shortname: 'https://gon-tv.disqus.com/embed.js',
-    config: { identifier: `${currentEpisodeSlug}-${currentEpisodeId}`, title: currentEpisodeTitle },
-  };
 
 
-  const changeResolution = (index) => {
-    setCurrentResolution(index);
-    setTimeout(() => {
-      // Renderizar o Disqus novamente
-      const disqusThread = document.getElementById('disqus_thread');
-      if (disqusThread) {
-        disqusThread.innerHTML = ''; // Limpar o conteúdo existente do elemento
-        window.DISQUS.reset({ reload: true, config: disqusConfig }); // Chamar a função de reset do Disqus com a nova configuração
-      }
-    }, 500); // Aguardar 500 milissegundos (0,5 segundos) antes de renderizar o Disqus novamente
-  };
+
+
 
   return (
 
@@ -128,6 +110,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode, onNex
 
         <div className="iframe-container">
   <iframe
+    title={`${anime.title} - ${titleEpisodio}`}
     src={videoUrl[currentResolution].url}
     width="100%"
     height="500px"

@@ -18,8 +18,8 @@ const animes = usePublicAnimes();
 
 const pageTitle = `Gon.TV - Animes Online em FHD`;
 const [isLoading, setIsLoading] = useState(true);
-const [animesData, setAnimesData] = useState([]);
-const [animesDay, setAnimesDay] = useState([])
+
+
 
 
 useEffect(() => {

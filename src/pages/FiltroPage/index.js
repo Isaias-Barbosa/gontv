@@ -7,6 +7,58 @@ import { Helmet } from 'react-helmet';
 import { LinearProgress } from "@mui/material";
 import { usePublicAnimes } from 'context/AnimeCatalogContext';
 
+function filterAnimes(data, filtro) {
+    const filteredAnimes = data.filter((anime) => {
+        let matchesFiltro = true;
+
+        if (filtro.tipo && anime.Type !== filtro.tipo) {
+            matchesFiltro = false;
+        }
+
+        if (filtro.language && anime.language !== filtro.language) {
+            matchesFiltro = false;
+        }
+
+
+        if (
+            filtro.generos &&
+            filtro.generos.length > 0 &&
+            (!anime.genres || !filtro.generos.every((genero) => anime.genres.includes(genero)))
+        ) {
+            matchesFiltro = false;
+        }
+
+
+        if (filtro.estudio && anime.studio && !anime.studio.includes(filtro.estudio)) {
+            matchesFiltro = false;
+        }
+
+        if (filtro.diretor && anime.director && !anime.director.includes(filtro.diretor)) {
+            matchesFiltro = false;
+        }
+
+        if (filtro.ano && anime.year !== filtro.ano) {
+            matchesFiltro = false;
+        }
+
+        if (filtro.temporada && anime.Premiered !== filtro.temporada) {
+            matchesFiltro = false;
+        }
+
+        if (filtro.fansub && anime.Fansub !== filtro.fansub) {
+            matchesFiltro = false;
+        }
+
+        if (filtro.status && anime.Status !== filtro.status) {
+            matchesFiltro = false;
+        }
+
+        return matchesFiltro;
+    });
+
+    return filteredAnimes;
+}
+
 export default function FiltroPage() {
     const data = usePublicAnimes();
 
@@ -105,59 +157,7 @@ export default function FiltroPage() {
     };
 
     const handleFilterButtonClick = () => {
-
-        if (Object.values(filtro).every((value) => value === '')) {
-            setAnimesFiltrados(data);
-            return;
-        }
-
-        const filteredAnimes = data.filter((anime) => {
-            let matchesFiltro = true;
-
-            if (filtro.tipo && anime.Type !== filtro.tipo) {
-                matchesFiltro = false;
-            }
-
-            if (filtro.language && anime.language !== filtro.language) {
-                matchesFiltro = false;
-            }
-
-
-            if (
-                filtro.generos &&
-                filtro.generos.length > 0 &&
-                (!anime.genres || !filtro.generos.every((genero) => anime.genres.includes(genero)))
-            ) {
-                matchesFiltro = false;
-            }
-
-
-            if (filtro.estudio && anime.studio && !anime.studio.includes(filtro.estudio)) {
-                matchesFiltro = false;
-            }
-
-            if (filtro.diretor && anime.director && !anime.director.includes(filtro.diretor)) {
-                matchesFiltro = false;
-            }
-
-            if (filtro.ano && anime.year !== filtro.ano) {
-                matchesFiltro = false;
-            }
-
-            if (filtro.temporada && anime.Premiered !== filtro.temporada) {
-                matchesFiltro = false;
-            }
-
-            if (filtro.fansub && anime.Fansub !== filtro.fansub) {
-                matchesFiltro = false;
-            }
-
-            if (filtro.status && anime.Status !== filtro.status) {
-                matchesFiltro = false;
-            }
-
-            return matchesFiltro;
-        });
+        const filteredAnimes = filterAnimes(data, filtro);
 
         setAnimesFiltrados(filteredAnimes);
 
@@ -168,17 +168,11 @@ export default function FiltroPage() {
 
     useEffect(() => {
         const params = new URLSearchParams(location.search);
-        const filtroFromParams = {};
-
-        if (params.toString()) {
-            for (let [key, value] of params.entries()) {
-                filtroFromParams[key] = value;
-            }
-        }
-
+        const filtroFromParams = Object.fromEntries(params.entries());
+        filtroFromParams.generos = (params.get('generos') || '').split(',').filter(Boolean);
         setFiltro(filtroFromParams);
-        handleFilterButtonClick();
-    }, []);
+        setAnimesFiltrados(filterAnimes(data, filtroFromParams));
+    }, [data, location.search]);
 
     const [isLoading, setIsLoading] = useState(true);
 

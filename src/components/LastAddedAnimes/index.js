@@ -13,7 +13,7 @@ export default function LastAddedAnimes() {
   const [isLoading, setIsLoading] = useState(true);
 
 
-  const [animesData, setAnimesData] = useState([]);
+
 
   useEffect(() => {
     // Simulação de uma requisição assíncrona

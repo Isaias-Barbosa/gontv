@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import { MdPlayCircleFilled } from 'react-icons/md';
+
+
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Pagination, Stack } from '@mui/material';
@@ -12,7 +12,7 @@ export default function Filmes() {
 
   // Estado para armazenar os dados dos animes
   const [isLoading, setIsLoading] = useState(true);
-  const [animesData, setAnimesData] = useState([]);
+  const [animesData] = useState([]);
 
 
 

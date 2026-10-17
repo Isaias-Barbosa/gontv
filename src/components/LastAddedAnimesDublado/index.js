@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { MdPlayCircleFilled } from 'react-icons/md';
+
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -12,7 +12,7 @@ export default function LastAddedAnimesDublado({animes}) {
   const [isLoading, setIsLoading] = useState(true);
 
 
-  const [animesData, setAnimesData] = useState([]);
+
 
 
   useEffect(() => {
@@ -24,14 +24,8 @@ export default function LastAddedAnimesDublado({animes}) {
 
   const dubladoAnimes = animes.filter((anime) => anime.language === "Dublado");
 
-  const MAX_TITLE_LENGTH = 20; // Define o número máximo de caracteres do título
 
-  const truncateTitle = (title) => {
-    if (title.length > MAX_TITLE_LENGTH) {
-      return title.substring(0, MAX_TITLE_LENGTH) + '...';
-    }
-    return title;
-  };
+
 
   const limitedAnimes = dubladoAnimes.slice(0, 10);
 
