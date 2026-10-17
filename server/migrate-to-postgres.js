@@ -6,7 +6,7 @@ const { Client } = require('pg');
 async function main() {
   if (!process.env.DATABASE_URL) throw new Error('Defina DATABASE_URL no .env antes de migrar.');
   const catalog = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 'catalog.json'), 'utf8'));
-  const client = new Client({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false } });
+  const client = new Client({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: true } });
   await client.connect();
   try {
     await client.query(`

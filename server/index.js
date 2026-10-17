@@ -14,7 +14,7 @@ const jsonBinBaseUrl = 'https://api.jsonbin.io/v3/b';
 const jikanBaseUrl = 'https://api.jikan.moe/v4';
 const supabaseCatalogTable = process.env.SUPABASE_CATALOG_TABLE || 'catalog';
 const databaseUrl = process.env.DATABASE_URL;
-const postgresPool = databaseUrl ? new Pool({ connectionString: databaseUrl, ssl: { rejectUnauthorized: false } }) : null;
+const postgresPool = databaseUrl ? new Pool({ connectionString: databaseUrl, ssl: { rejectUnauthorized: true } }) : null;
 let postgresSchemaPromise;
 
 app.use(express.json({ limit: '2mb' }));
