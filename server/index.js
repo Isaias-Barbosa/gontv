@@ -9,6 +9,7 @@ const cors = require('cors');
 
 const app = express();
 const port = Number(process.env.PORT || 3001);
+const host = process.env.HOST || '0.0.0.0';
 const catalogPath = path.resolve(__dirname, '..', 'data', 'catalog.json');
 const jsonBinBaseUrl = 'https://api.jsonbin.io/v3/b';
 const jikanBaseUrl = 'https://api.jikan.moe/v4';
@@ -238,6 +239,6 @@ app.get('/api/mal/anime/:id', async (req, res) => {
   }
 });
 
-app.listen(port, '127.0.0.1', () => {
-  console.log(`API do catálogo disponível em http://127.0.0.1:${port}`);
+app.listen(port, host, () => {
+  console.log(`API do catálogo disponível em http://${host}:${port}`);
 });
