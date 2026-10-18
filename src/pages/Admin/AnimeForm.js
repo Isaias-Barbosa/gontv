@@ -33,6 +33,8 @@ export default function AnimeForm() {
   const [error, setError] = useState('');
   const [saving, setSaving] = useState(false);
   const [malId, setMalId] = useState('');
+  const [anilistId, setAnilistId] = useState('');
+  const [importSource, setImportSource] = useState('mal');
   const [malLoading, setMalLoading] = useState(false);
   const [malError, setMalError] = useState('');
   const [malNotice, setMalNotice] = useState('');
@@ -50,35 +52,40 @@ export default function AnimeForm() {
       slug: current && previous.slug !== slugify(current.title) ? previous.slug : slugify(value),
     }));
   };
-  const fillFromMyAnimeList = async () => {
-    if (!/^\d+$/.test(malId.trim())) {
-      setMalError('Informe um ID numérico do MyAnimeList.');
+  const importAnime = async (source = 'mal') => {
+    const providerName = source === 'mal' ? 'MyAnimeList' : 'AniList';
+    const lookupId = (source === 'anilist' ? anilistId : malId).trim();
+    setMalError(''); setMalNotice('');
+    if (!/^\d+$/.test(lookupId)) {
+      setMalError(`Informe um ID numérico válido do ${source === 'anilist' ? 'AniList' : 'MyAnimeList'}.`);
       return;
     }
+    setImportSource(source);
     setMalLoading(true);
-    setMalError('');
-    setMalNotice('');
     try {
-      const data = await apiRequest(`/api/mal/anime/${malId.trim()}`);
+      const path = source === 'mal' ? `/api/mal/anime/${lookupId}` : source === 'anilist-mal' ? `/api/anilist/anime/by-mal/${lookupId}` : `/api/anilist/anime/${lookupId}`;
+      const data = await apiRequest(path);
       const airedFrom = data.aired?.from ? new Date(data.aired.from) : null;
       const releaseDay = airedFrom && !Number.isNaN(airedFrom.getTime())
-        ? airedFrom.toLocaleDateString('pt-BR', { weekday: 'long' })
+        ? airedFrom.toLocaleDateString('pt-BR', { weekday: 'long', timeZone: 'UTC' })
         : '';
       const genres = [...(data.genres || []), ...(data.themes || [])].map((item) => item.name);
       setForm((previous) => ({
         ...previous,
         title: data.title || previous.title,
+        malId: data.mal_id || previous.malId,
+        anilistId: data.anilist_id || previous.anilistId,
         slug: slugify(data.title || previous.title),
         subtitle: data.title_english || data.title_japanese || previous.subtitle,
         subtitule: data.title_english || data.title_japanese || previous.subtitule,
         Type: data.type === 'Movie' ? 'Filme' : data.type === 'OVA' ? 'OVA' : data.type === 'Special' ? 'Especial' : 'TV',
         date: releaseDay || previous.date,
         coverImage: data.images?.jpg?.large_image_url || data.images?.jpg?.image_url || previous.coverImage,
-        background: data.images?.jpg?.large_image_url || previous.background,
+        background: data.bannerImage || data.images?.jpg?.large_image_url || previous.background,
         studio: data.studios?.[0]?.name || previous.studio,
         director: data.director || previous.director,
         year: data.year ? String(data.year) : airedFrom ? String(airedFrom.getFullYear()) : previous.year,
-        Status: data.status === 'Currently Airing' ? 'Em Lançamento' : 'Finalizado',
+        Status: ({ 'Currently Airing': 'Em Lançamento', 'Not yet aired': 'Em breve', 'Finished Airing': 'Finalizado', 'On Hiatus': 'Em pausa', Cancelled: 'Cancelado' })[data.status] || previous.Status,
         status: data.status || previous.status,
         episodeDuration: data.duration || previous.episodeDuration,
         genres: genres.length ? genres : previous.genres,
@@ -86,7 +93,7 @@ export default function AnimeForm() {
         synopsis: data.synopsis || previous.synopsis,
       }));
       if (genres.length) setGenresInput(genres.join(', '));
-      setMalNotice(data.warnings?.join(' ') || 'Dados do anime carregados. Revise os campos antes de salvar.');
+      setMalNotice(`${providerName}: ${data.warnings?.join(' ') || 'Dados carregados. Revise os campos antes de salvar.'}`);
     } catch (fetchError) {
       setMalError(fetchError.message);
     } finally {
@@ -135,12 +142,20 @@ export default function AnimeForm() {
         <Link to="/admin/animes" className="text-sm text-emerald-300 hover:underline">← Voltar aos animes</Link>
     <div className="mt-3 flex flex-wrap items-center gap-3">
       <h1 className="text-3xl font-bold">{current ? 'Editar anime' : 'Cadastrar anime'}</h1>
-      {!current && <div className="flex flex-wrap gap-2">
-        <input value={malId} onChange={(event) => setMalId(event.target.value)} onKeyDown={(event) => event.key === 'Enter' && (event.preventDefault(), fillFromMyAnimeList())} inputMode="numeric" placeholder="ID do MyAnimeList" aria-label="ID do MyAnimeList" className="w-44 rounded border border-slate-700 bg-slate-950 px-3 py-2 text-sm" />
-        <button type="button" onClick={fillFromMyAnimeList} disabled={malLoading} className="rounded bg-sky-600 px-3 py-2 text-sm font-semibold hover:bg-sky-500 disabled:opacity-50">{malLoading ? 'Buscando...' : 'Buscar MAL'}</button>
+      {!current && <div className="flex w-full flex-col gap-3">
+        <div className="flex flex-wrap gap-2">
+          <input value={malId} disabled={malLoading} onChange={event => setMalId(event.target.value)} onKeyDown={event => { if (event.key === 'Enter') { event.preventDefault(); importAnime('mal'); } }} inputMode="numeric" placeholder="ID do MyAnimeList" aria-label="ID do MyAnimeList" className="w-44 rounded border border-slate-700 bg-slate-950 px-3 py-2 text-sm" />
+          <button type="button" onClick={() => importAnime('mal')} disabled={malLoading} className="rounded bg-sky-600 px-3 py-2 text-sm font-semibold hover:bg-sky-500 disabled:opacity-50">{malLoading && importSource === 'mal' ? 'Buscando...' : 'Buscar MAL'}</button>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <input value={anilistId} disabled={malLoading} onChange={event => setAnilistId(event.target.value)} onKeyDown={event => { if (event.key === 'Enter') { event.preventDefault(); importAnime('anilist'); } }} inputMode="numeric" placeholder="ID do AniList" aria-label="ID do AniList" className="w-44 rounded border border-slate-700 bg-slate-950 px-3 py-2 text-sm" />
+          <button type="button" onClick={() => importAnime('anilist')} disabled={malLoading} className="rounded bg-indigo-600 px-3 py-2 text-sm font-semibold hover:bg-indigo-500 disabled:opacity-50">{malLoading && importSource === 'anilist' ? 'Buscando...' : 'Buscar AniList'}</button>
+        </div>
+        <p className="text-xs text-slate-400">Os IDs são diferentes. No AniList, copie o número da URL da página do anime.</p>
       </div>}
     </div>
     {malError && <p role="alert" className="mt-2 text-sm text-red-300">{malError}</p>}
+    {malError && importSource === 'mal' && /^\d+$/.test(malId.trim()) && <button type="button" disabled={malLoading} onClick={() => importAnime('anilist-mal')} className="mt-2 rounded border border-indigo-500 px-3 py-2 text-sm text-indigo-200 disabled:opacity-50">Tentar este ID MAL no AniList</button>}
     {malNotice && <p role="status" className="mt-2 text-sm text-emerald-300">{malNotice}</p>}
       </div>
       {error && <p role="alert" className="mb-4 rounded bg-red-950 p-3 text-red-200">{error}</p>}
@@ -181,7 +196,7 @@ export default function AnimeForm() {
         </label>
         <p className="text-sm text-slate-400 sm:col-span-2">O destaque aparece na home quando o anime estiver publicado. Usamos a imagem de fundo ou, se não houver, a capa.</p>
         <div className="sm:col-span-2">
-          <button disabled={saving} className="rounded bg-emerald-600 px-4 py-2 font-semibold hover:bg-emerald-500 disabled:opacity-50">
+          <button disabled={saving || malLoading} className="rounded bg-emerald-600 px-4 py-2 font-semibold hover:bg-emerald-500 disabled:opacity-50">
             {saving ? 'Salvando...' : 'Salvar anime'}
           </button>
         </div>

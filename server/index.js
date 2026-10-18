@@ -9,6 +9,7 @@ const cors = require('cors');
 const { createAuth, bootstrapAdmin } = require('./auth');
 const { createMediaRouter } = require('./media');
 const { createMalRouter } = require('./mal');
+const { createAniListRouter } = require('./anilist');
 
 const app = express();
 const port = Number(process.env.PORT || 3001);
@@ -231,6 +232,7 @@ app.put('/api/animes', auth.optionalUser, auth.requireUser, async (req, res) => 
 });
 
 app.use('/api/mal', auth.optionalUser, auth.requireUser, createMalRouter());
+app.use('/api/anilist', auth.optionalUser, auth.requireUser, createAniListRouter());
 
 app.get('/api/admin/dashboard', auth.optionalUser, auth.requireUser, async (req, res, next) => {
   try {
