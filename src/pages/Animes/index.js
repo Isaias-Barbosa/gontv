@@ -1,251 +1,37 @@
-import React, { useState } from 'react';
-import { Helmet } from "react-helmet";
-import { LinearProgress } from "@mui/material";
-import { useEffect } from 'react';
+import React, { useMemo, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
 import CardAnime from 'components/CardAnime';
 import { usePublicAnimes } from 'context/AnimeCatalogContext';
-
+import { filterAnimes, sortAnimes } from 'lib/animeList';
+import './Animes.css';
+const initialFilters = { search: '', genre: '', type: '', language: '', order: 'newest' };
+const pageSize = 36;
 export default function Animes() {
-    const animes = usePublicAnimes();
-    // Estado para armazenar os dados dos animes
-    const [isLoading, setIsLoading] = useState(true);
-    const [animesData] = useState([]);
-
-     /*   
-    // Função para buscar os animes do servidor
-    const fetchAnimes = () => {
-        fetch('https://animes.vision/api/v2/search?ordenar=adicionado_recentemente')
-          .then(response => response.json())
-          .then(data => {
-            console.log(data); // Verifica se os dados estão sendo recebidos corretamente
-    
-            if (Array.isArray(data)) { // Verifica se data é um array
-                // Filtra os animes com a propriedade category igual a "Animes"
-                const currentAnimes = data.filter(anime => anime.category === 'Animes' && anime.dubbed === false).map(anime => ({
-                    id: anime.id,
-                    title: anime.title,
-                    imageUrl: anime.thumbnail,
-                    // outras propriedades do anime que você deseja exibir
-                }));
-    
-            console.log(currentAnimes); // Verifica os animes convertidos
-    
-            setAnimesData(currentAnimes);
-            setIsLoading(false);
-        } else {
-            console.log('Dados inválidos ou ausentes.');
-        }
-          })
-          .catch(error => {
-            console.log('Ocorreu um erro:', error);
-          });
-      };
-    
-      useEffect(() => {
-        fetchAnimes();
-      }, []);
-
-    console.log(animesData)
-
-    const pageTitle = `Gon.TV - Lista de Animes Legendados`;
-
-    // Filtra os animes legendados
-
-    const itemsPerPage = 36; // Número de animes por página
-
-    // Estado para controlar a página atual
-    const [currentPage, setCurrentPage] = useState(1);
-
-    // Cálculo dos índices inicial e final dos animes a serem exibidos
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-
-    // Animes da página atual
-    const currentAnimes = animesData.slice(startIndex, endIndex);
-
-
-
-    console.log(currentAnimes)
-
-    // Função para navegar para a página selecionada
-    const handlePageChange = (event, newPage) => {
-        setCurrentPage(newPage);
-    };
-
-    return (
-        <>
-            <Helmet>
-                <title>{pageTitle}</title>
-            </Helmet>
-            {isLoading ? (
-                // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados   
-                <div className="min-h-screen bg-black-dark flex justify-start flex-col">
-                    <LinearProgress />
-                </div>
-            ) : (
-                <div className="bg-black-dark py-8">
-                    <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
-                        <h2 className="text-2xl text-white text-start font-bold mb-8 p-1">
-                            <span className="border-b-4 border-emerald-600 pb-1"> Animes Legendados</span>
-                        </h2>
-                        <div className="container mx-auto">
-                            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-3">
-                                {currentAnimes.map((anime) => (
-                                 <CardAnime 
-                                 key={anime.id}
-                                 anime={{
-                                    title: anime.title,
-                                    coverImage: anime.imageUrl,
-                                 }}
-                                 />   
-                                ))}
-                            </div>
-                        </div>
-                        
-                        
-                        {animesData.length > itemsPerPage && (
-                            <div className="flex justify-center mt-10">
-                                <Stack spacing={2}>
-                                    <Pagination
-                                        className="bg-zinc-800"
-                                        size="large"
-                                        color="primary"
-                                        count={Math.ceil(animesData.length / itemsPerPage)}
-                                        page={currentPage}
-                                        onChange={handlePageChange}
-                                        sx={{
-                                            '& .Mui-selected': {
-                                                color: 'white',
-                                            },
-                                            '& .MuiPaginationItem-root': {
-                                                color: 'white',
-                                            },
-                                            '& .MuiPaginationItem-page.Mui-selected': {
-                                                backgroundColor: '#00b894', // Defina a cor desejada para a bolinha selecionada
-                                            },
-                                            '& .MuiPaginationItem-page:hover': {
-                                                backgroundColor: 'transparent',
-                                                color: 'white',
-                                            },
-                                            '& .MuiPaginationItem-page.Mui-selected:hover': {
-                                                backgroundColor: '#00b894',
-                                            },
-                                        }}
-                                    />
-                                </Stack>
-                            </div>
-                        )}
-                    </div>
-                </div>
-            )}
-        </>
-    )
-}
-*/
- // Função para buscar os animes do servidor
- useEffect(() => {
-    // Simulação de uma requisição assíncrona
-    setTimeout(() => {
-        setIsLoading(false);
-    }, 2000); // Tempo de simulação de carregamento (2 segundos)
-}, []);
-
-console.log(animesData)
-
-const pageTitle = `Gon.TV - Lista de Animes Legendados`;
-
-// Filtra os animes legendados
-
-const itemsPerPage = 36; // Número de animes por página
-
-// Estado para controlar a página atual
-const [currentPage, setCurrentPage] = useState(1);
-
-// Cálculo dos índices inicial e final dos animes a serem exibidos
-const startIndex = (currentPage - 1) * itemsPerPage;
-const endIndex = startIndex + itemsPerPage;
-
-// Animes da página atual
-const TVAnimes = animes.filter((anime) => anime.Type === 'TV');
-
-// const currentAnimes = TVAnimes ? TVAnimes.slice(startIndex, endIndex) : [];
-
-const currentAnimes = TVAnimes.slice(startIndex, endIndex);
-
-
-
-// Função para navegar para a página selecionada
-const handlePageChange = (event, newPage) => {
-    setCurrentPage(newPage);
-};
-
-return (
-    <>
-        <Helmet>
-            <title>{pageTitle}</title>
-        </Helmet>
-        {isLoading ? (
-            // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados   
-            <div className="min-h-screen bg-black-dark flex justify-start flex-col">
-                <LinearProgress />
-            </div>
-        ) : (
-            <div className="bg-black-dark py-8">
-                <div className="container mx-auto px-7 max-w-7xl mb-6 xl:px-1 2xl:px-1">
-                    <h2 className="text-2xl text-white text-start font-bold mb-8 p-1">
-                        <span className="border-b-4 border-emerald-600 pb-1"> Animes Legendados</span>
-                    </h2>
-                    <div className="container mx-auto">
-                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-3">
-                            {currentAnimes.map((anime) => (
-                             <CardAnime 
-                             key={anime._id}
-                             anime={{
-                                title: anime.title,
-                                coverImage: anime.coverImage,
-                             }}
-                             />   
-                            ))}
-                        </div>
-                    </div>
-                    {/* Paginação */}
-                    {TVAnimes.length > itemsPerPage && (
-                        <div className="flex justify-center mt-10">
-                            <Stack spacing={2}>
-                                <Pagination
-                                    className="bg-zinc-800"
-                                    size="large"
-                                    color="primary"
-                                    count={Math.ceil(TVAnimes.length / itemsPerPage)}
-                                    page={currentPage}
-                                    onChange={handlePageChange}
-                                    sx={{
-                                        '& .Mui-selected': {
-                                            color: 'white',
-                                        },
-                                        '& .MuiPaginationItem-root': {
-                                            color: 'white',
-                                        },
-                                        '& .MuiPaginationItem-page.Mui-selected': {
-                                            backgroundColor: '#00b894', // Defina a cor desejada para a bolinha selecionada
-                                        },
-                                        '& .MuiPaginationItem-page:hover': {
-                                            backgroundColor: 'transparent',
-                                            color: 'white',
-                                        },
-                                        '& .MuiPaginationItem-page.Mui-selected:hover': {
-                                            backgroundColor: '#00b894',
-                                        },
-                                    }}
-                                />
-                            </Stack>
-                        </div>
-                    )}
-                </div>
-            </div>
-        )}
-    </>
-)
+  const animes = usePublicAnimes();
+  const [filters, setFilters] = useState(initialFilters);
+  const [page, setPage] = useState(1);
+  const genres = useMemo(() => [...new Set(animes.flatMap(anime => anime.genres || []))].sort((a,b) => a.localeCompare(b, 'pt-BR')), [animes]);
+  const types = useMemo(() => [...new Set(animes.map(anime => anime.Type).filter(Boolean))].sort(), [animes]);
+  const languages = useMemo(() => [...new Set(animes.map(anime => anime.language).filter(Boolean))].sort(), [animes]);
+  const filtered = useMemo(() => sortAnimes(filterAnimes(animes, filters), filters.order), [animes, filters]);
+  const pages = Math.max(1, Math.ceil(filtered.length / pageSize));
+  const currentPage = Math.min(page, pages);
+  const visible = filtered.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+  const update = (key, value) => { setFilters(previous => ({ ...previous, [key]: value })); setPage(1); };
+  const reset = () => { setFilters(initialFilters); setPage(1); };
+  return <div className="bg-black-dark"><main className="anime-catalog-page">
+    <Helmet><title>Gon.TV - Catálogo de animes</title></Helmet>
+    <header className="anime-catalog-heading"><div><h1>Animes</h1><p>Explore o catálogo e encontre seu próximo anime.</p></div><span aria-live="polite">{filtered.length} {filtered.length === 1 ? 'anime encontrado' : 'animes encontrados'}</span></header>
+    <div className="anime-catalog-filters" role="search" aria-label="Filtros do catálogo">
+      <label className="anime-title-search">Buscar anime<input type="search" value={filters.search} onChange={event => update('search', event.target.value)} placeholder="Título ou nome alternativo" /></label>
+      <label>Gênero<select value={filters.genre} onChange={event => update('genre', event.target.value)}><option value="">Todos os gêneros</option>{genres.map(genre => <option key={genre}>{genre}</option>)}</select></label>
+      <label>Tipo<select value={filters.type} onChange={event => update('type', event.target.value)}><option value="">Todos os tipos</option>{types.map(type => <option key={type}>{type}</option>)}</select></label>
+      <label>Idioma<select value={filters.language} onChange={event => update('language', event.target.value)}><option value="">Todos os idiomas</option>{languages.map(language => <option key={language}>{language}</option>)}</select></label>
+      <label>Ordenar por<select value={filters.order} onChange={event => update('order', event.target.value)}><option value="newest">Mais recentes</option><option value="oldest">Mais antigos</option><option value="title">Título: A–Z</option></select></label>
+      <button type="button" onClick={reset}>Limpar filtros</button>
+    </div>
+    {visible.length ? <div className="anime-catalog-grid">{visible.map(anime => <CardAnime key={anime.id} anime={anime} />)}</div> : <div className="anime-catalog-empty"><h2>Nenhum anime encontrado.</h2><p>Tente outros filtros ou procure por outro título.</p><button onClick={reset}>Limpar filtros</button></div>}
+    {pages > 1 && <div className="anime-catalog-pagination"><Pagination count={pages} page={currentPage} onChange={(event, value) => setPage(value)} sx={{ '& .MuiPaginationItem-root': { color: 'white' }, '& .Mui-selected': { backgroundColor: '#14664e !important' } }} /></div>}
+  </main></div>;
 }

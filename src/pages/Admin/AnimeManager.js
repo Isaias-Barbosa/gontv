@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAnimeCatalog } from 'context/AnimeCatalogContext';
+import { normalizeAnimeText, sortAnimes } from 'lib/animeList';
 
 export default function AnimeManager() {
   const { animes, save } = useAnimeCatalog();
   const [search, setSearch] = useState('');
   const [error, setError] = useState('');
   const [savingId, setSavingId] = useState(null);
-  const filtered = animes.filter((anime) =>
-    `${anime.title} ${anime.slug}`.toLowerCase().includes(search.toLowerCase())
-  );
+  const [publication, setPublication] = useState('');
+  const [order, setOrder] = useState('newest');
+  const filtered = sortAnimes(animes.filter(anime =>
+    normalizeAnimeText(`${anime.title} ${anime.slug}`).includes(normalizeAnimeText(search.trim())) &&
+    (!publication || (publication === 'draft' ? anime.visibility === 'draft' : anime.visibility !== 'draft'))
+  ), order);
 
   const toggleVisibility = async (anime) => {
     setError('');
@@ -45,10 +49,11 @@ export default function AnimeManager() {
         </div>
         <Link to="/admin/animes/new" className="rounded bg-emerald-600 px-4 py-2 font-semibold hover:bg-emerald-500">Novo anime</Link>
       </div>
-      <label className="mb-5 block">
-        <span className="sr-only">Buscar anime</span>
-        <input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Buscar por título ou slug" className="w-full rounded border border-slate-700 bg-slate-900 px-3 py-2 text-white" />
-      </label>
+      <div className="mb-5 flex flex-wrap gap-3">
+        <label className="min-w-[200px] flex-1"><span className="mb-1 block text-sm text-slate-400">Buscar anime</span><input value={search} onChange={event => setSearch(event.target.value)} placeholder="Título ou slug" className="w-full rounded border border-slate-700 bg-slate-900 px-3 py-2 text-white" /></label>
+        <label><span className="mb-1 block text-sm text-slate-400">Publicação</span><select value={publication} onChange={event => setPublication(event.target.value)} className="rounded border border-slate-700 bg-slate-900 px-3 py-2"><option value="">Todas</option><option value="published">Publicados</option><option value="draft">Rascunhos</option></select></label>
+        <label><span className="mb-1 block text-sm text-slate-400">Ordenar por</span><select value={order} onChange={event => setOrder(event.target.value)} className="rounded border border-slate-700 bg-slate-900 px-3 py-2"><option value="newest">Mais recentes</option><option value="oldest">Mais antigos</option><option value="title">Título: A–Z</option></select></label>
+      </div>
       {error && <p role="alert" className="mb-4 rounded bg-red-950 p-3 text-red-200">{error}</p>}
       <div className="overflow-x-auto rounded-lg border border-slate-800">
         <table className="w-full min-w-[760px] text-left text-sm">

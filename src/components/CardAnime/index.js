@@ -29,10 +29,8 @@ export default function CardAnime({ anime }) {
         <div className="aspect-ratio-box" >
             <div className="relative">
                 <Link
-                    to={{
-                        pathname: `/animes/${generateSlug(anime.title)}`,
-                        state: { animeId: anime.id }
-                    }}
+                    to={`/animes/${anime.slug || generateSlug(anime.title)}`}
+                    state={{ animeId: anime.id }}
                 >
 
 

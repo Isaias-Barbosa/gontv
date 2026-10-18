@@ -1,0 +1,20 @@
+.anime-catalog-page { min-height: 80vh; max-width: 1280px; width: calc(100% - 48px); margin: 0 auto; padding: 36px 0 48px; color: #e6eee9; }
+.anime-catalog-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 26px; }
+.anime-catalog-heading h1 { display: inline-block; font-size: 28px; font-weight: 700; border-bottom: 3px solid #10b981; padding-bottom: 5px; }
+.anime-catalog-heading p { margin-top: 10px; color: #8c9e94; font-size: 13px; }
+.anime-catalog-heading > span { font-size: 12px; color: #8c9e94; }
+.anime-catalog-filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 14px; background: #101812; border: 1px solid #29382f; border-radius: 10px; padding: 20px; margin-bottom: 28px; }
+.anime-catalog-filters label { display: grid; gap: 7px; flex: 1; min-width: 130px; color: #a6b9ac; font-size: 12px; }
+.anime-catalog-filters .anime-title-search { flex: 2; min-width: 200px; }
+.anime-catalog-filters input, .anime-catalog-filters select { width: 100%; height: 40px; min-width: 0; background: #070e0a; color: #e6eee9; border: 1px solid #34493b; border-radius: 6px; padding: 8px 10px; }
+.anime-catalog-filters button, .anime-catalog-empty button { padding: 10px 12px; min-height: 40px; border-radius: 6px; border: 1px solid #35664a; font-size: 12px; color: #86dab1; }
+.anime-catalog-filters button:hover, .anime-catalog-empty button:hover { background: #173623; }
+.anime-catalog-filters :focus-visible, .anime-catalog-empty button:focus-visible { outline: 2px solid #34d399; outline-offset: 3px; }
+.anime-catalog-grid { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 14px; }
+.anime-catalog-empty { text-align: center; padding: 64px 16px; border: 1px solid #29382f; border-radius: 10px; color: #8c9e94; }
+.anime-catalog-empty h2 { color: #e6eee9; font-size: 19px; margin-bottom: 8px; }
+.anime-catalog-empty button { margin-top: 20px; }
+.anime-catalog-pagination { display: flex; justify-content: center; margin-top: 32px; }
+@media (max-width: 1100px) { .anime-catalog-grid { grid-template-columns: repeat(4,minmax(0,1fr)); } }
+@media (max-width: 700px) { .anime-catalog-page { width: calc(100% - 32px); padding-top: 26px; } .anime-catalog-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; } .anime-catalog-filters { padding: 15px; gap: 12px; } }
+@media (max-width: 480px) { .anime-catalog-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .anime-catalog-filters .anime-title-search { flex-basis: 100%; } }

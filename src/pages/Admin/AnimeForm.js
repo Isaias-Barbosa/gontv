@@ -175,6 +175,7 @@ export default function AnimeForm() {
           <input type="checkbox" checked={Boolean(form.top)} onChange={(event) => update('top', event.target.checked)} />
           Destacar no banner
         </label>
+        <p className="text-sm text-slate-400 sm:col-span-2">O destaque aparece na home quando o anime estiver publicado. Usamos a imagem de fundo ou, se não houver, a capa.</p>
         <div className="sm:col-span-2">
           <button disabled={saving} className="rounded bg-emerald-600 px-4 py-2 font-semibold hover:bg-emerald-500 disabled:opacity-50">
             {saving ? 'Salvando...' : 'Salvar anime'}
