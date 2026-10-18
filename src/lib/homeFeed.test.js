@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, fireEvent, render, screen, within } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import Home from 'pages/Home';
@@ -46,11 +46,8 @@ test('episódio novo aparece mesmo sem a marca de lançamento e editar legado n�
   expect(getRecentEpisodes([{ ...fixtures[0], visibility: 'draft' }])).toHaveLength(0);
 });
 test('home exibe as três seções recentes e os links de cada episódio correto', () => {
-  jest.useFakeTimers();
   usePublicAnimes.mockReturnValue(fixtures);
   render(<MemoryRouter><Home /></MemoryRouter>);
-  act(() => jest.advanceTimersByTime(2000));
-  act(() => jest.advanceTimersByTime(2000));
   for (const [heading, expected] of [['Novos Animes Legendados', ['Leg novo', 'Leg antigo']], ['Novos Animes Dublados', ['Dub novo', 'Dub antigo']], ['Novos Filmes Adicionados', ['Filme novo', 'Filme antigo']]]) {
     const section = screen.getByRole('region', { name: heading });
     expect(within(section).getAllByRole('heading', { level: 3 }).map(node => node.textContent)).toEqual(expected);

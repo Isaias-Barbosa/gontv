@@ -11,6 +11,7 @@ const { createMediaRouter } = require('./media');
 const { createMalRouter } = require('./mal');
 const { createAniListRouter } = require('./anilist');
 const { applyCatalogChanges } = require('./catalogChanges');
+const { createCatalogCache } = require('./catalogCache');
 
 const app = express();
 const port = Number(process.env.PORT || 3001);
@@ -82,15 +83,16 @@ async function ensurePostgresSchema() {
   await postgresSchemaPromise;
 }
 
-async function readPostgresCatalog() {
+async function readPostgresCatalog(publicOnly = false) {
   await ensurePostgresSchema();
   const result = await postgresPool.query(`
     SELECT a.data, a.created_at, a.updated_at, COALESCE(json_agg(e.data ORDER BY e.episode_number NULLS LAST, e.id) FILTER (WHERE e.id IS NOT NULL), '[]') AS episodes
     FROM animes a
     LEFT JOIN episodes e ON e.anime_id = a.id
+    WHERE ($1::boolean = FALSE OR a.visibility <> 'draft')
     GROUP BY a.id
     ORDER BY a.id
-  `);
+  `, [publicOnly]);
   return result.rows.map(({ data, episodes, created_at, updated_at }) => ({ ...data, episodes, createdAt: created_at, updatedAt: updated_at }));
 }
 
@@ -149,42 +151,39 @@ function writeLocalCatalog(animes) {
   fs.renameSync(temporaryPath, catalogPath);
 }
 
-app.get('/api/animes', auth.optionalUser, async (req, res) => {
-  res.set('Cache-Control', 'no-store');
-  const visible = animes => req.user ? animes : animes.filter(anime => anime.visibility !== 'draft');
-  try {
-    if (postgresPool) {
-      return res.json({ animes: visible(await readPostgresCatalog()), storage: 'postgres' });
-    }
-    const supabase = supabaseConfiguration();
-    if (supabase) {
-      const response = await axios.get(`${supabase.url}/rest/v1/${supabaseCatalogTable}`, {
-        params: { select: 'animes', id: 'eq.1', limit: 1 },
-        headers: { apikey: supabase.serviceRoleKey, Authorization: `Bearer ${supabase.serviceRoleKey}` },
-      });
-      const record = response.data[0];
-      if (!record || !Array.isArray(record.animes)) throw new Error('A tabela do Supabase não contém um catálogo válido.');
-      return res.json({ animes: visible(record.animes), storage: 'supabase' });
-    }
-    const config = jsonBinConfiguration();
-    if (!config) {
-      const localCatalog = readLocalCatalog();
-      return res.json({ animes: visible(localCatalog.animes), storage: 'local' });
-    }
-
-    const response = await axios.get(
-      `${jsonBinBaseUrl}/${encodeURIComponent(config.binId)}/latest`,
-      { headers: { 'X-Master-Key': config.masterKey, 'X-Bin-Meta': 'false' } }
-    );
-    const record = response.data.record || response.data;
-    if (!Array.isArray(record.animes)) {
-      throw new Error('O Bin do Jsonbin não contém o campo "animes" como lista.');
-    }
-    res.json({ animes: visible(record.animes), storage: 'jsonbin' });
-  } catch (error) {
-    console.error('Falha ao carregar o catálogo:', error.message);
-    res.status(502).json({ error: error.message || 'Não foi possível carregar o catálogo.' });
+async function loadCatalog(publicOnly = false) {
+  const visible = animes => publicOnly ? animes.filter(anime => anime.visibility !== 'draft') : animes;
+  if (postgresPool) return { animes: await readPostgresCatalog(publicOnly), storage: 'postgres' };
+  const supabase = supabaseConfiguration();
+  if (supabase) {
+    const response = await axios.get(`${supabase.url}/rest/v1/${supabaseCatalogTable}`, {
+      params: { select: 'animes', id: 'eq.1', limit: 1 },
+      headers: { apikey: supabase.serviceRoleKey, Authorization: `Bearer ${supabase.serviceRoleKey}` },
+    });
+    if (!Array.isArray(response.data[0]?.animes)) throw new Error('O Supabase não contém um catálogo válido.');
+    return { animes: visible(response.data[0].animes), storage: 'supabase' };
   }
+  const config = jsonBinConfiguration();
+  if (!config) return { animes: visible(readLocalCatalog().animes), storage: 'local' };
+  const response = await axios.get(`${jsonBinBaseUrl}/${encodeURIComponent(config.binId)}/latest`,
+    { headers: { 'X-Master-Key': config.masterKey, 'X-Bin-Meta': 'false' } });
+  const record = response.data.record || response.data;
+  if (!Array.isArray(record.animes)) throw new Error('O Jsonbin não contém um catálogo válido.');
+  return { animes: visible(record.animes), storage: 'jsonbin' };
+}
+const publicCatalogCache = createCatalogCache(() => loadCatalog(true));
+// Public data has a separate endpoint and never depends on a session or contains drafts.
+app.get('/api/animes/public', async (req, res, next) => {
+  try {
+    res.set('Cache-Control', 'public, max-age=0, must-revalidate');
+    res.json(await publicCatalogCache.get());
+  } catch (error) { next(error); }
+});
+app.get('/api/animes', auth.optionalUser, async (req, res, next) => {
+  try {
+    res.set('Cache-Control', 'no-store');
+    res.json(await loadCatalog(!req.user));
+  } catch (error) { next(error); }
 });
 
 app.post('/api/animes/changes', auth.optionalUser, auth.requireUser, async (req, res, next) => {
@@ -192,6 +191,7 @@ app.post('/api/animes/changes', auth.optionalUser, auth.requireUser, async (req,
     if (!postgresPool) return res.status(503).json({ error: 'Esta operação requer PostgreSQL.' });
     await ensurePostgresSchema();
     await applyCatalogChanges(postgresPool, req.body.changes);
+    publicCatalogCache.clear();
     res.json({ animes: await readPostgresCatalog(), storage: 'postgres' });
   } catch (error) {
     if (error.code === '23505') return res.status(409).json({ error: 'Já existe um anime com esse ID ou slug. Atualize o catálogo e tente novamente.' });
@@ -205,6 +205,7 @@ app.put('/api/animes', auth.optionalUser, auth.requireUser, async (req, res) => 
     validateCatalog(animes);
     if (postgresPool) {
       await writePostgresCatalog(animes);
+      publicCatalogCache.clear();
       return res.json({ animes: await readPostgresCatalog(), storage: 'postgres' });
     }
     const supabase = supabaseConfiguration();
@@ -218,12 +219,14 @@ app.put('/api/animes', auth.optionalUser, auth.requireUser, async (req, res) => 
           Prefer: 'resolution=merge-duplicates,return=minimal',
         },
       });
+      publicCatalogCache.clear();
       return res.json({ animes, storage: 'supabase' });
     }
     const config = jsonBinConfiguration();
 
     if (!config) {
       writeLocalCatalog(animes);
+      publicCatalogCache.clear();
       return res.json({ animes, storage: 'local' });
     }
 
@@ -237,6 +240,7 @@ app.put('/api/animes', auth.optionalUser, auth.requireUser, async (req, res) => 
         },
       }
     );
+    publicCatalogCache.clear();
     res.json({ animes, storage: 'jsonbin', metadata: response.data.metadata });
   } catch (error) {
     console.error('Falha ao salvar o catálogo:', error.message);

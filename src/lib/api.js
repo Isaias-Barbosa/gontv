@@ -3,9 +3,10 @@ const tokenKey = 'gontv.admin.session';
 export const getToken = () => sessionStorage.getItem(tokenKey);
 export const storeToken = token => token ? sessionStorage.setItem(tokenKey, token) : sessionStorage.removeItem(tokenKey);
 export async function apiRequest(path, options = {}) {
-  const token = getToken();
+  const { anonymous, ...requestOptions } = options;
+  const token = anonymous ? null : getToken();
   const response = await fetch(`${apiBaseUrl}${path}`, {
-    ...options,
+    ...requestOptions,
     headers: { ...(options.body ? { 'Content-Type': 'application/json' } : {}), ...(token ? { Authorization: `Bearer ${token}` } : {}), ...options.headers },
   });
   if (response.status === 204) return null;

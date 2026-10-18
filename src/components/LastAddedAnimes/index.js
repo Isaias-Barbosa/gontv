@@ -3,26 +3,12 @@ import { Link } from 'react-router-dom'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { BeatLoader } from 'react-spinners';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import CardAnime from 'components/CardAnime';
 import { usePublicAnimes } from 'context/AnimeCatalogContext';
 
 export default function LastAddedAnimes() {
   const lastAddedAnimeData = usePublicAnimes();
-
-  const [isLoading, setIsLoading] = useState(true);
-
-
-
-
-  useEffect(() => {
-    // Simulação de uma requisição assíncrona
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000); // Tempo de simulação de carregamento (2 segundos)
-  }, []);
-
 
   const limitedAnimes = getRecentAnimes(lastAddedAnimeData, 'legendado');
 
@@ -75,12 +61,6 @@ export default function LastAddedAnimes() {
                   Ver Todos
             </Link>
           </div>
-          {isLoading ? (
-          // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados
-          <div className="flex justify-center">
-            <BeatLoader color="#00b894" loading={isLoading} size={20} />
-          </div>
-        ) : (
           <Slider {...settings}>
             {limitedAnimes && limitedAnimes.length > 0 ? (
               limitedAnimes.map((anime) => (
@@ -92,7 +72,6 @@ export default function LastAddedAnimes() {
               <div>Nenhum anime encontrado.</div>
             )}
           </Slider>
-                )}
         </div>
       </div>
     </>

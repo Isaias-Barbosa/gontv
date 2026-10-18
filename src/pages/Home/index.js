@@ -1,7 +1,7 @@
 import { getRecentEpisodes } from 'lib/homeFeed';
 import Banner from "components/Banner";
 import PopularAnime from "components/PopularAnime";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { MdPlayCircleFilled } from 'react-icons/md';
 import LastAddedAnimes from "components/LastAddedAnimes";
 import LastAddedAnimesDublado from 'components/LastAddedAnimesDublado';
@@ -9,27 +9,14 @@ import { Link } from 'react-router-dom';
 import LastAddedFilmes from "components/LastAddedFilmes";
 import 'tailwindcss/tailwind.css';
 import { Helmet } from "react-helmet";
-import { LinearProgress } from "@mui/material";
 import Calendar from "components/Calendar";
 import { usePublicAnimes } from 'context/AnimeCatalogContext';
 
-
 export default function Home() {
 const animes = usePublicAnimes();
-const recentEpisodes = getRecentEpisodes(animes).slice(0, 20);
+const recentEpisodes = useMemo(() => getRecentEpisodes(animes).slice(0, 20), [animes]);
 
 const pageTitle = `Gon.TV - Animes Online em FHD`;
-const [isLoading, setIsLoading] = useState(true);
-
-
-
-
-useEffect(() => {
-  // Simulação de uma requisição assíncrona
-  setTimeout(() => {
-    setIsLoading(false);
-  }, 2000); // Tempo de simulação de carregamento (2 segundos)
-}, []);
 
 const MAX_TITLE_LENGTH = 30; // Define o número máximo de caracteres do título
 
@@ -42,7 +29,6 @@ const truncateTitle = (title) => {
 
 const [hoveredIndex, setHoveredIndex] = useState(null);
 
-
 //Pegue a data do dia e compara com os dias da semana.
 const date = new Date().toLocaleDateString('pt-BR', {
   weekday: 'long',
@@ -54,8 +40,6 @@ const date = new Date().toLocaleDateString('pt-BR', {
 
 const title = `Animes de Hoje`;
 
-
-
 return (
 
   <>
@@ -63,12 +47,6 @@ return (
       <title>{pageTitle}</title>
     </Helmet>
 
-    {isLoading ? (
-      // Exibir o progress de pré-carregamento enquanto os dados estão sendo carregados   
-      <div className="min-h-screen bg-black-dark flex justify-start flex-col">
-        <LinearProgress />
-      </div>
-    ) : (
       <div className="bg-black-dark">
         <Banner />
         <main className="container mx-auto py-8">
@@ -110,6 +88,7 @@ return (
                         <div className="relative thumbnail">
                           <img
                             src={lastEpisode.thumbnail}
+                            loading="lazy" decoding="async"
                             alt={anime.title}
                             className="w-full h-auto"
                           />
@@ -148,9 +127,7 @@ return (
           </div>
         </main>
       </div>
-    )}
   </>
-
 
 )
 }

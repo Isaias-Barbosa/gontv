@@ -67,6 +67,13 @@ test('autenticação e dashboard em schema PostgreSQL isolado', {skip:!process.e
       assert.equal((await request('/api/animes')).status,200);
       const saved=await request('/api/animes',{method:'PUT',token:editor,body:{animes}});
       assert.equal(saved.status,200);assert.ok(saved.data.animes[0].createdAt);
+      const publicResponse = await request('/api/animes/public', { token: admin });
+      assert.equal(publicResponse.status, 200);
+      assert.equal(publicResponse.data.animes.length, 1);
+      assert.equal(publicResponse.data.animes[0].visibility, 'published');
+      assert.equal(publicResponse.headers.get('cache-control'), 'public, max-age=0, must-revalidate');
+      const conditional = await fetch(base + '/api/animes/public', { cache: 'no-cache', headers: { 'If-None-Match': publicResponse.headers.get('etag') } });
+      assert.equal(conditional.status, 304);
       const firstDate=saved.data.animes[0].createdAt;
       const again=await request('/api/animes',{method:'PUT',token:editor,body:{animes}});
       assert.equal(again.data.animes[0].createdAt,firstDate);
@@ -86,10 +93,12 @@ test('autenticação e dashboard em schema PostgreSQL isolado', {skip:!process.e
       const created = await change(null, { id: 3, slug: 'terceiro', title: 'Terceiro', visibility: 'published', episodes });
       assert.equal(created.status, 200);
       let before = created.data.animes.find(a => a.id === 3);
+      assert.equal((await request('/api/animes/public')).data.animes.find(a => a.id === 3).title, 'Terceiro');
       const date = before.createdAt;
       const rowIds = (await pool.query('SELECT id, data FROM episodes WHERE anime_id = 3 ORDER BY id')).rows;
       const edited = await change(before, { ...before, title: 'Editado', episodes: before.episodes.map(e => e.id === 2 ? { ...e, duration: '24 min' } : e) });
       assert.equal(edited.status, 200);
+      assert.equal((await request('/api/animes/public')).data.animes.find(a => a.id === 3).title, 'Editado');
       assert.deepEqual(edited.data.animes.find(a => a.id === 2), untouched);
       assert.equal(edited.data.animes.find(a => a.id === 3).createdAt, date);
       const updatedRows = (await pool.query('SELECT id, data FROM episodes WHERE anime_id = 3 ORDER BY id')).rows;
@@ -107,6 +116,7 @@ test('autenticação e dashboard em schema PostgreSQL isolado', {skip:!process.e
       assert.deepEqual((await request('/api/animes', { token: editor })).data.animes.find(a => a.id === 3), before);
       const removed = await change(before, null);
       assert.equal(removed.status, 200);
+      assert.equal((await request('/api/animes/public')).data.animes.some(a => a.id === 3), false);
       assert.equal(removed.data.animes.some(a => a.id === 3), false);
       assert.deepEqual(removed.data.animes.find(a => a.id === 2), untouched);
       assert.equal((await pool.query('SELECT count(*)::int AS total FROM episodes WHERE anime_id = 3')).rows[0].total, 0);

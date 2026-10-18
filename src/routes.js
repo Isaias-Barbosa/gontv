@@ -1,5 +1,5 @@
 import Home from "pages/Home";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import ScrollToTop from "components/ScrollToTop";
 import SingleAnimePage from "pages/SingleAnimePage";
 import Animes from "pages/Animes";
@@ -35,7 +35,7 @@ import { Navigate } from "react-router-dom";
 function AppRoutes() {
 
   return (
-    <BrowserRouter>
+    <>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout><Home /></Layout>} />
@@ -76,7 +76,7 @@ function AppRoutes() {
 
           <Route path="*" element={<Layout><NotFoundPage /></Layout>} />
         </Routes>
-    </BrowserRouter>
+    </>
   )
 }
 

@@ -37,6 +37,7 @@ export default function CardAnime({ anime }) {
                     <div className="anime-cover">
                         <img
                             src={anime.coverImage}
+                            loading="lazy" decoding="async"
                             alt={anime.title}
                             className="object-cover custom-height"
                         />

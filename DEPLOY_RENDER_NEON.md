@@ -112,3 +112,25 @@ antes dessa atualização não têm data original conhecida e aparecem como
   No Neon, a conexão direta é usada nos testes porque o pooler não permite
   `search_path` nos parâmetros de inicialização.
 - `CI=true npm run build`: build com avisos tratados como erros.
+
+### Carregamento do catálogo público
+
+A home e as páginas públicas usam `/api/animes/public`, sem esperar pela sessão
+administrativa. O endpoint contém somente animes publicados e mantém um cache
+em memória por 30 segundos. Gravações e exclusões na API invalidam esse cache.
+A resposta tem ETag e permite revalidação HTTP sem transferir novamente os dados
+quando o conteúdo não mudou. O painel continua usando a consulta autenticada,
+sem cache público, para carregar rascunhos e editar a versão atual dos dados.
+
+O navegador guarda somente o catálogo público por até cinco minutos. Ao retornar
+ao site, ele exibe essa cópia imediatamente e consulta a API em segundo plano.
+Se a atualização falhar, a página mantém os dados salvos e oferece nova tentativa.
+As esperas simuladas de dois segundos da home e dos carrosséis foram removidas.
+
+Faça o deploy da API no Render antes do frontend na Vercel, pois o frontend usa
+o novo endpoint público. Nenhuma variável de ambiente adicional é necessária.
+
+Se o serviço estiver no plano Free, o Render pode suspender a API após 15 minutos
+sem tráfego e levar cerca de um minuto para reativá-la. O cache ajuda nas visitas
+seguintes, mas não elimina essa espera no primeiro acesso sem uma cópia salva.
+Referência: https://render.com/docs/free#spinning-down-on-idle

@@ -4,28 +4,10 @@ import { Link } from 'react-router-dom'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import React, { useState, useEffect } from 'react';
-import { BeatLoader } from 'react-spinners';
+import React from 'react';
 import CardAnime from 'components/CardAnime';
 
 export default function LastAddedAnimesDublado({animes}) {
-
-  const [isLoading, setIsLoading] = useState(true);
-
-
-
-
-
-  useEffect(() => {
-    // Simulação de uma requisição assíncrona
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000); // Tempo de simulação de carregamento (2 segundos)
-  }, []);
-
-
-
-
 
   const limitedAnimes = getRecentAnimes(animes, 'dublado');
 
@@ -77,13 +59,7 @@ export default function LastAddedAnimesDublado({animes}) {
             Ver Todos
           </Link>
         </div>
-        {isLoading ? (
-          // Exibir o spinner de pré-carregamento enquanto os dados estão sendo carregados
-          <div className="flex justify-center">
-            <BeatLoader color="#00b894" loading={isLoading} size={20} />
-          </div>
-        ) : (
-          <Slider {...settings}>
+        <Slider {...settings}>
             {limitedAnimes && limitedAnimes.length > 0 ? (
               limitedAnimes.map((anime) => (
                 <div className="px-1" key={anime.id}>
@@ -94,7 +70,6 @@ export default function LastAddedAnimesDublado({animes}) {
               <div>Nenhum anime encontrado.</div>
             )}
           </Slider>
-        )}
       </div>
 
     </>
