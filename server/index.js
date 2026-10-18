@@ -10,6 +10,7 @@ const { createAuth, bootstrapAdmin } = require('./auth');
 const { createMediaRouter } = require('./media');
 const { createMalRouter } = require('./mal');
 const { createAniListRouter } = require('./anilist');
+const { applyCatalogChanges } = require('./catalogChanges');
 
 const app = express();
 const port = Number(process.env.PORT || 3001);
@@ -183,6 +184,18 @@ app.get('/api/animes', auth.optionalUser, async (req, res) => {
   } catch (error) {
     console.error('Falha ao carregar o catálogo:', error.message);
     res.status(502).json({ error: error.message || 'Não foi possível carregar o catálogo.' });
+  }
+});
+
+app.post('/api/animes/changes', auth.optionalUser, auth.requireUser, async (req, res, next) => {
+  try {
+    if (!postgresPool) return res.status(503).json({ error: 'Esta operação requer PostgreSQL.' });
+    await ensurePostgresSchema();
+    await applyCatalogChanges(postgresPool, req.body.changes);
+    res.json({ animes: await readPostgresCatalog(), storage: 'postgres' });
+  } catch (error) {
+    if (error.code === '23505') return res.status(409).json({ error: 'Já existe um anime com esse ID ou slug. Atualize o catálogo e tente novamente.' });
+    next(error);
   }
 });
 

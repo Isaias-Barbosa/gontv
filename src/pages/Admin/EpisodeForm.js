@@ -31,6 +31,7 @@ export default function EpisodeForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (saving) return;
     setSaving(true);
     setError('');
     const titleSlug = form.titleSlug.trim();
@@ -51,7 +52,7 @@ export default function EpisodeForm() {
       : [...anime.episodes, episode];
     try {
       await save(animes.map((item) => item.id === anime.id ? { ...item, episodes } : item));
-      navigate(`/admin/animes/${anime.id}/episodes`);
+      navigate(`/admin/animes/${anime.id}/episodes`, { state: { success: current ? 'Episódio atualizado com sucesso.' : 'Episódio cadastrado com sucesso.' } });
     } catch (saveError) {
       setError(saveError.message);
     } finally {
@@ -67,6 +68,7 @@ export default function EpisodeForm() {
         <p className="mt-1 text-slate-400">Cadastre URLs de vídeo para estudo; não há upload de arquivos.</p>
       </div>
       {error && <p role="alert" className="mb-4 rounded bg-red-950 p-3 text-red-200">{error}</p>}
+      {saving && <p role="status" className="mb-4 rounded bg-sky-950 p-3 text-sky-200">Salvando episódio… Aguarde a confirmação.</p>}
       <form aria-label="Episódio" onSubmit={handleSubmit} className="grid gap-4 rounded-lg border border-slate-800 bg-slate-900 p-5 sm:grid-cols-2">
         <label><span className="mb-1 block text-sm text-slate-300">Título</span><input required value={form.titleEpisodio} onChange={(event) => setForm((previous) => ({ ...previous, titleEpisodio: event.target.value, titleSlug: current && previous.titleSlug !== slugify(current.titleEpisodio) ? previous.titleSlug : slugify(event.target.value) }))} className="w-full rounded border border-slate-700 bg-slate-950 px-3 py-2" /></label>
         <label><span className="mb-1 block text-sm text-slate-300">Slug</span><input required value={form.titleSlug} onChange={(event) => update('titleSlug', event.target.value)} className="w-full rounded border border-slate-700 bg-slate-950 px-3 py-2" /></label>

@@ -1,0 +1,46 @@
+import React from 'react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { useAnimeCatalog } from 'context/AnimeCatalogContext';
+import EpisodeManager from './EpisodeManager';
+import EpisodeForm from './EpisodeForm';
+jest.mock('context/AnimeCatalogContext');
+const episode = { id: 1, titleEpisodio: 'Episódio 1', titleSlug: 'ep-1', videoUrl: [] };
+const anime = { id: 1, title: 'Anime teste', episodes: [episode] };
+const mount = (path = '/admin/animes/1/episodes') => render(<MemoryRouter initialEntries={[path]}><Routes><Route path="/admin/animes/:animeId/episodes" element={<EpisodeManager />} /><Route path="/admin/animes/:animeId/episodes/:episodeId/edit" element={<EpisodeForm />} /></Routes></MemoryRouter>);
+afterEach(() => jest.restoreAllMocks());
+test('exclusão informa andamento, bloqueia repetição e só confirma após resposta', async () => {
+  let resolve;
+  const save = jest.fn(() => new Promise(done => { resolve = done; }));
+  useAnimeCatalog.mockReturnValue({ animes: [anime], save });
+  jest.spyOn(window, 'confirm').mockReturnValue(true);
+  mount();
+  fireEvent.click(screen.getByRole('button', { name: 'Excluir' }));
+  expect(screen.getByRole('status')).toHaveTextContent('Processando');
+  expect(screen.getByRole('button', { name: 'Excluir' })).toBeDisabled();
+  expect(screen.queryByText('Episódio excluído com sucesso.')).not.toBeInTheDocument();
+  fireEvent.click(screen.getByRole('button', { name: 'Excluir' }));
+  expect(save).toHaveBeenCalledTimes(1);
+  await act(async () => resolve([]));
+  expect(screen.getByRole('status')).toHaveTextContent('Episódio excluído com sucesso.');
+});
+test('falha na exclusão informa erro e permite tentar novamente', async () => {
+  useAnimeCatalog.mockReturnValue({ animes: [anime], save: jest.fn().mockRejectedValue(new Error('Falha de conexão')) });
+  jest.spyOn(window, 'confirm').mockReturnValue(true);
+  mount();
+  fireEvent.click(screen.getByRole('button', { name: 'Excluir' }));
+  expect(await screen.findByRole('alert')).toHaveTextContent('Falha de conexão');
+  expect(screen.getByRole('button', { name: 'Excluir' })).toBeEnabled();
+  expect(screen.queryByRole('status')).not.toBeInTheDocument();
+});
+test('edição mostra andamento e confirmação na lista após navegar', async () => {
+  let resolve;
+  useAnimeCatalog.mockReturnValue({ animes: [anime], save: jest.fn(() => new Promise(done => { resolve = done; })) });
+  mount('/admin/animes/1/episodes/1/edit');
+  fireEvent.submit(screen.getByRole('form', { name: 'Episódio' }));
+  expect(screen.getByRole('status')).toHaveTextContent('Salvando episódio');
+  expect(screen.getByRole('button', { name: 'Salvando...' })).toBeDisabled();
+  await act(async () => resolve([]));
+  expect(screen.getByRole('status')).toHaveTextContent('Episódio atualizado com sucesso.');
+});

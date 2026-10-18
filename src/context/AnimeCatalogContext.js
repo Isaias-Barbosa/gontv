@@ -27,11 +27,18 @@ export function AnimeCatalogProvider({ children }) {
     return () => { request.current += 1; };
   }, [refresh, user, authLoading]);
   const save = useCallback(async nextAnimes => {
-    const payload = await apiRequest('/api/animes', { method: 'PUT', body: JSON.stringify({ animes: nextAnimes }) });
+    const before = new Map(animes.map(anime => [String(anime.id), anime]));
+    const after = new Map(nextAnimes.map(anime => [String(anime.id), anime]));
+    const changes = [...new Set([...before.keys(), ...after.keys()])]
+      .filter(id => before.get(id) !== after.get(id))
+      .map(id => ({ before: before.get(id) || null, after: after.get(id) || null }));
+    const payload = storage === 'postgres'
+      ? await apiRequest('/api/animes/changes', { method: 'POST', body: JSON.stringify({ changes }) })
+      : await apiRequest('/api/animes', { method: 'PUT', body: JSON.stringify({ animes: nextAnimes }) });
     if (!Array.isArray(payload.animes)) throw new Error('A API retornou uma resposta de gravação inválida.');
     setAnimes(payload.animes); setStorage(payload.storage || 'local');
     return payload.animes;
-  }, []);
+  }, [animes, storage]);
   const value = useMemo(() => ({ animes, storage, loading, error, refresh, save }), [animes, storage, loading, error, refresh, save]);
   return <AnimeCatalogContext.Provider value={value}>{children}</AnimeCatalogContext.Provider>;
 }

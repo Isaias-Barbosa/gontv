@@ -103,6 +103,7 @@ export default function AnimeForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (saving) return;
     setError('');
     setSaving(true);
     const slug = form.slug.trim();
@@ -128,7 +129,7 @@ export default function AnimeForm() {
 
     try {
       await save(nextAnimes);
-      navigate('/admin/animes');
+      navigate('/admin/animes', { state: { success: current ? 'Anime atualizado com sucesso.' : 'Anime cadastrado com sucesso.' } });
     } catch (saveError) {
       setError(saveError.message);
     } finally {
@@ -159,6 +160,7 @@ export default function AnimeForm() {
     {malNotice && <p role="status" className="mt-2 text-sm text-emerald-300">{malNotice}</p>}
       </div>
       {error && <p role="alert" className="mb-4 rounded bg-red-950 p-3 text-red-200">{error}</p>}
+      {saving && <p role="status" className="mb-4 rounded bg-sky-950 p-3 text-sky-200">Salvando anime… Aguarde a confirmação.</p>}
       <form onSubmit={handleSubmit} className="grid gap-4 rounded-lg border border-slate-800 bg-slate-900 p-5 sm:grid-cols-2">
         {fields.map(([key, label]) => (
           <label key={key} className={key === 'synopsis' ? 'sm:col-span-2' : ''}>
