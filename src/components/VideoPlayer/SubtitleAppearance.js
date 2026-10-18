@@ -1,4 +1,4 @@
-import React, { useEffect, useId, useState } from 'react';
+import React, { useEffect, useId, useMemo, useState } from 'react';
 const storageKey = 'gontv.subtitle-appearance.v1';
 export const defaultAppearance = { size: 'normal', color: 'white', background: 'none', shadow: 'none' };
 const choices = {
@@ -14,17 +14,15 @@ function readAppearance() {
     return Object.fromEntries(Object.keys(defaultAppearance).map(key => [key, Object.hasOwn(choices[key], saved?.[key]) ? saved[key] : defaultAppearance[key]]));
   } catch { return { ...defaultAppearance }; }
 }
-export default function SubtitleAppearance({ targetId }) {
+export default function SubtitleAppearance({ onStyleChange }) {
   const [appearance, setAppearance] = useState(readAppearance);
   const id = useId();
   useEffect(() => {
     try { localStorage.setItem(storageKey, JSON.stringify(appearance)); } catch { /* Preferences still apply when storage is unavailable. */ }
   }, [appearance]);
-  const style = { color: choices.color[appearance.color][1], backgroundColor: choices.background[appearance.background][1], fontSize: choices.size[appearance.size][1], textShadow: choices.shadow[appearance.shadow][1] };
-  // Use validated literal values: native video cues do not consistently inherit custom properties.
-  const cueStyle = `#${targetId} video::cue { color: ${style.color}; background-color: ${style.backgroundColor}; font-size: ${style.fontSize}; text-shadow: ${style.textShadow}; }`;
+  const style = useMemo(() => ({ color: choices.color[appearance.color][1], backgroundColor: choices.background[appearance.background][1], fontSize: choices.size[appearance.size][1], textShadow: choices.shadow[appearance.shadow][1] }), [appearance]);
+  useEffect(() => { onStyleChange?.(style); }, [style, onStyleChange]);
   return <>
-    <style data-subtitle-appearance>{cueStyle}</style>
     <details className="gon-subtitle-appearance">
       <summary>Configurações da legenda</summary>
       <div className="gon-subtitle-appearance-grid">

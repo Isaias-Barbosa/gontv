@@ -272,3 +272,22 @@
 @media (max-width: 480px) {
   .gon-subtitle-appearance-grid { grid-template-columns: 1fr; }
 }
+
+.gon-dplayer { position: relative; }
+.gon-caption-overlay {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: 12%;
+  z-index: 4;
+  pointer-events: none;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: clamp(14px, 2.4vw, 28px);
+  line-height: 1.35;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+  color: #fff;
+}
+.gon-caption-overlay > div { margin-top: 3px; }
+.gon-caption-overlay span { padding: 2px 5px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }

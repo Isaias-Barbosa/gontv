@@ -1,15 +1,14 @@
-import React, { useCallback, useEffect, useId, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import DPlayer from 'dplayer';
+import { createPortal } from 'react-dom';
 import { FiAlertCircle, FiRefreshCw, FiType, FiSquare } from 'react-icons/fi';
 import { createSubtitleWorker } from 'lib/createSubtitleWorker';
 import { alternateDiscordUrl, sourceInfo, subtitleSourceUrl } from 'lib/videoSources';
 import './VideoPlayer.css';
 import SubtitleAppearance from './SubtitleAppearance';
-const escapeCue = text => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const portuguese = language => /^(pt|por)(-|$)/i.test(language);
 export default function VideoPlayer({ sources = [], title, poster }) {
-  const playerId = `gon-player-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
   const [selectedSource, setSelectedSource] = useState(0);
   const [alternate, setAlternate] = useState(false);
   const originalUrl = sources[selectedSource]?.url?.trim() || '';
@@ -24,14 +23,25 @@ export default function VideoPlayer({ sources = [], title, poster }) {
   const [status, setStatus] = useState('As legendas internas serão buscadas ao iniciar a reprodução.');
   const [progress, setProgress] = useState({ read: 0, total: 0 });
   const [cueCount, setCueCount] = useState(0);
+  const [captionHost, setCaptionHost] = useState(null);
+  const [captionStyle, setCaptionStyle] = useState({});
+  const [captions, setCaptions] = useState([]);
+  const cueTexts = useRef(new WeakMap());
+  const nativeFullscreen = useRef(false);
+  const syncCaptions = useCallback(() => {
+    const track = nativeTracks.current.get(selectedRef.current)?.track;
+    const next = Array.from(track?.activeCues || []).map(cue => cueTexts.current.get(cue) ?? cue.text);
+    setCaptions(previous => previous.length === next.length && previous.every((text, i) => text === next[i]) ? previous : next);
+  }, []);
   const activate = useCallback(id => {
     selectedRef.current = id; setSubtitle(id);
-    for (const [key, item] of nativeTracks.current) item.track.mode = key === id ? 'showing' : 'disabled';
-  }, []);
+    for (const [key, item] of nativeTracks.current) item.track.mode = key === id ? (nativeFullscreen.current ? 'showing' : 'hidden') : 'disabled';
+    syncCaptions();
+  }, [syncCaptions]);
   const clearTracks = useCallback(() => {
-    for (const item of nativeTracks.current.values()) { item.track.mode = 'disabled'; while (item.track.cues?.length) item.track.removeCue(item.track.cues[0]); }
+    for (const item of nativeTracks.current.values()) { item.track.mode = 'disabled'; item.track.removeEventListener?.('cuechange', syncCaptions); while (item.track.cues?.length) item.track.removeCue(item.track.cues[0]); }
     nativeTracks.current.clear(); setTracks([]); activate(''); setCueCount(0); manualSubtitle.current = false;
-  }, [activate]);
+  }, [activate, syncCaptions]);
   const startScan = useCallback(() => {
     const video = player.current?.video;
     if (!video || !sourceInfo(url).mkv) return;
@@ -53,6 +63,7 @@ export default function VideoPlayer({ sources = [], title, poster }) {
         if (t.supported) {
           const track = video.addTextTrack('subtitles', label, t.language); track.mode = 'disabled';
           nativeTracks.current.set(id, { track, language: t.language, last: null });
+          track.addEventListener?.('cuechange', syncCaptions);
           const previous = nativeTracks.current.get(selectedRef.current);
           if (!manualSubtitle.current && (!previous || (portuguese(t.language) && !portuguese(previous.language)))) activate(id);
         }
@@ -62,10 +73,11 @@ export default function VideoPlayer({ sources = [], title, poster }) {
           const entry = nativeTracks.current.get(String(item.track));
           if (!entry) continue;
           if (entry.last?.estimated && entry.last.cue.startTime < item.start) entry.last.cue.endTime = Math.min(entry.last.cue.endTime, item.start);
-          const cue = new window.VTTCue(item.start, item.end, escapeCue(item.text));
+          const cue = new window.VTTCue(item.start, item.end, item.text);
+          cueTexts.current.set(cue, item.text);
           entry.track.addCue(cue); entry.last = { cue, estimated: item.estimated }; count += 1;
         }
-        setCueCount(count);
+        setCueCount(count); syncCaptions();
       }
       if (data.type === 'progress') setProgress({ read: data.read, total: data.total });
       if (data.type === 'done') {
@@ -80,24 +92,63 @@ export default function VideoPlayer({ sources = [], title, poster }) {
     };
     current.onerror = () => { if (worker.current === current) { setPhase('error'); setStatus('A leitura de legendas falhou. Tente buscar novamente.'); current.terminate(); worker.current = null; } };
     current.postMessage({ type: 'start', url: subtitleSourceUrl(url) });
-  }, [url, clearTracks, activate]);
+  }, [url, clearTracks, activate, syncCaptions]);
   useEffect(() => {
     setError(''); worker.current?.terminate(); worker.current = null; clearTracks();
     setPhase('idle'); setStatus('As legendas internas serão buscadas ao iniciar a reprodução.'); setProgress({ read: 0, total: 0 }); autoStarted.current = false;
     if (!sourceInfo(url).direct || !container.current) return undefined;
     const instance = new DPlayer({ container: container.current, theme: '#34d399', lang: 'en', autoplay: false, preload: 'metadata', screenshot: false, video: { url, type: 'normal', pic: poster || '' } });
     player.current = instance;
+    const host = document.createElement('div');
+    nativeFullscreen.current = false;
+    host.className = 'gon-caption-overlay';
+    host.setAttribute('aria-label', 'Legenda do vídeo');
+    (instance.video.parentElement || container.current).appendChild(host);
+    setCaptionHost(host);
+    // Keep native tracks timed but hidden, including any track exposed directly by the MKV.
+    const hideNativeCaptions = () => {
+      if (!sourceInfo(url).mkv) return;
+      const selected = nativeTracks.current.get(selectedRef.current)?.track;
+      const selectedMode = nativeFullscreen.current ? 'showing' : 'hidden';
+      if (selected && selected.mode !== selectedMode) selected.mode = selectedMode;
+      for (const track of Array.from(instance.video.textTracks || [])) {
+        if (!['subtitles', 'captions'].includes(track.kind)) continue;
+        const mode = track === selected ? selectedMode : 'disabled';
+        if (track.mode !== mode) track.mode = mode;
+      }
+    };
+    const enterNativeFullscreen = () => { nativeFullscreen.current = true; host.hidden = true; hideNativeCaptions(); };
+    const exitNativeFullscreen = () => { nativeFullscreen.current = false; host.hidden = false; hideNativeCaptions(); syncCaptions(); };
+    instance.video.addEventListener('webkitbeginfullscreen', enterNativeFullscreen);
+    instance.video.addEventListener('webkitendfullscreen', exitNativeFullscreen);
+    hideNativeCaptions();
+    instance.video.textTracks?.addEventListener?.('addtrack', hideNativeCaptions);
+    instance.video.textTracks?.addEventListener?.('change', hideNativeCaptions);
+    instance.video.addEventListener('timeupdate', syncCaptions);
+    instance.video.addEventListener('seeked', syncCaptions);
+    instance.video.addEventListener('loadedmetadata', hideNativeCaptions);
     instance.video.setAttribute('aria-label', title || 'Player de vídeo');
     instance.on('loadedmetadata', () => { if (resume.current) { instance.seek(Math.min(resume.current.time, Number.isFinite(instance.video.duration) ? instance.video.duration : resume.current.time)); if (resume.current.playing) instance.play()?.catch?.(() => {}); resume.current = null; } });
     instance.on('error', () => setError(instance.video.error?.code === 4 ? 'O navegador não suporta o formato ou os codecs deste vídeo. Tente outro navegador ou uma fonte MP4/H.264.' : 'Não foi possível carregar o vídeo. O link pode ter expirado ou a conexão foi interrompida.'));
     instance.on('play', () => { if (sourceInfo(url).mkv && !autoStarted.current) startScan(); });
-    return () => { worker.current?.terminate(); worker.current = null; clearTracks(); instance.destroy(); if (player.current === instance) player.current = null; };
-  }, [url, poster, title, clearTracks, startScan]);
+    return () => {
+      instance.video.textTracks?.removeEventListener?.('addtrack', hideNativeCaptions);
+      instance.video.textTracks?.removeEventListener?.('change', hideNativeCaptions);
+      instance.video.removeEventListener('timeupdate', syncCaptions);
+      instance.video.removeEventListener('seeked', syncCaptions);
+      instance.video.removeEventListener('loadedmetadata', hideNativeCaptions);
+      instance.video.removeEventListener('webkitbeginfullscreen', enterNativeFullscreen);
+      instance.video.removeEventListener('webkitendfullscreen', exitNativeFullscreen);
+      worker.current?.terminate(); worker.current = null; clearTracks(); instance.destroy();
+      if (player.current === instance) player.current = null;
+    };
+  }, [url, poster, title, clearTracks, startScan, syncCaptions]);
   const rememberPosition = () => { if (player.current?.video) resume.current = { time: player.current.video.currentTime || 0, playing: !player.current.video.paused }; };
   const changeSource = event => { rememberPosition(); setAlternate(false); setSelectedSource(Number(event.target.value)); };
-  return <section id={playerId} className="gon-video-player" aria-label="Reprodução do episódio">
+  return <section className="gon-video-player" aria-label="Reprodução do episódio">
     {sources.length > 1 && <div className="gon-video-toolbar"><label>Fonte / qualidade <select value={selectedSource} onChange={changeSource}>{sources.map((source, index) => <option key={index} value={index}>{source.resolution || `Fonte ${index + 1}`}</option>)}</select></label></div>}
     {!info.valid ? <p role="alert" className="gon-player-message">Nenhuma fonte de vídeo válida foi cadastrada para este episódio.</p> : info.torrent ? <p className="gon-player-message">Esta fonte é um torrent. <Link to="/torrent">Abrir Player Torrent</Link></p> : info.direct ? <div className="gon-dplayer" ref={container} /> : <div className="gon-embed"><iframe title={title || 'Player do episódio'} src={url} allow="autoplay; fullscreen; picture-in-picture" allowFullScreen /></div>}
+    {captionHost && createPortal(captions.map((text, index) => <div key={index}><span style={captionStyle}>{text}</span></div>), captionHost)}
     {error && <p role="alert" className="gon-player-message gon-player-error"><FiAlertCircle />{error}</p>}
     {info.discord && <div className="gon-video-toolbar"><button type="button" onClick={() => { rememberPosition(); setAlternate(value => !value); }}><FiRefreshCw /> Alternar CDN / Media</button><span>Se o link falhar, tente o outro servidor do Discord.</span></div>}
     {info.mkv && <div className="gon-subtitle-panel">
@@ -107,7 +158,7 @@ export default function VideoPlayer({ sources = [], title, poster }) {
       </div>
       <p role="status" aria-live="polite">{phase === 'scanning' ? `${nativeTracks.current.size} faixa(s) de texto · ${cueCount} falas · ${(progress.read / 1048576).toFixed(1)} MB lidos. Você já pode selecionar um idioma.` : status}</p>
       {phase === 'scanning' && <progress aria-label="Leitura das legendas" max={progress.total || 1} {...(progress.total ? { value: progress.read } : {})} />}
-      <SubtitleAppearance targetId={playerId} />
+      <SubtitleAppearance onStyleChange={setCaptionStyle} />
       <small>A busca lê o MKV pela rede e pode transferir o arquivo inteiro, sem salvá-lo no dispositivo. SRT, ASS/SSA e WebVTT são exibidas como texto; estilos avançados e legendas em imagem não são suportados.</small>
     </div>}
   </section>;
