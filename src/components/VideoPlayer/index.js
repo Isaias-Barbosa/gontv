@@ -1,13 +1,15 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import DPlayer from 'dplayer';
 import { FiAlertCircle, FiRefreshCw, FiType, FiSquare } from 'react-icons/fi';
 import { createSubtitleWorker } from 'lib/createSubtitleWorker';
 import { alternateDiscordUrl, sourceInfo, subtitleSourceUrl } from 'lib/videoSources';
 import './VideoPlayer.css';
+import SubtitleAppearance from './SubtitleAppearance';
 const escapeCue = text => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const portuguese = language => /^(pt|por)(-|$)/i.test(language);
 export default function VideoPlayer({ sources = [], title, poster }) {
+  const playerId = `gon-player-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
   const [selectedSource, setSelectedSource] = useState(0);
   const [alternate, setAlternate] = useState(false);
   const originalUrl = sources[selectedSource]?.url?.trim() || '';
@@ -93,7 +95,7 @@ export default function VideoPlayer({ sources = [], title, poster }) {
   }, [url, poster, title, clearTracks, startScan]);
   const rememberPosition = () => { if (player.current?.video) resume.current = { time: player.current.video.currentTime || 0, playing: !player.current.video.paused }; };
   const changeSource = event => { rememberPosition(); setAlternate(false); setSelectedSource(Number(event.target.value)); };
-  return <section className="gon-video-player" aria-label="Reprodução do episódio">
+  return <section id={playerId} className="gon-video-player" aria-label="Reprodução do episódio">
     {sources.length > 1 && <div className="gon-video-toolbar"><label>Fonte / qualidade <select value={selectedSource} onChange={changeSource}>{sources.map((source, index) => <option key={index} value={index}>{source.resolution || `Fonte ${index + 1}`}</option>)}</select></label></div>}
     {!info.valid ? <p role="alert" className="gon-player-message">Nenhuma fonte de vídeo válida foi cadastrada para este episódio.</p> : info.torrent ? <p className="gon-player-message">Esta fonte é um torrent. <Link to="/torrent">Abrir Player Torrent</Link></p> : info.direct ? <div className="gon-dplayer" ref={container} /> : <div className="gon-embed"><iframe title={title || 'Player do episódio'} src={url} allow="autoplay; fullscreen; picture-in-picture" allowFullScreen /></div>}
     {error && <p role="alert" className="gon-player-message gon-player-error"><FiAlertCircle />{error}</p>}
@@ -105,6 +107,7 @@ export default function VideoPlayer({ sources = [], title, poster }) {
       </div>
       <p role="status" aria-live="polite">{phase === 'scanning' ? `${nativeTracks.current.size} faixa(s) de texto · ${cueCount} falas · ${(progress.read / 1048576).toFixed(1)} MB lidos. Você já pode selecionar um idioma.` : status}</p>
       {phase === 'scanning' && <progress aria-label="Leitura das legendas" max={progress.total || 1} {...(progress.total ? { value: progress.read } : {})} />}
+      <SubtitleAppearance targetId={playerId} />
       <small>A busca lê o MKV pela rede e pode transferir o arquivo inteiro, sem salvá-lo no dispositivo. SRT, ASS/SSA e WebVTT são exibidas como texto; estilos avançados e legendas em imagem não são suportados.</small>
     </div>}
   </section>;

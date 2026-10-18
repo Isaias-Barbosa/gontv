@@ -18,6 +18,7 @@ const mkv = 'https://media.discordapp.net/attachments/123/456/episode.mkv?ex=abc
 let worker;
 beforeEach(() => {
   jest.clearAllMocks();
+  localStorage.clear();
   DPlayer.mockImplementation(mockPlayer);
   window.Worker = jest.fn();
   window.VTTCue = class { constructor(start, end, text) { this.startTime = start; this.endTime = end; this.text = text; } };
@@ -65,4 +66,43 @@ test('embeds existentes continuam em iframe e não iniciam extração', () => {
 });
 test('sem fonte válida mostra mensagem em vez de acessar um índice inexistente', () => {
   renderPlayer([]); expect(screen.getByRole('alert')).toHaveTextContent('Nenhuma fonte');
+});
+
+test('aparência aplica sombra, fundo, cor e tamanho sem reiniciar vídeo ou extração', () => {
+  const { container } = renderPlayer([{ url: mkv }]);
+  fireEvent.click(screen.getByRole('button', { name: 'Buscar legendas' }));
+  fireEvent.click(screen.getByText('Configurações da legenda'));
+  const rule = () => container.querySelector('style[data-subtitle-appearance]').textContent;
+  expect(rule()).toContain('text-shadow: none');
+  expect(rule()).toContain('background-color: transparent');
+  fireEvent.change(screen.getByLabelText('Sombreamento da legenda'), { target: { value: 'outline' } });
+  fireEvent.change(screen.getByLabelText('Cor da legenda'), { target: { value: 'yellow' } });
+  fireEvent.change(screen.getByLabelText('Tamanho da legenda'), { target: { value: 'large' } });
+  fireEvent.change(screen.getByLabelText('Fundo da legenda'), { target: { value: 'soft' } });
+  expect(rule()).toContain('text-shadow: -1px -1px 0 #000000');
+  expect(rule()).toContain('color: #ffe45c');
+  expect(rule()).toContain('font-size: 1.45em');
+  expect(rule()).toContain('background-color: rgba(0,0,0,0.55)');
+  expect(screen.getByLabelText('Prévia da legenda').firstChild).toHaveStyle({ color: '#ffe45c', fontSize: '1.45em' });
+  expect(DPlayer).toHaveBeenCalledTimes(1);
+  expect(worker.postMessage).toHaveBeenCalledTimes(1);
+});
+test('preferências persistem nos próximos episódios e podem voltar ao padrão', () => {
+  const first = renderPlayer([{ url: mkv }]);
+  fireEvent.change(screen.getByLabelText('Sombreamento da legenda'), { target: { value: 'soft' } });
+  first.unmount();
+  renderPlayer([{ url: mkv }]);
+  expect(screen.getByLabelText('Sombreamento da legenda')).toHaveValue('soft');
+  fireEvent.click(screen.getByText('Configurações da legenda'));
+  fireEvent.click(screen.getByRole('button', { name: 'Restaurar padrão' }));
+  expect(screen.getByLabelText('Sombreamento da legenda')).toHaveValue('none');
+  expect(screen.getByLabelText('Fundo da legenda')).toHaveValue('none');
+  expect(JSON.parse(localStorage.getItem('gontv.subtitle-appearance.v1')).shadow).toBe('none');
+});
+test('preferências inválidas são ignoradas e não entram no CSS das legendas', () => {
+  localStorage.setItem('gontv.subtitle-appearance.v1', JSON.stringify({ color: 'red; display:none', size: 'giant', shadow: 'unknown' }));
+  const { container } = renderPlayer([{ url: mkv }]);
+  expect(screen.getByLabelText('Cor da legenda')).toHaveValue('white');
+  expect(screen.getByLabelText('Sombreamento da legenda')).toHaveValue('none');
+  expect(container.querySelector('style[data-subtitle-appearance]').textContent).not.toContain('display:none');
 });
