@@ -8,13 +8,13 @@ const express = require('express');
 const cors = require('cors');
 const { createAuth, bootstrapAdmin } = require('./auth');
 const { createMediaRouter } = require('./media');
+const { createMalRouter } = require('./mal');
 
 const app = express();
 const port = Number(process.env.PORT || 3001);
 const host = process.env.HOST || '0.0.0.0';
 const catalogPath = path.resolve(__dirname, '..', 'data', 'catalog.json');
 const jsonBinBaseUrl = 'https://api.jsonbin.io/v3/b';
-const jikanBaseUrl = 'https://api.jikan.moe/v4';
 const supabaseCatalogTable = process.env.SUPABASE_CATALOG_TABLE || 'catalog';
 const databaseUrl = process.env.DATABASE_URL;
 const postgresPool = databaseUrl ? new Pool({ connectionString: databaseUrl, ssl: { rejectUnauthorized: true } }) : null;
@@ -230,24 +230,7 @@ app.put('/api/animes', auth.optionalUser, auth.requireUser, async (req, res) => 
   }
 });
 
-app.get('/api/mal/anime/:id', auth.optionalUser, auth.requireUser, async (req, res) => {
-  const malId = Number(req.params.id);
-  if (!Number.isInteger(malId) || malId < 1) {
-    return res.status(400).json({ error: 'Informe um ID válido do MyAnimeList.' });
-  }
-  try {
-    const [animeResponse, staffResponse] = await Promise.all([
-      axios.get(`${jikanBaseUrl}/anime/${malId}/full`, { timeout: 15000 }),
-      axios.get(`${jikanBaseUrl}/anime/${malId}/staff`, { timeout: 15000 }),
-    ]);
-    const anime = animeResponse.data.data;
-    const director = staffResponse.data.data?.find((item) => item.positions?.some((position) => /director/i.test(position)));
-    res.json({ ...anime, director: director?.person?.name || '' });
-  } catch (error) {
-    const status = error.response?.status === 404 ? 404 : 502;
-    res.status(status).json({ error: status === 404 ? 'Anime não encontrado no MyAnimeList.' : 'Não foi possível consultar o MyAnimeList agora.' });
-  }
-});
+app.use('/api/mal', auth.optionalUser, auth.requireUser, createMalRouter());
 
 app.get('/api/admin/dashboard', auth.optionalUser, auth.requireUser, async (req, res, next) => {
   try {

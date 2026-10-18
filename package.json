@@ -74,7 +74,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "create-admin": "node server/create-admin.js",
-    "test:server": "node --test server/auth.test.js server/media.test.js"
+    "test:server": "node --test server/auth.test.js server/media.test.js server/mal.test.js"
   },
   "eslintConfig": {
     "extends": [

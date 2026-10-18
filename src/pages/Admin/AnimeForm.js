@@ -35,6 +35,7 @@ export default function AnimeForm() {
   const [malId, setMalId] = useState('');
   const [malLoading, setMalLoading] = useState(false);
   const [malError, setMalError] = useState('');
+  const [malNotice, setMalNotice] = useState('');
 
   if (id && !current) {
     return <p className="text-red-300">Anime não encontrado.</p>;
@@ -56,6 +57,7 @@ export default function AnimeForm() {
     }
     setMalLoading(true);
     setMalError('');
+    setMalNotice('');
     try {
       const data = await apiRequest(`/api/mal/anime/${malId.trim()}`);
       const airedFrom = data.aired?.from ? new Date(data.aired.from) : null;
@@ -84,6 +86,7 @@ export default function AnimeForm() {
         synopsis: data.synopsis || previous.synopsis,
       }));
       if (genres.length) setGenresInput(genres.join(', '));
+      setMalNotice(data.warnings?.join(' ') || 'Dados do anime carregados. Revise os campos antes de salvar.');
     } catch (fetchError) {
       setMalError(fetchError.message);
     } finally {
@@ -138,6 +141,7 @@ export default function AnimeForm() {
       </div>}
     </div>
     {malError && <p role="alert" className="mt-2 text-sm text-red-300">{malError}</p>}
+    {malNotice && <p role="status" className="mt-2 text-sm text-emerald-300">{malNotice}</p>}
       </div>
       {error && <p role="alert" className="mb-4 rounded bg-red-950 p-3 text-red-200">{error}</p>}
       <form onSubmit={handleSubmit} className="grid gap-4 rounded-lg border border-slate-800 bg-slate-900 p-5 sm:grid-cols-2">
