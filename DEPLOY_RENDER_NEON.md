@@ -67,3 +67,48 @@ na build. Não basta reiniciar um deploy antigo sem reconstruir o frontend.
 - Erro de conexão PostgreSQL: confira `DATABASE_URL` e os logs da API.
 - Catálogo vazio com `storage: "postgres"`: confira se a API usa o banco correto
   antes de executar qualquer importação.
+
+## Painel administrativo
+
+O painel fica em `/admin` e o login em `/admin/login`.
+O primeiro acesso é criado pelas variáveis **do serviço da API no Render**:
+
+```text
+ADMIN_NAME=Seu nome
+ADMIN_EMAIL=seu@email.com
+ADMIN_PASSWORD=uma senha exclusiva com pelo menos 12 caracteres
+```
+
+Defina os valores no Render e faça o deploy. Na primeira inicialização, a API cria
+as tabelas de usuários e sessões e o primeiro administrador. Se já existir um
+administrador ativo, essas variáveis não alteram a conta existente. Não use
+prefixo `REACT_APP_` nessas variáveis e não envie a senha para o Git.
+Depois de conseguir entrar, remova `ADMIN_PASSWORD` do Render e salve novamente.
+
+Alternativa local: com `DATABASE_URL`, `ADMIN_EMAIL`, `ADMIN_PASSWORD` e
+opcionalmente `ADMIN_NAME` definidos no `.env`, execute `npm run create-admin`.
+Nenhum administrador ou senha padrão é distribuído com o código.
+
+Em **Usuários**, administradores podem criar contas, trocar o perfil,
+desativar acessos e redefinir senhas. Editores podem gerenciar o catálogo.
+Não existe cadastro público para a equipe. As rotas antigas `/login` e
+`/register` encaminham para o login administrativo.
+
+Senhas são armazenadas como hash bcrypt. As sessões duram 12 horas, são
+revogadas no logout ou na desativação/redefinição de senha e ficam no PostgreSQL
+apenas como hash. No navegador, o identificador de sessão fica no sessionStorage
+da aba. A API exige autenticação para salvar animes e oculta rascunhos de visitantes.
+
+Novos animes recebem data de cadastro no servidor. Os registros importados
+antes dessa atualização não têm data original conhecida e aparecem como
+"Cadastro anterior"; entre eles, a tabela usa o ID decrescente.
+
+### Testes
+
+- `npm run test:server`: validações locais; testes de integração são pulados sem
+  `TEST_DATABASE_URL`.
+- Com `TEST_DATABASE_URL` configurada, os testes criam um schema temporário
+  aleatório no PostgreSQL e o removem ao finalizar, sem usar as tabelas públicas.
+  No Neon, a conexão direta é usada nos testes porque o pooler não permite
+  `search_path` nos parâmetros de inicialização.
+- `CI=true npm run build`: build com avisos tratados como erros.

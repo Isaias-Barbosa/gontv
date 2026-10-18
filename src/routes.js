@@ -13,16 +13,18 @@ import AzListPage from "pages/AzListPage";
 import FiltroPage from "pages/FiltroPage";
 import SearchGenero from "pages/SearchGenero";
 import TVAnimes from "pages/TVAnimes";
-import LoginPage from "pages/LoginPage";
+
 import NotFoundPage from "pages/NotFoundPage";
 import Layout from "Layout";
-import Register from "pages/Register";
+
 import MeuPerfil from "pages/Profile/MeuPerfil";
 import MinhaConta from "pages/Profile/MinhaConta";
 import DownloadEpisodio from "pages/DownloadEpisodio";
 import GenerosPage from "pages/GenerosPage";
 import TorrentPlayer from "pages/TorrentPlayer";
 import AdminLayout from "pages/Admin/AdminLayout";
+import AdminLogin from "pages/Admin/AdminLogin";
+import UserManager from "pages/Admin/UserManager";
 import AdminDashboard from "pages/Admin/AdminDashboard";
 import AnimeManager from "pages/Admin/AnimeManager";
 import AnimeForm from "pages/Admin/AnimeForm";
@@ -56,12 +58,14 @@ function AppRoutes() {
           <Route path="/az-list/:letter/*" element={<Layout><AzListPage /></Layout>} />
           <Route path="/search-genero/:genero/*" element={<Layout><SearchGenero /></Layout>} />
           <Route path="/filtro/*" element={<Layout><FiltroPage /></Layout>} />
-          <Route path="/login/*" element={<Layout><LoginPage /></Layout>} />
-          <Route path="/register/*" element={<Layout><Register /></Layout>} />
+          <Route path="/login/*" element={<Navigate to="/admin/login" replace />} />
+          <Route path="/register/*" element={<Navigate to="/admin/login" replace />} />
           <Route path="/profile/meuperfil/*" element={<Layout><MeuPerfil /></Layout>} />
           <Route path="/profile/minhaconta/*" element={<Layout><MinhaConta /></Layout>} />
+          <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<AdminDashboard />} />
+            <Route path="usuarios" element={<UserManager />} />
             <Route path="animes" element={<AnimeManager />} />
             <Route path="animes/new" element={<AnimeForm />} />
             <Route path="animes/:id/edit" element={<AnimeForm />} />

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useAnimeCatalog } from 'context/AnimeCatalogContext';
+import { apiRequest } from 'lib/api';
 
 const slugify = (value) => value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
@@ -56,9 +57,7 @@ export default function AnimeForm() {
     setMalLoading(true);
     setMalError('');
     try {
-      const response = await fetch(`/api/mal/anime/${malId.trim()}`);
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.error || 'Não foi possível buscar esse anime.');
+      const data = await apiRequest(`/api/mal/anime/${malId.trim()}`);
       const airedFrom = data.aired?.from ? new Date(data.aired.from) : null;
       const releaseDay = airedFrom && !Number.isNaN(airedFrom.getTime())
         ? airedFrom.toLocaleDateString('pt-BR', { weekday: 'long' })

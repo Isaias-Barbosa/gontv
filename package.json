@@ -72,7 +72,9 @@
     "migrate-postgres": "node server/migrate-to-postgres.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "create-admin": "node server/create-admin.js",
+    "test:server": "node --test server/auth.test.js"
   },
   "eslintConfig": {
     "extends": [

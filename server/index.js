@@ -6,6 +6,7 @@ const axios = require('axios');
 const { Pool } = require('pg');
 const express = require('express');
 const cors = require('cors');
+const { createAuth, bootstrapAdmin } = require('./auth');
 
 const app = express();
 const port = Number(process.env.PORT || 3001);
@@ -17,6 +18,7 @@ const supabaseCatalogTable = process.env.SUPABASE_CATALOG_TABLE || 'catalog';
 const databaseUrl = process.env.DATABASE_URL;
 const postgresPool = databaseUrl ? new Pool({ connectionString: databaseUrl, ssl: { rejectUnauthorized: true } }) : null;
 let postgresSchemaPromise;
+const auth = createAuth(postgresPool);
 
 app.use(express.json({ limit: '2mb' }));
 const allowedFrontendOrigin = process.env.FRONTEND_URL;
@@ -24,6 +26,8 @@ app.use(cors({ origin: (origin, callback) => {
   if (!origin || /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin) || origin === allowedFrontendOrigin) return callback(null, true);
   return callback(new Error('Origem não autorizada pelo CORS.'));
 } }));
+
+app.use('/api', auth.router);
 
 function jsonBinConfiguration() {
   const masterKey = process.env.JSONBIN_MASTER_KEY;
@@ -64,6 +68,8 @@ async function ensurePostgresSchema() {
         data JSONB NOT NULL
       );
       CREATE INDEX IF NOT EXISTS episodes_anime_id_idx ON episodes(anime_id);
+      ALTER TABLE animes ADD COLUMN IF NOT EXISTS created_at TIMESTAMPTZ;
+      ALTER TABLE animes ADD COLUMN IF NOT EXISTS updated_at TIMESTAMPTZ;
     `).catch((error) => {
       postgresSchemaPromise = null;
       throw error;
@@ -75,13 +81,13 @@ async function ensurePostgresSchema() {
 async function readPostgresCatalog() {
   await ensurePostgresSchema();
   const result = await postgresPool.query(`
-    SELECT a.data, COALESCE(json_agg(e.data ORDER BY e.episode_number NULLS LAST, e.id) FILTER (WHERE e.id IS NOT NULL), '[]') AS episodes
+    SELECT a.data, a.created_at, a.updated_at, COALESCE(json_agg(e.data ORDER BY e.episode_number NULLS LAST, e.id) FILTER (WHERE e.id IS NOT NULL), '[]') AS episodes
     FROM animes a
     LEFT JOIN episodes e ON e.anime_id = a.id
     GROUP BY a.id
     ORDER BY a.id
   `);
-  return result.rows.map(({ data, episodes }) => ({ ...data, episodes }));
+  return result.rows.map(({ data, episodes, created_at, updated_at }) => ({ ...data, episodes, createdAt: created_at, updatedAt: updated_at }));
 }
 
 async function writePostgresCatalog(animes) {
@@ -92,9 +98,9 @@ async function writePostgresCatalog(animes) {
     for (const anime of animes) {
       const { episodes = [], ...animeData } = anime;
       await client.query(`
-        INSERT INTO animes (id, slug, title, visibility, data)
-        VALUES ($1, $2, $3, $4, $5::jsonb)
-        ON CONFLICT (id) DO UPDATE SET slug = EXCLUDED.slug, title = EXCLUDED.title, visibility = EXCLUDED.visibility, data = EXCLUDED.data
+        INSERT INTO animes (id, slug, title, visibility, data, created_at, updated_at)
+        VALUES ($1, $2, $3, $4, $5::jsonb, NOW(), NOW())
+        ON CONFLICT (id) DO UPDATE SET slug = EXCLUDED.slug, title = EXCLUDED.title, visibility = EXCLUDED.visibility, data = EXCLUDED.data, updated_at = NOW()
       `, [anime.id, anime.slug, anime.title, anime.visibility || 'draft', JSON.stringify(animeData)]);
       await client.query('DELETE FROM episodes WHERE anime_id = $1', [anime.id]);
       for (const episode of episodes) {
@@ -139,10 +145,12 @@ function writeLocalCatalog(animes) {
   fs.renameSync(temporaryPath, catalogPath);
 }
 
-app.get('/api/animes', async (req, res) => {
+app.get('/api/animes', auth.optionalUser, async (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  const visible = animes => req.user ? animes : animes.filter(anime => anime.visibility !== 'draft');
   try {
     if (postgresPool) {
-      return res.json({ animes: await readPostgresCatalog(), storage: 'postgres' });
+      return res.json({ animes: visible(await readPostgresCatalog()), storage: 'postgres' });
     }
     const supabase = supabaseConfiguration();
     if (supabase) {
@@ -152,12 +160,12 @@ app.get('/api/animes', async (req, res) => {
       });
       const record = response.data[0];
       if (!record || !Array.isArray(record.animes)) throw new Error('A tabela do Supabase não contém um catálogo válido.');
-      return res.json({ animes: record.animes, storage: 'supabase' });
+      return res.json({ animes: visible(record.animes), storage: 'supabase' });
     }
     const config = jsonBinConfiguration();
     if (!config) {
       const localCatalog = readLocalCatalog();
-      return res.json({ animes: localCatalog.animes, storage: 'local' });
+      return res.json({ animes: visible(localCatalog.animes), storage: 'local' });
     }
 
     const response = await axios.get(
@@ -168,20 +176,20 @@ app.get('/api/animes', async (req, res) => {
     if (!Array.isArray(record.animes)) {
       throw new Error('O Bin do Jsonbin não contém o campo "animes" como lista.');
     }
-    res.json({ animes: record.animes, storage: 'jsonbin' });
+    res.json({ animes: visible(record.animes), storage: 'jsonbin' });
   } catch (error) {
     console.error('Falha ao carregar o catálogo:', error.message);
     res.status(502).json({ error: error.message || 'Não foi possível carregar o catálogo.' });
   }
 });
 
-app.put('/api/animes', async (req, res) => {
+app.put('/api/animes', auth.optionalUser, auth.requireUser, async (req, res) => {
   try {
     const { animes } = req.body;
     validateCatalog(animes);
     if (postgresPool) {
       await writePostgresCatalog(animes);
-      return res.json({ animes, storage: 'postgres' });
+      return res.json({ animes: await readPostgresCatalog(), storage: 'postgres' });
     }
     const supabase = supabaseConfiguration();
     if (supabase) {
@@ -220,7 +228,7 @@ app.put('/api/animes', async (req, res) => {
   }
 });
 
-app.get('/api/mal/anime/:id', async (req, res) => {
+app.get('/api/mal/anime/:id', auth.optionalUser, auth.requireUser, async (req, res) => {
   const malId = Number(req.params.id);
   if (!Number.isInteger(malId) || malId < 1) {
     return res.status(400).json({ error: 'Informe um ID válido do MyAnimeList.' });
@@ -239,6 +247,34 @@ app.get('/api/mal/anime/:id', async (req, res) => {
   }
 });
 
-app.listen(port, host, () => {
-  console.log(`API do catálogo disponível em http://${host}:${port}`);
+app.get('/api/admin/dashboard', auth.optionalUser, auth.requireUser, async (req, res, next) => {
+  try {
+    const animes = await readPostgresCatalog();
+    const users = await postgresPool.query('SELECT COUNT(*)::int AS total FROM users');
+    const recentAnimes = [...animes].sort((a, b) =>
+      (new Date(b.createdAt || 0) - new Date(a.createdAt || 0)) || Number(b.id) - Number(a.id)
+    ).slice(0, 8);
+    res.json({
+      totalAnimes: animes.length,
+      published: animes.filter(anime => anime.visibility !== 'draft').length,
+      drafts: animes.filter(anime => anime.visibility === 'draft').length,
+      episodes: animes.reduce((total, anime) => total + anime.episodes.length, 0),
+      users: users.rows[0].total, recentAnimes,
+    });
+  } catch (error) { next(error); }
 });
+
+app.use((error, req, res, next) => {
+  if (res.headersSent) return next(error);
+  console.error('Falha na API:', error.message);
+  res.status(error.status || 500).json({ error: error.status ? error.message : 'Não foi possível concluir a operação.' });
+});
+
+async function start() {
+  if (process.env.ADMIN_PASSWORD) {
+    await bootstrapAdmin(postgresPool, auth, {name:process.env.ADMIN_NAME, email:process.env.ADMIN_EMAIL, password:process.env.ADMIN_PASSWORD});
+  }
+  app.listen(port, host, () => console.log(`API do catálogo disponível em http://${host}:${port}`));
+}
+if (require.main === module) start().catch(error => { console.error('Falha ao iniciar a API:', error.message); process.exitCode = 1; });
+module.exports = { app, postgresPool };
