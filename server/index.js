@@ -7,6 +7,7 @@ const { Pool } = require('pg');
 const express = require('express');
 const cors = require('cors');
 const { createAuth, bootstrapAdmin } = require('./auth');
+const { createMediaRouter } = require('./media');
 
 const app = express();
 const port = Number(process.env.PORT || 3001);
@@ -27,6 +28,7 @@ app.use(cors({ origin: (origin, callback) => {
   return callback(new Error('Origem não autorizada pelo CORS.'));
 } }));
 
+app.use('/api/media', createMediaRouter());
 app.use('/api', auth.router);
 
 function jsonBinConfiguration() {

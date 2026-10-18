@@ -75,6 +75,7 @@ export default function EpisodeForm() {
         <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={Boolean(form.lancamento)} onChange={(event) => update('lancamento', event.target.checked)} />Marcar como lançamento</label>
         <div className="space-y-3 sm:col-span-2">
           <h2 className="font-semibold">URLs de vídeo por resolução</h2>
+          <p className="text-sm text-slate-400">MP4, WebM ou MKV: use o link direto do arquivo. As legendas de texto do MKV podem ser selecionadas no player.</p>
           {form.videoUrl.map((video, index) => (
             <label key={video.resolution} className="grid gap-2 sm:grid-cols-[90px_1fr] sm:items-center">
               <span className="text-sm text-slate-300">{video.resolution}</span>

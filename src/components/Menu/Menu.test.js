@@ -17,7 +17,7 @@ test.each([
   useAuth.mockReturnValue({ user, loading: false });
   render(<MemoryRouter><Menu /></MemoryRouter>);
   expect(screen.getByRole('link', { name: label })).toHaveAttribute('href', path);
-  if (user?.role !== 'admin') expect(screen.queryByRole('link', { name: 'Dashboard' })).not.toBeInTheDocument();
+  expect(Boolean(screen.queryByRole('link', { name: 'Dashboard' }))).toBe(user?.role === 'admin');
 });
 test.each([
   [{ role: 'admin' }, 'Dashboard', '/admin'],
