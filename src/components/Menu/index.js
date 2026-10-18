@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FiSearch, FiVideo, FiX } from "react-icons/fi";
+import { FiSearch, FiVideo, FiX, FiGrid, FiUser } from "react-icons/fi";
 import { IoLogInOutline } from "react-icons/io5";
 import { AiOutlineHome } from 'react-icons/ai';
 import { BsPlayBtn, BsDisplay, BsShuffle } from 'react-icons/bs';
@@ -9,11 +9,16 @@ import { Link, useLocation } from "react-router-dom";
 import Search from "components/Search";
 import logo from "assets/logo.png";
 import { useNavigate } from "react-router-dom";
-import Hamburger from 'hamburger-react'
+import Hamburger from 'hamburger-react';
+import { useAuth } from 'context/AuthContext';
 
 export default function Menu() {
+  const { user, loading: authLoading } = useAuth();
+  const accountLabel = user ? (user.role === 'admin' ? 'Dashboard' : 'Perfil') : 'Login';
+  const accountPath = user ? (user.role === 'admin' ? '/admin' : '/profile/meuperfil') : '/login';
+  const AccountIcon = user ? (user.role === 'admin' ? FiGrid : FiUser) : IoLogInOutline;
   const [isMobile, setIsMobile] = useState(false);
-  const [isLogin, setIsLogin] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
   const [, setSearchSize] = useState("64");
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
@@ -30,7 +35,7 @@ export default function Menu() {
     const handleResize = () => {
       const windowWidth = window.innerWidth;
       setIsMobile(windowWidth < 640);
-      setIsLogin(windowWidth > 640);
+      setIsDesktop(windowWidth >= 640);
 
       if (windowWidth < 768) {
         setSearchSize(28); // Tamanho no mobile
@@ -87,7 +92,7 @@ export default function Menu() {
         <div className="fixed inset-0 bg-black-dark  opacity-80 z-50 "></div>
       )}
 
-      <nav class="flex bg-black-light flex-grow items-center h-20">
+      <nav className="flex bg-black-light flex-grow items-center h-20">
         <div className="flex justify-end flex-grow ">
           {!isOpen && !isMobile && (
             <Link to="/">
@@ -104,6 +109,7 @@ export default function Menu() {
         </div>
         <button
           className="fixed left-4  text-white p-1 z-50  md:fixed md:top-4 md:left-2 md:bg-transparent md:text-white md:p-0 md:w-12 md:h-12 md:flex md:justify-center md:items-center"
+          aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
           onClick={toggleMenu}
         >
           <Hamburger toggled={isOpen} toggle={setIsOpen} />
@@ -157,12 +163,10 @@ export default function Menu() {
             >
               <LuDices className="" size={26} />
             </button>
-            <Link to="/login">
-              <button className="hover:text-emerald-500 text-white px-1 py-2 mx-2 rounded-lg flex items-center">
-                <IoLogInOutline className="mr-3" size={26} />
-                <span className="text-center mr-5">Login</span>
-              </button>
-            </Link>
+            {!authLoading && <Link to={accountPath} className="hover:text-emerald-500 text-white px-1 py-2 mx-2 rounded-lg flex items-center">
+              <AccountIcon className="mr-3" size={26} />
+              <span className="text-center mr-5">{accountLabel}</span>
+            </Link>}
           </>
         )}
 
@@ -258,7 +262,7 @@ export default function Menu() {
                       Gêneros
                     </Link>
                   </li>
-                  {!isLogin && (
+                  {!isDesktop && (
                     <>
                       <li>
                         <button
@@ -270,13 +274,11 @@ export default function Menu() {
                         </button>
                       </li>
 
-                      <div className="py-2">
-                        <Link to="/login">
-                          <button className="border hover:bg-emerald-500 text-white px-7 py-3 rounded-lg">
-                            Login
-                          </button>
+                      {!authLoading && <li className="py-2">
+                        <Link to={accountPath} className="border hover:bg-emerald-500 text-white px-7 py-3 rounded-lg flex items-center gap-2">
+                          <AccountIcon size={20} /> {accountLabel}
                         </Link>
-                      </div>
+                      </li>}
                     </>
                   )}
                 </ul>
