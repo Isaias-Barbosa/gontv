@@ -69,7 +69,8 @@
   max-width: 100%;
 }
 
-.gon-video-player button {
+.gon-video-toolbar button,
+.gon-subtitle-controls button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -83,7 +84,8 @@
   cursor: pointer;
 }
 
-.gon-video-player button:hover {
+.gon-video-toolbar button:hover,
+.gon-subtitle-controls button:hover {
   background: #1b4d30;
 }
 
