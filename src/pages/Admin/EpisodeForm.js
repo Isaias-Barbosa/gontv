@@ -1,3 +1,4 @@
+import { episodeDates } from 'lib/homeFeed';
 import React, { useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useAnimeCatalog } from 'context/AnimeCatalogContext';
@@ -42,7 +43,7 @@ export default function EpisodeForm() {
       ...form,
       id: current ? current.id : Math.max(0, ...anime.episodes.map((item) => Number(item.id) || 0)) + 1,
       titleSlug,
-      dataCreateEpisode: current?.dataCreateEpisode || new Date().toISOString(),
+      ...episodeDates(form, current),
       videoUrl: form.videoUrl.filter((video) => video.url.trim()).map((video) => ({ ...video, url: video.url.trim() })),
     };
     const episodes = current
@@ -66,13 +67,14 @@ export default function EpisodeForm() {
         <p className="mt-1 text-slate-400">Cadastre URLs de vídeo para estudo; não há upload de arquivos.</p>
       </div>
       {error && <p role="alert" className="mb-4 rounded bg-red-950 p-3 text-red-200">{error}</p>}
-      <form onSubmit={handleSubmit} className="grid gap-4 rounded-lg border border-slate-800 bg-slate-900 p-5 sm:grid-cols-2">
+      <form aria-label="Episódio" onSubmit={handleSubmit} className="grid gap-4 rounded-lg border border-slate-800 bg-slate-900 p-5 sm:grid-cols-2">
         <label><span className="mb-1 block text-sm text-slate-300">Título</span><input required value={form.titleEpisodio} onChange={(event) => setForm((previous) => ({ ...previous, titleEpisodio: event.target.value, titleSlug: current && previous.titleSlug !== slugify(current.titleEpisodio) ? previous.titleSlug : slugify(event.target.value) }))} className="w-full rounded border border-slate-700 bg-slate-950 px-3 py-2" /></label>
         <label><span className="mb-1 block text-sm text-slate-300">Slug</span><input required value={form.titleSlug} onChange={(event) => update('titleSlug', event.target.value)} className="w-full rounded border border-slate-700 bg-slate-950 px-3 py-2" /></label>
         <label><span className="mb-1 block text-sm text-slate-300">URL da miniatura</span><input value={form.thumbnail || ''} onChange={(event) => update('thumbnail', event.target.value)} className="w-full rounded border border-slate-700 bg-slate-950 px-3 py-2" /></label>
         <label><span className="mb-1 block text-sm text-slate-300">Duração</span><input value={form.duration || ''} onChange={(event) => update('duration', event.target.value)} className="w-full rounded border border-slate-700 bg-slate-950 px-3 py-2" /></label>
         <label><span className="mb-1 block text-sm text-slate-300">Idioma</span><select value={form.languageEpisode || 'legendado'} onChange={(event) => update('languageEpisode', event.target.value)} className="w-full rounded border border-slate-700 bg-slate-950 px-3 py-2"><option value="legendado">Legendado</option><option value="dublado">Dublado</option></select></label>
         <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={Boolean(form.lancamento)} onChange={(event) => update('lancamento', event.target.checked)} />Marcar como lançamento</label>
+        <p className="text-sm text-slate-400 sm:col-span-2">Ao marcar e salvar um episódio antigo, ele volta ao início dos lançamentos. Editar sem alterar essa opção mantém a ordem atual.</p>
         <div className="space-y-3 sm:col-span-2">
           <h2 className="font-semibold">URLs de vídeo por resolução</h2>
           <p className="text-sm text-slate-400">MP4, WebM ou MKV: use o link direto do arquivo. As legendas de texto do MKV podem ser selecionadas no player.</p>
