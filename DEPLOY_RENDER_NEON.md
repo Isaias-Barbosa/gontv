@@ -31,7 +31,7 @@ Crie um **Web Service** conectado ao repositório e à branch `master`:
 | Runtime | Node |
 | Build Command | `npm ci` |
 | Start Command | `npm run start-server` |
-| Health Check Path | `/api/animes` |
+| Health Check Path | `/api/health` |
 | `DATABASE_URL` | Connection string do Neon |
 | `FRONTEND_URL` | `https://gontv.vercel.app` (sem barra final) |
 | `NODE_ENV` | `production` |
@@ -134,3 +134,34 @@ Se o serviço estiver no plano Free, o Render pode suspender a API após 15 minu
 sem tráfego e levar cerca de um minuto para reativá-la. O cache ajuda nas visitas
 seguintes, mas não elimina essa espera no primeiro acesso sem uma cópia salva.
 Referência: https://render.com/docs/free#spinning-down-on-idle
+
+### Ping externo para reduzir partidas a frio
+
+O workflow [Keep API awake](.github/workflows/keep-alive.yml) faz um GET a cada
+10 minutos em `/api/health`. Essa rota retorna `{"status":"ok"}`, sem login,
+consulta ao banco ou transferência do catálogo. Ela verifica apenas se a API
+está respondendo; não comprova que o banco ou o catálogo estão disponíveis.
+
+Para ativar:
+
+1. Publique as alterações na branch padrão do GitHub e faça o deploy da API no Render.
+2. No Render, configure **Health Check Path** como `/api/health` se o serviço
+   existente não for atualizado pelo Blueprint.
+3. No GitHub, abra **Settings → Secrets and variables → Actions → Variables**
+   e crie `API_BASE_URL` com a origem HTTPS real da API (sem caminho), por exemplo
+   `https://SEU-SERVICO.onrender.com`. Não coloque a URL do frontend nem credenciais.
+4. Em **Actions → Keep API awake → Run workflow**, execute uma vez e confira o
+   código HTTP e o tempo de resposta. Sem a variável, o job é ignorado.
+
+O agendamento funciona na branch padrão, mesmo com o navegador fechado. Um timer
+no próprio servidor não conseguiria acordá-lo quando estivesse suspenso.
+GitHub Actions pode atrasar ou omitir execuções e desativar agendamentos de
+repositórios públicos após 60 dias sem atividade. Portanto, esse ping é uma
+mitigação, não uma garantia de disponibilidade. Considere os minutos do Actions
+e a franquia de horas do Render: manter o serviço ativo consome essas cotas.
+
+O Neon ainda pode suspender o banco independentemente do Render, pois esse ping
+não consulta o PostgreSQL. Se o atraso persistir com `/api/health` rápido,
+compare os tempos de `/api/auth/login` e `/api/animes/public` na aba Network do
+navegador e os logs do banco. Para disponibilidade contínua, use um plano da API
+sem suspensão e avalie separadamente a configuração de suspensão do banco.

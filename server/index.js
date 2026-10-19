@@ -31,6 +31,12 @@ app.use(cors({ origin: (origin, callback) => {
   return callback(new Error('Origem não autorizada pelo CORS.'));
 } }));
 
+// Liveness only: avoid loading the catalog or waking the database for each ping.
+app.get('/api/health', (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  res.json({ status: 'ok' });
+});
+
 app.use('/api/media', createMediaRouter());
 app.use('/api', auth.router);
 
