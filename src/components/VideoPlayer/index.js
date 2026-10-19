@@ -56,6 +56,7 @@ export default function VideoPlayer({ sources = [], title, poster, subtitles = E
     current.onmessage = event => {
       if (worker.current !== current) return;
       const data = event.data;
+      if (data.type === 'retry') setStatus(`O servidor do vídeo retornou HTTP ${data.status}. Nova tentativa ${data.attempt}/${data.attempts}...`);
       if (data.type === 'track') {
         const t = data.track, id = String(t.number);
         const label = [t.language === 'und' ? 'Idioma não informado' : t.language, t.name].filter(Boolean).join(' · ');

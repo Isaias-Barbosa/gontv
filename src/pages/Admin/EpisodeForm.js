@@ -73,6 +73,9 @@ export default function EpisodeForm() {
 
     worker.onmessage = (event) => {
       const data = event.data;
+      if (data.type === 'retry') {
+        setExtractStatus(`O servidor do vídeo retornou HTTP ${data.status}. Tentando conectar novamente (${data.attempt}/${data.attempts})...`);
+      }
       if (data.type === 'track') {
         detectedTrack = data.track;
         setExtractStatus(`Faixa identificada: ${data.track.name || data.track.language}`);

@@ -11,6 +11,7 @@ globalThis.onmessage = async event => {
   try {
     const result = await scanMkvSubtitles(event.data.url, {
       signal: controller.signal,
+      onRetry: retry => globalThis.postMessage({ type: 'retry', ...retry }),
       onTrack: track => globalThis.postMessage({ type: 'track', track }),
       onCue: (track, cue) => { cues.push({ track: track.number, ...cue }); if (cues.length >= 100) flush(); },
       onProgress: progress => { if (performance.now() - lastUpdate > 300) { lastUpdate = performance.now(); flush(); globalThis.postMessage({ type: 'progress', ...progress }); } },
