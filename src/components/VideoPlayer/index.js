@@ -8,12 +8,13 @@ import { alternateDiscordUrl, sourceInfo, subtitleSourceUrl } from 'lib/videoSou
 import './VideoPlayer.css';
 import SubtitleAppearance from './SubtitleAppearance';
 const portuguese = language => /^(pt|por)(-|$)/i.test(language);
-export default function VideoPlayer({ sources = [], title, poster }) {
+export default function VideoPlayer({ sources = [], title, poster, subtitles = [] }) {
   const [selectedSource, setSelectedSource] = useState(0);
   const [alternate, setAlternate] = useState(false);
   const originalUrl = sources[selectedSource]?.url?.trim() || '';
   const url = (alternate && alternateDiscordUrl(originalUrl)) || originalUrl;
   const info = sourceInfo(url);
+  const hasSavedSubtitles = Array.isArray(subtitles) && subtitles.length > 0 && subtitles.some(s => Array.isArray(s.cues) && s.cues.length > 0);
   const container = useRef(null), player = useRef(null), worker = useRef(null), nativeTracks = useRef(new Map());
   const resume = useRef(null), selectedRef = useRef(''), manualSubtitle = useRef(false), autoStarted = useRef(false);
   const [error, setError] = useState('');
@@ -105,9 +106,9 @@ export default function VideoPlayer({ sources = [], title, poster }) {
     host.setAttribute('aria-label', 'Legenda do vídeo');
     (instance.video.parentElement || container.current).appendChild(host);
     setCaptionHost(host);
-    // Keep native tracks timed but hidden, including any track exposed directly by the MKV.
+    // Keep native tracks timed but hidden, including any track exposed directly by the MKV or saved subtitles.
     const hideNativeCaptions = () => {
-      if (!sourceInfo(url).mkv) return;
+      if (!sourceInfo(url).mkv && !hasSavedSubtitles) return;
       const selected = nativeTracks.current.get(selectedRef.current)?.track;
       const selectedMode = nativeFullscreen.current ? 'showing' : 'hidden';
       if (selected && selected.mode !== selectedMode) selected.mode = selectedMode;
@@ -128,9 +129,38 @@ export default function VideoPlayer({ sources = [], title, poster }) {
     instance.video.addEventListener('seeked', syncCaptions);
     instance.video.addEventListener('loadedmetadata', hideNativeCaptions);
     instance.video.setAttribute('aria-label', title || 'Player de vídeo');
+
+    // Mount pre-saved subtitles from Neon database immediately
+    if (hasSavedSubtitles) {
+      for (const sub of subtitles) {
+        if (!sub.cues || sub.cues.length === 0) continue;
+        const id = String(sub.language || 'pt-BR');
+        const label = sub.label || 'Português (Brasil)';
+        const track = instance.video.addTextTrack('subtitles', label, sub.language || 'pt-BR');
+        track.mode = 'disabled';
+        nativeTracks.current.set(id, { track, language: sub.language || 'pt-BR', last: null });
+        track.addEventListener?.('cuechange', syncCaptions);
+
+        for (const cue of sub.cues) {
+          const vttCue = new window.VTTCue(cue.start, cue.end, cue.text);
+          cueTexts.current.set(vttCue, cue.text);
+          track.addCue(vttCue);
+        }
+
+        setTracks(prev => [...prev, { number: id, label, supported: true, language: sub.language || 'pt-BR' }]);
+      }
+
+      const defaultTrackId = String(subtitles[0].language || 'pt-BR');
+      activate(defaultTrackId);
+      setPhase('done');
+      setStatus(`Legenda carregada do Neon (${subtitles[0].cues.length} falas).`);
+      setCueCount(subtitles[0].cues.length);
+      autoStarted.current = true;
+    }
+
     instance.on('loadedmetadata', () => { if (resume.current) { instance.seek(Math.min(resume.current.time, Number.isFinite(instance.video.duration) ? instance.video.duration : resume.current.time)); if (resume.current.playing) instance.play()?.catch?.(() => {}); resume.current = null; } });
     instance.on('error', () => setError(instance.video.error?.code === 4 ? 'O navegador não suporta o formato ou os codecs deste vídeo. Tente outro navegador ou uma fonte MP4/H.264.' : 'Não foi possível carregar o vídeo. O link pode ter expirado ou a conexão foi interrompida.'));
-    instance.on('play', () => { if (sourceInfo(url).mkv && !autoStarted.current) startScan(); });
+    instance.on('play', () => { if (!hasSavedSubtitles && sourceInfo(url).mkv && !autoStarted.current) startScan(); });
     return () => {
       instance.video.textTracks?.removeEventListener?.('addtrack', hideNativeCaptions);
       instance.video.textTracks?.removeEventListener?.('change', hideNativeCaptions);
@@ -142,7 +172,7 @@ export default function VideoPlayer({ sources = [], title, poster }) {
       worker.current?.terminate(); worker.current = null; clearTracks(); instance.destroy();
       if (player.current === instance) player.current = null;
     };
-  }, [url, poster, title, clearTracks, startScan, syncCaptions]);
+  }, [url, poster, title, clearTracks, startScan, syncCaptions, hasSavedSubtitles, subtitles, activate]);
   const rememberPosition = () => { if (player.current?.video) resume.current = { time: player.current.video.currentTime || 0, playing: !player.current.video.paused }; };
   const changeSource = event => { rememberPosition(); setAlternate(false); setSelectedSource(Number(event.target.value)); };
   return <section className="gon-video-player" aria-label="Reprodução do episódio">
@@ -151,15 +181,15 @@ export default function VideoPlayer({ sources = [], title, poster }) {
     {captionHost && createPortal(captions.map((text, index) => <div key={index}><span style={captionStyle}>{text}</span></div>), captionHost)}
     {error && <p role="alert" className="gon-player-message gon-player-error"><FiAlertCircle />{error}</p>}
     {info.discord && <div className="gon-video-toolbar"><button type="button" onClick={() => { rememberPosition(); setAlternate(value => !value); }}><FiRefreshCw /> Alternar CDN / Media</button><span>Se o link falhar, tente o outro servidor do Discord.</span></div>}
-    {info.mkv && <div className="gon-subtitle-panel">
-      <div className="gon-subtitle-heading"><FiType /><strong>Legendas do MKV</strong><span>Texto embutido no arquivo</span></div>
+    {(info.mkv || hasSavedSubtitles) && <div className="gon-subtitle-panel">
+      <div className="gon-subtitle-heading"><FiType /><strong>Legendas {hasSavedSubtitles ? '(Salvas no Neon)' : 'do MKV'}</strong><span>{hasSavedSubtitles ? 'Carregamento instantâneo' : 'Texto embutido no arquivo'}</span></div>
       <div className="gon-subtitle-controls"><label>Idioma da legenda<select value={subtitle} onChange={event => { manualSubtitle.current = true; activate(event.target.value); }}><option value="">Desativadas</option>{tracks.map(track => <option key={track.number} value={String(track.number)} disabled={!track.supported}>{track.label}{!track.supported ? ' (não suportada)' : ''}</option>)}</select></label>
-        {phase === 'scanning' ? <button type="button" onClick={() => worker.current?.postMessage({ type: 'stop' })}><FiSquare /> Interromper busca</button> : <button type="button" onClick={startScan}><FiRefreshCw />{phase === 'idle' ? 'Buscar legendas' : 'Buscar novamente'}</button>}
+        {!hasSavedSubtitles && (phase === 'scanning' ? <button type="button" onClick={() => worker.current?.postMessage({ type: 'stop' })}><FiSquare /> Interromper busca</button> : <button type="button" onClick={startScan}><FiRefreshCw />{phase === 'idle' ? 'Buscar legendas' : 'Buscar novamente'}</button>)}
       </div>
       <p role="status" aria-live="polite">{phase === 'scanning' ? `${nativeTracks.current.size} faixa(s) de texto · ${cueCount} falas · ${(progress.read / 1048576).toFixed(1)} MB lidos. Você já pode selecionar um idioma.` : status}</p>
       {phase === 'scanning' && <progress aria-label="Leitura das legendas" max={progress.total || 1} {...(progress.total ? { value: progress.read } : {})} />}
       <SubtitleAppearance onStyleChange={setCaptionStyle} />
-      <small>A busca lê o MKV pela rede e pode transferir o arquivo inteiro, sem salvá-lo no dispositivo. SRT, ASS/SSA e WebVTT são exibidas como texto; estilos avançados e legendas em imagem não são suportados.</small>
+      <small>{hasSavedSubtitles ? 'As legendas deste episódio foram extraídas e salvas no Neon, prontas para exibição instantânea sem reler o arquivo de vídeo.' : 'A busca lê o MKV pela rede e pode transferir o arquivo inteiro, sem salvá-lo no dispositivo. SRT, ASS/SSA e WebVTT são exibidas como texto; estilos avançados e legendas em imagem não são suportados.'}</small>
     </div>}
   </section>;
 }

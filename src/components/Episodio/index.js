@@ -17,7 +17,7 @@ export default function Episodio({ anime, episodio, slug, languageEpisode }) {
         <Link to={`/animes/${slug}`}>Todos os episódios</Link>
         {index < anime.episodes.length - 1 ? <Link to={episodeLink(anime.episodes[index + 1])}>Próximo <AiOutlineRight /></Link> : <span />}
       </nav>
-      <VideoPlayer key={`${anime.id}:${episode.id}`} sources={(episode.videoUrl || []).filter(source => source.url?.trim())} title={`${anime.title} - ${episode.titleEpisodio}`} poster={episode.thumbnail} />
+      <VideoPlayer key={`${anime.id}:${episode.id}`} sources={(episode.videoUrl || []).filter(source => source.url?.trim())} title={`${anime.title} - ${episode.titleEpisodio}`} poster={episode.thumbnail} subtitles={episode.subtitles} />
       <section className="episode-comments"><h3>Comentários</h3><p>Cuidado com os spoilers. Utilize a tag spoiler ao comentar sobre o episódio.</p><Discus identifier={`${episode.titleSlug}-${episode.id}`} title={episode.titleEpisodio} /></section>
     </main>
   </div>;
