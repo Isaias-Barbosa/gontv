@@ -1,4 +1,3 @@
-import { apiBaseUrl } from './api';
 export function sourceInfo(value) {
   try {
     const url = new URL(value);
@@ -16,5 +15,6 @@ export function alternateDiscordUrl(value) {
   return url.href;
 }
 export function subtitleSourceUrl(value) {
-  return sourceInfo(value).discord ? `${apiBaseUrl}/api/media/discord?url=${encodeURIComponent(value)}` : value;
+  // Fetch subtitles from the media host too; never relay video bytes via the API.
+  return value;
 }

@@ -26,12 +26,20 @@ beforeEach(() => {
   createSubtitleWorker.mockReturnValue(worker);
 });
 const renderPlayer = sources => render(<MemoryRouter><VideoPlayer title="Episódio teste" sources={sources} /></MemoryRouter>);
+
+test('R2 uses the same direct URL for playback and MKV subtitle extraction', () => {
+  const url = 'https://videos.example.com/anime/episode-01.mkv';
+  renderPlayer([{ url }]);
+  expect(DPlayer.mock.calls[0][0].video.url).toBe(url);
+  act(() => DPlayer.mock.results[0].value.handlers.play());
+  expect(worker.postMessage).toHaveBeenCalledWith({ type: 'start', url });
+});
 test('MKV assinado é carregado diretamente no DPlayer e busca legendas ao reproduzir', () => {
   renderPlayer([{ url: mkv }]);
   expect(DPlayer.mock.calls[0][0].video).toMatchObject({ url: mkv, type: 'normal' });
   const player = DPlayer.mock.results[0].value;
   act(() => player.handlers.play());
-  expect(worker.postMessage).toHaveBeenCalledWith({ type: 'start', url: expect.stringContaining('/api/media/discord?url=') });
+  expect(worker.postMessage).toHaveBeenCalledWith({ type: 'start', url: mkv });
   expect(screen.getByRole('button', { name: 'Interromper busca' })).toBeInTheDocument();
 });
 test('seleciona português, adiciona falas sincronizadas e permite desativar legendas', () => {

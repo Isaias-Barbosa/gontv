@@ -7,7 +7,6 @@ const { Pool } = require('pg');
 const express = require('express');
 const cors = require('cors');
 const { createAuth, bootstrapAdmin } = require('./auth');
-const { createMediaRouter } = require('./media');
 const { createMalRouter } = require('./mal');
 const { createAniListRouter } = require('./anilist');
 const { applyCatalogChanges } = require('./catalogChanges');
@@ -20,7 +19,7 @@ const catalogPath = path.resolve(__dirname, '..', 'data', 'catalog.json');
 const jsonBinBaseUrl = 'https://api.jsonbin.io/v3/b';
 const supabaseCatalogTable = process.env.SUPABASE_CATALOG_TABLE || 'catalog';
 const databaseUrl = process.env.DATABASE_URL;
-const postgresPool = databaseUrl ? new Pool({ connectionString: databaseUrl, ssl: { rejectUnauthorized: true } }) : null;
+const postgresPool = databaseUrl ? new Pool({ connectionString: databaseUrl, ssl: { rejectUnauthorized: true }, max: 3, idleTimeoutMillis: 10000, connectionTimeoutMillis: 10000, allowExitOnIdle: true }) : null;
 let postgresSchemaPromise;
 const auth = createAuth(postgresPool);
 
@@ -37,7 +36,17 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-app.use('/api/media', createMediaRouter());
+// Media must be fetched from its host directly, including MKV subtitle scans.
+app.use('/api/media', (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  res.status(410).json({ error: 'O proxy de mídia foi desativado. Use o link direto do vídeo com CORS habilitado.' });
+});
+app.use('/api', (req, res, next) => {
+  if (process.env.VERCEL && !postgresPool) {
+    return res.status(503).json({ error: 'Configure DATABASE_URL do Neon na API do Vercel.' });
+  }
+  next();
+});
 app.use('/api', auth.router);
 
 function jsonBinConfiguration() {
@@ -273,6 +282,8 @@ app.get('/api/admin/dashboard', auth.optionalUser, auth.requireUser, async (req,
     });
   } catch (error) { next(error); }
 });
+
+app.use('/api', (req, res) => res.status(404).json({ error: 'Rota da API não encontrada.' }));
 
 app.use((error, req, res, next) => {
   if (res.headersSent) return next(error);

@@ -1,5 +1,8 @@
 ﻿# Deploy: Vercel + Render + Neon
 
+> Para a migração atual, siga [Vercel + Neon + R2](./DEPLOY_VERCEL_R2.md).
+> Este documento descreve a hospedagem anterior; o proxy citado foi desativado.
+
 O frontend fica no Vercel, a API Express no Render e o PostgreSQL no Neon.
 O Vercel executa a build do React; isso não inicia `server/index.js`.
 
@@ -151,7 +154,8 @@ Para ativar:
    e crie `API_BASE_URL` com a origem HTTPS real da API (sem caminho), por exemplo
    `https://SEU-SERVICO.onrender.com`. Não coloque a URL do frontend nem credenciais.
 4. Em **Actions → Keep API awake → Run workflow**, execute uma vez e confira o
-   código HTTP e o tempo de resposta. Sem a variável, o job é ignorado.
+   código HTTP e o tempo de resposta. Sem `API_BASE_URL`, o job é ignorado.
+   Não é necessário configurar `KEEP_ALIVE_ENABLED`.
 
 O agendamento funciona na branch padrão, mesmo com o navegador fechado. Um timer
 no próprio servidor não conseguiria acordá-lo quando estivesse suspenso.
@@ -165,3 +169,36 @@ não consulta o PostgreSQL. Se o atraso persistir com `/api/health` rápido,
 compare os tempos de `/api/auth/login` e `/api/animes/public` na aba Network do
 navegador e os logs do banco. Para disponibilidade contínua, use um plano da API
 sem suspensão e avalie separadamente a configuração de suspensão do banco.
+
+### Suspensão por franquia de tráfego
+
+O ping não reativa serviços suspensos por esgotamento de banda. Segundo o aviso
+do Render, a recuperação exige adicionar pagamento, mudar de plano ou aguardar
+a renovação mensal. Para voltar antes disso sem pagar ao Render, é necessário
+implantar a API em outro provedor com franquia suficiente.
+
+O proxy em `server/media.js`, na rota `/api/media/discord`, retransmite vídeos
+do Discord para o navegador. Todo esse conteúdo passa pela saída da API;
+dez transferências de 500 MB representam aproximadamente 5 GB, sem contar
+repetições e outros acessos. Esse é um candidato a consumo alto, mas confirme
+no painel de uso do workspace quais serviços consumiram a franquia. O pequeno
+JSON de `/api/health` não permite atribuir os 5 GB ao workflow.
+
+Durante a suspensão:
+
+1. O workflow permanece habilitado, mas os pings não removem a suspensão.
+   A alteração do workflow precisa estar publicada na branch padrão para valer
+   no GitHub.
+2. Escolha entre regularizar a franquia, aguardar a renovação ou migrar a API.
+3. Em uma migração, configure no novo serviço as variáveis necessárias da API,
+   incluindo `DATABASE_URL` do banco atual, `FRONTEND_URL` e `NODE_ENV`.
+   Use `npm ci`, `npm run start-server` e verifique `/api/health` e o catálogo.
+   Não reimporte o catálogo nem recrie o banco para trocar apenas a hospedagem.
+4. Atualize `REACT_APP_API_URL` no Vercel e reconstrua o frontend. Atualize também
+   `API_BASE_URL` no GitHub para os pings usarem o novo serviço.
+
+Para reduzir o consumo de forma duradoura, sirva os vídeos por uma hospedagem
+de mídia que permita acesso direto do player, incluindo CORS e requisições Range.
+Trocar o proxy por uma URL direta sem verificar esses requisitos pode quebrar
+a reprodução MKV. Mover o mesmo proxy para outra franquia pequena apenas muda
+onde o tráfego será contabilizado.

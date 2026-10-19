@@ -1,4 +1,4 @@
-export const apiBaseUrl = (process.env.REACT_APP_API_URL || 'http://127.0.0.1:3001').replace(/\/$/, '');
+export const apiBaseUrl = (process.env.REACT_APP_API_URL || (process.env.NODE_ENV === 'production' ? '' : 'http://127.0.0.1:3001')).replace(/\/$/, '');
 const tokenKey = 'gontv.admin.session';
 export const getToken = () => sessionStorage.getItem(tokenKey);
 export const storeToken = token => token ? sessionStorage.setItem(tokenKey, token) : sessionStorage.removeItem(tokenKey);
