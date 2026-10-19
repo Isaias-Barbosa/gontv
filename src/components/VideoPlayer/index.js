@@ -82,7 +82,7 @@ export default function VideoPlayer({ sources = [], title, poster }) {
       if (data.type === 'progress') setProgress({ read: data.read, total: data.total });
       if (data.type === 'done') {
         setPhase('done');
-        setStatus(!data.tracks ? 'Nenhuma legenda interna encontrada.' : !nativeTracks.current.size ? 'As legendas deste arquivo são em imagem ou usam uma codificação não suportada.' : `Busca concluída. ${count} falas disponíveis.`);
+        setStatus(!data.tracks ? 'Nenhuma legenda identificada como português brasileiro encontrada.' : !nativeTracks.current.size ? 'As legendas em português brasileiro são em imagem ou usam uma codificação não suportada.' : `Busca concluída. ${count} falas disponíveis em português brasileiro.`);
         current.terminate(); worker.current = null;
       }
       if (['stopped', 'error'].includes(data.type)) {

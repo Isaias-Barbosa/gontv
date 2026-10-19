@@ -13,7 +13,7 @@ function size(value) {
 const el = (id, payload) => bytes(Buffer.from(id, 'hex'), size(payload.length), payload);
 const uint = value => { const b = Buffer.alloc(4); b.writeUInt32BE(value); return b; };
 const text = value => Buffer.from(value, 'utf8');
-function track(codec = 'S_TEXT/UTF8') { return el('ae', bytes(el('d7', [1]), el('83', [17]), el('86', text(codec)), el('22b59c', text('por')), el('536e', text('Português')))); }
+function track(codec = 'S_TEXT/UTF8', number = 1, language = 'por', name = 'Português Brasil') { return el('ae', bytes(el('d7', [number]), el('83', [17]), el('86', text(codec)), el('22b59c', text(language)), el('536e', text(name)))); }
 function block(content, relative = 500, number = 1) { const b = Buffer.alloc(4); b[0] = 0x80 | number; b.writeInt16BE(relative, 1); return bytes(b, text(content)); }
 function fixture(codec = 'S_TEXT/UTF8', content = 'Olá, mundo!', { unknown = false } = {}) {
   const group = el('a0', bytes(el('a1', block(content)), el('9b', uint(2500))));
@@ -29,7 +29,7 @@ function parse(data, chunkSize = 1) {
 }
 test('MKV em chunks de um byte preserva idioma, início e duração e ignora vídeo', () => {
   const result = parse(fixture());
-  expect(result.tracks[0]).toMatchObject({ language: 'por', name: 'Português', supported: true });
+  expect(result.tracks[0]).toMatchObject({ language: 'por', name: 'Português Brasil', supported: true });
   expect(result.cues).toEqual([{ track: 1, start: 1.5, end: 4, text: 'Olá, mundo!', estimated: false }]);
   expect(result.parser.buffer.length).toBe(0);
 });
@@ -54,4 +54,21 @@ test('segmentos com tamanho desconhecido são aceitos', () => {
 test('arquivo inválido ou truncado gera erro em vez de legenda falsa', () => {
   expect(() => parse(Buffer.from('<html>erro</html>'))).toThrow();
   expect(() => parse(fixture().subarray(0, -2))).toThrow(/fim/);
+});
+
+test('extrai somente pt-BR de um MKV com múltiplos idiomas em chunks pequenos', () => {
+  const tracks = bytes(track('S_TEXT/UTF8', 1, 'eng', 'English'), track('S_TEXT/UTF8', 2, 'por', 'Brazilian'), track('S_TEXT/UTF8', 3, 'pt-PT', 'Português Portugal'), track('S_TEXT/UTF8', 4, 'por', 'Portuguese'), track('S_TEXT/UTF8', 5, 'pt-BR', 'Full'));
+  const cluster = el('1f43b675', bytes(...[1, 2, 3, 4, 5].map(n => el('a3', block(`Fala ${n}`, 0, n)))));
+  const data = bytes(el('1a45dfa3', []), el('18538067', bytes(el('1654ae6b', tracks), cluster)));
+  const result = parse(data, 3);
+  expect(result.tracks.map(t => t.number)).toEqual([2, 5]);
+  expect(result.cues.map(c => c.text)).toEqual(['Fala 2', 'Fala 5']);
+  expect(result.parser.cueCount).toBe(2);
+});
+
+test('sem identificação brasileira não emite faixas nem falas', () => {
+  const data = bytes(el('1a45dfa3', []), el('18538067', bytes(el('1654ae6b', track('S_TEXT/UTF8', 1, 'por', 'Portuguese')), el('1f43b675', el('a3', block('Não extrair'))))));
+  const result = parse(data, 2);
+  expect(result.tracks).toEqual([]);
+  expect(result.cues).toEqual([]);
 });

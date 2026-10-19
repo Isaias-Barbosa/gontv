@@ -1,5 +1,6 @@
 // Incremental Matroska subtitle reader. Audio/video payloads are discarded, never retained.
 // Container mappings: https://www.matroska.org/technical/subtitles.html
+import { isBrazilianPortuguese } from './subtitleLanguage';
 const utf8 = new TextDecoder();
 function vint(bytes, offset, id = false) {
   if (offset >= bytes.length) return null;
@@ -113,7 +114,7 @@ export class MkvSubtitles {
             break;
         }
       });
-      if (t.type === 17) {
+      if (t.type === 17 && isBrazilianPortuguese(t)) {
         if (this.tracks.size >= 64) throw Error('O arquivo excede o limite de faixas de legenda.');
         t.supported = !t.unsupported && ['S_TEXT/UTF8', 'S_TEXT/ASS', 'S_TEXT/SSA', 'S_TEXT/WEBVTT', 'D_WEBVTT/SUBTITLES', 'D_WEBVTT/CAPTIONS'].includes(t.codec);
         this.tracks.set(t.number, t);

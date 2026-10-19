@@ -64,6 +64,16 @@ R2 não converte codecs. MKV depende dos codecs e do navegador. A extração de
 legendas internas pode ler bastante do arquivo, mas agora essa leitura vai direto
 à hospedagem de mídia.
 
+O extrator seleciona apenas faixas identificadas como português brasileiro pelo
+idioma ou nome: `pt-BR`, `por-BR`, `Brazilian`, `Portuguese Brazil`,
+`Português Brasil` e variações de acentos/separadores. `por`, `pt` ou
+`Portuguese` sem indicação de Brasil são ambíguos e ficam de fora, assim como
+faixas identificadas como Portugal. Todas as faixas brasileiras correspondentes
+são preservadas (por exemplo, completa e forçada). Blocos de outros idiomas são
+descartados antes de decodificar as falas. Isso reduz processamento e texto
+extraído, mas a leitura sequencial ainda pode transferir o MKV inteiro.
+Esse filtro não implementa upload ou armazenamento de legendas no R2.
+
 O endpoint antigo `/api/media/*` retorna 410, inclusive para clientes antigos,
 para impedir novo consumo de vídeo na API. Links externos sem CORS podem tocar
 no player, mas falhar na leitura de legendas; substitua-os por URLs R2 configuradas.
