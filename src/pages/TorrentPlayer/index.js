@@ -3,12 +3,13 @@ import { Helmet } from 'react-helmet';
 import { FiLink, FiSquare, FiUsers, FiDownload, FiUpload, FiPlay, FiInfo, FiCloud, FiCheckCircle, FiFilePlus } from 'react-icons/fi';
 import VideoPlayer from 'components/VideoPlayer';
 
-const WEBTORRENT_SCRIPT_URL = 'https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js';
-
 const WEBRTC_TRACKERS = [
   'wss://tracker.openwebtorrent.com',
   'wss://tracker.webtorrent.dev',
 ];
+
+const LOCAL_WEBTORRENT_URL = `${process.env.PUBLIC_URL || ''}/webtorrent.min.js`;
+const CDN_WEBTORRENT_URL = 'https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js';
 
 let webtorrentPromise;
 function loadWebTorrentSdk() {
@@ -18,30 +19,36 @@ function loadWebTorrentSdk() {
 
   if (!webtorrentPromise) {
     webtorrentPromise = new Promise((resolve, reject) => {
-      let script = document.querySelector(`script[src="${WEBTORRENT_SCRIPT_URL}"]`);
-      const shouldAppend = !script;
-      if (!script) {
-        script = document.createElement('script');
-        script.src = WEBTORRENT_SCRIPT_URL;
+      const loadScript = (src, isFallback = false) => {
+        const script = document.createElement('script');
+        script.src = src;
         script.async = true;
-      }
 
-      script.addEventListener('load', () => {
-        if (window.WebTorrent) {
-          resolve(window.WebTorrent);
-        } else {
-          webtorrentPromise = null;
-          reject(new Error('O SDK do WebTorrent foi carregado, mas não está disponível no navegador.'));
-        }
-      }, { once: true });
+        script.addEventListener('load', () => {
+          if (window.WebTorrent) {
+            resolve(window.WebTorrent);
+          } else if (!isFallback) {
+            loadScript(CDN_WEBTORRENT_URL, true);
+          } else {
+            webtorrentPromise = null;
+            reject(new Error('O SDK do WebTorrent foi carregado, mas não está disponível no navegador.'));
+          }
+        }, { once: true });
 
-      script.addEventListener('error', () => {
-        script.remove();
-        webtorrentPromise = null;
-        reject(new Error('Não foi possível carregar o WebTorrent. Verifique sua conexão com a internet.'));
-      }, { once: true });
+        script.addEventListener('error', () => {
+          script.remove();
+          if (!isFallback) {
+            loadScript(CDN_WEBTORRENT_URL, true);
+          } else {
+            webtorrentPromise = null;
+            reject(new Error('Não foi possível carregar o WebTorrent. Verifique sua conexão com a internet.'));
+          }
+        }, { once: true });
 
-      if (shouldAppend) document.head.appendChild(script);
+        document.head.appendChild(script);
+      };
+
+      loadScript(LOCAL_WEBTORRENT_URL);
     });
   }
 
