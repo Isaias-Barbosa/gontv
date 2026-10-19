@@ -88,15 +88,14 @@ export default function TorrentPlayer() {
     }
 
     setStatus('loading');
+    setShowPlayer(true);
 
     try {
       const webtor = await loadWebtorSdk();
       if (requestId !== requestRef.current || !playerRef.current) return;
 
-      webtor.push({
-        el: playerRef.current,
-        magnet: isMagnet ? torrentSource : undefined,
-        torrentUrl: torrentUrl ? torrentSource : undefined,
+      const playerConfig = {
+        id: 'webtor-player',
         width: '100%',
         header: true,
         controls: true,
@@ -110,11 +109,18 @@ export default function TorrentPlayer() {
             setStatus('ready');
           }
         },
-      });
+      };
+
+      if (isMagnet) {
+        playerConfig.magnet = torrentSource;
+      } else {
+        playerConfig.torrentUrl = torrentSource;
+      }
+
+      webtor.push(playerConfig);
 
       const iframe = playerRef.current.querySelector('iframe');
       if (iframe) iframe.title = 'Player de torrent da Webtor';
-      setShowPlayer(true);
       setStatus('ready');
     } catch (torrentError) {
       if (requestId !== requestRef.current) return;
@@ -190,7 +196,7 @@ export default function TorrentPlayer() {
 
           {status === 'loading' && <p className="mb-5 text-emerald-300">Carregando o player da Webtor...</p>}
           <section aria-label="Reprodução do torrent" className={showPlayer ? '' : 'hidden'}>
-            <div ref={playerRef} className="w-full overflow-hidden" />
+            <div id="webtor-player" ref={playerRef} className="w-full overflow-hidden" />
           </section>
         </section>
       </main>
