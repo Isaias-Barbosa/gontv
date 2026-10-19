@@ -14,7 +14,7 @@ function mockPlayer(options) {
   const handlers = {};
   return { video, handlers, on: (name, callback) => { handlers[name] = callback; }, destroy: jest.fn(() => video.remove()), seek: jest.fn(), play: jest.fn() };
 }
-const mkv = 'https://media.discordapp.com/attachments/123/456/episode.mkv?ex=abc&hm=example&';
+const mkv = 'https://media.discordapp.net/attachments/123/456/episode.mkv?ex=abc&hm=example&';
 let worker;
 beforeEach(() => {
   jest.clearAllMocks();

@@ -4,15 +4,14 @@ import DPlayer from 'dplayer';
 import { createPortal } from 'react-dom';
 import { FiAlertCircle, FiRefreshCw, FiType, FiSquare } from 'react-icons/fi';
 import { createSubtitleWorker } from 'lib/createSubtitleWorker';
-import { alternateDiscordUrl, sourceInfo, subtitleSourceUrl } from 'lib/videoSources';
+import { sourceInfo, subtitleSourceUrl } from 'lib/videoSources';
 import './VideoPlayer.css';
 import SubtitleAppearance from './SubtitleAppearance';
 const portuguese = language => /^(pt|por)(-|$)/i.test(language);
-export default function VideoPlayer({ sources = [], title, poster, subtitles = [] }) {
+const EMPTY_SUBTITLES = [];
+export default function VideoPlayer({ sources = [], title, poster, subtitles = EMPTY_SUBTITLES }) {
   const [selectedSource, setSelectedSource] = useState(0);
-  const [alternate, setAlternate] = useState(false);
-  const originalUrl = sources[selectedSource]?.url?.trim() || '';
-  const url = (alternate && alternateDiscordUrl(originalUrl)) || originalUrl;
+  const url = sources[selectedSource]?.url?.trim() || '';
   const info = sourceInfo(url);
   const hasSavedSubtitles = Array.isArray(subtitles) && subtitles.length > 0 && subtitles.some(s => Array.isArray(s.cues) && s.cues.length > 0);
   const container = useRef(null), player = useRef(null), worker = useRef(null), nativeTracks = useRef(new Map());
@@ -174,13 +173,12 @@ export default function VideoPlayer({ sources = [], title, poster, subtitles = [
     };
   }, [url, poster, title, clearTracks, startScan, syncCaptions, hasSavedSubtitles, subtitles, activate]);
   const rememberPosition = () => { if (player.current?.video) resume.current = { time: player.current.video.currentTime || 0, playing: !player.current.video.paused }; };
-  const changeSource = event => { rememberPosition(); setAlternate(false); setSelectedSource(Number(event.target.value)); };
+  const changeSource = event => { rememberPosition(); setSelectedSource(Number(event.target.value)); };
   return <section className="gon-video-player" aria-label="Reprodução do episódio">
     {sources.length > 1 && <div className="gon-video-toolbar"><label>Fonte / qualidade <select value={selectedSource} onChange={changeSource}>{sources.map((source, index) => <option key={index} value={index}>{source.resolution || `Fonte ${index + 1}`}</option>)}</select></label></div>}
     {!info.valid ? <p role="alert" className="gon-player-message">Nenhuma fonte de vídeo válida foi cadastrada para este episódio.</p> : info.torrent ? <p className="gon-player-message">Esta fonte é um torrent. <Link to="/torrent">Abrir Player Torrent</Link></p> : info.direct ? <div className="gon-dplayer" ref={container} /> : <div className="gon-embed"><iframe title={title || 'Player do episódio'} src={url} allow="autoplay; fullscreen; picture-in-picture" allowFullScreen /></div>}
     {captionHost && createPortal(captions.map((text, index) => <div key={index}><span style={captionStyle}>{text}</span></div>), captionHost)}
     {error && <p role="alert" className="gon-player-message gon-player-error"><FiAlertCircle />{error}</p>}
-    {info.discord && <div className="gon-video-toolbar"><button type="button" onClick={() => { rememberPosition(); setAlternate(value => !value); }}><FiRefreshCw /> Alternar CDN / Media</button><span>Se o link falhar, tente o outro servidor do Discord.</span></div>}
     {(info.mkv || hasSavedSubtitles) && <div className="gon-subtitle-panel">
       <div className="gon-subtitle-heading"><FiType /><strong>Legendas {hasSavedSubtitles ? '(Salvas no Neon)' : 'do MKV'}</strong><span>{hasSavedSubtitles ? 'Carregamento instantâneo' : 'Texto embutido no arquivo'}</span></div>
       <div className="gon-subtitle-controls"><label>Idioma da legenda<select value={subtitle} onChange={event => { manualSubtitle.current = true; activate(event.target.value); }}><option value="">Desativadas</option>{tracks.map(track => <option key={track.number} value={String(track.number)} disabled={!track.supported}>{track.label}{!track.supported ? ' (não suportada)' : ''}</option>)}</select></label>

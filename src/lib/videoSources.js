@@ -11,14 +11,14 @@ export function alternateDiscordUrl(value) {
   const info = sourceInfo(value);
   if (!info.discord) return null;
   const url = new URL(value);
-    url.hostname = url.hostname === 'cdn.discordapp.com' ? 'media.discordapp.com' : 'cdn.discordapp.com';
+  url.hostname = url.hostname === 'cdn.discordapp.com' ? 'media.discordapp.net' : 'cdn.discordapp.com';
   return url.href;
 }
 export function subtitleSourceUrl(value) {
   try {
     const url = new URL(value);
-    if (url.hostname === 'cdn.discordapp.com' && url.pathname.startsWith('/attachments/')) {
-      url.hostname = 'media.discordapp.com';
+    if (['cdn.discordapp.com', 'media.discordapp.com'].includes(url.hostname) && url.pathname.startsWith('/attachments/')) {
+      url.hostname = 'media.discordapp.net';
       return url.href;
     }
   } catch {}

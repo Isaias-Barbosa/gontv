@@ -107,6 +107,7 @@ export default function EpisodeForm() {
         }
       }
       if (data.type === 'error' || data.type === 'stopped') {
+        setExtractStatus('');
         setExtracting(false);
         worker.terminate();
         workerRef.current = null;
@@ -115,6 +116,7 @@ export default function EpisodeForm() {
     };
 
     worker.onerror = () => {
+      setExtractStatus('');
       setExtracting(false);
       worker.terminate();
       workerRef.current = null;

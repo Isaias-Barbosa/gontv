@@ -17,6 +17,6 @@ globalThis.onmessage = async event => {
     }, MkvSubtitles);
     flush(); globalThis.postMessage({ type: 'done', ...result });
   } catch (error) {
-    flush(); globalThis.postMessage({ type: error.name === 'AbortError' ? 'stopped' : 'error', message: error instanceof TypeError ? 'Não foi possível ler o vídeo. Confira sua conexão, a API e a validade do link.' : error.message });
+    flush(); globalThis.postMessage({ type: error.name === 'AbortError' ? 'stopped' : 'error', message: error instanceof TypeError ? 'Não foi possível acessar o MKV. O servidor pode bloquear a leitura pelo navegador (CORS), o link pode ter expirado ou a conexão falhou. Atualize o link ou importe uma legenda .srt/.vtt na edição do episódio.' : error.message });
   } finally { controller = null; }
 };
