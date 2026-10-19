@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { FiLink, FiSquare, FiUsers, FiDownload, FiUpload, FiPlay, FiInfo, FiCloud, FiCheckCircle } from 'react-icons/fi';
+import { FiLink, FiSquare, FiUsers, FiDownload, FiUpload, FiPlay, FiInfo, FiCloud, FiCheckCircle, FiFilePlus } from 'react-icons/fi';
 import VideoPlayer from 'components/VideoPlayer';
 
 const WEBTORRENT_SCRIPT_URL = 'https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js';
@@ -8,8 +8,6 @@ const WEBTORRENT_SCRIPT_URL = 'https://cdn.jsdelivr.net/npm/webtorrent@latest/we
 const WEBRTC_TRACKERS = [
   'wss://tracker.openwebtorrent.com',
   'wss://tracker.webtorrent.dev',
-  'wss://tracker.btorrent.xyz',
-  'wss://tracker.files.fm:7073/announce',
 ];
 
 let webtorrentPromise;
@@ -82,6 +80,7 @@ export default function TorrentPlayer() {
   const videoRef = useRef(null);
   const playerContainerRef = useRef(null);
   const statsTimerRef = useRef(null);
+  const fileInputRef = useRef(null);
 
   // Cloudflare R2 state
   const [r2Url, setR2Url] = useState('');
@@ -155,12 +154,21 @@ export default function TorrentPlayer() {
     }
   };
 
-  const handleTorrentSubmit = async (event) => {
-    event.preventDefault();
+  const startTorrentWithSource = async (source) => {
     handleStopTorrent();
 
-    const source = torrentSource.trim();
     if (!source) return;
+
+    // Check if source is an HTTP/HTTPS URL to a .torrent file from sites that block CORS (like nyaa.si)
+    if (typeof source === 'string' && /^https?:\/\//i.test(source) && /\.torrent(\?.*)?$/i.test(source)) {
+      if (source.includes('nyaa.si')) {
+        setTorrentError(
+          'O Nyaa bloqueia o download direto de arquivos .torrent pelo navegador (bloqueio de CORS). Use o Link Magnet (ícone de ímã 🧲 no Nyaa) ou baixe o arquivo .torrent no seu computador e envie no botão abaixo.'
+        );
+        setTorrentStatus('error');
+        return;
+      }
+    }
 
     setTorrentStatus('loading');
     setTorrentError('');
@@ -172,7 +180,14 @@ export default function TorrentPlayer() {
 
       client.on('error', (err) => {
         console.error('WebTorrent client error:', err);
-        setTorrentError(err.message || 'Erro no cliente WebTorrent.');
+        const msg = err.message || '';
+        if (msg.includes('Failed to fetch') || msg.includes('CORS') || msg.includes('NetworkError')) {
+          setTorrentError(
+            'Não foi possível baixar o arquivo .torrent devido à política de CORS do servidor de origem. Copie o Link Magnet (ícone de ímã 🧲) ou envie o arquivo .torrent baixado do seu PC.'
+          );
+        } else {
+          setTorrentError(msg || 'Erro no cliente WebTorrent.');
+        }
         setTorrentStatus('error');
       });
 
@@ -212,6 +227,20 @@ export default function TorrentPlayer() {
       console.error(err);
       setTorrentError(err.message || 'Falha ao inicializar o WebTorrent.');
       setTorrentStatus('error');
+    }
+  };
+
+  const handleTorrentSubmit = (event) => {
+    event.preventDefault();
+    startTorrentWithSource(torrentSource.trim());
+  };
+
+  const handleFileInputChange = (event) => {
+    const file = event.target.files && event.target.files[0];
+    if (file) {
+      setTorrentSource(file.name);
+      startTorrentWithSource(file);
+      event.target.value = '';
     }
   };
 
@@ -286,25 +315,30 @@ export default function TorrentPlayer() {
                 <div className="flex items-start gap-3">
                   <FiInfo className="mt-1 shrink-0 text-xl text-emerald-400" />
                   <div className="text-sm">
-                    <p className="font-semibold text-emerald-300">Como funciona o WebTorrent no navegador (WebRTC):</p>
-                    <p className="mt-1 text-zinc-300">
-                      O WebTorrent roda 100% no seu navegador sem cobrar servidores. Ele se conecta via <strong>WebRTC</strong> com outros navegadores ou programas que usam WebTorrent (como o <em>WebTorrent Desktop</em> ou navegador <em>Brave</em>).
-                    </p>
-                    <p className="mt-1 text-xs text-zinc-400">
-                      Nota: Torrents tradicionais da internet (onde as sementes estão exclusivamente no qBittorrent/Transmission via TCP/UDP) não têm peers WebRTC e podem ficar com 0 peers conectados.
-                    </p>
+                    <p className="font-semibold text-emerald-300">Como usar o WebTorrent no navegador:</p>
+                    <ul className="mt-1.5 list-inside list-disc space-y-1 text-zinc-300">
+                      <li>
+                        <strong>Link Magnet (Recomendado):</strong> Copie o link do ícone de ímã (🧲) no site de anime e cole abaixo. Não sofre bloqueio de CORS.
+                      </li>
+                      <li>
+                        <strong>Arquivo .torrent:</strong> Baixe o arquivo no seu computador e envie pelo botão abaixo ou arraste para cá.
+                      </li>
+                      <li>
+                        <strong>Aviso sobre Peers:</strong> Conecta exclusivamente com peers <strong>WebRTC</strong> (navegadores e WebTorrent Desktop). Se o torrent só tiver sementes em clientes TCP/UDP tradicionais, o número de peers ficará em 0.
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
 
-              <form onSubmit={handleTorrentSubmit} className="mb-6 flex flex-col gap-3 sm:flex-row">
+              <form onSubmit={handleTorrentSubmit} className="mb-3 flex flex-col gap-3 sm:flex-row">
                 <label className="sr-only" htmlFor="torrent-source">Link magnet ou URL .torrent</label>
                 <input
                   id="torrent-source"
                   type="text"
                   value={torrentSource}
                   onChange={(event) => setTorrentSource(event.target.value)}
-                  placeholder="Cole um link magnet ou a URL de um arquivo .torrent"
+                  placeholder="Cole um link Magnet (magnet:?xt=...) ou nome do arquivo"
                   className="min-w-0 flex-1 border border-zinc-600 bg-zinc-900 px-4 py-3 text-white outline-none focus:border-emerald-400"
                   required
                 />
@@ -328,10 +362,31 @@ export default function TorrentPlayer() {
                 )}
               </form>
 
+              {/* Local .torrent file upload button */}
+              <div className="mb-6 flex flex-wrap items-center gap-2 text-xs text-zinc-400">
+                <span>Ou envie o arquivo baixado do seu computador:</span>
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept=".torrent,application/x-bittorrent"
+                  className="hidden"
+                  onChange={handleFileInputChange}
+                />
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  className="flex items-center gap-1.5 rounded border border-zinc-600 bg-zinc-800 px-3 py-1.5 font-medium text-emerald-400 transition-colors hover:bg-zinc-700 hover:text-emerald-300"
+                >
+                  <FiFilePlus aria-hidden="true" />
+                  Escolher arquivo .torrent
+                </button>
+              </div>
+
               {torrentError && (
-                <p role="alert" className="mb-5 border-l-4 border-rose-500 bg-zinc-900 px-4 py-3 text-rose-200">
-                  {torrentError}
-                </p>
+                <div role="alert" className="mb-5 rounded-lg border-l-4 border-rose-500 bg-zinc-900 p-4 text-sm text-rose-200">
+                  <p className="font-semibold text-rose-300">Atenção ao carregar o torrent:</p>
+                  <p className="mt-1">{torrentError}</p>
+                </div>
               )}
 
               {/* Status / Live Torrent Stats */}
