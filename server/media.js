@@ -3,7 +3,7 @@ const axios = require('axios');
 function validateDiscordUrl(value) {
   if (typeof value !== 'string' || value.length > 4096) throw new Error('Link de mídia inválido.');
   const url = new URL(value);
-  if (url.protocol !== 'https:' || !['cdn.discordapp.com', 'media.discordapp.net'].includes(url.hostname) || url.port || url.username || url.password || !/^\/attachments\/\d+\/\d+\/[^/]+\.(mkv|webm)$/i.test(url.pathname)) throw new Error('Use um link HTTPS direto de MKV dos anexos do Discord.');
+  if (url.protocol !== 'https:' || !['cdn.discordapp.com', 'media.discordapp.com', 'media.discordapp.net'].includes(url.hostname) || url.port || url.username || url.password || !/^\/attachments\/\d+\/\d+\/[^/]+\.(mkv|webm)$/i.test(url.pathname)) throw new Error('Use um link HTTPS direto de MKV dos anexos do Discord.');
   url.hash = '';
   return url.href;
 }

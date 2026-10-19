@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const express = require('express');
 const { Readable } = require('node:stream');
 const { createMediaRouter, validateDiscordUrl } = require('./media');
-const valid = 'https://cdn.discordapp.com/attachments/123/456/episode.mkv?ex=abc&hm=example';
+const valid = 'https://media.discordapp.com/attachments/123/456/episode.mkv?ex=abc&hm=example';
 test('relay aceita somente anexos MKV HTTPS em hosts exatos do Discord', () => {
   assert.equal(validateDiscordUrl(valid), valid);
   for (const url of ['http://cdn.discordapp.com/attachments/1/2/a.mkv', 'https://cdn.discordapp.com.attacker.test/attachments/1/2/a.mkv', 'https://127.0.0.1/a.mkv', 'https://cdn.discordapp.com:444/attachments/1/2/a.mkv', 'https://user@cdn.discordapp.com/attachments/1/2/a.mkv', 'https://cdn.discordapp.com/attachments/1/2/a.html']) assert.throws(() => validateDiscordUrl(url));
