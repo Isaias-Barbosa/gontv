@@ -1,141 +1,134 @@
 import { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { FiLink, FiSquare } from 'react-icons/fi';
-import WebTorrent from 'webtorrent/dist/webtorrent.min.js';
 
-const VIDEO_EXTENSION = /\.(mp4|m4v|webm|ogv|ogg|mov|mkv|avi)$/i;
+const WEBTOR_SDK_URL = 'https://cdn.jsdelivr.net/npm/@webtor/embed-sdk-js@0.2.19/dist/index.min.js';
+
+let webtorSdkPromise;
+
+function loadWebtorSdk() {
+  if (window.webtor && typeof window.webtor.push === 'function') {
+    return Promise.resolve(window.webtor);
+  }
+
+  if (!webtorSdkPromise) {
+    webtorSdkPromise = new Promise((resolve, reject) => {
+      let script = document.querySelector(`script[src="${WEBTOR_SDK_URL}"]`);
+      const shouldAppend = !script;
+      if (!script) {
+        script = document.createElement('script');
+        script.src = WEBTOR_SDK_URL;
+        script.async = true;
+      }
+
+      script.addEventListener('load', () => {
+        if (window.webtor && typeof window.webtor.push === 'function') {
+          resolve(window.webtor);
+        } else {
+          webtorSdkPromise = null;
+          reject(new Error('O SDK da Webtor foi carregado, mas não ficou disponível.'));
+        }
+      }, { once: true });
+      script.addEventListener('error', () => {
+        script.remove();
+        webtorSdkPromise = null;
+        reject(new Error('Não foi possível carregar o player da Webtor. Verifique sua conexão e tente novamente.'));
+      }, { once: true });
+      if (shouldAppend) document.head.appendChild(script);
+    });
+  }
+
+  return webtorSdkPromise;
+}
+
+function getTorrentErrorMessage(event) {
+  const detail = event && event.data;
+  if (typeof detail === 'string' && detail.trim()) return detail;
+  if (detail && typeof detail.message === 'string' && detail.message.trim()) return detail.message;
+  return 'A Webtor não conseguiu carregar este torrent. Verifique o link e tente novamente.';
+}
 
 export default function TorrentPlayer() {
   const [source, setSource] = useState('');
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
-  const [torrentName, setTorrentName] = useState('');
-  const [files, setFiles] = useState([]);
-  const [selectedFileIndex, setSelectedFileIndex] = useState(0);
-  const [progress, setProgress] = useState(0);
-  const [peerCount, setPeerCount] = useState(0);
-  const [downloadSpeed, setDownloadSpeed] = useState(0);
-  const clientRef = useRef(null);
-  const timerRef = useRef(null);
-  const videoRef = useRef(null);
+  const [showPlayer, setShowPlayer] = useState(false);
+  const playerRef = useRef(null);
+  const requestRef = useRef(0);
 
-  const disposeClient = () => {
-    if (timerRef.current) {
-      window.clearInterval(timerRef.current);
-      timerRef.current = null;
-    }
-    if (clientRef.current) {
-      clientRef.current.destroy();
-      clientRef.current = null;
-    }
-  };
-
-  useEffect(() => () => disposeClient(), []);
-
-  useEffect(() => {
-    const selectedFile = files[selectedFileIndex];
-    const video = videoRef.current;
-    if (!selectedFile || !video) return undefined;
-
-    selectedFile.streamTo(video);
-    video.load();
-
-    return () => {
-      video.removeAttribute('src');
-      video.load();
-    };
-  }, [files, selectedFileIndex]);
+  useEffect(() => () => {
+    requestRef.current += 1;
+    if (playerRef.current) playerRef.current.replaceChildren();
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    const requestId = requestRef.current + 1;
+    requestRef.current = requestId;
+    if (playerRef.current) playerRef.current.replaceChildren();
+    setError('');
+    setShowPlayer(false);
+
     const torrentSource = source.trim();
     const isMagnet = /^magnet:\?/i.test(torrentSource);
-    const isTorrentUrl = /^https?:\/\//i.test(torrentSource);
+    let torrentUrl = false;
+    if (/^https?:\/\//i.test(torrentSource)) {
+      try {
+        const parsedSource = new URL(torrentSource);
+        torrentUrl = parsedSource.protocol === 'http:' || parsedSource.protocol === 'https:';
+      } catch {
+        torrentUrl = false;
+      }
+    }
 
-    if (!isMagnet && !isTorrentUrl) {
+    if (!isMagnet && !torrentUrl) {
       setError('Informe um link magnet ou uma URL HTTP/HTTPS para o arquivo .torrent.');
       setStatus('error');
       return;
     }
 
-    disposeClient();
-    setError('');
-    setFiles([]);
-    setTorrentName('');
-    setProgress(0);
-    setPeerCount(0);
-    setDownloadSpeed(0);
-    setSelectedFileIndex(0);
     setStatus('loading');
 
     try {
-      if (!window.isSecureContext || !('serviceWorker' in navigator)) {
-        throw new Error('O streaming P2P exige HTTPS. Em desenvolvimento, use localhost.');
-      }
+      const webtor = await loadWebtorSdk();
+      if (requestId !== requestRef.current || !playerRef.current) return;
 
-      const registration = await navigator.serviceWorker.register('/webtorrent-sw.js', { scope: '/' });
-      let worker = registration.active || registration.waiting || registration.installing;
-      if (!worker) throw new Error('Não foi possível iniciar o serviço de streaming.');
-
-      if (worker.state !== 'activated') {
-        await new Promise((resolve, reject) => {
-          const onStateChange = () => {
-            if (worker.state === 'activated') {
-              worker.removeEventListener('statechange', onStateChange);
-              resolve();
-            } else if (worker.state === 'redundant') {
-              worker.removeEventListener('statechange', onStateChange);
-              reject(new Error('O serviço de streaming não foi ativado. Recarregue a página e tente novamente.'));
-            }
-          };
-          worker.addEventListener('statechange', onStateChange);
-        });
-      }
-
-      const client = new WebTorrent({ dht: false, lsd: false, natUpnp: false, natPmp: false });
-      clientRef.current = client;
-      client.createServer({ controller: registration });
-      client.on('error', (torrentError) => {
-        setError(torrentError.message || 'Falha ao iniciar o torrent.');
-        setStatus('error');
+      webtor.push({
+        el: playerRef.current,
+        magnet: isMagnet ? torrentSource : undefined,
+        torrentUrl: torrentUrl ? torrentSource : undefined,
+        width: '100%',
+        header: true,
+        controls: true,
+        lang: 'pt',
+        on: (sdkEvent) => {
+          if (requestId !== requestRef.current) return;
+          if (sdkEvent.name === 'torrent error') {
+            setError(getTorrentErrorMessage(sdkEvent));
+            setStatus('error');
+          } else if (sdkEvent.name === 'inited' || sdkEvent.name === 'torrent fetched') {
+            setStatus('ready');
+          }
+        },
       });
 
-      const torrent = client.add(torrentSource, (loadedTorrent) => {
-        const videoFiles = loadedTorrent.files
-          .filter((file) => VIDEO_EXTENSION.test(file.name));
-
-        setTorrentName(loadedTorrent.name);
-        setFiles(videoFiles);
-        setStatus(videoFiles.length ? 'ready' : 'error');
-        if (!videoFiles.length) setError('Este torrent não contém arquivos de vídeo compatíveis.');
-
-        const updateStats = () => {
-          setProgress(Math.round(loadedTorrent.progress * 100));
-          setPeerCount(loadedTorrent.numPeers);
-          setDownloadSpeed(loadedTorrent.downloadSpeed);
-        };
-        updateStats();
-        timerRef.current = window.setInterval(updateStats, 1000);
-      });
-
-      torrent.on('error', (torrentError) => {
-        setError(torrentError.message || 'Não foi possível carregar este torrent.');
-        setStatus('error');
-      });
+      const iframe = playerRef.current.querySelector('iframe');
+      if (iframe) iframe.title = 'Player de torrent da Webtor';
+      setShowPlayer(true);
+      setStatus('ready');
     } catch (torrentError) {
-      disposeClient();
+      if (requestId !== requestRef.current) return;
+      if (playerRef.current) playerRef.current.replaceChildren();
+      setShowPlayer(false);
       setError(torrentError.message || 'Não foi possível iniciar o player torrent.');
       setStatus('error');
     }
   };
 
   const handleStop = () => {
-    disposeClient();
-    setFiles([]);
-    setTorrentName('');
-    setProgress(0);
-    setPeerCount(0);
-    setDownloadSpeed(0);
+    requestRef.current += 1;
+    if (playerRef.current) playerRef.current.replaceChildren();
+    setShowPlayer(false);
     setStatus('idle');
     setError('');
   };
@@ -156,7 +149,8 @@ export default function TorrentPlayer() {
             <label className="sr-only" htmlFor="torrent-source">Link magnet ou URL do arquivo torrent</label>
             <input
               id="torrent-source"
-              type="url"
+              type="text"
+              inputMode="url"
               value={source}
               onChange={(event) => setSource(event.target.value)}
               placeholder="Cole um link magnet ou a URL de um arquivo .torrent"
@@ -185,7 +179,7 @@ export default function TorrentPlayer() {
           </form>
 
           <p className="mb-6 max-w-3xl text-sm text-zinc-400">
-            O navegador conecta a peers WebRTC. Torrents sem peers compatíveis podem não iniciar; URLs .torrent também dependem de permissão CORS no servidor de origem.
+            O player da Webtor conecta a peers compatíveis para transmitir o torrent. A disponibilidade depende dos peers e, para URLs .torrent, da permissão CORS do servidor de origem.
           </p>
 
           {error && (
@@ -194,42 +188,12 @@ export default function TorrentPlayer() {
             </p>
           )}
 
-          {status === 'loading' && <p className="mb-5 text-emerald-300">Buscando metadados do torrent...</p>}
-
-          {files.length > 0 && (
-            <section aria-label="Reprodução do torrent">
-              <div className="mb-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <h2 className="font-semibold">{torrentName}</h2>
-                  <p className="text-sm text-zinc-400">{progress}% recebido · {peerCount} peers · {formatSpeed(downloadSpeed)}</p>
-                </div>
-                {files.length > 1 && (
-                  <label className="flex items-center gap-3 text-sm">
-                    Vídeo
-                    <select
-                      value={selectedFileIndex}
-                      onChange={(event) => setSelectedFileIndex(Number(event.target.value))}
-                      className="max-w-full border border-zinc-600 bg-zinc-900 px-3 py-2 text-white"
-                    >
-                      {files.map((file, index) => (
-                        <option key={file.path} value={index}>{file.name}</option>
-                      ))}
-                    </select>
-                  </label>
-                )}
-              </div>
-              <progress className="mb-4 h-1 w-full accent-emerald-400" value={progress} max="100" />
-              <video ref={videoRef} className="aspect-video w-full bg-black" controls playsInline />
-            </section>
-          )}
+          {status === 'loading' && <p className="mb-5 text-emerald-300">Carregando o player da Webtor...</p>}
+          <section aria-label="Reprodução do torrent" className={showPlayer ? '' : 'hidden'}>
+            <div ref={playerRef} className="w-full overflow-hidden" />
+          </section>
         </section>
       </main>
     </>
   );
-}
-
-function formatSpeed(bytesPerSecond) {
-  if (bytesPerSecond < 1024) return `${bytesPerSecond} B/s`;
-  if (bytesPerSecond < 1024 * 1024) return `${(bytesPerSecond / 1024).toFixed(1)} KB/s`;
-  return `${(bytesPerSecond / (1024 * 1024)).toFixed(1)} MB/s`;
 }
